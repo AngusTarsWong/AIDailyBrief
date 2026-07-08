@@ -849,11 +849,13 @@ print(f"\n✅ 数据采集完成: {total} 条原始数据")
 print(f"📦 Raw JSON: {RAW_JSON}")
 print(f"   Trending:{len(results['github_trending'])} GitHub:{len(results['github'])} 论文:{len(results['papers'])} Blog:{len(results['blogs'])} HN:{len(results['hn'])} News:{len(results['news'])}")
 
-# 复制到桌面
+# 复制一份到 docs 目录方便查看
 import shutil, os
-desktop = os.path.expanduser('~/Desktop')
+docs_dir = "/Users/zz/code/AI_Daily_Brief/docs"
 try:
-    shutil.copy(RAW_JSON, desktop)
-    print(f"📋 已复制到桌面: {os.path.join(desktop, os.path.basename(RAW_JSON))}")
+    os.makedirs(docs_dir, exist_ok=True)
+    docs_file = f"{docs_dir}/llm-briefing-raw-{DATE_STR}.json"
+    shutil.copy(RAW_JSON, docs_file)
+    print(f"📋 已复制到 docs: {docs_file}")
 except Exception as e:
-    print(f"  ⚠️ 复制到桌面失败: {e}")
+    print(f"  ⚠️ 复制到 docs 失败: {e}")

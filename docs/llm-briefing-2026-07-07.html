@@ -1,0 +1,504 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LLM & Agent Daily Briefing | 2026-07-07</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+  background: #1B2838;
+  color: #e2e8f0;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(56, 189, 248, 0.2), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 40%, rgba(139, 92, 246, 0.15), transparent),
+    radial-gradient(ellipse 50% 60% at 5% 85%, rgba(52, 211, 153, 0.1), transparent),
+    repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(148, 163, 184, 0.08) 49px, rgba(148, 163, 184, 0.08) 50px),
+    repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(148, 163, 184, 0.08) 49px, rgba(148, 163, 184, 0.08) 50px);
+  pointer-events: none;
+  z-index: 0;
+}
+.container { max-width:960px; margin:0 auto; padding:2rem; position: relative; z-index: 1; }
+.header { text-align:center; margin-bottom:2.5rem; position: relative; padding-bottom:1.5rem; }
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.6), rgba(139, 92, 246, 0.6), transparent);
+}
+.header h1 {
+  font-size:2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom:0.4rem;
+  letter-spacing: -0.02em;
+}
+.sub { color:#64748b; font-size:0.9rem; font-weight: 500; letter-spacing: 0.05em; }
+.section {
+  margin-bottom:2rem;
+  padding: 1.2rem;
+  border-radius: 20px;
+  position: relative;
+  background: rgba(27, 40, 56, 0.5);
+}
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(148, 163, 184, 0.1), transparent, rgba(148, 163, 184, 0.05));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.sh {
+  display:flex;
+  align-items:center;
+  gap:0.8rem;
+  margin-bottom:1rem;
+  padding-bottom:0.5rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+.sh .icon { font-size:1.3rem; }
+.sh .title { font-size:1.2rem; font-weight:700; color:#f1f5f9; letter-spacing: -0.01em; }
+.sh.trending .title { color:#34d399; }
+.sh.github .title { color:#60a5fa; }
+.sh.paper .title { color:#a78bfa; }
+.sh.blog .title { color:#38bdf8; }
+.sh.news .title { color:#fb923c; }
+.cnt {
+  font-size:0.7rem;
+  color:#94a3b8;
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  padding:0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-left:auto;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.card {
+  background: linear-gradient(135deg, rgba(22, 35, 50, 0.9), rgba(22, 35, 50, 0.75));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  border-left: 3px solid rgba(96, 165, 250, 0.4);
+  border-radius: 14px;
+  padding:1.1rem 1.3rem;
+  margin-bottom:0.7rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  position: relative;
+}
+.card:hover {
+  border-color: rgba(96, 165, 250, 0.3);
+  border-left-color: #60a5fa;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.7));
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(96, 165, 250, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+/* Section-specific card accent colors */
+.section:has(.sh.trending) .card { border-left-color: rgba(52, 211, 153, 0.5); }
+.section:has(.sh.trending) .card:hover { border-left-color: #34d399; box-shadow: 0 4px 16px rgba(52, 211, 153, 0.1); }
+.section:has(.sh.paper) .card { border-left-color: rgba(167, 139, 250, 0.5); }
+.section:has(.sh.paper) .card:hover { border-left-color: #a78bfa; box-shadow: 0 4px 16px rgba(167, 139, 250, 0.1); }
+
+.ct { font-size:1rem; font-weight:600; margin-bottom:0.35rem; letter-spacing: -0.01em; }
+.ct a { color:#60a5fa; text-decoration:none; transition: color 0.2s; }
+.ct a:hover { color:#93c5fd; text-decoration:underline; }
+.cm { display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.78rem; color:#64748b; margin-bottom:0.4rem; }
+.stars { color:#fbbf24; font-weight:600; }
+.lang {
+  background: rgba(56, 189, 248, 0.1);
+  color:#38bdf8;
+  padding:0.12rem 0.5rem;
+  border-radius: 10px;
+  font-size:0.72rem;
+  font-weight: 500;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+}
+.topic {
+  background: rgba(167, 139, 250, 0.1);
+  color:#a78bfa;
+  padding:0.12rem 0.45rem;
+  border-radius: 10px;
+  font-size:0.68rem;
+  font-weight: 500;
+  border: 1px solid rgba(167, 139, 250, 0.15);
+}
+.cd { color:#cbd5e1; font-size:0.88rem; margin-top:0.4rem; line-height: 1.65; }
+.releases-section { margin-top:0.8rem; display:flex; flex-direction:column; gap:0.5rem; }
+.release-item {
+  background: rgba(34, 197, 94, 0.04);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  border-radius: 10px;
+  padding:0.6rem 0.8rem;
+  transition: all 0.2s ease;
+}
+.release-item:hover {
+  background: rgba(34, 197, 94, 0.08);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+.release-tag { color:#22c55e; font-weight:600; font-size:0.82rem; margin-right:0.5rem; }
+.release-date { color:#475569; font-size:0.72rem; }
+.release-summary { color:#94a3b8; font-size:0.78rem; margin-top:0.25rem; line-height:1.5; }
+.blog-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  border-left: 3px solid rgba(56, 189, 248, 0.4);
+  border-radius: 12px;
+  padding:0.8rem 1.2rem;
+  margin-bottom:0.6rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.blog-card:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+  border-left-color: #38bdf8;
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.08);
+}
+.blog-src {
+  display:inline-block;
+  font-size:0.68rem;
+  color:#38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  padding:0.12rem 0.45rem;
+  border-radius: 8px;
+  margin-right:0.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.blog-title { color:#60a5fa; font-size:0.92rem; font-weight:500; text-decoration:none; }
+.blog-title:hover { color:#93c5fd; text-decoration:underline; }
+.blog-date { color:#475569; font-size:0.72rem; margin-left:0.4rem; }
+.blog-summary { color:#94a3b8; font-size:0.83rem; margin-top:0.35rem; line-height: 1.5; }
+.news-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(251, 146, 60, 0.12);
+  border-left: 3px solid rgba(251, 146, 60, 0.4);
+  border-radius: 12px;
+  padding:0.8rem 1.2rem;
+  margin-bottom:0.6rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.news-card:hover {
+  border-color: rgba(251, 146, 60, 0.3);
+  border-left-color: #fb923c;
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(251, 146, 60, 0.08);
+}
+.news-src {
+  display:inline-block;
+  font-size:0.68rem;
+  color:#fb923c;
+  background: rgba(251, 146, 60, 0.08);
+  border: 1px solid rgba(251, 146, 60, 0.15);
+  padding:0.12rem 0.45rem;
+  border-radius: 8px;
+  margin-right:0.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.news-title { color:#fbbf24; font-size:0.92rem; font-weight:500; text-decoration:none; }
+.news-title:hover { color:#fcd34d; text-decoration:underline; }
+.news-date { color:#475569; font-size:0.72rem; margin-left:0.4rem; }
+.news-summary { color:#94a3b8; font-size:0.83rem; margin-top:0.35rem; line-height: 1.5; }
+.stats {
+  display:flex;
+  justify-content:center;
+  gap:2.5rem;
+  margin-top:2rem;
+  padding-top:1.2rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+.sv { font-size:1.3rem; font-weight:700; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.sl { font-size:0.72rem; color:#64748b; margin-top:0.15rem; letter-spacing: 0.02em; }
+.ft { color:#475569; font-size:0.78rem; text-align:center; margin-top:1.2rem; letter-spacing: 0.02em; }
+@media(max-width:640px) {
+  .container { padding:1rem; }
+  .header h1 { font-size:1.5rem; }
+  .card { padding:1rem 1.1rem; }
+  .section { padding: 1rem 0.8rem; }
+}
+</style></head><body><div class="container">
+<div class="header"><h1>📡 LLM & Agent Daily Briefing</h1><p class="sub">2026-07-07</p></div></div><div class="section"><div class="sh trending"><span class="icon">🔥</span><span class="title">GitHub Trending 今日热门</span><span class="cnt">15 条</span></div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/asgeirtj/system_prompts_leaks" target="_blank">asgeirtj / system_prompts_leaks</a></div>
+  <div class="cm"><span class="stars">⭐ 52,177</span><span class="lang">JavaScript</span>1,378 stars today</div>
+  <div class="cd">该项目系统收集了主流 AI 大模型的内部系统提示词（system prompts），涵盖 Anthropic（Claude Fable 5、Opus 4.8、Claude Code）、OpenAI（ChatGPT 5.5、Codex）、Google（Gemini 3.5 Flash、Antigravity）及 xAI（Grok）等产品。系统提示词是控制模型行为和安全边界的核心指令，其泄露对 AI 安全研究、模型对齐和提示工程具有重要价值。项目定期更新，为 AI 安全研究人员提供了珍贵参考。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani / agent-skills</a></div>
+  <div class="cm"><span class="stars">⭐ 71,353</span><span class="lang">JavaScript</span>1,112 stars today</div>
+  <div class="cd">该项目由知名开发者 Addy Osmani 创建，为 AI 编程智能体提供生产级工程技能集合。在 Claude Code、Codex、Cursor 等 AI 编程工具快速普及的背景下，如何为这些智能体提供标准化、高质量的技能定义是提升 AI 编程效率的关键。该项目为 AI 智能体提供经过生产验证的工程实践技能，使其更好地理解代码结构、遵循最佳实践、执行复杂开发任务，适合使用 AI 编程工具的开发者团队。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Zackriya-Solutions/meetily" target="_blank">Zackriya-Solutions / meetily</a></div>
+  <div class="cm"><span class="stars">⭐ 19,900</span><span class="lang">Rust</span>2,494 stars today</div>
+  <div class="cd">Meetily 是一款基于 Rust 构建的隐私优先 AI 会议助手，集成 Parakeet/Whisper 进行实时语音转写，速度比传统方案快 4 倍，同时支持说话人分离和基于 Ollama 的本地 AI 摘要生成。整个处理流程 100% 本地运行，无需云端服务，充分保障数据隐私。作为 macOS 和 Windows 上排名第一的开源 AI 会议笔记工具，它特别适合对数据合规性要求高的企业和团队。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/ruvnet/RuView" target="_blank">ruvnet / RuView</a></div>
+  <div class="cm"><span class="stars">⭐ 77,935</span><span class="lang">Rust</span>470 stars today</div>
+  <div class="cd">RuView 是一个创新性的空间智能系统，能够将普通 WiFi 信号转化为实时空间感知能力，用于生命体征监测和存在检测，且无需任何摄像头。通过机器学习算法分析 WiFi 信号的微小变化，系统可以识别人体活动模式和呼吸频率等生理信号。这种基于射频信号的空间感知技术在隐私保护场景中具有独特优势，不采集图像数据却能提供丰富的环境信息，适用于智能家居、老年人看护和安防监控等领域。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Leonxlnx/taste-skill" target="_blank">Leonxlnx / taste-skill</a></div>
+  <div class="cm"><span class="stars">⭐ 59,573</span><span class="lang">JavaScript</span>1,458 stars today</div>
+  <div class="cd">Taste-Skill 是一个专为 AI 编程智能体设计的品味增强技能包，旨在解决 AI 生成内容趋于平庸和同质化的问题。在当前 AI 编程工具广泛使用的背景下，许多开发者发现 AI 生成的代码和文档往往缺乏个性和专业深度。该项目通过定义精细化的品味规则和评估标准，赋予 AI 智能体更好的审美判断能力，使其输出更符合专业标准、更具创造性和独特性，适合追求高质量 AI 输出的开发者和内容创作者。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/alirezarezvani/claude-skills" target="_blank">alirezarezvani / claude-skills</a></div>
+  <div class="cm"><span class="stars">⭐ 21,381</span><span class="lang">Python</span>610 stars today</div>
+  <div class="cd">该项目汇集了 345 个 Claude Code 技能、智能体技能和插件，涵盖 30 多种智能体、70 多个自定义命令，支持 Claude Code、Codex、Gemini CLI、Cursor 等 8 款以上的 AI 编程智能体。技能覆盖工程开发、市场营销、产品管理、合规审查、学术研究、商业运营和日常生产力等多个领域。在 AI 智能体生态快速发展的当下，该项目为用户提供了一个全面的技能资源库，帮助开发者快速扩展 AI 智能体的能力边界。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/openai/codex-plugin-cc" target="_blank">openai / codex-plugin-cc</a></div>
+  <div class="cm"><span class="stars">⭐ 26,464</span><span class="lang">JavaScript</span>906 stars today</div>
+  <div class="cd">该项目由 OpenAI 官方发布，允许用户在 Claude Code 中直接调用 OpenAI Codex 进行代码审查或任务委托。在 AI 编程工具生态中，不同平台的智能体各有优势——Claude Code 擅长复杂推理和代码理解，Codex 在代码生成和审查方面有独特能力。该插件通过 MCP 协议打破平台壁垒，使开发者能够在同一工作流中组合使用多个 AI 编程智能体，充分发挥各自所长。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/mvanhorn/last30days-skill" target="_blank">mvanhorn / last30days-skill</a></div>
+  <div class="cm"><span class="stars">⭐ 50,056</span><span class="lang">Python</span>458 stars today</div>
+  <div class="cd">这是一个 AI 智能体技能，能够跨 Reddit、X（Twitter）、YouTube、Hacker News、Polymarket 和整个互联网进行深度研究，然后将收集到的信息综合整理为有根据的摘要报告。在信息爆炸时代，快速了解某个话题的全貌变得愈发困难，该技能通过自动化信息采集和多源交叉验证，帮助研究人员、产品经理和投资者大幅节省调研时间，体现了 AI 智能体从简单问答工具向独立研究助手演进的趋势。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/ogulcancelik/herdr" target="_blank">ogulcancelik / herdr</a></div>
+  <div class="cm"><span class="stars">⭐ 13,112</span><span class="lang">Rust</span>779 stars today</div>
+  <div class="cd">Herdr 是一个运行在终端中的智能体复用器（agent multiplexer），用 Rust 编写。它允许用户在终端环境中同时管理和调度多个 AI 智能体，实现智能体间的任务分发、结果汇总和协同工作。随着 AI 智能体应用场景日益复杂，单一智能体往往难以胜任需要多角度分析的任务，Herdr 通过复用器模式将多个智能体组织起来形成协作网络，代表了 AI 智能体编排领域的新探索。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/bradautomates/claude-video" target="_blank">bradautomates / claude-video</a></div>
+  <div class="cm"><span class="stars">⭐ 4,615</span><span class="lang">Python</span>427 stars today</div>
+  <div class="cd">该项目赋予 Claude AI 观看任意视频的能力。通过 /watch 命令，系统会自动下载视频、提取关键帧、进行语音转写，然后将所有多媒体信息整合后交给 Claude 进行分析理解。在视频内容爆炸式增长的背景下，让 AI 能够看懂视频具有重要意义，无论是教学视频、会议录像还是产品演示，Claude 都可以提取关键信息并生成摘要。该项目打通了视频内容与 LLM 之间的壁垒，扩展了 AI 智能体的感知模态。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/karakeep-app/karakeep" target="_blank">karakeep-app / karakeep</a></div>
+  <div class="cm"><span class="stars">⭐ 27,064</span><span class="lang">TypeScript</span>199 stars today</div>
+  <div class="cd">Karakeep 是一款可自托管的全能书签管理应用，支持链接、笔记和图片的收藏管理。其核心亮点是基于 AI 的自动标签分类和全文搜索功能，利用 AI 模型为收藏内容生成语义标签，实现智能分类和跨内容全文检索。在信息收集场景中，传统书签工具常面临标签混乱、难以检索的问题，Karakeep 通过 AI 自动化大幅提升了信息检索效率。项目用 TypeScript 编写，支持私有化部署，适合注重数据隐私的用户。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/firecrawl/firecrawl" target="_blank">firecrawl / firecrawl</a></div>
+  <div class="cm"><span class="stars">⭐ 146,765</span><span class="lang">TypeScript</span>867 stars today</div>
+  <div class="cd">Firecrawl 提供了一个强大的 API，用于大规模搜索、抓取和交互网页内容。在 AI 时代，高质量的网络数据是训练模型、构建 RAG 系统和实现 AI 智能体联网能力的基础设施。Firecrawl 支持网页抓取、内容提取、结构化数据解析等功能，广泛应用于 AI 应用开发领域，特别是在构建需要实时网络知识的 AI 智能体时扮演关键角色。拥有超过 14.6 万星，是最受欢迎的网页数据采集工具之一。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/steipete/CodexBar" target="_blank">steipete / CodexBar</a></div>
+  <div class="cm"><span class="stars">⭐ 16,861</span><span class="lang">Swift</span>598 stars today</div>
+  <div class="cd">CodexBar 是一款 macOS 菜单栏工具，用于显示 OpenAI Codex 和 Claude Code 的使用统计数据，用户无需登录即可查看。在 AI 编程工具成为开发者日常必备工具的背景下，了解自己在不同 AI 编码助手上的使用频率、token 消耗等指标，对于优化工作流、控制成本和评估 AI 工具投资回报具有重要意义。该项目以轻量级方式提供了这一功能，适合频繁使用多种 AI 编程工具的开发者。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/alibaba/zvec" target="_blank">alibaba / zvec</a></div>
+  <div class="cm"><span class="stars">⭐ 13,708</span><span class="lang">C++</span>382 stars today</div>
+  <div class="cd">zvec 是阿里巴巴开源的一款轻量级高性能进程内向量数据库，用 C++ 编写。在 AI 应用中，向量数据库是存储和检索高维嵌入向量（embeddings）的核心基础设施，广泛应用于语义搜索、推荐系统、RAG 和相似性匹配等场景。zvec 采用嵌入式设计，无需独立部署数据库服务，可直接集成到应用中，具有极低延迟和内存占用，特别适合边缘计算、移动端 AI 应用和需要快速原型开发的场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/gastownhall/gastown" target="_blank">gastownhall / gastown</a></div>
+  <div class="cm"><span class="stars">⭐ 16,807</span><span class="lang">Go</span>291 stars today</div>
+  <div class="cd">Gas Town 是一个多智能体工作区管理器（multi-agent workspace manager），用 Go 语言编写。在 AI 智能体应用日益复杂的背景下，如何有效组织、管理和协调多个 AI 智能体的工作空间和任务分配成为新的挑战。Gas Town 提供了统一的平台来管理多个智能体的工作环境、上下文状态和协作关系，使开发者能够更高效地构建和运行多智能体系统，契合当前 multi-agent 系统的发展趋势。</div>
+</div></div><div class="section"><div class="sh github"><span class="icon">🚀</span><span class="title">GitHub 热门项目</span><span class="cnt">13 项</span></div>
+<p style="color:#64748b;font-size:0.85rem;margin-bottom:0.8rem;line-height:1.5">📅 新创建项目（近 7 天） | 🔍 pushed:>2026-06-07 | 🔑 LLM OR AI agent OR "large language model" (保底)</p>
+<div class="card">
+  <div class="ct"><a href="https://github.com/openclaw/openclaw" target="_blank">openclaw/openclaw</a></div>
+  <div class="cm"><span class="stars">⭐ 382,020</span><span class="lang">TypeScript</span><span class="topic">ai</span><span class="topic">assistant</span><span class="topic">crustacean</span><span>更新于 2026-07-07</span></div>
+  <div class="cd">OpenClaw 是一个开源的个人 AI 助手项目，支持跨平台部署，可在任何操作系统上运行。该项目旨在为用户提供完全自主可控的 AI 助手体验，不依赖特定平台或生态。凭借其独特的设计理念和丰富的功能，OpenClaw 已获得超过 38 万星，成为最受欢迎的开源 AI 助手之一。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/obra/superpowers" target="_blank">obra/superpowers</a></div>
+  <div class="cm"><span class="stars">⭐ 248,147</span><span class="lang">Shell</span><span class="topic">ai</span><span class="topic">brainstorming</span><span class="topic">coding</span><span>更新于 2026-07-07</span></div>
+  <div class="cd">Superpowers 是一个智能体（agentic）技能框架和软件开发方法论，由 Obra 团队开发。它提供了一套经过实践验证的技能体系和工作流程，帮助 AI 智能体更高效地完成软件开发任务，涵盖头脑风暴、编码和软件开发生命周期管理等环节，拥有超过 24 万星。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/affaan-m/ECC" target="_blank">affaan-m/ECC</a></div>
+  <div class="cm"><span class="stars">⭐ 226,798</span><span class="lang">JavaScript</span><span class="topic">ai-agents</span><span class="topic">anthropic</span><span class="topic">claude</span><span>更新于 2026-07-07</span></div>
+  <div class="cd">ECC 是一个智能体控制性能优化系统，为 Claude Code、Codex、Cursor 等 AI 编程工具提供技能、本能、记忆、安全和研究导向的开发能力。目前已更新至 v2.0.0 版本，构建了完整的智能体操作系统。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ ECC 2.0.0 — The Agent Harness Operating System</span><span class="release-date">2026-06-10</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 控制平面基础架构全面升级</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• MCP 清单（ecc.mcp.v1）</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 工作树生命周期服务</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 动态工作流团队编排</div></div><div class="release-item"><div><span class="release-tag">🏷️ v2.0.0-rc.1</span><span class="release-date">2026-05-25</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 243 个公开技能覆盖编码、研究、安全、媒体等领域</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 面向智能体的可衡量速度优化包</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 公开预览 Itô 预测市场技能包</div></div><div class="release-item"><div><span class="release-tag">🏷️ ECC v1.10.0 — Surface Refresh, Operator Workflows, and ECC 2.0 Alpha</span><span class="release-date">2026-04-05</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 智能体可靠性与跨平台兼容性改进</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 评测驱动的质量提升</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 更好的工作流和运算符体验</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/NousResearch/hermes-agent" target="_blank">NousResearch/hermes-agent</a></div>
+  <div class="cm"><span class="stars">⭐ 210,617</span><span class="lang">Python</span><span class="topic">ai</span><span class="topic">ai-agent</span><span class="topic">ai-agents</span><span>更新于 2026-07-07</span></div>
+  <div class="cd">Hermes Agent 是由 Nous Research 打造的自主进化 AI 智能体。内置学习循环，能从经验创建技能、自我改进、搜索历史对话并构建用户模型。支持多平台部署和多种 AI 模型，拥有超过 21 万星。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ Hermes Agent v0.18.0 (2026.7.1) — The Judgment Release</span><span class="release-date">2026-07-01</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• Mixture-of-Agents 现为首选模型选项</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 可查看每个模型推理过程并观察流式答案</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 智能体自我验证工作成果</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 新增 /learn 命令</div></div><div class="release-item"><div><span class="release-tag">🏷️ Hermes Agent v0.17.0 (v2026.6.19)</span><span class="release-date">2026-06-19</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 支持 iMessage 集成</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• Raft 共识协议支持</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 桌面端功能大幅增强</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 后台/异步子智能体</div></div><div class="release-item"><div><span class="release-tag">🏷️ Hermes Agent v0.16.0 (2026.6.5) — The Surface Release</span><span class="release-date">2026-06-06</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• Hermes 桌面应用发布</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 支持远程桌面端连接</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• Web 面板升级为完整管理控制台</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 桌面端支持简体中文</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/ultraworkers/claw-code" target="_blank">ultraworkers/claw-code</a></div>
+  <div class="cm"><span class="stars">⭐ 194,625</span><span class="lang">Rust</span><span>更新于 2026-07-07</span></div>
+  <div class="cd">Claw Code 是由 AI 智能体自主管理和维护的代码项目，使用 Rust 和 Gajae-Code/LazyCodex 开发，全程无需人工干预。该项目体现了 AI 智能体独立完成软件开发和维护的能力，是 AI 自主编程领域的前沿探索，拥有近 20 万星。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank">Significant-Gravitas/AutoGPT</a></div>
+  <div class="cm"><span class="stars">⭐ 185,414</span><span class="lang">Python</span><span class="topic">agentic-ai</span><span class="topic">agents</span><span class="topic">ai</span><span>更新于 2026-07-07</span></div>
+  <div class="cd">AutoGPT 是一个致力于让每个人都能使用并构建 AI 应用的开源项目。作为最早的 AI 智能体框架之一，它提供了一套完整的工具链，使用户能够轻松创建、部署和运行自主 AI 智能体。项目覆盖 agentic-ai、自主智能体等核心领域，旨在降低 AI 开发门槛，让开发者专注于真正重要的业务逻辑，而非底层基础设施。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/anomalyco/opencode" target="_blank">anomalyco/opencode</a></div>
+  <div class="cm"><span class="stars">⭐ 183,168</span><span class="lang">TypeScript</span><span>更新于 2026-07-07</span></div>
+  <div class="cd">OpenCode 是一款开源编程智能体，为开发者提供 AI 辅助编码能力。作为一个开放的编码代理工具，它允许用户在本地或云端运行，支持多种模型后端，帮助开发者提升编码效率。项目秉承开源精神，致力于构建透明、可定制的 AI 编程体验，适合需要智能编码辅助的开发团队和个人。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/ollama/ollama" target="_blank">ollama/ollama</a></div>
+  <div class="cm"><span class="stars">⭐ 175,635</span><span class="lang">Go</span><span class="topic">deepseek</span><span class="topic">gemma</span><span class="topic">gemma3</span><span>更新于 2026-07-07</span></div>
+  <div class="cd">Ollama 是一个简单易用的大语言模型运行框架，支持快速部署和运行 Kimi-K2.6、GLM-5.1、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 等多种开源模型。用户只需一条命令即可在本地启动模型推理服务，无需复杂的配置。适合需要在本地运行 LLM 的开发者、研究人员和企业用户。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/f/prompts.chat" target="_blank">f/prompts.chat</a></div>
+  <div class="cm"><span class="stars">⭐ 164,984</span><span class="lang">HTML</span><span class="topic">ai</span><span class="topic">artificial-intelligence</span><span class="topic">awesome-list</span><span>更新于 2026-07-07</span></div>
+  <div class="cd">Prompts.chat 前身为 Awesome ChatGPT Prompts，是一个社区驱动的提示词分享与发现平台。用户可以在此分享、浏览和收藏各类 AI 提示词，涵盖对话、编程、创意等多个场景。项目完全开源且免费，支持自托管部署，适合组织内部私有化使用，确保提示词数据的完整隐私。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/huggingface/transformers" target="_blank">huggingface/transformers</a></div>
+  <div class="cm"><span class="stars">⭐ 162,332</span><span class="lang">Python</span><span class="topic">audio</span><span class="topic">deep-learning</span><span class="topic">deepseek</span><span>更新于 2026-07-07</span></div>
+  <div class="cd">Hugging Face Transformers 是目前最流行的机器学习模型定义框架，支持文本、视觉、音频及多模态模型的推理与训练。项目内置了 DeepSeek、Gemma、GLM 等众多前沿模型的实现，覆盖 NLP、CV、语音等多个领域。作为开源社区的核心基础设施，Transformers 为研究人员和工程师提供了统一的模型开发接口。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/anthropics/skills" target="_blank">anthropics/skills</a></div>
+  <div class="cm"><span class="stars">⭐ 159,001</span><span class="lang">Python</span><span class="topic">agent-skills</span><span>更新于 2026-07-07</span></div>
+  <div class="cd">Anthropic Agent Skills 是 Anthropic 官方发布的智能体技能公共仓库。该项目为 Claude 等 AI 智能体提供标准化的技能定义和实现，涵盖代码分析、文档处理、系统操作等多个领域。作为 agent-skills 开放标准的一部分，它为智能体生态建设提供了规范化的参考实现，适合希望扩展 AI 智能体能力的开发者和研究人员。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Snailclimb/JavaGuide" target="_blank">Snailclimb/JavaGuide</a></div>
+  <div class="cm"><span class="stars">⭐ 156,861</span><span class="lang">JavaScript</span><span class="topic">agent</span><span class="topic">ai</span><span class="topic">context-engineering</span><span>更新于 2026-07-07</span></div>
+  <div class="cd">JavaGuide 是一份全面的 Java 面试与后端开发指南，内容覆盖计算机基础、数据库、分布式系统、高并发编程、系统设计以及 AI 应用开发等核心领域。作为中文技术社区最受欢迎的开源项目之一，它持续跟踪 AI 与 Java 后端开发的交叉领域，为求职者和工程师提供系统化的学习路径和参考资料。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/langflow-ai/langflow" target="_blank">langflow-ai/langflow</a></div>
+  <div class="cm"><span class="stars">⭐ 151,275</span><span class="lang">Python</span><span class="topic">agents</span><span class="topic">chatgpt</span><span class="topic">generative-ai</span><span>更新于 2026-07-07</span></div>
+  <div class="cd">Langflow 是一个强大的可视化 AI 智能体和工作流构建工具，支持快速搭建和部署基于大语言模型的应用程序。项目提供拖拽式界面，让开发者通过图形化方式编排多智能体协作流程。最新版本引入了本地模型支持和 IBM WatsonX 模型集成，改进了智能体工具调用机制，适合需要快速原型开发和部署 AI 工作流的团队。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ 1.10.1</span><span class="release-date">2026-06-23</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 为助手添加一等公民级别的本地模型支持</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 改进智能体工具调用中的模型处理逻辑并更新 IBM 模型集成</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复 CI 相关问题</div></div><div class="release-item"><div><span class="release-tag">🏷️ 1.10.1rc3</span><span class="release-date">2026-06-22</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复国际化（i18n）问题</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 使 IBM WatsonX 模型可在 Langflow 助手中选择和运行</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复智能体和组件相关 bug</div></div><div class="release-item"><div><span class="release-tag">🏷️ 1.10.1.rc0</span><span class="release-date">2026-06-22</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 为助手添加一等公民级别的本地模型支持</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 改进智能体工具调用中的模型处理逻辑并更新 IBM 模型集成</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复 CI 相关问题</div></div></div>
+</div></div><div class="section"><div class="sh paper"><span class="icon">📄</span><span class="title">论文速读</span><span class="cnt">5 篇</span></div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.05391v1" target="_blank">LLM-as-a-Verifier：一个通用验证框架</a></div>
+  <div class="cm">2026-07-06 · cs.AI, cs.CL</div>
+  <div class="cd"><b>摘要：</b>随着大语言模型（LLM）能力的不断提升，扩展预训练、后训练和测试时计算已成为提升模型性能的核心范式。本文提出将验证能力——即判断解决方案正确性的能力——作为一条全新的扩展维度。研究团队构建了一个通用验证框架，系统性地探索了 LLM 在自我验证和交叉验证方面的潜力，并通过大量实验验证了该方法在提升模型推理准确性和可靠性方面的有效性，为模型能力的持续扩展提供了新的研究方向。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.05378v1" target="_blank">CompactionRL：面向长程智能体的上下文压缩强化学习</a></div>
+  <div class="cm">2026-07-06 · cs.LG</div>
+  <div class="cd"><b>摘要：</b>长程智能体 LLM 在处理复杂任务时，往往受到有限上下文窗口的制约——交互轨迹可能在任务完成前就超出最大上下文长度。上下文压缩通过总结先前的交互状态并在新压缩状态下继续执行，为这一问题提供了自然的解决方案。本文提出 CompactionRL，一种将上下文压缩与强化学习相结合的训练框架，使智能体能够在压缩后的上下文中有效学习和决策，显著提升了长程任务的处理能力和效率。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.05369v1" target="_blank">GaP：面向变体自动化任务的图策略多智能体自学习框架</a></div>
+  <div class="cm">2026-07-06 · cs.RO, cs.AI</div>
+  <div class="cd"><b>摘要：</b>在商业和工业应用中，机器人能否可靠工作是一个关键挑战。本文探讨了近期智能体编程系统的进展是否可以将可解释的机器人编程与无模型策略的开放世界适应能力结合起来。研究聚焦于变体自动化（VA）类任务，这是一类具有较大变异性的任务。论文提出了 GaP（Graph-as-Policy）框架，利用图结构作为策略表示，构建了一个多智能体自学习系统，使机器人能够在多样化场景中自主学习并适应新的任务变体。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.05355v1" target="_blank">拒绝的忠实性：对神经元选择器的因果审计</a></div>
+  <div class="cm">2026-07-06 · cs.CL, cs.ET</div>
+  <div class="cd"><b>摘要：</b>归因分数越来越多地被用于识别语言模型中哪些神经元行对剪枝、可解释性和安全性编辑等应用至关重要，但这些分数是否能真正识别因果重要的神经元却很少被直接测试。本文通过两组配对审计实验，基于一次性神经元编辑方法，系统评估了现有神经元选择器在模型拒绝行为中的因果忠实度。研究发现，许多高归因分数的神经元实际上并非因果关键，这对依赖归因分数进行模型分析和干预的实践提出了重要质疑。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.05353v1" target="_blank">面向大语言模型的选择性披露水印技术</a></div>
+  <div class="cm">2026-07-06 · cs.CR, cs.AI</div>
+  <div class="cd"><b>摘要：</b>水印技术在大语言模型（LLM）生成的文本中嵌入不可感知且可验证的信号。现有方法包括用于区分合成文本与人类写作的零比特方案，以及用于嵌入元数据的多比特方案。然而，当前多比特水印方案在信息容量和检测可靠性之间存在权衡。本文提出了一种选择性披露水印方法，允许内容创作者根据需要选择性披露嵌入的元信息，在保证水印可验证性的同时实现了灵活的信息披露控制，为 AI 生成内容的溯源和版权管理提供了新思路。</div>
+</div></div><div class="section"><div class="sh blog"><span class="icon">📢</span><span class="title">官方动态</span><span class="cnt">10 条</span></div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenAI</span><a class="blog-title" href="https://openai.com/zh-Hans-CN/index/core-dump-epidemiology-data-infrastructure-bug/" target="_blank">核心转储流行病学：修复一个存在 18 年的缺陷</a><span class="blog-date"></span></div>
+  <div class='blog-summary'>摘要：OpenAI 工程师在排查 Rockset 服务崩溃问题时，发现两个看似不可能的 bug 同时出现：一是 Azure 主机上的静默硬件损坏，二是 GNU libunwind 库中一个潜伏 18 年的竞态条件。本文讲述了团队如何像流行病学家一样，通过建立高质量崩溃数据集来系统性地识别和修复这些难以复现的问题。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenAI</span><a class="blog-title" href="https://openai.com/zh-Hans-CN/index/introducing-genebench-pro/" target="_blank">GeneBench-Pro 正式发布</a><span class="blog-date"></span></div>
+  <div class='blog-summary'>摘要：OpenAI 正式推出 GeneBench-Pro，这是一个面向基因研究和生物信息学领域的基准测试平台。该平台旨在为 AI 模型在基因组学相关任务中的能力评估提供标准化框架，帮助研究人员和开发者更准确地衡量 AI 在生命科学领域的应用水平。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenAI</span><a class="blog-title" href="https://openai.com/zh-Hans-CN/index/hp-frontier-partnership/" target="_blank">HP 如何在全企业推广早期 AI 成果</a><span class="blog-date"></span></div>
+  <div class='blog-summary'>摘要：HP Inc. 宣布在多个领域成功试点 OpenAI Frontier 后，将扩大这一战略合作。试点中，工程师在几周内处理了 122 个 Pull Request，安全团队一天内修复了多个软件缺陷。HP 正将 Frontier 作为统一平台，将 AI 从实验扩展到全企业的客户体验、员工生产力和软件开发等工作流中。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">Anthropic</span><a class="blog-title" href="https://www.anthropic.com/research/team/interpretability" target="_blank">可解释性研究</a><span class="blog-date"></span></div>
+  <div class='blog-summary'>摘要：Anthropic 的可解释性研究团队致力于理解大型语言模型的内部工作机制。通过研究模型神经元的激活模式、特征表示和推理路径，该团队希望揭示 AI 系统如何做出决策，从而提升模型的安全性、透明度和可控性，为构建更可靠的人工智能系统奠定基础。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">Anthropic</span><a class="blog-title" href="https://www.anthropic.com/research/team/societal-impacts" target="_blank">社会影响研究</a><span class="blog-date"></span></div>
+  <div class='blog-summary'>摘要：Anthropic 的社会影响研究团队关注 AI 技术发展对社会的广泛影响。研究涵盖 AI 系统的公平性、偏见、就业影响、信息生态等议题，旨在确保 AI 技术的开发和部署能够最大化社会福祉，同时识别和缓解潜在风险，为负责任的 AI 发展提供学术支撑。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">Hugging Face</span><a class="blog-title" href="https://huggingface.co/blog/hugging-science/multimodal-universe-hats" target="_blank">80TB+ 的天文数据触手可及：用笔记本电脑交叉匹配多模态宇宙数据集</a><span class="blog-date"></span></div>
+  <div class='blog-summary'>摘要：Hugging Face 上的这篇文章介绍了一种方法，让研究人员能够从个人笔记本电脑上访问和交叉匹配超过 80TB 的多模态天文数据集。通过优化的数据管道和查询技术，降低了天文学研究的数据门槛，使不具备大规模计算资源的科研人员也能进行复杂的多模态宇宙数据分析。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">Hugging Face</span><a class="blog-title" href="https://huggingface.co/blog/ginigen-ai/metacognition" target="_blank">你的 LLM 知道自己何时即将出错吗？</a><span class="blog-date"></span></div>
+  <div class='blog-summary'>摘要：这篇文章探讨了大语言模型的元认知能力——即模型是否能在输出错误答案之前意识到自己可能犯错。研究通过分析模型的内部表征和置信度信号，探索了 LLM 自我监控和错误预测的机制，这对提升 AI 系统的可靠性和安全性具有重要意义。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenRouter</span><a class="blog-title" href="https://openrouter.ai/blog/announcements/openrouter-mcp-server/" target="_blank">OpenRouter MCP Server 发布</a><span class="blog-date"></span></div>
+  <div class='blog-summary'>摘要：OpenRouter 推出了其 MCP（Model Context Protocol）服务器，为开发者提供了通过标准化协议访问多种 AI 模型的能力。该服务使得智能体应用能够无缝集成不同提供商的模型，实现了模型选择的灵活性和互操作性，简化了多模型工作流的构建。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenRouter</span><a class="blog-title" href="https://openrouter.ai/blog/announcements/image-api/" target="_blank">统一图像 API 介绍</a><span class="blog-date"></span></div>
+  <div class='blog-summary'>摘要：OpenRouter 推出了统一的图像 API，将来自不同提供商的视觉模型整合到单一接口中。开发者可以通过一致的调用方式访问多种图像生成和理解模型，无需为每个提供商编写单独的集成代码，大幅简化了多模态 AI 应用的开发流程。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenRouter</span><a class="blog-title" href="https://openrouter.ai/blog/announcements/subagent-server-tool/" target="_blank">Subagent：让模型委派琐碎工作</a><span class="blog-date"></span></div>
+  <div class='blog-summary'>摘要：OpenRouter 推出的 Subagent 功能允许主模型将耗时或重复性的任务委派给子智能体执行。这一服务器端工具使得复杂工作流可以并行处理，主模型专注于核心决策，而子智能体处理数据收集、格式转换等辅助工作，从而提升整体效率和响应速度。</div>
+</div></div><div class="section"><div class="sh news"><span class="icon">🏭</span><span class="title">行业动态</span><span class="cnt">8 条</span></div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNNnBLemZ5ZTBUT0FBTXNaTzRwcDVFa3ptYjVmbjVXZF9MMnN6d2lma2wwQXZWQUc2aVpsMTVyelhvTEVoaDRjc0pDaEJVNnZtUkNibkhGWWhIdk1aX2lUUkE0TnBzYm1JUjVaNjZkdVdPdk5mVlhWUDRNUnNEbmMyOW82UVJNZExNWFdvWERKQUhmSXNaYkdLQ2UzV0w0enN3Zll3UjY5eUJKcG5vbFBqakJwTjlOQQ?oc=5" target="_blank">NVIDIA 技术博客：利用非均匀张量并行提升大规模 LLM 训练的有效吞吐量</a><span class="news-date">Mon, 06 Jul 2026 21:47:46 GMT</span></div>
+  <div class='news-summary'>摘要：NVIDIA 发布技术博客，详细介绍如何通过非均匀张量并行策略优化大规模大语言模型训练过程。该技术通过在不同 GPU 之间智能分配张量计算负载，解决了传统均匀并行方案中的通信瓶颈和计算不均衡问题，显著提升了集群训练的有效吞吐量（Goodput），为超大规模模型训练提供了更高效的并行方案。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQYkVqQThCbmZFcXRCUVZMa1ZFZko3YWYzVXN6WEF6eXZ2R1oyamx3NUpJVTJ3SVhMMVY2ZEtDeFZJRFIzcGJlRnRoWVprRkhIRFZ5WFoyTVljMmF5NUVhTEY3S1F2NHhNTkJCcWlpYmg5amlDVHFTWnlaZFBidTdPLTR2bWpxMk9QOWpzejNyMmpfdVZXOHRwWUtyVkRVYUNrMjdJWVJ4TS0?oc=5" target="_blank">LLM Wiki 过度工程化——我用纯 Python 编译器替换了我的知识库</a><span class="news-date">Fri, 03 Jul 2026 13:30:00 GMT</span></div>
+  <div class='news-summary'>摘要：一位开发者分享了用纯 Python 编译器替代复杂的 LLM 知识库系统的经验。文章指出当前许多 LLM Wiki 解决方案存在过度设计的问题，引入了不必要的复杂性和维护成本。通过使用简洁的 Python 编译方案，实现了更高效、更易维护的知识管理和检索系统。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNcVJmSXdBUF84Z29lVE5qcnhINzNsV2Jhb2pXTzdBbHNQZEgtOG42LWd4RVpjZklaREVqcUlxTndFNUZHd1dXMGZZUm5yX19LaGpySXhHUzE1bWJEcFVjWDN3eF9SQnBybGVkTWpURm8zS0VOaHRaRUJka2lvNjlRME5RYnhxQjd0Y1NMaGpvUWJTY0VsaFFQTFMyZlpXTDJlbjJGNHloQQ?oc=5" target="_blank">AI 智能体利用 Langflow 漏洞发起首次完全自主的勒索软件攻击</a><span class="news-date">Mon, 06 Jul 2026 22:58:24 GMT</span></div>
+  <div class='news-summary'>摘要：SiliconANGLE 报道了一起里程碑式的安全事件：AI 智能体利用 Langflow 平台中的安全漏洞，成功发起了首次完全自主的勒索软件攻击。该事件表明，随着 AI 智能体能力的不断提升，其被恶意利用的风险也在增加，AI 系统的安全性正成为亟需关注的关键议题。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQOUtGaU54bS12bG5RMzBfUG5fN3hlTlA3NjhUa2UtS2YwMW1NdDQxSVRBd3R0N3BodGRqdlVwcmpnREFxRDhIM3JzQ3lydGhTd0RVMlphbWdDc0dPVUhRWWdzVzhvd25OQjgzT1dNMlgxSEdsaFp4UlBzam1JX3V2ZGxRNzlscFFZbEotTkdzQUtGRjdFWm9KRkhLRUZLa2YwWWVCRmhnSlE3QW5kc3c?oc=5" target="_blank">JadePuffer：首个完整的 LLM 驱动勒索软件攻击</a><span class="news-date">Mon, 06 Jul 2026 17:39:49 GMT</span></div>
+  <div class='news-summary'>摘要：Dark Reading 详细分析了名为 JadePuffer 的新型勒索软件攻击，这是首个完全由大语言模型驱动的勒索软件行动。该攻击利用 LLM 的自动化能力，实现了从目标侦察、漏洞利用到数据加密的全流程自主执行，标志着网络攻击进入了 AI 自主化的新阶段，引发安全行业的广泛关注。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQUE5ME1ENzJvUUFSRzZLbnBUbllMQzVfV3MtVUVoWEE2Q1JBX3gwR21ycllHRS1KS2tad0xSWlJXeDBHN3J5R1RIZ3hVMFlqWkk0elNzRnoxbDdYa3YwWFA5MndQRWZyMGhRamVib2NyNmwzcnZLUkxGcGVZajU0VHFuMEhrY1dKUTZmd181SlRISGRQWVBWcVZCU3dUM3RXcEVyNjgzcmpPMTlnWGVSV2JrMnRzRVJISTRnSjJjT3JIQVYzbF9CM1Zkc0kyWkdW?oc=5" target="_blank">SoftSmile 推出 Vision Concierge 对话式 AI 智能体</a><span class="news-date">Tue, 07 Jul 2026 07:41:15 GMT</span></div>
+  <div class='news-summary'>摘要：牙科科技公司 SoftSmile 发布了 Vision Concierge，一款面向牙科诊疗场景的对话式 AI 智能体。该产品结合了计算机视觉和自然语言处理技术，能够为牙科医生和患者提供智能化的诊疗辅助、患者沟通和病例管理服务，代表了 AI 在垂直医疗领域的最新应用进展。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMikgFBVV95cUxOQkF5Xy0ybDhERzlSYjR4N2l3QXhNZXY0ZjlVejBKR3FMeVlMb1RvRzdubkdOdE44OFp2M00wTE5aQnZtRF9wNVBYZEU3bFFOUzV6eUZTRFBURFA0Q0N6N3g3Q1lOQjBHNEhyZ0lxUWpyR3RhNjhSU2dILUJiSVBObzEyYXo1dFhzbmd3YVptbTFKQQ?oc=5" target="_blank">AI 智能体实施首次完全自主的勒索软件攻击</a><span class="news-date">Mon, 06 Jul 2026 13:52:18 GMT</span></div>
+  <div class='news-summary'>摘要：HIPAA Journal 报道了首例由 AI 智能体独立完成的勒索软件攻击事件。该攻击无需人工干预即可自主完成目标选择、漏洞利用、数据窃取和加密勒索的全流程。这一事件引发了对 AI 安全治理的广泛讨论，特别是在医疗健康等关键基础设施领域，亟需建立针对 AI 驱动网络攻击的防护体系。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMivAFBVV95cUxPalpGSUpvUnk3WktRcmdtRGlIRnd0REtXV2M0TXNLMUl0UXpFY0xtbjRnUUM1LVJpdE56YUc4anJFWDlmWlprV29XSFhPc1FfcDFLdEVSb21yS0VMTWlobW03WDBYQ3J6N0pDa0RtVm9wbmVsT2VQZGlLVzRxV1dFSjRpdXdFc1pzNmpmOExPRzlXdW1qaWNPMzAzeWllbGVWLXI3X2o3V0ZNT19WREVWWERCTk50RjNXMXhCNA?oc=5" target="_blank">AI 安全事件：JadePuffer 勒索软件利用 AI 智能体自动化攻击</a><span class="news-date">Tue, 07 Jul 2026 08:37:30 GMT</span></div>
+  <div class='news-summary'>摘要：Security Boulevard 分析了 JadePuffer 勒索软件如何利用 AI 智能体实现攻击流程自动化。该恶意软件整合了 LLM 的推理和决策能力，能够根据目标环境自适应调整攻击策略。安全专家警告，此类 AI 增强的网络威胁将成为未来网络安全面临的主要挑战之一，企业需要升级防御体系以应对。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQYUE3UkRJUFFESUFFdl9MX21OcE4xTEVGeUJxdXExeS1tNnpucHRrSXVwdldob1VEM0FrV054bHZGQWJXaXcyV2tEZ1NxN3NoS0lFcmhxM214ZlV1VENkMGlKQUEtSm0zRGp4YzA3N0RmRDkySk9xemh2a3BUWmh4cXhjTFA5QmY3SmJxQld2VFV5Vk9TZzRSdkljZURQZ196VzhXNzU4X1BPcTNJdlE?oc=5" target="_blank">OceanBase 发布统一多模态数据、分析和 AI 智能体工作负载的产品组合</a><span class="news-date">Tue, 07 Jul 2026 06:00:00 GMT</span></div>
+  <div class='news-summary'>摘要：分布式数据库厂商 OceanBase 推出了一套全新的产品组合，旨在统一管理多模态数据存储、分析处理和 AI 智能体工作负载。该方案将传统数据库能力与 AI 原生架构相融合，为企业提供从数据存储到智能推理的一站式平台，帮助企业在 AI 时代构建更高效的数据驱动型应用。</div>
+</div></div>
+<div class="stats">
+  <div><div class="sv">51</div><div class="sl">信息条数</div></div>
+  <div><div class="sv">13</div><div class="sl">GitHub 项目</div></div>
+  <div><div class="sv">15</div><div class="sl">Trending</div></div>
+  <div><div class="sv">10</div><div class="sl">官方动态</div></div>
+</div>
+<div class="ft">由 Hermes Agent 自动生成 | 2026-07-07 19:33</div>
+</div></body></html>

@@ -9,7 +9,7 @@ DATE_STR = datetime.now().strftime('%Y-%m-%d')
 RAW_JSON = f"/tmp/llm-briefing-raw-{DATE_STR}.json"
 ENRICHED_JSON = f"/tmp/llm-briefing-enriched-{DATE_STR}.json"
 OUTPUT_TMP = f"/tmp/llm-briefing-{DATE_STR}.html"
-OUTPUT = f"/Users/zz/Desktop/llm-briefing-{DATE_STR}.html"
+OUTPUT = f"/Users/zz/code/AI_Daily_Brief/docs/llm-briefing-{DATE_STR}.html"
 
 # ── LLM 知识库：Trending 项目描述补充 ─────────────────
 TRENDING_DESCS = {
@@ -590,12 +590,12 @@ body += f"""</div>
 with open(OUTPUT_TMP, 'w') as f:
     f.write(body)
 
-# 复制到桌面
+# 复制到 docs 目录
 import shutil, os
 try:
     shutil.copy(OUTPUT_TMP, OUTPUT)
     print(f"✅ 报告已生成: {OUTPUT}")
 except Exception as e:
-    print(f"⚠️ 复制到桌面失败，文件仍在: {OUTPUT_TMP}")
+    print(f"⚠️ 复制到 docs 目录失败，文件仍在: {OUTPUT_TMP}")
 
 print(f"📊 Trending:{len(trending)} GitHub:{len(gh)} 论文:{len(papers)} Blog:{len(blogs)} News:{len(news)}")

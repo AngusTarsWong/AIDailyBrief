@@ -18,7 +18,7 @@ category: automation
 ┌─────────────────┐    ┌──────────────────────────────────┐    ┌─────────────────────┐    ┌─────────────────┐
 │  Phase 1 采集   │───▶│  Phase 2 逐批翻译                  │───▶│  Phase 2.5 合并      │───▶│  Phase 3 HTML   │
 │  (Python)       │    │  (每批 3-5 个项目，专注翻译)       │    │  (Python)           │    │  (Python)       │
-│  raw JSON       │    │  各批次写 batch-{N}.json           │    │  merged enriched    │    │  ~/Desktop/     │
+│  raw JSON       │    │  各批次写 batch-{N}.json           │    │  merged enriched    │    │  ~/code/AI_Daily_Brief/docs/     │
 │  /tmp/          │    │  /tmp/llm-briefing-batch-{N}.json  │    │  /tmp/              │    │  html           │
 │                 │    │                                  │    │                     │    │                 │
 └─────────────────┘    └──────────────────────────────────┘    └─────────────────────┘    └─────────────────┘
@@ -34,7 +34,7 @@ category: automation
 
 **输出**：
 - `/tmp/llm-briefing-raw-YYYY-MM-DD.json` — 原始采集数据，含 `github_strategy` 字段（记录当日实际使用的搜索关键词、过滤条件、排序方式和 fallback 标记）
-- 自动复制：`~/Desktop/llm-briefing-raw-YYYY-MM-DD.json`
+- 自动复制：`~/code/AI_Daily_Brief/docs/llm-briefing-raw-YYYY-MM-DD.json`
 
 ### Phase 2 — 逐批翻译（Hermes Agent 执行）
 
@@ -95,7 +95,7 @@ category: automation
 
 **输出**：
 - `/tmp/llm-briefing-YYYY-MM-DD.html`（临时文件）
-- 自动复制：`~/Desktop/llm-briefing-YYYY-MM-DD.html`
+- 自动复制：`~/code/AI_Daily_Brief/docs/llm-briefing-YYYY-MM-DD.html`
 
 ## GitHub API 访问方式
 
@@ -275,23 +275,23 @@ body = re.sub(r'^[\w\-]+:\s*', '', body)
 
 ⚠️ 如果回退到旧方案：Jina 对 `github.com` 域名会返回 **403 AbuseAlleviationError**（"DDoS attack suspected"）。所以当 GitHub API 限速时，**不要**依赖 Jina fallback 获取 releases。跳过即可。
 
-## 文件输出到桌面
+## 文件输出到 docs 目录
 
-**问题**：Hermes 沙箱（execute_code 和脚本运行）**无法直接写入 `~/Desktop/`**（macOS 沙箱权限拒绝，`PermissionError: Operation not permitted`）。
+**问题**：Hermes 沙箱（execute_code 和脚本运行）**无法直接写入 `~/code/AI_Daily_Brief/docs/`**（macOS 沙箱权限拒绝，`PermissionError: Operation not permitted`）。
 
-**解决方案**：脚本先写入 `/tmp/`，然后用 `shutil.copy` 复制到桌面：
+**解决方案**：脚本先写入 `/tmp/`，然后用 `shutil.copy` 复制到 docs 目录：
 
 ```python
 import shutil, os
 RAW_JSON = f"/tmp/llm-briefing-raw-{DATE_STR}.json"
 OUTPUT_TMP = f"/tmp/llm-briefing-{DATE_STR}.html"
-OUTPUT = f"/Users/zz/Desktop/llm-briefing-{DATE_STR}.html"
+OUTPUT = f"/Users/zz/code/AI_Daily_Brief/docs/llm-briefing-{DATE_STR}.html"
 
 # 写入 /tmp
 with open(OUTPUT_TMP, 'w') as f:
     f.write(body)
 
-# 复制到桌面
+# 复制到 docs 目录
 try:
     shutil.copy(OUTPUT_TMP, OUTPUT)
 except Exception as e:
@@ -299,7 +299,7 @@ except Exception as e:
     pass
 ```
 
-终端命令：`cp /tmp/llm-briefing-2026-07-06.html ~/Desktop/`
+终端命令：`cp /tmp/llm-briefing-2026-07-06.html ~/code/AI_Daily_Brief/docs/`
 
 ## 逐批翻译：批次输出格式
 
@@ -581,7 +581,7 @@ for en, zh in TRANSLATIONS.items():
 - `/tmp/llm-briefing-batches-{DATE}.json` — 翻译批次清单（Phase 2b）
 - `/tmp/llm-briefing-batch-{N}.json` — 各批次翻译结果（Phase 2 逐个处理）
 - `/tmp/llm-briefing-enriched-{DATE}.json` — 合并后的完整 enriched 数据（Phase 2.5）
-- `/Users/zz/Desktop/llm-briefing-YYYY-MM-DD.html` — 最终 HTML 报告（Phase 3）
+- `/Users/zz/code/AI_Daily_Brief/docs/llm-briefing-YYYY-MM-DD.html` — 最终 HTML 报告（Phase 3）
 
 ## 关键陷阱（必读）
 
@@ -597,7 +597,7 @@ for en, zh in TRANSLATIONS.items():
 7. **cdp_eval 不要用 `-d` 直接传 JS** — 引号/换行会被 shell 破坏，用 tempfile + `--data-binary`
 8. **Google News URL 不要用 CDP 打开** — redirect URL 太长会超时，用 Jina 提取真实 URL
 9. **Blog/News 标题先清洗再翻译** — Jina 返回的标题常黏连日期和来源名
-10. **文件先写 /tmp 再复制桌面** — 沙箱无法直写 `~/Desktop/`
+10. **文件先写 /tmp 再复制 docs 目录** — 沙箱无法直写 `~/code/AI_Daily_Brief/docs/`
 12. **GitHub Trending 已不再使用 CDP** — 改用 Jina 抓取，不依赖浏览器环境，无需等待 JS 渲染
 13. **GitHub Search API 查询字符串必须 URL 编码** — 用 `urllib.parse.quote(query)` 编码整个查询字符串，不要用 `+` 手动拼接。未编码的查询会导致静默返回 0 结果（HTTP 200 但 total_count: 0），不会报错，极难排查。详见 `references/github-api-patterns.md`。
 14. **`seen_repos` 必须在脚本顶部加载** — 在 `results` 初始化后立即 `load_seen_repos()`，不要延迟到 GitHub section 内部加载。否则末尾的 `update_seen_repos` 调用会 NameError，且无法在多个 section 间共享。
