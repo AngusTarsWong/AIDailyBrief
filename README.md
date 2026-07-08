@@ -2,6 +2,10 @@
 
 一个自动化的基于大语言模型与 Agent 技术的资讯收集 Skill，每天重点收集最新的 LLM 与 Agent 落地相关的开源项目、各家大模型厂商的最新动态、前沿论文和行业新闻。通过 AI 的深度参与（提取、过滤、翻译与丰富），大幅提升获取前沿技术资讯的效率。本项目也会定期将生成的日报报告归档，方便直接查看。
 
+## 在线预览
+
+- **日报总览页**：<https://angustarswong.github.io/AIDailyBrief/>
+
 ## 项目特点
 
 - **多数据源聚合**：包含 GitHub Trending、GitHub 热门项目（动态搜索策略）、arXiv 最新论文、Hacker News、Google News 以及各主流大模型厂商（OpenAI, Anthropic 等）的官方博客。
