@@ -45,12 +45,88 @@ body::before {
   letter-spacing: -0.02em;
 }
 .sub { color:#64748b; font-size:0.9rem; font-weight: 500; letter-spacing: 0.05em; }
+.progress-rail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(148, 163, 184, 0.08);
+  z-index: 20;
+}
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #34d399, #38bdf8, #a78bfa);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+  transition: width 0.12s ease-out;
+}
+.quick-nav {
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 1.2rem;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+.quick-nav-links {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+.quick-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(30, 41, 59, 0.65);
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: all 0.2s ease;
+}
+.quick-link:hover {
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.35);
+  transform: translateY(-1px);
+}
+.quick-link.active {
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.35);
+  background: rgba(37, 99, 235, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.12);
+}
+.quick-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.quick-status strong {
+  color: #f8fafc;
+  font-weight: 700;
+}
 .section {
   margin-bottom:2rem;
   padding: 1.2rem;
   border-radius: 20px;
   position: relative;
   background: rgba(27, 40, 56, 0.5);
+  scroll-margin-top: 88px;
 }
 .section::before {
   content: '';
@@ -240,9 +316,27 @@ body::before {
   .header h1 { font-size:1.5rem; }
   .card { padding:1rem 1.1rem; }
   .section { padding: 1rem 0.8rem; }
+  .quick-nav {
+    top: 8px;
+    padding: 0.75rem 0.8rem;
+  }
+  .quick-status {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
-</style></head><body><div class="container">
-<div class="header"><h1>📡 LLM & Agent Daily Briefing</h1><p class="sub">2026-07-07</p></div></div><div class="section"><div class="sh trending"><span class="icon">🔥</span><span class="title">GitHub Trending 今日热门</span><span class="cnt">15 条</span></div>
+</style></head><body><div class="progress-rail"><div id="progress-bar" class="progress-bar"></div></div><div class="container">
+<div class="header"><h1>📡 LLM & Agent Daily Briefing</h1><p class="sub">2026-07-07</p></div>
+<div class="quick-nav">
+  <div class="quick-nav-links">
+    <a class="quick-link" data-target="section-trending" href="#section-trending">🔥 Trending</a>
+    <a class="quick-link" data-target="section-github" href="#section-github">🚀 GitHub</a>
+    <a class="quick-link" data-target="section-paper" href="#section-paper">📄 论文</a>
+    <a class="quick-link" data-target="section-blog" href="#section-blog">📢 官方动态</a>
+    <a class="quick-link" data-target="section-news" href="#section-news">🏭 行业动态</a>
+  </div>
+  <div class="quick-status">当前阅读：<strong id="current-section-label">Trending</strong><span id="reading-percent">0%</span></div>
+</div><div id="section-trending" class="section"><div class="sh trending"><span class="icon">🔥</span><span class="title">GitHub Trending 今日热门</span><span class="cnt">15 条</span></div>
 <div class="card">
   <div class="ct"><a href="https://github.com/asgeirtj/system_prompts_leaks" target="_blank">asgeirtj / system_prompts_leaks</a></div>
   <div class="cm"><span class="stars">⭐ 52,177</span><span class="lang">JavaScript</span>1,378 stars today</div>
@@ -317,7 +411,7 @@ body::before {
   <div class="ct"><a href="https://github.com/gastownhall/gastown" target="_blank">gastownhall / gastown</a></div>
   <div class="cm"><span class="stars">⭐ 16,807</span><span class="lang">Go</span>291 stars today</div>
   <div class="cd">Gas Town 是一个多智能体工作区管理器（multi-agent workspace manager），用 Go 语言编写。在 AI 智能体应用日益复杂的背景下，如何有效组织、管理和协调多个 AI 智能体的工作空间和任务分配成为新的挑战。Gas Town 提供了统一的平台来管理多个智能体的工作环境、上下文状态和协作关系，使开发者能够更高效地构建和运行多智能体系统，契合当前 multi-agent 系统的发展趋势。</div>
-</div></div><div class="section"><div class="sh github"><span class="icon">🚀</span><span class="title">GitHub 热门项目</span><span class="cnt">13 项</span></div>
+</div></div><div id="section-github" class="section"><div class="sh github"><span class="icon">🚀</span><span class="title">GitHub 热门项目</span><span class="cnt">13 项</span></div>
 <p style="color:#64748b;font-size:0.85rem;margin-bottom:0.8rem;line-height:1.5">📅 新创建项目（近 7 天） | 🔍 pushed:>2026-06-07 | 🔑 LLM OR AI agent OR "large language model" (保底)</p>
 <div class="card">
   <div class="ct"><a href="https://github.com/openclaw/openclaw" target="_blank">openclaw/openclaw</a></div>
@@ -396,7 +490,7 @@ body::before {
   <div class="cm"><span class="stars">⭐ 151,275</span><span class="lang">Python</span><span class="topic">agents</span><span class="topic">chatgpt</span><span class="topic">generative-ai</span><span>更新于 2026-07-07</span></div>
   <div class="cd">Langflow 是一个强大的可视化 AI 智能体和工作流构建工具，支持快速搭建和部署基于大语言模型的应用程序。项目提供拖拽式界面，让开发者通过图形化方式编排多智能体协作流程。最新版本引入了本地模型支持和 IBM WatsonX 模型集成，改进了智能体工具调用机制，适合需要快速原型开发和部署 AI 工作流的团队。</div>
   <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ 1.10.1</span><span class="release-date">2026-06-23</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 为助手添加一等公民级别的本地模型支持</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 改进智能体工具调用中的模型处理逻辑并更新 IBM 模型集成</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复 CI 相关问题</div></div><div class="release-item"><div><span class="release-tag">🏷️ 1.10.1rc3</span><span class="release-date">2026-06-22</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复国际化（i18n）问题</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 使 IBM WatsonX 模型可在 Langflow 助手中选择和运行</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复智能体和组件相关 bug</div></div><div class="release-item"><div><span class="release-tag">🏷️ 1.10.1.rc0</span><span class="release-date">2026-06-22</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 为助手添加一等公民级别的本地模型支持</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 改进智能体工具调用中的模型处理逻辑并更新 IBM 模型集成</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复 CI 相关问题</div></div></div>
-</div></div><div class="section"><div class="sh paper"><span class="icon">📄</span><span class="title">论文速读</span><span class="cnt">5 篇</span></div>
+</div></div><div id="section-paper" class="section"><div class="sh paper"><span class="icon">📄</span><span class="title">论文速读</span><span class="cnt">5 篇</span></div>
 <div class="card">
   <div class="ct"><a href="https://arxiv.org/abs/2607.05391v1" target="_blank">LLM-as-a-Verifier：一个通用验证框架</a></div>
   <div class="cm">2026-07-06 · cs.AI, cs.CL</div>
@@ -421,7 +515,7 @@ body::before {
   <div class="ct"><a href="https://arxiv.org/abs/2607.05353v1" target="_blank">面向大语言模型的选择性披露水印技术</a></div>
   <div class="cm">2026-07-06 · cs.CR, cs.AI</div>
   <div class="cd"><b>摘要：</b>水印技术在大语言模型（LLM）生成的文本中嵌入不可感知且可验证的信号。现有方法包括用于区分合成文本与人类写作的零比特方案，以及用于嵌入元数据的多比特方案。然而，当前多比特水印方案在信息容量和检测可靠性之间存在权衡。本文提出了一种选择性披露水印方法，允许内容创作者根据需要选择性披露嵌入的元信息，在保证水印可验证性的同时实现了灵活的信息披露控制，为 AI 生成内容的溯源和版权管理提供了新思路。</div>
-</div></div><div class="section"><div class="sh blog"><span class="icon">📢</span><span class="title">官方动态</span><span class="cnt">10 条</span></div>
+</div></div><div id="section-blog" class="section"><div class="sh blog"><span class="icon">📢</span><span class="title">官方动态</span><span class="cnt">10 条</span></div>
 <div class="blog-card">
   <div><span class="blog-src">OpenAI</span><a class="blog-title" href="https://openai.com/zh-Hans-CN/index/core-dump-epidemiology-data-infrastructure-bug/" target="_blank">核心转储流行病学：修复一个存在 18 年的缺陷</a><span class="blog-date"></span></div>
   <div class='blog-summary'>摘要：OpenAI 工程师在排查 Rockset 服务崩溃问题时，发现两个看似不可能的 bug 同时出现：一是 Azure 主机上的静默硬件损坏，二是 GNU libunwind 库中一个潜伏 18 年的竞态条件。本文讲述了团队如何像流行病学家一样，通过建立高质量崩溃数据集来系统性地识别和修复这些难以复现的问题。</div>
@@ -461,7 +555,7 @@ body::before {
 <div class="blog-card">
   <div><span class="blog-src">OpenRouter</span><a class="blog-title" href="https://openrouter.ai/blog/announcements/subagent-server-tool/" target="_blank">Subagent：让模型委派琐碎工作</a><span class="blog-date"></span></div>
   <div class='blog-summary'>摘要：OpenRouter 推出的 Subagent 功能允许主模型将耗时或重复性的任务委派给子智能体执行。这一服务器端工具使得复杂工作流可以并行处理，主模型专注于核心决策，而子智能体处理数据收集、格式转换等辅助工作，从而提升整体效率和响应速度。</div>
-</div></div><div class="section"><div class="sh news"><span class="icon">🏭</span><span class="title">行业动态</span><span class="cnt">8 条</span></div>
+</div></div><div id="section-news" class="section"><div class="sh news"><span class="icon">🏭</span><span class="title">行业动态</span><span class="cnt">8 条</span></div>
 <div class="news-card">
   <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNNnBLemZ5ZTBUT0FBTXNaTzRwcDVFa3ptYjVmbjVXZF9MMnN6d2lma2wwQXZWQUc2aVpsMTVyelhvTEVoaDRjc0pDaEJVNnZtUkNibkhGWWhIdk1aX2lUUkE0TnBzYm1JUjVaNjZkdVdPdk5mVlhWUDRNUnNEbmMyOW82UVJNZExNWFdvWERKQUhmSXNaYkdLQ2UzV0w0enN3Zll3UjY5eUJKcG5vbFBqakJwTjlOQQ?oc=5" target="_blank">NVIDIA 技术博客：利用非均匀张量并行提升大规模 LLM 训练的有效吞吐量</a><span class="news-date">Mon, 06 Jul 2026 21:47:46 GMT</span></div>
   <div class='news-summary'>摘要：NVIDIA 发布技术博客，详细介绍如何通过非均匀张量并行策略优化大规模大语言模型训练过程。该技术通过在不同 GPU 之间智能分配张量计算负载，解决了传统均匀并行方案中的通信瓶颈和计算不均衡问题，显著提升了集群训练的有效吞吐量（Goodput），为超大规模模型训练提供了更高效的并行方案。</div>
@@ -501,4 +595,50 @@ body::before {
   <div><div class="sv">10</div><div class="sl">官方动态</div></div>
 </div>
 <div class="ft">由 Hermes Agent 自动生成 | 2026-07-07 19:33</div>
-</div></body></html>
+</div>
+<script>
+(() => {
+  const progressBar = document.getElementById('progress-bar');
+  const percentLabel = document.getElementById('reading-percent');
+  const currentLabel = document.getElementById('current-section-label');
+  const links = Array.from(document.querySelectorAll('.quick-link'));
+  const sections = links
+    .map(link => {
+      const id = link.getAttribute('data-target');
+      const section = document.getElementById(id);
+      return section ? { id, link, section, label: link.textContent.trim() } : null;
+    })
+    .filter(Boolean);
+
+  function updateProgress() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = maxScroll > 0 ? Math.min(100, Math.max(0, (scrollTop / maxScroll) * 100)) : 0;
+    progressBar.style.width = percent + '%';
+    percentLabel.textContent = Math.round(percent) + '%';
+  }
+
+  function updateActiveSection() {
+    const trigger = window.innerHeight * 0.22;
+    let current = sections[0];
+    for (const item of sections) {
+      const rect = item.section.getBoundingClientRect();
+      if (rect.top <= trigger) {
+        current = item;
+      }
+    }
+    if (!current) return;
+    links.forEach(link => link.classList.remove('active'));
+    current.link.classList.add('active');
+    currentLabel.textContent = current.label.replace(/^[^\s]+\s/, '');
+  }
+
+  function onScroll() {
+    updateProgress();
+    updateActiveSection();
+  }
+
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script></body></html>

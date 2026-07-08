@@ -265,12 +265,88 @@ body::before {{
   letter-spacing: -0.02em;
 }}
 .sub {{ color:#64748b; font-size:0.9rem; font-weight: 500; letter-spacing: 0.05em; }}
+.progress-rail {{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(148, 163, 184, 0.08);
+  z-index: 20;
+}}
+.progress-bar {{
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #34d399, #38bdf8, #a78bfa);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+  transition: width 0.12s ease-out;
+}}
+.quick-nav {{
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 1.2rem;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}}
+.quick-nav-links {{
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}}
+.quick-link {{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(30, 41, 59, 0.65);
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: all 0.2s ease;
+}}
+.quick-link:hover {{
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.35);
+  transform: translateY(-1px);
+}}
+.quick-link.active {{
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.35);
+  background: rgba(37, 99, 235, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.12);
+}}
+.quick-status {{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}}
+.quick-status strong {{
+  color: #f8fafc;
+  font-weight: 700;
+}}
 .section {{
   margin-bottom:2rem;
   padding: 1.2rem;
   border-radius: 20px;
   position: relative;
   background: rgba(27, 40, 56, 0.5);
+  scroll-margin-top: 88px;
 }}
 .section::before {{
   content: '';
@@ -460,12 +536,31 @@ body::before {{
   .header h1 {{ font-size:1.5rem; }}
   .card {{ padding:1rem 1.1rem; }}
   .section {{ padding: 1rem 0.8rem; }}
+  .quick-nav {{
+    top: 8px;
+    padding: 0.75rem 0.8rem;
+  }}
+  .quick-status {{
+    width: 100%;
+    justify-content: space-between;
+  }}
 }}
-</style></head><body><div class="container">
+</style></head><body><div class="progress-rail"><div id="progress-bar" class="progress-bar"></div></div><div class="container">
 <div class="header"><h1>📡 LLM & Agent Daily Briefing</h1><p class="sub">{DATE}</p></div>"""
+body += """
+<div class="quick-nav">
+  <div class="quick-nav-links">
+    <a class="quick-link" data-target="section-trending" href="#section-trending">🔥 Trending</a>
+    <a class="quick-link" data-target="section-github" href="#section-github">🚀 GitHub</a>
+    <a class="quick-link" data-target="section-paper" href="#section-paper">📄 论文</a>
+    <a class="quick-link" data-target="section-blog" href="#section-blog">📢 官方动态</a>
+    <a class="quick-link" data-target="section-news" href="#section-news">🏭 行业动态</a>
+  </div>
+  <div class="quick-status">当前阅读：<strong id="current-section-label">Trending</strong><span id="reading-percent">0%</span></div>
+</div>"""
 
 # 1. GitHub Trending
-body += f"""</div><div class="section"><div class="sh trending"><span class="icon">🔥</span><span class="title">GitHub Trending 今日热门</span><span class="cnt">{len(trending)} 条</span></div>"""
+body += f"""<div id="section-trending" class="section"><div class="sh trending"><span class="icon">🔥</span><span class="title">GitHub Trending 今日热门</span><span class="cnt">{len(trending)} 条</span></div>"""
 for p in trending:
     s = f"{p.get('stars','')}"
     t = p.get('today','')
@@ -495,7 +590,7 @@ if strategy_query:
     parts.append(f"🔑 {strategy_query}")
 strategy_info = " | ".join(parts) if parts else "按 Stars 排序的 LLM/Agent 开源项目"
 
-body += f"""</div><div class="section"><div class="sh github"><span class="icon">🚀</span><span class="title">GitHub 热门项目</span><span class="cnt">{len(gh)} 项</span></div>
+body += f"""</div><div id="section-github" class="section"><div class="sh github"><span class="icon">🚀</span><span class="title">GitHub 热门项目</span><span class="cnt">{len(gh)} 项</span></div>
 <p style="color:#64748b;font-size:0.85rem;margin-bottom:0.8rem;line-height:1.5">{strategy_info}</p>"""
 for p in gh:
     s = f"{p['stars']:,}"
@@ -540,7 +635,7 @@ for p in gh:
 </div>"""
 
 # 3. 论文速读
-body += f"""</div><div class="section"><div class="sh paper"><span class="icon">📄</span><span class="title">论文速读</span><span class="cnt">{len(papers)} 篇</span></div>"""
+body += f"""</div><div id="section-paper" class="section"><div class="sh paper"><span class="icon">📄</span><span class="title">论文速读</span><span class="cnt">{len(papers)} 篇</span></div>"""
 for p in papers:
     c = ', '.join(p['cats']) if p.get('cats') else ''
     body += f"""
@@ -551,7 +646,7 @@ for p in papers:
 </div>"""
 
 # 4. 官方动态
-body += f"""</div><div class="section"><div class="sh blog"><span class="icon">📢</span><span class="title">官方动态</span><span class="cnt">{len(blogs)} 条</span></div>"""
+body += f"""</div><div id="section-blog" class="section"><div class="sh blog"><span class="icon">📢</span><span class="title">官方动态</span><span class="cnt">{len(blogs)} 条</span></div>"""
 for b in blogs:
     src = b.get('source', '')
     src_cls = src.lower().replace(' ', '-')
@@ -564,7 +659,7 @@ for b in blogs:
 </div>"""
 
 # 5. 行业动态
-body += f"""</div><div class="section"><div class="sh news"><span class="icon">🏭</span><span class="title">行业动态</span><span class="cnt">{len(news)} 条</span></div>"""
+body += f"""</div><div id="section-news" class="section"><div class="sh news"><span class="icon">🏭</span><span class="title">行业动态</span><span class="cnt">{len(news)} 条</span></div>"""
 for n in news:
     src = n.get('source', 'Google News')
     title_zh = n.get('title_zh', n.get('title', ''))
@@ -585,7 +680,53 @@ body += f"""</div>
   <div><div class="sv">{len(blogs)}</div><div class="sl">官方动态</div></div>
 </div>
 <div class="ft">由 Hermes Agent 自动生成 | {datetime.now().strftime('%Y-%m-%d %H:%M')}</div>
-</div></body></html>"""
+</div>
+<script>
+(() => {{
+  const progressBar = document.getElementById('progress-bar');
+  const percentLabel = document.getElementById('reading-percent');
+  const currentLabel = document.getElementById('current-section-label');
+  const links = Array.from(document.querySelectorAll('.quick-link'));
+  const sections = links
+    .map(link => {{
+      const id = link.getAttribute('data-target');
+      const section = document.getElementById(id);
+      return section ? {{ id, link, section, label: link.textContent.trim() }} : null;
+    }})
+    .filter(Boolean);
+
+  function updateProgress() {{
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = maxScroll > 0 ? Math.min(100, Math.max(0, (scrollTop / maxScroll) * 100)) : 0;
+    progressBar.style.width = percent + '%';
+    percentLabel.textContent = Math.round(percent) + '%';
+  }}
+
+  function updateActiveSection() {{
+    const trigger = window.innerHeight * 0.22;
+    let current = sections[0];
+    for (const item of sections) {{
+      const rect = item.section.getBoundingClientRect();
+      if (rect.top <= trigger) {{
+        current = item;
+      }}
+    }}
+    if (!current) return;
+    links.forEach(link => link.classList.remove('active'));
+    current.link.classList.add('active');
+    currentLabel.textContent = current.label.replace(/^[^\\s]+\\s/, '');
+  }}
+
+  function onScroll() {{
+    updateProgress();
+    updateActiveSection();
+  }}
+
+  onScroll();
+  window.addEventListener('scroll', onScroll, {{ passive: true }});
+}})();
+</script></body></html>"""
 
 with open(OUTPUT_TMP, 'w') as f:
     f.write(body)

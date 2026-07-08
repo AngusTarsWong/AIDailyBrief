@@ -45,12 +45,88 @@ body::before {
   letter-spacing: -0.02em;
 }
 .sub { color:#64748b; font-size:0.9rem; font-weight: 500; letter-spacing: 0.05em; }
+.progress-rail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(148, 163, 184, 0.08);
+  z-index: 20;
+}
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #34d399, #38bdf8, #a78bfa);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+  transition: width 0.12s ease-out;
+}
+.quick-nav {
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 1.2rem;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+.quick-nav-links {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+.quick-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(30, 41, 59, 0.65);
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: all 0.2s ease;
+}
+.quick-link:hover {
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.35);
+  transform: translateY(-1px);
+}
+.quick-link.active {
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.35);
+  background: rgba(37, 99, 235, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.12);
+}
+.quick-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.quick-status strong {
+  color: #f8fafc;
+  font-weight: 700;
+}
 .section {
   margin-bottom:2rem;
   padding: 1.2rem;
   border-radius: 20px;
   position: relative;
   background: rgba(27, 40, 56, 0.5);
+  scroll-margin-top: 88px;
 }
 .section::before {
   content: '';
@@ -240,9 +316,27 @@ body::before {
   .header h1 { font-size:1.5rem; }
   .card { padding:1rem 1.1rem; }
   .section { padding: 1rem 0.8rem; }
+  .quick-nav {
+    top: 8px;
+    padding: 0.75rem 0.8rem;
+  }
+  .quick-status {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
-</style></head><body><div class="container">
-<div class="header"><h1>📡 LLM & Agent Daily Briefing</h1><p class="sub">2026-07-08</p></div></div><div class="section"><div class="sh trending"><span class="icon">🔥</span><span class="title">GitHub Trending 今日热门</span><span class="cnt">12 条</span></div>
+</style></head><body><div class="progress-rail"><div id="progress-bar" class="progress-bar"></div></div><div class="container">
+<div class="header"><h1>📡 LLM & Agent Daily Briefing</h1><p class="sub">2026-07-08</p></div>
+<div class="quick-nav">
+  <div class="quick-nav-links">
+    <a class="quick-link" data-target="section-trending" href="#section-trending">🔥 Trending</a>
+    <a class="quick-link" data-target="section-github" href="#section-github">🚀 GitHub</a>
+    <a class="quick-link" data-target="section-paper" href="#section-paper">📄 论文</a>
+    <a class="quick-link" data-target="section-blog" href="#section-blog">📢 官方动态</a>
+    <a class="quick-link" data-target="section-news" href="#section-news">🏭 行业动态</a>
+  </div>
+  <div class="quick-status">当前阅读：<strong id="current-section-label">Trending</strong><span id="reading-percent">0%</span></div>
+</div><div id="section-trending" class="section"><div class="sh trending"><span class="icon">🔥</span><span class="title">GitHub Trending 今日热门</span><span class="cnt">12 条</span></div>
 <div class="card">
   <div class="ct"><a href="https://github.com/MadsLorentzen/ai-job-search" target="_blank">MadsLorentzen / ai-job-search</a></div>
   <div class="cm"><span class="stars">⭐ 11,339</span><span class="lang">TypeScript</span>2,514 stars today</div>
@@ -302,7 +396,7 @@ body::before {
   <div class="ct"><a href="https://github.com/hesreallyhim/awesome-claude-code" target="_blank">hesreallyhim / awesome-claude-code</a></div>
   <div class="cm"><span class="stars">⭐ 49,188</span><span class="lang">Python</span>144 stars today</div>
   <div class="cd">精心策划的 Claude Code 生态资源合集，由 Anthropic 社区维护。在 Claude Code 快速成为主流 AI 编程工具后，社区涌现了大量技能插件、自定义命令、状态行主题和开发工具。该项目系统性地整理了这些资源，涵盖技能框架、智能体配置、开发者工具链和插件生态。对于使用 Claude Code 的开发者来说，这是发现高质量扩展资源的一站式入口。</div>
-</div></div><div class="section"><div class="sh github"><span class="icon">🚀</span><span class="title">GitHub 热门项目</span><span class="cnt">22 项</span></div>
+</div></div><div id="section-github" class="section"><div class="sh github"><span class="icon">🚀</span><span class="title">GitHub 热门项目</span><span class="cnt">22 项</span></div>
 <p style="color:#64748b;font-size:0.85rem;margin-bottom:0.8rem;line-height:1.5">📅 中型潜力股（500-50K stars） | 🔍 pushed:>2026-06-08 | 🔑 LLM OR AI agent OR "large language model" (保底)</p>
 <div class="card">
   <div class="ct"><a href="https://github.com/CopilotKit/CopilotKit" target="_blank">CopilotKit/CopilotKit</a></div>
@@ -435,7 +529,7 @@ body::before {
   <div class="cm"><span class="stars">⭐ 12,987</span><span class="lang">Python</span><span class="topic">model</span><span>更新于 2026-07-07</span></div>
   <div class="cd">PaddleFormers 是基于百度飞桨（PaddlePaddle）深度学习框架开发的预训练大语言模型库。该库提供了一套简单易用的API接口，集成了多种主流的Transformer架构预训练模型，涵盖文本分类、命名实体识别、机器翻译、文本生成等自然语言处理任务。开发者可以通过PaddleFormers快速加载预训练模型并进行微调，大幅降低大语言模型的应用门槛。该库充分利用了飞桨框架的分布式训练能力和高性能推理引擎，支持大规模模型的训练与部署，是国内AI开发者进行大语言模型研究和应用的重要开源工具。</div>
   <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ PaddleFormers v1.2</span><span class="release-date">2026-06-19</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;line-height:1.5">PaddleFormers v1.2 版本新增了 CI 构建脚本并更新了每日构建存储桶配置。核心功能是添加了 QLoRA 上的 tensor parallelism 支持，以及 cherry-pick 了混合 expert parallel sharding 优化。这些改动提升了大规模模型在 Paddle 框架下的分布式训练效率和 CI 流程稳定性。</div></div><div class="release-item"><div><span class="release-tag">🏷️ PaddleFormers v1.1</span><span class="release-date">2026-04-02</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;line-height:1.5">PaddleFormers v1.1 正式版本引入多项关键特性。核心新增功能是支持 GLM-4.5 的 multi-token prediction（MTP）训练，该特性可显著提升训练吞吐量和生成效率。同时包含了多项改进和优化，进一步完善了 Paddle 生态下 Transformer 模型的训练支持。</div></div><div class="release-item"><div><span class="release-tag">🏷️ PaddleFormers v1.0</span><span class="release-date">2026-01-21</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;line-height:1.5">PaddleFormers v1.0 是首个正式版本，初始支持多个主流模型架构，包括 paddleocr_vl（视觉语言模型）、phi3、qwen2_5_vl（视觉语言模型）和 qwen3_next。该版本标志着 PaddlePaddle 正式推出兼容 HuggingFace Transformers 风格的模型推理与微调框架。</div></div></div>
-</div></div><div class="section"><div class="sh paper"><span class="icon">📄</span><span class="title">论文速读</span><span class="cnt">5 篇</span></div>
+</div></div><div id="section-paper" class="section"><div class="sh paper"><span class="icon">📄</span><span class="title">论文速读</span><span class="cnt">5 篇</span></div>
 <div class="card">
   <div class="ct"><a href="https://arxiv.org/abs/2607.06564v1" target="_blank">Lift3D-VLA：提升 VLA 模型的 3D 几何与动态感知操作能力</a></div>
   <div class="cm">2026-07-07 · cs.RO, cs.CV</div>
@@ -460,7 +554,7 @@ body::before {
   <div class="ct"><a href="https://arxiv.org/abs/2607.06528v1" target="_blank">学术知识图谱中信任感知的引用联盟排序</a></div>
   <div class="cm">2026-07-07 · cs.SI</div>
   <div class="cd"><b>摘要：</b>基于引用的系统通常将每次引用视为同等重要的学术影响力信号，但实际上引用可能存在"联盟"行为（互相引用以提升排名）。本文提出信任感知的引用联盟排序方法，通过分析引用网络结构和引用模式，识别并降低可疑引用联盟的影响，为学术影响力评估提供更可靠的排名机制。</div>
-</div></div><div class="section"><div class="sh blog"><span class="icon">📢</span><span class="title">官方动态</span><span class="cnt">3 条</span></div>
+</div></div><div id="section-blog" class="section"><div class="sh blog"><span class="icon">📢</span><span class="title">官方动态</span><span class="cnt">3 条</span></div>
 <div class="blog-card">
   <div><span class="blog-src">OpenAI</span><a class="blog-title" href="https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug/" target="_blank">核心转储流行病学：修复一个存在 18 年的缺陷</a><span class="blog-date">2026-06-30</span></div>
   
@@ -472,7 +566,7 @@ body::before {
 <div class="blog-card">
   <div><span class="blog-src">Anthropic</span><a class="blog-title" href="https://www.anthropic.com/research/project-fetch-phase-two" target="_blank">前沿红队 Project Fetch：第二阶段</a><span class="blog-date">2026-06-18</span></div>
   
-</div></div><div class="section"><div class="sh news"><span class="icon">🏭</span><span class="title">行业动态</span><span class="cnt">8 条</span></div>
+</div></div><div id="section-news" class="section"><div class="sh news"><span class="icon">🏭</span><span class="title">行业动态</span><span class="cnt">8 条</span></div>
 <div class="news-card">
   <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMipAFBVV95cUxNMktXeVZMU1pEUkh5RjJ2WFV5aFdUUjZnUC1YMHc3N0NUVlBySlN0ZFFLRGFtb0RXMHEyUF9vR20tMHlrOTBsSHJ1dlNJODFWMy1sMkRGSS1QaC14c2M4QmYwcEZUTjcwdWNIcmd2UjB1cllyY1cyQjRMcDJHTFY3VzlQUmUzX2dYSTJOZlh3X0ZBM2pQN2o4QkF5N21KZFotcHpPQg?oc=5" target="_blank">亚利桑那州图森市寻求AI智能体以提升公共服务交付能力</a><span class="news-date">Tue, 07 Jul 2026 21:15:27 GMT</span></div>
   <div class='news-summary'>摘要：亚利桑那州图森市政府发布采购需求，计划引入AI智能体技术以优化公共服务交付流程。该项目旨在利用人工智能自动化处理市民服务请求，提高服务响应速度和办事效率，同时降低运营成本。此举标志着地方政府正在积极探索AI技术在实际政务场景中的应用，以改善市民体验并推动智慧城市建设。</div>
@@ -511,5 +605,51 @@ body::before {
   <div><div class="sv">12</div><div class="sl">Trending</div></div>
   <div><div class="sv">3</div><div class="sl">官方动态</div></div>
 </div>
-<div class="ft">由 Hermes Agent 自动生成 | 2026-07-08 19:14</div>
-</div></body></html>
+<div class="ft">由 Hermes Agent 自动生成 | 2026-07-08 19:54</div>
+</div>
+<script>
+(() => {
+  const progressBar = document.getElementById('progress-bar');
+  const percentLabel = document.getElementById('reading-percent');
+  const currentLabel = document.getElementById('current-section-label');
+  const links = Array.from(document.querySelectorAll('.quick-link'));
+  const sections = links
+    .map(link => {
+      const id = link.getAttribute('data-target');
+      const section = document.getElementById(id);
+      return section ? { id, link, section, label: link.textContent.trim() } : null;
+    })
+    .filter(Boolean);
+
+  function updateProgress() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = maxScroll > 0 ? Math.min(100, Math.max(0, (scrollTop / maxScroll) * 100)) : 0;
+    progressBar.style.width = percent + '%';
+    percentLabel.textContent = Math.round(percent) + '%';
+  }
+
+  function updateActiveSection() {
+    const trigger = window.innerHeight * 0.22;
+    let current = sections[0];
+    for (const item of sections) {
+      const rect = item.section.getBoundingClientRect();
+      if (rect.top <= trigger) {
+        current = item;
+      }
+    }
+    if (!current) return;
+    links.forEach(link => link.classList.remove('active'));
+    current.link.classList.add('active');
+    currentLabel.textContent = current.label.replace(/^[^\s]+\s/, '');
+  }
+
+  function onScroll() {
+    updateProgress();
+    updateActiveSection();
+  }
+
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script></body></html>
