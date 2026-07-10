@@ -11,7 +11,9 @@ import json, subprocess, re, html as html_mod, base64, time, os
 from datetime import datetime
 
 PROXY = "http://127.0.0.1:6789"
-DATE_STR = datetime.now().strftime('%Y-%m-%d')
+REPORT_DATE = os.environ.get('BRIEF_DATE')
+REPORT_DATETIME = datetime.strptime(REPORT_DATE, '%Y-%m-%d') if REPORT_DATE else datetime.now()
+DATE_STR = REPORT_DATETIME.strftime('%Y-%m-%d')
 RAW_JSON = f"/tmp/llm-briefing-raw-{DATE_STR}.json"
 
 def run(cmd, timeout=15):
@@ -345,7 +347,7 @@ def fetch_page_content_jina(url, timeout=20):
 def get_daily_search_strategy():
     """根据星期几轮换搜索策略，避免每天都是同样的项目"""
     from datetime import timedelta
-    today = datetime.now()
+    today = REPORT_DATETIME
     day = today.weekday()  # 0=周一, 6=周日
     
     # 动态日期计算
@@ -624,7 +626,7 @@ if len(results['github']) < MIN_GITHUB_ITEMS:
 if len(results['github']) < MIN_GITHUB_ITEMS:
     print(f"  🔍 仅 {len(results['github'])} 个，换经典关键词重搜...")
     from datetime import timedelta
-    d30_fallback = (datetime.now() - timedelta(days=30)).strftime('%Y-%m-%d')
+    d30_fallback = (REPORT_DATETIME - timedelta(days=30)).strftime('%Y-%m-%d')
     new_items3, filtered_out3 = collect_github_items(
         'LLM OR AI agent OR "large language model"', f'pushed:>{d30_fallback}', 'stars'
     )

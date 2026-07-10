@@ -2,10 +2,10 @@
 """LLM & Agent Daily Briefing - Phase 2: 信息增强 + HTML 生成
 读取 raw JSON，用 LLM 知识补充翻译和信息，生成最终 HTML。
 """
-import json, sys, re, html as html_mod
+import json, sys, re, os, html as html_mod
 from datetime import datetime
 
-DATE_STR = datetime.now().strftime('%Y-%m-%d')
+DATE_STR = os.environ.get('BRIEF_DATE', datetime.now().strftime('%Y-%m-%d'))
 RAW_JSON = f"/tmp/llm-briefing-raw-{DATE_STR}.json"
 ENRICHED_JSON = f"/tmp/llm-briefing-enriched-{DATE_STR}.json"
 OUTPUT_TMP = f"/tmp/llm-briefing-{DATE_STR}.html"

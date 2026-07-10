@@ -6,7 +6,7 @@
 import json, os, sys
 from datetime import datetime
 
-DATE_STR = datetime.now().strftime('%Y-%m-%d')
+DATE_STR = os.environ.get('BRIEF_DATE', datetime.now().strftime('%Y-%m-%d'))
 RAW_JSON = f"/tmp/llm-briefing-raw-{DATE_STR}.json"
 BATCHES_JSON = f"/tmp/llm-briefing-batches-{DATE_STR}.json"
 ENRICHED_JSON = f"/tmp/llm-briefing-enriched-{DATE_STR}.json"

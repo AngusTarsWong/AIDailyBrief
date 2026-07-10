@@ -1,0 +1,481 @@
+{
+  "date": "2026-07-09",
+  "github": [
+    {
+      "name": "obra/superpowers",
+      "desc": "An agentic skills framework & software development methodology that works.",
+      "stars": 250953,
+      "lang": "Shell",
+      "updated": "2026-07-10",
+      "url": "https://github.com/obra/superpowers",
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v6.1.1",
+          "name": "v6.1.1",
+          "date": "2026-07-02",
+          "summary": "- Codex no longer re-registers the Claude SessionStart hook. v6.1.0 removed the Codex hook config and its manifest hooks；- Removed orphaned Codex session-start dead code. hooks/session-start-codex had no caller once the Codex hook config was；- New pa"
+        },
+        {
+          "tag": "v6.1.0",
+          "name": "v6.1.0",
+          "date": "2026-06-30",
+          "summary": "The using-superpowers bootstrap is injected into every session, so its size is paid for constantly. This release trims i；- Compressed the using-superpowers bootstrap. Replaced the graphviz skill-flow diagram with the prose it encoded, folded；- Pruned"
+        },
+        {
+          "tag": "v6.0.3",
+          "name": "v6.0.3",
+          "date": "2026-06-18",
+          "summary": "- SDD scratch files moved out of .git/. Claude Code treats .git/ as a protected path and denies agent writes there, so a"
+        }
+      ],
+      "name_zh": "Superpowers",
+      "desc_zh": "面向智能体软件开发的技能框架与方法论，将需求、实现、测试与复盘组织成可执行的工程流程。",
+      "lang_zh": "Shell"
+    },
+    {
+      "name": "tensorflow/tensorflow",
+      "desc": "An Open Source Machine Learning Framework for Everyone",
+      "stars": 196166,
+      "lang": "C++",
+      "updated": "2026-07-10",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "topics": [
+        "deep-learning",
+        "deep-neural-networks",
+        "distributed",
+        "machine-learning",
+        "ml"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v2.21.0",
+          "name": "TensorFlow 2.21.0",
+          "date": "2026-03-06",
+          "summary": "Support for Python 3.9 has been removed starting with TF 2.21.；The TensorBoard (TB) dependency has been removed starting with TF 2.21.；tf.lite；Adds int8 and int16x8 support for SQRT operator."
+        },
+        {
+          "tag": "v2.21.0-rc1",
+          "name": "TensorFlow 2.21.0-rc1",
+          "date": "2026-03-02",
+          "summary": "Support for Python 3.9 has been removed starting with TF 2.21.；tf.lite；Adds int8 and int16x8 support for SQRT operator.；Adds int16x8 support for EQUAL and NOT_EQUAL operators."
+        },
+        {
+          "tag": "v2.21.0-rc0",
+          "name": "TensorFlow 2.21.0-rc0",
+          "date": "2026-02-09",
+          "summary": "Support for Python 3.9 has been removed starting with TF 2.21.；tf.lite；Adds int8 and int16x8 support for SQRT operator.；Adds int16x8 support for EQUAL and NOT_EQUAL operators."
+        }
+      ],
+      "name_zh": "TensorFlow",
+      "desc_zh": "广泛使用的开源机器学习框架，支持从研究到生产部署的模型训练、推理和生态工具。",
+      "lang_zh": "C++"
+    },
+    {
+      "name": "huggingface/transformers",
+      "desc": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+      "stars": 162422,
+      "lang": "Python",
+      "updated": "2026-07-10",
+      "url": "https://github.com/huggingface/transformers",
+      "topics": [
+        "audio",
+        "deep-learning",
+        "deepseek",
+        "gemma",
+        "glm"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v5.13.0",
+          "name": "Release v5.13.0",
+          "date": "2026-07-03",
+          "summary": "🚨 Modeling changes for export, compile, and hybrid-attention standardization；🚨 [gemma 3/4] Fix bidirectional attention masking crossing sliding window boundaries；🚨 EP；Update workflow callers to use transformers-ci in [#47040"
+        },
+        {
+          "tag": "v5.12.1",
+          "name": "Patch release v5.12.1",
+          "date": "2026-06-15",
+          "summary": "Updated the lower bound for PEFT and a fix for auto tokenizer to properly resolve the mistral tokenizer (when mistral-co；* Fix peft lower bound #46605 by @hmellor (#46605)；* mistral common backend fix #46667 by @itazap (#46667)"
+        },
+        {
+          "tag": "v5.10.3",
+          "name": "Patch release v5.10.4",
+          "date": "2026-06-15",
+          "summary": "Update: Note that on pypi 5.10.3 doesn't exist and this this saved under 5.10.4 (so essentially a minor version skipped)；A few fixes needed for vLLM to sync with transformers :hugs:；* [fix] regression introduced by #45534 #46456 by @eustlb (#46456)"
+        }
+      ],
+      "name_zh": "Transformers",
+      "desc_zh": "Hugging Face 的模型定义框架，覆盖文本、视觉、音频和多模态模型的训练与推理，是开源模型应用的重要基础设施。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "langchain-ai/langchain",
+      "desc": "The agent engineering platform.",
+      "stars": 141419,
+      "lang": "Python",
+      "updated": "2026-07-10",
+      "url": "https://github.com/langchain-ai/langchain",
+      "topics": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "anthropic",
+        "chatgpt"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "langchain-fireworks==1.4.4",
+          "name": "langchain-fireworks==1.4.4",
+          "date": "2026-07-09",
+          "summary": "Changes since langchain-fireworks==1.4.3；release(fireworks): 1.4.4 (#38753)；fix(fireworks): report cached prompt token usage (#38751)"
+        },
+        {
+          "tag": "langchain==1.3.12",
+          "name": "langchain==1.3.12",
+          "date": "2026-07-08",
+          "summary": "Changes since langchain==1.3.11；release(langchain): 1.3.12 (#38730)；fix(langchain): propagate interrupts through ToolRetryMiddleware (#38722)"
+        },
+        {
+          "tag": "langchain-openai==1.3.4",
+          "name": "langchain-openai==1.3.4",
+          "date": "2026-07-08",
+          "summary": "Changes since langchain-openai==1.3.3；release(openai): 1.3.4 (#38731)；fix(openai): suppress Pydantic serializer warning on structured output parsed field (#37727)"
+        }
+      ],
+      "name_zh": "LangChain",
+      "desc_zh": "Agent 工程平台，用于构建、编排和部署基于大模型的应用与工作流。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "TauricResearch/TradingAgents",
+      "desc": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "stars": 92074,
+      "lang": "Python",
+      "updated": "2026-07-10",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "topics": [
+        "agent",
+        "finance",
+        "llm",
+        "multiagent",
+        "trading"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v0.3.1",
+          "name": "TradingAgents v0.3.1",
+          "date": "2026-07-05",
+          "summary": "Alpha Vantage look-ahead filter now runs. The fundamentals payload is a JSON string, so the dict-onl；News analyst prompt matches the tool. It advertised get_news(query, ...) while the tool takes a tick；Shared debate/risk routers can't crash mid-run. "
+        },
+        {
+          "tag": "v0.3.0",
+          "name": "TradingAgents v0.3.0",
+          "date": "2026-06-22",
+          "summary": "TradingAgents v0.3.0 is a stabilization and extensibility release: a verified data-access contract, an expanded provider；Symbol normalization now runs on every vendor path (identity, returns, CLI, news). The configured vendor list is the exa；OpenAI-c"
+        },
+        {
+          "tag": "v0.2.5",
+          "name": "TradingAgents v0.2.5",
+          "date": "2026-05-11",
+          "summary": "ticker path-traversal validation at every filesystem-path site.；\\pip install .\\ installations now pick up the project \\.env\\ when running the CLI as a console scrip；Reports save end-to-end；Ticker prompt preserves exchange suffixes (\\.SH\\, \\.SZ\\, \\.SS"
+        }
+      ],
+      "name_zh": "TradingAgents",
+      "desc_zh": "基于多 Agent 与 LLM 的金融交易研究框架，探索将不同角色 Agent 用于市场分析与决策支持。",
+      "lang_zh": "Python"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "MadsLorentzen / ai-job-search",
+      "url": "https://github.com/MadsLorentzen/ai-job-search",
+      "desc": "AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write cover letters, and prepare you for interviews.",
+      "lang": "TypeScript",
+      "stars": "19,155",
+      "today": "3,716 stars today",
+      "name_zh": "AI 求职助手",
+      "desc_zh": "基于 Claude Code 的求职自动化框架：根据个人资料评估职位匹配度、定制简历与求职信，并协助面试准备。适合希望把重复求职准备流程交给 Agent 的开发者和求职者。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "addyosmani / agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "desc": "Production-grade engineering skills for AI coding agents.",
+      "lang": "JavaScript",
+      "stars": "75,931",
+      "today": "2,554 stars today",
+      "name_zh": "Agent Skills",
+      "desc_zh": "面向 AI 编程 Agent 的生产级工程技能库，将架构设计、代码审查、测试等最佳实践封装为可复用能力，帮助团队建立稳定的 Agent 研发流程。",
+      "lang_zh": "JavaScript"
+    },
+    {
+      "name": "VoltAgent / awesome-design-md",
+      "url": "https://github.com/VoltAgent/awesome-design-md",
+      "desc": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
+      "stars": "99,772",
+      "today": "1,391 stars today",
+      "name_zh": "Awesome DESIGN.md",
+      "desc_zh": "收集并分析知名品牌设计系统的 DESIGN.md 文档。开发者可将其放入项目，让编码 Agent 按既定品牌风格生成一致的界面。",
+      "lang_zh": "Markdown"
+    },
+    {
+      "name": "iOfficeAI / OfficeCLI",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "desc": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "lang": "C#",
+      "stars": "13,514",
+      "today": "1,929 stars today",
+      "name_zh": "OfficeCLI",
+      "desc_zh": "专为 AI Agent 读取、编辑和自动化 Word、Excel、PowerPoint 而设计的命令行办公套件，无需安装 Office，适合文档和表格自动化。",
+      "lang_zh": "C#"
+    },
+    {
+      "name": "wonderwhy-er / DesktopCommanderMCP",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+      "desc": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+      "lang": "TypeScript",
+      "stars": "6,586",
+      "today": "185 stars today",
+      "name_zh": "DesktopCommanderMCP",
+      "desc_zh": "为 Claude 提供终端控制、文件搜索和差异编辑能力的 MCP 服务，可让 Agent 在受控本地环境中完成开发任务。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "anthropics / claude-cookbooks",
+      "url": "https://github.com/anthropics/claude-cookbooks",
+      "desc": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+      "lang": "Jupyter Notebook",
+      "stars": "47,186",
+      "today": "194 stars today",
+      "name_zh": "Claude Cookbooks",
+      "desc_zh": "Anthropic 官方示例与笔记本合集，展示 Claude 在提示设计、工具调用和实际应用中的有效使用方法。",
+      "lang_zh": "Jupyter Notebook"
+    },
+    {
+      "name": "vxcontrol / pentagi",
+      "url": "https://github.com/vxcontrol/pentagi",
+      "desc": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+      "lang": "Go",
+      "stars": "19,437",
+      "today": "535 stars today",
+      "name_zh": "PentAGI",
+      "desc_zh": "可执行复杂渗透测试任务的自治 AI Agent 系统，面向授权安全测试场景，展示 Agent 在网络安全自动化中的应用。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "unclecode / crawl4ai",
+      "url": "https://github.com/unclecode/crawl4ai",
+      "desc": "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN\n[](https://github.com/unclecode/crawl4ai#-crawl4ai-cloud-api--closed-beta-launching-soon)",
+      "lang": "Python",
+      "stars": "71,860",
+      "today": "215 stars today",
+      "page_content": "* * *\n#### 🚀 Crawl4AI Cloud API — Closed Beta (Launching Soon)\n[](https://github.com/unclecode/crawl4ai#-crawl4ai-cloud-api--closed-beta-launching-soon)\nReliable, large-scale web extraction, now built to be _**drastically more cost-effective**_ than any of the existing solutions.\n👉 **Apply [here](https://forms.gle/E9MyPaNXACnAMaqG7) for early access**\n_We’ll be onboarding in phases and working closely with early users. Limited slots._\n* * *\nCrawl4AI turns the web into clean, LLM ready Markdown for RAG, agents, and data pipelines. Fast, controllable, battle tested by a 50k+ star community.\n[✨ Check out latest update v0.9.1](https://github.com/unclecode/crawl4ai#-recent-updates)\n✨ **New in v0.9.1**: Patch release with 12 bug fixes across Docker, browser, and core. Adds `preserve_classes`/`preserve_tags` whitelist for PruningContentFilter, fixes Windows browser crash, Docker auth gate UI, HTTP timeout unit mismatch, and more. [Release notes →](https://github.com/unclecode/crawl4ai/blob/main/docs/blog/release-v0.9.1.md)\n✨ Recent v0.9.0: Major secure-by-default release of the Docker API server. Auth is on by default, the server binds loopback unless given a token, and the request body is now an untrusted trust boundary. [Release notes →](https://github.com/unclecode/crawl4ai/blob/main/docs/blog/release-v0.9.0.md)\n✨ Recent v0.8.7: Security-hardening release. Fixes critical Docker API vulnerabilities (RCE, SSRF, auth bypass, file write, XSS, hardcoded JWT secret), adds DomainMapper, and ships scraping, deep-crawl, and LLM fixes. [Release notes →](https://github.com/unclecode/crawl4ai/blob/main/docs/blog/release-v0.8.7.md)\n✨ Previous v0.8.0: Crash Recovery & Prefetch Mode! Deep crawl crash recovery with `resume_state` and `on_state_change` callbacks for long-running crawls. New `prefetch=True` mode for 5-10x faster URL discovery. [Release notes →](https://github.com/unclecode/crawl4ai/blob/main/docs/blog/release-v0.8.0.md)\n✨ Previous v0.7.8: Stability & Bug Fix Release! 11 ",
+      "name_zh": "Crawl4AI",
+      "desc_zh": "开源、面向 LLM 的网页爬取与内容提取工具，为 RAG、研究 Agent 和网页自动化提供结构化、高质量数据入口。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "bradautomates / claude-video",
+      "url": "https://github.com/bradautomates/claude-video",
+      "desc": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+      "lang": "Python",
+      "stars": "6,733",
+      "today": "718 stars today",
+      "name_zh": "Claude Video",
+      "desc_zh": "让 Claude 理解视频的工具：自动抽帧、转录并交由模型分析，适合教程检索、会议回顾和视频内容提炼。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "kyutai-labs / pocket-tts",
+      "url": "https://github.com/kyutai-labs/pocket-tts",
+      "desc": "A TTS that fits in your CPU (and pocket)",
+      "lang": "Python",
+      "stars": "7,001",
+      "today": "235 stars today",
+      "name_zh": "Pocket TTS",
+      "desc_zh": "可在 CPU 上运行的轻量级文本转语音系统，面向本地、低资源的语音应用和语音 Agent。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "asgeirtj / system_prompts_leaks",
+      "url": "https://github.com/asgeirtj/system_prompts_leaks",
+      "desc": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
+      "lang": "JavaScript",
+      "stars": "55,184",
+      "today": "1,125 stars today",
+      "name_zh": "System Prompts Leaks",
+      "desc_zh": "收集多家 AI 产品的系统提示词与内部工具信息，帮助研究模型行为与默认限制；使用时应注意来源、授权与安全边界。",
+      "lang_zh": "JavaScript"
+    }
+  ],
+  "papers": [
+    {
+      "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+      "date": "2026-07-09",
+      "summary": "The rapid development of large language models and multimodal large language models has accelerated the emergence of proactive agents capable of operating everyday tools and assisting users in real-world environments. However, existing benchmarks struggle to evaluate such agents effectively, as they",
+      "url": "https://arxiv.org/abs/2607.08768v1",
+      "cats": [
+        "cs.CL"
+      ],
+      "title_zh": "UniClawBench：面向真实任务的主动式 Agent 通用基准",
+      "summary_zh": "提出评测主动式 Agent 的通用基准，关注其在真实环境中操作日常工具、主动协助用户的能力，并弥补现有评测与真实任务脱节的问题。"
+    },
+    {
+      "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation",
+      "date": "2026-07-09",
+      "summary": "Scientific ideas rarely start from a blank page. They inherit mechanisms, repair known limitations, and recombine pieces of earlier work, much like biological genomes. Current benchmarks still say little about whether AI systems can follow this inheritance structure. We present IdeaGene-Bench (IG-Be",
+      "url": "https://arxiv.org/abs/2607.08758v1",
+      "cats": [
+        "cs.AI"
+      ],
+      "title_zh": "创意也有基因：科学谱系推理与基于谱系的创意生成基准",
+      "summary_zh": "研究科学思想的谱系关系，评估模型追踪研究脉络、并在既有知识基础上生成新想法的能力。"
+    },
+    {
+      "title": "SLORR: Simple and Efficient In-Training Low-Rank Regularization",
+      "date": "2026-07-09",
+      "summary": "Low-rank factorization is widely used to compress neural networks, but modern models are often not naturally amenable to aggressive factorization without significant accuracy loss. Existing training-time low-rank regularizers can improve compressibility, but they often require SVDs of large weight m",
+      "url": "https://arxiv.org/abs/2607.08754v1",
+      "cats": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "title_zh": "SLORR：简单高效的训练内低秩正则化",
+      "summary_zh": "提出训练过程中使用的低秩正则化方法，旨在以较低复杂度改善模型训练效率与表示质量。"
+    },
+    {
+      "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+      "date": "2026-07-09",
+      "summary": "Recent advances in Vision-Language Models, Large Language Models, and Multimodal Large Language Models have improved autonomous driving tasks such as scene understanding, decision making, trajectory prediction, and visual question answering. However, evaluating whether these models can reliably reas",
+      "url": "https://arxiv.org/abs/2607.08745v1",
+      "cats": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "title_zh": "AUTOPILOT VQA：面向事故场景行车记录仪理解的视觉语言模型基准",
+      "summary_zh": "评测视觉语言模型对行车记录仪事故场景的理解能力，适用于驾驶安全和动态视觉事件分析。"
+    },
+    {
+      "title": "Workflow as Knowledge: Semantic Persistence for LLM-Mediated Workflows",
+      "date": "2026-07-09",
+      "summary": "Large language model (LLM) applications increasingly use explicit workflows for tool use, retrieval, branching, checkpointing, and human approval. Existing workflow systems already address many execution concerns. This paper proposes a Lisp-inspired but language-independent conceptual model: symboli",
+      "url": "https://arxiv.org/abs/2607.08740v1",
+      "cats": [
+        "cs.AI",
+        "cs.PL"
+      ],
+      "title_zh": "工作流即知识：LLM 中介工作流的语义持久化",
+      "summary_zh": "探讨将 LLM 驱动工作流沉淀为可检索、可复用的语义知识资产，让后续任务可继承流程经验。"
+    }
+  ],
+  "hn": [],
+  "news": [
+    {
+      "title": "Biomni AI Agent Promises to Speed up Biomedical Research, Serve as 'Expert Collaborator' - GenomeWeb",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOFV2SjkyOV9OREU5UVlCWWtUNU9iRHpsSENkQ0dUSTJXMVdMdUlXdFJsY2swZFpxam9WWU1FNl9XMDh3cDA1SnlteGNQbTlxSEpTdFdvbzdSLUFKMk5xd1ZZZU5wd3FuSFFlaVQ3bHZEVHJJcjJ2MU1QT1lNRVBucFZIZGZuZk9zaXJ6QVdiM3Y5Z2xHTVdfYTlnek9UbVVSN3U4a3QySzIzSENmMHR4X1I1Z3Q?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 18:30:51 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPOFV2SjkyOV9OREU5UVlCWWtUNU9iRHpsSENkQ0dUSTJXMVdMdUlXdFJsY2swZFpxam9WWU1FNl9XMDh3cDA1Snlt",
+      "page_content": "[Skip to main content](https://news.google.com/rss/articles/CBMitAFBVV95cUxPOFV2SjkyOV9OREU5UVlCWWtUNU9iRHpsSENkQ0dUSTJXMVdMdUlXdFJsY2swZFpxam9WWU1FNl9XMDh3cDA1SnlteGNQbTlxSEpTdFdvbzdSLUFKMk5xd1ZZZU5wd3FuSFFlaVQ3bHZEVHJJcjJ2MU1QT1lNRVBucFZIZGZuZk9zaXJ6QVdiM3Y5Z2xHTVdfYTlnek9UbVVSN3U4a3QySzIzSENmMHR4X1I1Z3Q?oc=5#main-content)\n\n## Sister Publication Links\n\n*   [GenomeWeb](https://www.genomeweb.com/)\n*   [360Dx](https://www.360dx.com/)\n*   [Precision Medicine Online](https://www.precisionmedicineonline.com/)\n*   [PMLS Events](https://www.precisionmedicineonline.com/events)\n\n*   [](https://news.google.com/rss-feeds \"RSS Feeds\")\n*   [](https://www.twitter.com/genomeweb \"Visit GenomeWeb on Twitter\")\n*   [](https://www.linkedin.com/company/116396 \"Visit GenomeWeb on LinkedIn\")\n\n[![Image 4: Logo](https://crain-platform-genomeweb-prod.s3.amazonaws.com/s3fs-public/logo.svg)](https://news.google.com/)",
+      "title_zh": "Biomni AI Agent 承诺加速生物医学研究，成为“专家协作者”",
+      "summary_zh": "报道关注 Biomni 在生物医学数据分析、研究协作和假设生成中的 Agent 化探索。"
+    },
+    {
+      "title": "AI agent startup Lyzr reportedly raising $100M at $500M valuation - SiliconANGLE",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTDdkUmdwY0dTcU1WTTUxdTJ6TGp0dGtTRkZvVnE3VjdGRHFXMVhsMTFVaEw0bnlYakktc0JYaGsxZFlBdW1VM2x1XzZacFJrYVI3Z3d3WllFaXpZWElwc1ZSU1lmMjZMOTlzOTAxYkMtSVloeGdNaEV4R1RzaHhjSmY2UEJ2MmZ3Z3VlTnVqMFhkLVppS2ZxSWFVZDk4Zw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 20:38:11 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPTDdkUmdwY0dTcU1WTTUxdTJ6TGp0dGtTRkZvVnE3VjdGRHFXMVhsMTFVaEw0bnlYakktc0JYaGsxZFlBdW1VM2x1",
+      "page_content": "[![Image 2: Siliconangle](https://d15shllkswkct0.cloudfront.net/wp-content/themes/siliconangle/img/SA-web-logo-300x58.png)](https://siliconangle.com/)\n\n[the voice of enterprise and emerging tech]\n\n*   _search_\n*   OUR NETWORK\n*   [![Image 3](https://s3.us-west-2.amazonaws.com/cube365-prod/related-content/e810e50d-1091-4ce3-9cc2-0232848a8d60.png)](https://www.thecube.net/)\n*   [![Image 4](https://s3.us-west-2.amazonaws.com/cube365-prod/related-content/04ae65c6-92d8-4203-904e-2ee935b71f1f.png)](https://thecuberesearch.com/)\n\n_menu_[![Image 5: Siliconangle](https://d15shllkswkct0.cloudfront.net/wp-content/themes/siliconangle/img/SA-web-logo-300x58.png)](https://siliconangle.com/)\n*   _account\\_circle_\n\n[THE SILICONANGLE 100](https://siliconangle.com/sa-100)\n\nMarket Data Provided by[![Image 6](https://client.quotemedia.com/qmc/footer/logo.png)](https://www.quotemedia.com/)",
+      "title_zh": "AI Agent 创业公司 Lyzr 据报以 5 亿美元估值融资 1 亿美元",
+      "summary_zh": "融资消息显示资本市场继续关注企业级 AI Agent 平台的商业化机会。"
+    },
+    {
+      "title": "An AI agent startup just let its agent run its $100M fundraise - TechCrunch",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQQkgtaERFdmRZejR5dnNKVXZWbXh1U3U3eXZRS2luZUpRMV9fQndUQ1MzNGNQcEN0MDFCRVQzeTBaeDF3b3JJOXNCT2xGQVhlZEVoaDVRUlJaSEMxaVJGNExPdXlVVlBRaXJZNDFtZUFaeVVoeDJocnh5bmxLTUE1V2hudC00WEhTbXRiYXBKMG5sQXEzMWNHUzAtVWlyVGc3cmVVQ2Zn?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 22:08:58 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQQkgtaERFdmRZejR5dnNKVXZWbXh1U3U3eXZRS2luZUpRMV9fQndUQ1MzNGNQcEN0MDFCRVQzeTBaeDF3b3JJOXNC",
+      "page_content": "[Skip to content](https://news.google.com/rss/articles/CBMipgFBVV95cUxQQkgtaERFdmRZejR5dnNKVXZWbXh1U3U3eXZRS2luZUpRMV9fQndUQ1MzNGNQcEN0MDFCRVQzeTBaeDF3b3JJOXNCT2xGQVhlZEVoaDVRUlJaSEMxaVJGNExPdXlVVlBRaXJZNDFtZUFaeVVoeDJocnh5bmxLTUE1V2hudC00WEhTbXRiYXBKMG5sQXEzMWNHUzAtVWlyVGc3cmVVQ2Zn?oc=5#wp--skip-link--target)\n\n[![Image 3](https://techcrunch.com/wp-content/uploads/2026/05/tc-lockup-hp.svg)TechCrunch Desktop Logo](https://techcrunch.com/)[![Image 4](https://techcrunch.com/wp-content/uploads/2024/09/tc-logo-mobile.svg)TechCrunch Mobile Logo](https://techcrunch.com/)\n\n*   [Latest](https://news.google.com/latest/)\n*   [Startups](https://news.google.com/category/startups/)\n*   [Venture](https://news.google.com/category/venture/)\n*   [Apple](https://news.google.com/tag/apple/)\n*   [Security](https://news.google.com/category/security/)\n*   [AI](https://news.google.com/category/artificial-intelligence/)\n*   [Apps](https://news.google.com/category/apps/)\n*   [Disrupt 2026](https://techcrunch.com/events/techcrunch-disrupt/)\n\n*   [Events](https://news.google.com/events/)\n*   [Podcasts](https://news.google.com/podcasts/)",
+      "title_zh": "一家 AI Agent 创业公司让 Agent 参与了 1 亿美元融资",
+      "summary_zh": "该案例探索 Agent 在高价值商业流程中的参与边界与可控性。"
+    },
+    {
+      "title": "Cursor Is Developing an AI Agent to Compete With Claude Cowork - The Information",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOZ2tEWU1XQmk4OEdCcHhKSmF1VkFwMUxLcUJsQTVRY2N3NEhkMXduSUo3bVBBUk1zYUp6Q2p2QWozRHZ5NnJwM2VLSG0yUkJSOV9JMGpoZjl6R3Jsa0UxZnozeGQ1NjI1Z3NobzZMQlpLNjJBVTZSR3plRTJ6T2pCalhKUHVubnBlOENtVTBSN0dOUQ?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 19:57:00 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOZ2tEWU1XQmk4OEdCcHhKSmF1VkFwMUxLcUJsQTVRY2N3NEhkMXduSUo3bVBBUk1zYUp6Q2p2QWozRHZ5NnJwM2VL",
+      "page_content": "",
+      "title_zh": "Cursor 正在开发与 Claude Cowork 竞争的 AI Agent",
+      "summary_zh": "编码 Agent 的竞争正从补全代码扩展到更完整的协同工作流。"
+    },
+    {
+      "title": "AI agent tests whether machines can speak for patients at life's end - Tech Xplore",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5iRzN2ZTlIdjN2S2RrbFFNMEctZFNJRmJPNDhrM3MxTkNfRThEMXBBQk9ncVlPMTlCcUptLWUwd2pVNmNxOHhvQ0NHX2ZfSHg4U3dudFNIR0xzcFBmaEZhYWd1MmFTUDFPc2cybm92a05xVjVUamkzSDI1a2k?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 15:30:01 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE5iRzN2ZTlIdjN2S2RrbFFNMEctZFNJRmJPNDhrM3MxTkNfRThEMXBBQk9ncVlPMTlCcUptLWUwd2pVNmNxOHhvQ0NH",
+      "page_content": "",
+      "title_zh": "AI Agent 测试机器能否在生命终点替患者发声",
+      "summary_zh": "报道讨论医疗代理决策中的伦理、授权与患者意愿表达问题。"
+    },
+    {
+      "title": "OpenAI Launches GPT-5.6 and ChatGPT Work AI Agent - Forbes",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQODBadkVpb1MzdzV0ajhXRHRVRVhRM1EyeWxsbGg0YVBsS1ZSOExnU2RQTHYySWpIY1MteHNJc2xKOG1LZVR5Q2RBSjVjekp2ZzFSRkdKeUdJSkg3d2FYQkJfcjBfY2pIaVE1UEFuVlo3ckw2M1ZVck5OZkFVOU9XRVJoSE04clhvTVlPNTctNGVIbERFc0RhdGxxa0FySW5XRi15ZXBVVWZBNVUwcWpHNkk4U3Npdw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 20:09:47 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQODBadkVpb1MzdzV0ajhXRHRVRVhRM1EyeWxsbGg0YVBsS1ZSOExnU2RQTHYySWpIY1MteHNJc2xKOG1LZVR5Q2RB",
+      "page_content": "",
+      "title_zh": "OpenAI 推出 GPT-5.6 与 ChatGPT Work AI Agent",
+      "summary_zh": "企业知识工作与任务自动化将是新模型和工作 Agent 的重点观察方向。"
+    },
+    {
+      "title": "Meet Biomni: the free powerful biomed AI agent turning data into hypotheses - South China Morning Post",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPMTlhSjFCVlRMbmlIME5FdW1nd05kYlpSSDR1aUFBRXFNVUthQm8yTU1ERkdieFR3YkpJZU1zdHZyZExlemlaenhVWWhnYjFtd1NsWXl0OUVqbHV1Si01cl95TktrRHhQYmVyWlNKQTZDYUF6TjlRTkJpTzJaRE9ua2tlM3FxbGRhNTVMUWFhaVZHRW91ZTF0N3VOb1h1Yk1zaHpxMllDWjZEemJWZ3ZkN0FQMGFLX1NRcXJIbEVR0gG-AUFVX3lxTE80b3gwRXJyWHdvNUJId3Z0eXU1MHhOZEp5NjJiWEd1S0h1VEtlTWZYNHo4R1R4QjFUaUM0d0JPVDBVNkM2STh1djYyc3phbE80dGpXMzNPNVljbW9xMnNFOGFtbzN4LWFiMTZYVEt3WUZGLU1ZcG8xbFJ3VkJtaWFqem1ZbldxTVlmVE5WSEk4SHVIZ1ltTnZzTXYxZ3k4YWw5YVlpUHZ3bEl5V3lNZkZwZDduUUtodWN4NTNjNEE?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 18:00:08 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxPMTlhSjFCVlRMbmlIME5FdW1nd05kYlpSSDR1aUFBRXFNVUthQm8yTU1ERkdieFR3YkpJZU1zdHZyZExlemlaenhV",
+      "page_content": "",
+      "title_zh": "认识 Biomni：将数据转化为假设的免费生物医学 AI Agent",
+      "summary_zh": "Biomni 试图将科研数据处理与假设生成连接起来，辅助研究人员探索。"
+    },
+    {
+      "title": "DeepFabric Releases AI Agent Platform for End-to-End Supply Chain Operations - Supply & Demand Chain Executive",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOZm1qbHhWRFItQkc4QWVzeUxPcUZod0h6MmRJbXM1STBlUl8ybEhDSXdLOS1ibVFlTU5acldJQU9kb3Nqb000QkY1Mnp1OUVTUFVSUkpqOWVGd3c4SUZnazZJcGdRcExsZXNSWm9QWmF6UjFtcjUtc0dxN1JuQi1qZEtBNnE4eE9ScWlsVFhrZndvRW5tZFZmTmhUdElxaXBoZm9ieVNiUGlDSkpYVXdpRlZQdUhYS2VUUEhPcGZVcjdLa1hxTzVra2h1MzQ1ODNyREFkSzdyb2x2Ym5xOGJ4MHpVcw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 18:43:33 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxOZm1qbHhWRFItQkc4QWVzeUxPcUZod0h6MmRJbXM1STBlUl8ybEhDSXdLOS1ibVFlTU5acldJQU9kb3Nqb000QkY1",
+      "page_content": "",
+      "title_zh": "DeepFabric 发布端到端供应链运营 AI Agent 平台",
+      "summary_zh": "供应链 Agent 平台反映智能体正进入规划、执行和运营等垂直业务流程。"
+    }
+  ],
+  "blogs": [],
+  "github_strategy": {
+    "query": "MCP OR embedding OR \"vector database\" OR \"AI framework\"",
+    "filters": "pushed:>2026-06-25",
+    "sort": "stars",
+    "label": "新兴话题（MCP/Vector/Embedding）"
+  }
+}

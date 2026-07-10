@@ -12,7 +12,7 @@ from datetime import datetime
 
 if len(sys.argv) < 2:
     # 自动查找今天的 raw JSON
-    DATE_STR = datetime.now().strftime('%Y-%m-%d')
+    DATE_STR = os.environ.get('BRIEF_DATE', datetime.now().strftime('%Y-%m-%d'))
     RAW_JSON = f"/tmp/llm-briefing-raw-{DATE_STR}.json"
 else:
     RAW_JSON = sys.argv[1]
