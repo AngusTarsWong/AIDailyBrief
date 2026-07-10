@@ -6,7 +6,7 @@
 import json, sys, os
 from datetime import datetime
 
-DATE_STR = datetime.now().strftime('%Y-%m-%d')
+DATE_STR = os.environ.get('BRIEF_DATE', datetime.now().strftime('%Y-%m-%d'))
 TASKS_JSON = f"/tmp/llm-briefing-tasks-{DATE_STR}.json"
 
 if not os.path.exists(TASKS_JSON):
