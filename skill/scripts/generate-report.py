@@ -216,7 +216,8 @@ trending = raw['github_trending']
 gh = raw.get('github', [])
 papers = raw['papers']
 blogs = raw.get('blogs', [])
-news = raw.get('news', [])
+# HN 与 Google News 都是行业动态来源；合并渲染，避免已采集的 HN 条目遗漏。
+news = raw.get('news', []) + raw.get('hn', [])
 
 body = f"""<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LLM & Agent Daily Briefing | {DATE}</title>
 <style>
