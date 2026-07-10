@@ -1,0 +1,594 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LLM & Agent Daily Briefing | 2026-07-10</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+  background: #1B2838;
+  color: #e2e8f0;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(56, 189, 248, 0.2), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 40%, rgba(139, 92, 246, 0.15), transparent),
+    radial-gradient(ellipse 50% 60% at 5% 85%, rgba(52, 211, 153, 0.1), transparent),
+    repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(148, 163, 184, 0.08) 49px, rgba(148, 163, 184, 0.08) 50px),
+    repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(148, 163, 184, 0.08) 49px, rgba(148, 163, 184, 0.08) 50px);
+  pointer-events: none;
+  z-index: 0;
+}
+.container { max-width:1080px; margin:0 auto; padding:2rem; position: relative; z-index: 1; }
+.header { text-align:center; margin-bottom:2.5rem; position: relative; padding-bottom:1.5rem; }
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.6), rgba(139, 92, 246, 0.6), transparent);
+}
+.header h1 {
+  font-size:2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom:0.4rem;
+  letter-spacing: -0.02em;
+}
+.sub { color:#64748b; font-size:0.9rem; font-weight: 500; letter-spacing: 0.05em; }
+.progress-rail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(148, 163, 184, 0.08);
+  z-index: 20;
+}
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #34d399, #38bdf8, #a78bfa);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+  transition: width 0.12s ease-out;
+}
+.quick-nav {
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 1.2rem;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+.quick-nav-links {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+.quick-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(30, 41, 59, 0.65);
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+.quick-link:hover {
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.48);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(30, 41, 59, 0.88));
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22), 0 0 0 1px rgba(96, 165, 250, 0.12);
+}
+.quick-link.active {
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.35);
+  background: rgba(37, 99, 235, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.12);
+}
+.quick-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.quick-status strong {
+  color: #f8fafc;
+  font-weight: 700;
+}
+.section {
+  margin-bottom:2rem;
+  padding: 1.2rem;
+  border-radius: 20px;
+  position: relative;
+  background: rgba(27, 40, 56, 0.5);
+  scroll-margin-top: 88px;
+}
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(148, 163, 184, 0.1), transparent, rgba(148, 163, 184, 0.05));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.sh {
+  display:flex;
+  align-items:center;
+  gap:0.8rem;
+  margin-bottom:1rem;
+  padding-bottom:0.5rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+.sh .icon { font-size:1.3rem; }
+.sh .title { font-size:1.2rem; font-weight:700; color:#f1f5f9; letter-spacing: -0.01em; }
+.sh.trending .title { color:#34d399; }
+.sh.github .title { color:#60a5fa; }
+.sh.paper .title { color:#a78bfa; }
+.sh.blog .title { color:#38bdf8; }
+.sh.news .title { color:#fb923c; }
+.cnt {
+  font-size:0.7rem;
+  color:#94a3b8;
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  padding:0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-left:auto;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.card {
+  background: linear-gradient(135deg, rgba(22, 35, 50, 0.9), rgba(22, 35, 50, 0.75));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  border-left: 3px solid rgba(96, 165, 250, 0.4);
+  border-radius: 14px;
+  padding:1.1rem 1.3rem;
+  margin-bottom:0.7rem;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+.card::after {
+  content: '';
+  position: absolute;
+  inset: -20% auto auto -10%;
+  width: 42%;
+  height: 140%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.0), rgba(255,255,255,0.06), rgba(255,255,255,0.0));
+  transform: translateX(-140%) skewX(-18deg);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+.card:hover {
+  border-color: rgba(96, 165, 250, 0.42);
+  border-left-color: #60a5fa;
+  background: linear-gradient(135deg, rgba(36, 50, 72, 0.96), rgba(28, 39, 58, 0.84));
+  transform: translateY(-4px) translateX(6px) scale(1.008);
+  box-shadow: 0 14px 34px rgba(96, 165, 250, 0.18), 0 0 0 1px rgba(96, 165, 250, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+.card:hover::after {
+  transform: translateX(280%) skewX(-18deg);
+}
+/* Section-specific card accent colors */
+.section:has(.sh.trending) .card { border-left-color: rgba(52, 211, 153, 0.5); }
+.section:has(.sh.trending) .card:hover { border-left-color: #34d399; box-shadow: 0 14px 34px rgba(52, 211, 153, 0.16), 0 0 0 1px rgba(52, 211, 153, 0.08), inset 0 1px 0 rgba(255,255,255,0.06); }
+.section:has(.sh.paper) .card { border-left-color: rgba(167, 139, 250, 0.5); }
+.section:has(.sh.paper) .card:hover { border-left-color: #a78bfa; box-shadow: 0 14px 34px rgba(167, 139, 250, 0.16), 0 0 0 1px rgba(167, 139, 250, 0.08), inset 0 1px 0 rgba(255,255,255,0.06); }
+
+.ct { font-size:1rem; font-weight:600; margin-bottom:0.35rem; letter-spacing: -0.01em; }
+.ct a { color:#60a5fa; text-decoration:none; transition: color 0.2s; }
+.ct a:hover { color:#93c5fd; text-decoration:underline; }
+.cm { display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.78rem; color:#64748b; margin-bottom:0.4rem; }
+.stars { color:#fbbf24; font-weight:600; }
+.lang {
+  background: rgba(56, 189, 248, 0.1);
+  color:#38bdf8;
+  padding:0.12rem 0.5rem;
+  border-radius: 10px;
+  font-size:0.72rem;
+  font-weight: 500;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+}
+.topic {
+  background: rgba(167, 139, 250, 0.1);
+  color:#a78bfa;
+  padding:0.12rem 0.45rem;
+  border-radius: 10px;
+  font-size:0.68rem;
+  font-weight: 500;
+  border: 1px solid rgba(167, 139, 250, 0.15);
+}
+.cd { color:#cbd5e1; font-size:0.88rem; margin-top:0.4rem; line-height: 1.65; }
+.releases-section { margin-top:0.8rem; display:flex; flex-direction:column; gap:0.5rem; }
+.release-item {
+  background: rgba(34, 197, 94, 0.04);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  border-radius: 10px;
+  padding:0.6rem 0.8rem;
+  transition: all 0.2s ease;
+}
+.release-item:hover {
+  background: rgba(34, 197, 94, 0.08);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+.release-tag { color:#22c55e; font-weight:600; font-size:0.82rem; margin-right:0.5rem; }
+.release-date { color:#475569; font-size:0.72rem; }
+.release-summary { color:#94a3b8; font-size:0.78rem; margin-top:0.25rem; line-height:1.5; }
+.blog-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  border-left: 3px solid rgba(56, 189, 248, 0.4);
+  border-radius: 12px;
+  padding:0.8rem 1.2rem;
+  margin-bottom:0.6rem;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.blog-card::after {
+  content: '';
+  position: absolute;
+  inset: -15% auto auto -10%;
+  width: 36%;
+  height: 130%;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.06), rgba(255,255,255,0));
+  transform: translateX(-150%) skewX(-18deg);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+.blog-card:hover {
+  border-color: rgba(56, 189, 248, 0.42);
+  border-left-color: #38bdf8;
+  background: linear-gradient(135deg, rgba(36, 53, 76, 0.94), rgba(28, 41, 61, 0.82));
+  transform: translateY(-4px) translateX(6px) scale(1.008);
+  box-shadow: 0 14px 32px rgba(56, 189, 248, 0.16), 0 0 0 1px rgba(56, 189, 248, 0.08);
+}
+.blog-card:hover::after {
+  transform: translateX(285%) skewX(-18deg);
+}
+.blog-src {
+  display:inline-block;
+  font-size:0.68rem;
+  color:#38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  padding:0.12rem 0.45rem;
+  border-radius: 8px;
+  margin-right:0.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.blog-title { color:#60a5fa; font-size:0.92rem; font-weight:500; text-decoration:none; }
+.blog-title:hover { color:#93c5fd; text-decoration:underline; }
+.blog-date { color:#475569; font-size:0.72rem; margin-left:0.4rem; }
+.blog-summary { color:#94a3b8; font-size:0.83rem; margin-top:0.35rem; line-height: 1.5; }
+.news-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(251, 146, 60, 0.12);
+  border-left: 3px solid rgba(251, 146, 60, 0.4);
+  border-radius: 12px;
+  padding:0.8rem 1.2rem;
+  margin-bottom:0.6rem;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.news-card::after {
+  content: '';
+  position: absolute;
+  inset: -15% auto auto -10%;
+  width: 36%;
+  height: 130%;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.06), rgba(255,255,255,0));
+  transform: translateX(-150%) skewX(-18deg);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+.news-card:hover {
+  border-color: rgba(251, 146, 60, 0.46);
+  border-left-color: #fb923c;
+  background: linear-gradient(135deg, rgba(56, 44, 33, 0.94), rgba(40, 34, 30, 0.84));
+  transform: translateY(-4px) translateX(6px) scale(1.008);
+  box-shadow: 0 14px 32px rgba(251, 146, 60, 0.18), 0 0 0 1px rgba(251, 146, 60, 0.08);
+}
+.news-card:hover::after {
+  transform: translateX(285%) skewX(-18deg);
+}
+.news-src {
+  display:inline-block;
+  font-size:0.68rem;
+  color:#fb923c;
+  background: rgba(251, 146, 60, 0.08);
+  border: 1px solid rgba(251, 146, 60, 0.15);
+  padding:0.12rem 0.45rem;
+  border-radius: 8px;
+  margin-right:0.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.news-title { color:#fbbf24; font-size:0.92rem; font-weight:500; text-decoration:none; }
+.news-title:hover { color:#fcd34d; text-decoration:underline; }
+.news-date { color:#475569; font-size:0.72rem; margin-left:0.4rem; }
+.news-summary { color:#94a3b8; font-size:0.83rem; margin-top:0.35rem; line-height: 1.5; }
+.stats {
+  display:flex;
+  justify-content:center;
+  gap:2.5rem;
+  margin-top:2rem;
+  padding-top:1.2rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+.sv { font-size:1.3rem; font-weight:700; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.sl { font-size:0.72rem; color:#64748b; margin-top:0.15rem; letter-spacing: 0.02em; }
+.ft { color:#475569; font-size:0.78rem; text-align:center; margin-top:1.2rem; letter-spacing: 0.02em; }
+@media(max-width:640px) {
+  .container { padding:1rem; }
+  .header h1 { font-size:1.5rem; }
+  .card { padding:1rem 1.1rem; }
+  .section { padding: 1rem 0.8rem; }
+  .quick-nav {
+    top: 8px;
+    padding: 0.75rem 0.8rem;
+  }
+  .quick-status {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+</style></head><body><div class="progress-rail"><div id="progress-bar" class="progress-bar"></div></div><div class="container">
+<div class="header"><h1>📡 LLM & Agent Daily Briefing</h1><p class="sub">2026-07-10</p></div>
+<div class="quick-nav">
+  <div class="quick-nav-links">
+    <a class="quick-link" data-target="section-trending" href="#section-trending">🔥 Trending</a>
+    <a class="quick-link" data-target="section-github" href="#section-github">🚀 GitHub</a>
+    <a class="quick-link" data-target="section-paper" href="#section-paper">📄 论文</a>
+    <a class="quick-link" data-target="section-blog" href="#section-blog">📢 官方动态</a>
+    <a class="quick-link" data-target="section-news" href="#section-news">🏭 行业动态</a>
+  </div>
+  <div class="quick-status">当前阅读：<strong id="current-section-label">Trending</strong><span id="reading-percent">0%</span></div>
+</div><div id="section-trending" class="section"><div class="sh trending"><span class="icon">🔥</span><span class="title">GitHub Trending 今日热门</span><span class="cnt">9 条</span></div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani/agent-skills</a></div>
+  <div class="cm"><span class="stars">⭐ 74275</span><span class="lang">JavaScript</span>1297</div>
+  <div class="cd">面向 AI 编程 Agent 的生产级工程技能库，把代码审查、测试、重构和交付等实践封装为可复用能力。它帮助 Claude、Codex 等工具以稳定、可组合的方式遵循团队研发规范，适合希望减少提示词重复、提升自动化编码可靠性的工程团队。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/TencentCloud/TencentDB-Agent-Memory" target="_blank">TencentCloud/TencentDB-Agent-Memory</a></div>
+  <div class="cm"><span class="stars">⭐ 7708</span><span class="lang">TypeScript</span>318</div>
+  <div class="cd">完全本地化的 AI Agent 长期记忆组件，采用四层渐进式处理管线且不依赖外部 API。它用于保存、检索和演化对话与任务上下文，降低长流程中遗忘历史的风险，适合重视数据驻留和私有化部署的智能体应用。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/mvanhorn/last30days-skill" target="_blank">mvanhorn/last30days-skill</a></div>
+  <div class="cm"><span class="stars">⭐ 50796</span><span class="lang">Python</span>352</div>
+  <div class="cd">研究型 Agent 技能，可跨 Reddit、X、YouTube、HN、Polymarket 与网页搜集主题信息，再生成带依据的综合摘要。它把分散的信息源整合到单一研究流程，适用于市场调研、技术追踪和新闻监测等需要快速形成可靠结论的工作。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/iOfficeAI/OfficeCLI" target="_blank">iOfficeAI/OfficeCLI</a></div>
+  <div class="cm"><span class="stars">⭐ 12016</span><span class="lang">C#</span>1717</div>
+  <div class="cd">为 AI Agent 设计的 Office 自动化命令行套件，可读写和处理 Word、Excel、PowerPoint，且无需安装 Office。单二进制形态便于在沙箱和流水线部署，适合让 Agent 完成表格分析、文档修改与演示稿生成等企业办公自动化任务。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/obra/superpowers" target="_blank">obra/superpowers</a></div>
+  <div class="cm"><span class="stars">⭐ 249904</span><span class="lang">Shell</span>1116</div>
+  <div class="cd">面向智能体软件开发的技能框架与方法论，把需求澄清、设计、实现、测试和复盘组织成可执行流程。重点在于让 Agent 持续遵守质量门槛，而非只追求一次性生成代码；适合希望将编码 Agent 纳入正式研发协作的团队。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/alibaba/zvec" target="_blank">alibaba/zvec</a></div>
+  <div class="cm"><span class="stars">⭐ 14442</span><span class="lang">C++</span>395</div>
+  <div class="cd">轻量、高性能的进程内向量数据库，适合嵌入 RAG、语义搜索和 Agent 记忆等应用。它不需要单独部署数据库服务，可直接作为应用组件运行，因而对本地开发、边缘部署和追求简洁架构的团队特别实用。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/wonderwhy-er/DesktopCommanderMCP" target="_blank">wonderwhy-er/DesktopCommanderMCP</a></div>
+  <div class="cm"><span class="stars">⭐ 6395</span><span class="lang">TypeScript</span>28</div>
+  <div class="cd">为 Claude 提供终端控制、文件系统搜索和差异编辑能力的 MCP 服务。它通过标准 MCP 接口将对话式助手接入受控本地开发环境，适合需要可审计工具调用、文件定位和代码修改自动化的开发者。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/bradautomates/claude-video" target="_blank">bradautomates/claude-video</a></div>
+  <div class="cm"><span class="stars">⭐ 6100</span><span class="lang">Python</span>951</div>
+  <div class="cd">让 Claude 能理解视频的工具，自动下载视频、抽取关键帧并转录音频，再将多模态材料交给模型分析。它将视频处理流程封装为简单命令，适用于会议回顾、教程检索与媒体内容审阅等自动化任务。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/TencentCloud/CubeSandbox" target="_blank">TencentCloud/CubeSandbox</a></div>
+  <div class="cm"><span class="stars">⭐ 8967</span><span class="lang">Rust</span>564</div>
+  <div class="cd">面向 AI Agent 的即时、并发、安全、轻量执行沙箱。Agent 调用代码和系统工具时需要隔离环境控制风险；该项目提供高并发场景可用的底层运行环境，帮助在保持响应速度的同时建立可靠的安全边界。</div>
+</div></div><div id="section-github" class="section"><div class="sh github"><span class="icon">🚀</span><span class="title">GitHub 热门项目</span><span class="cnt">5 项</span></div>
+<p style="color:#64748b;font-size:0.85rem;margin-bottom:0.8rem;line-height:1.5">📅 最近活跃（近 3 天 push） | 🔍 pushed:>2026-07-07 | 🔑 LLM OR AI agent OR machine learning</p>
+<div class="card">
+  <div class="ct"><a href="https://github.com/openclaw/openclaw" target="_blank">openclaw/openclaw</a></div>
+  <div class="cm"><span class="stars">⭐ 382,364</span><span class="lang">TypeScript</span><span class="topic">ai-assistant</span><span class="topic">agent</span><span>更新于 2026-07-10</span></div>
+  <div class="cd">跨操作系统和平台的个人 AI 助手项目，聚焦将智能体能力带到用户自己的设备与日常工作环境。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/n8n-io/n8n" target="_blank">n8n-io/n8n</a></div>
+  <div class="cm"><span class="stars">⭐ 195,865</span><span class="lang">TypeScript</span><span class="topic">workflow</span><span class="topic">automation</span><span class="topic">ai</span><span>更新于 2026-07-10</span></div>
+  <div class="cd">支持原生 AI 能力的公平代码工作流自动化平台，可组合可视化流程、自定义代码和数百种集成。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/langflow-ai/langflow" target="_blank">langflow-ai/langflow</a></div>
+  <div class="cm"><span class="stars">⭐ 151,459</span><span class="lang">Python</span><span class="topic">agents</span><span class="topic">llm</span><span class="topic">workflow</span><span>更新于 2026-07-10</span></div>
+  <div class="cd">用于构建、部署 AI Agent 与工作流的可视化工具，帮助团队更快搭建和测试基于大模型的应用。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/google-gemini/gemini-cli" target="_blank">google-gemini/gemini-cli</a></div>
+  <div class="cm"><span class="stars">⭐ 105,872</span><span class="lang">TypeScript</span><span class="topic">gemini</span><span class="topic">cli</span><span class="topic">coding-agent</span><span>更新于 2026-07-10</span></div>
+  <div class="cd">Google 开源的终端 AI Agent，将 Gemini 模型能力直接带入命令行开发工作流。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/browser-use/browser-use" target="_blank">browser-use/browser-use</a></div>
+  <div class="cm"><span class="stars">⭐ 103,988</span><span class="lang">Python</span><span class="topic">browser-automation</span><span class="topic">agent</span><span>更新于 2026-07-10</span></div>
+  <div class="cd">让网站可被 AI Agent 操作的浏览器自动化框架，面向在线任务执行与网页工作流自动化。</div>
+  
+</div></div><div id="section-paper" class="section"><div class="sh paper"><span class="icon">📄</span><span class="title">论文速读</span><span class="cnt">5 篇</span></div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.08768v1" target="_blank">UniClawBench：面向真实任务的主动式 Agent 通用基准</a></div>
+  <div class="cm">2026-07-09 · cs.CL</div>
+  <div class="cd"><b>摘要：</b>该论文提出用于评测主动式 Agent 的通用基准，关注 Agent 在真实环境中操作日常工具、主动协助用户的能力。作者指出现有评测难以有效覆盖这类任务，并尝试建立更贴近现实使用情境的评价方式。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.08758v1" target="_blank">创意也有基因：科学谱系推理与基于谱系的创意生成基准</a></div>
+  <div class="cm">2026-07-09 · cs.AI</div>
+  <div class="cd"><b>摘要：</b>论文研究科学思想之间的谱系关系，提出评估模型追踪研究脉络、并在既有知识谱系上生成新想法的基准。该方向有助于衡量模型在科研辅助中的可解释推理与创新能力。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.08754v1" target="_blank">SLORR：简单高效的训练内低秩正则化</a></div>
+  <div class="cm">2026-07-09 · cs.LG, cs.AI</div>
+  <div class="cd"><b>摘要：</b>论文提出 SLORR，一种在训练过程中加入的低秩正则化方法，旨在以较低复杂度改善模型训练的效率与表示质量。其关注点是用简洁机制获得稳定的优化收益。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.08745v1" target="_blank">AUTOPILOT VQA：面向事故场景行车记录仪理解的视觉语言模型基准</a></div>
+  <div class="cm">2026-07-09 · cs.AI, cs.CV</div>
+  <div class="cd"><b>摘要：</b>该基准评估视觉语言模型对行车记录仪事故场景的理解能力，聚焦事件中心的视觉问答。研究可用于检验模型在驾驶安全、事件分析和复杂动态视觉情境中的可靠性。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.08740v1" target="_blank">工作流即知识：LLM 中介工作流的语义持久化</a></div>
+  <div class="cm">2026-07-09 · cs.AI, cs.PL</div>
+  <div class="cd"><b>摘要：</b>论文研究 LLM 中介工作流的语义持久化，将工作流沉淀为可检索、可复用的知识资产，以便后续任务理解并继承既有流程经验。</div>
+</div></div><div id="section-blog" class="section"><div class="sh blog"><span class="icon">📢</span><span class="title">官方动态</span><span class="cnt">3 条</span></div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenAI</span><a class="blog-title" href="https://openai.com/news/company-announcements/" target="_blank">推出 GPT-Live</a><span class="blog-date">2026-07-08</span></div>
+  <div class='blog-summary'>摘要：OpenAI 将 GPT-Live 列为最新产品动态，值得持续关注其对实时交互与 Agent 工作流的后续影响。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">Anthropic</span><a class="blog-title" href="https://www.anthropic.com/news" target="_blank">Claude Code 的诞生历程</a><span class="blog-date">2026-07-06</span></div>
+  <div class='blog-summary'>摘要：Anthropic 回顾 Claude Code 如何从内部 CLI 演化为编程 Agent，呈现工程实践与早期用户反馈共同塑造产品的过程。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">Anthropic</span><a class="blog-title" href="https://www.anthropic.com/news/fable-safeguards-jailbreak-framework" target="_blank">Fable 5 的网络安全防护与越狱分级框架详解</a><span class="blog-date">2026-07-02</span></div>
+  <div class='blog-summary'>摘要：Anthropic 介绍 Fable 5 配套的网络安全分类器，并公布 AI 越狱严重性评估框架的早期草案。</div>
+</div></div><div id="section-news" class="section"><div class="sh news"><span class="icon">🏭</span><span class="title">行业动态</span><span class="cnt">9 条</span></div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMipgFBVV95cUxQQkgtaERFdmRZejR5dnNKVXZWbXh1U3U3eXZRS2luZUpRMV9fQndUQ1MzNGNQcEN0MDFCRVQzeTBaeDF3b3JJOXNCT2xGQVhlZEVoaDVRUlJaSEMxaVJGNExPdXlVVlBRaXJZNDFtZUFaeVVoeDJocnh5bmxLTUE1V2hudC00WEhTbXRiYXBKMG5sQXEzMWNHUzAtVWlyVGc3cmVVQ2Zn?oc=5" target="_blank">一家 AI Agent 创业公司让其 Agent 参与了 1 亿美元融资</a><span class="news-date">Thu, 09 Jul 2026 22:08:58 GMT</span></div>
+  <div class='news-summary'>摘要：TechCrunch 报道一家 AI Agent 创业公司尝试让 Agent 参与其融资流程，反映 Agent 在高价值商业工作流中的应用边界正被探索。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMitAFBVV95cUxPOFV2SjkyOV9OREU5UVlCWWtUNU9iRHpsSENkQ0dUSTJXMVdMdUlXdFJsY2swZFpxam9WWU1FNl9XMDh3cDA1SnlteGNQbTlxSEpTdFdvbzdSLUFKMk5xd1ZZZU5wd3FuSFFlaVQ3bHZEVHJJcjJ2MU1QT1lNRVBucFZIZGZuZk9zaXJ6QVdiM3Y5Z2xHTVdfYTlnek9UbVVSN3U4a3QySzIzSENmMHR4X1I1Z3Q?oc=5" target="_blank">Biomni AI Agent 希望加速生物医学研究，充当“专家协作者”</a><span class="news-date">Thu, 09 Jul 2026 18:30:51 GMT</span></div>
+  <div class='news-summary'>摘要：报道称 Biomni 试图以 AI Agent 身份协助生物医学研究，让模型参与数据处理、分析与假设生成等科研环节。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMingFBVV95cUxPTDdkUmdwY0dTcU1WTTUxdTJ6TGp0dGtTRkZvVnE3VjdGRHFXMVhsMTFVaEw0bnlYakktc0JYaGsxZFlBdW1VM2x1XzZacFJrYVI3Z3d3WllFaXpZWElwc1ZSU1lmMjZMOTlzOTAxYkMtSVloeGdNaEV4R1RzaHhjSmY2UEJ2MmZ3Z3VlTnVqMFhkLVppS2ZxSWFVZDk4Zw?oc=5" target="_blank">AI Agent 创业公司 Lyzr 据报以 5 亿美元估值融资 1 亿美元</a><span class="news-date">Thu, 09 Jul 2026 20:38:11 GMT</span></div>
+  <div class='news-summary'>摘要：SiliconANGLE 报道 Lyzr 的融资消息，显示资本市场持续关注企业级 AI Agent 平台的商业化潜力。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxQODBadkVpb1MzdzV0ajhXRHRVRVhRM1EyeWxsbGg0YVBsS1ZSOExnU2RQTHYySWpIY1MteHNJc2xKOG1LZVR5Q2RBSjVjekp2ZzFSRkdKeUdJSkg3d2FYQkJfcjBfY2pIaVE1UEFuVlo3ckw2M1ZVck5OZkFVOU9XRVJoSE04clhvTVlPNTctNGVIbERFc0RhdGxxa0FySW5XRi15ZXBVVWZBNVUwcWpHNkk4U3Npdw?oc=5" target="_blank">OpenAI 推出 GPT-5.6 与 ChatGPT Work AI Agent</a><span class="news-date">Thu, 09 Jul 2026 20:09:47 GMT</span></div>
+  <div class='news-summary'>摘要：Forbes 报道 OpenAI 推出 GPT-5.6 与面向工作的 ChatGPT Agent，企业级知识工作和任务自动化将是重点观察方向。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMifEFVX3lxTE5iRzN2ZTlIdjN2S2RrbFFNMEctZFNJRmJPNDhrM3MxTkNfRThEMXBBQk9ncVlPMTlCcUptLWUwd2pVNmNxOHhvQ0NHX2ZfSHg4U3dudFNIR0xzcFBmaEZhYWd1MmFTUDFPc2cybm92a05xVjVUamkzSDI1a2k?oc=5" target="_blank">AI Agent 测试机器能否在生命终点替患者发声</a><span class="news-date">Thu, 09 Jul 2026 15:30:01 GMT</span></div>
+  <div class='news-summary'>摘要：报道讨论 AI Agent 在临终医疗沟通中的潜在角色，同时凸显代理决策、伦理边界与患者意愿表达等重要问题。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMivgFBVV95cUxPMTlhSjFCVlRMbmlIME5FdW1nd05kYlpSSDR1aUFBRXFNVUthQm8yTU1ERkdieFR3YkpJZU1zdHZyZExlemlaenhVWWhnYjFtd1NsWXl0OUVqbHV1Si01cl95TktrRHhQYmVyWlNKQTZDYUF6TjlRTkJpTzJaRE9ua2tlM3FxbGRhNTVMUWFhaVZHRW91ZTF0N3VOb1h1Yk1zaHpxMllDWjZEemJWZ3ZkN0FQMGFLX1NRcXJIbEVR0gG-AUFVX3lxTE80b3gwRXJyWHdvNUJId3Z0eXU1MHhOZEp5NjJiWEd1S0h1VEtlTWZYNHo4R1R4QjFUaUM0d0JPVDBVNkM2STh1djYyc3phbE80dGpXMzNPNVljbW9xMnNFOGFtbzN4LWFiMTZYVEt3WUZGLU1ZcG8xbFJ3VkJtaWFqem1ZbldxTVlmVE5WSEk4SHVIZ1ltTnZzTXYxZ3k4YWw5YVlpUHZ3bEl5V3lNZkZwZDduUUtodWN4NTNjNEE?oc=5" target="_blank">认识 Biomni：将数据转化为假设的免费生物医学 AI Agent</a><span class="news-date">Thu, 09 Jul 2026 18:00:08 GMT</span></div>
+  <div class='news-summary'>摘要：报道介绍 Biomni 这一生物医学 AI Agent，强调其将科研数据处理与假设生成结合，以协助研究人员推进探索。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMi4wFBVV95cUxOZm1qbHhWRFItQkc4QWVzeUxPcUZod0h6MmRJbXM1STBlUl8ybEhDSXdLOS1ibVFlTU5acldJQU9kb3Nqb000QkY1Mnp1OUVTUFVSUkpqOWVGd3c4SUZnazZJcGdRcExsZXNSWm9QWmF6UjFtcjUtc0dxN1JuQi1qZEtBNnE4eE9ScWlsVFhrZndvRW5tZFZmTmhUdElxaXBoZm9ieVNiUGlDSkpYVXdpRlZQdUhYS2VUUEhPcGZVcjdLa1hxTzVra2h1MzQ1ODNyREFkSzdyb2x2Ym5xOGJ4MHpVcw?oc=5" target="_blank">DeepFabric 发布端到端供应链运营 AI Agent 平台</a><span class="news-date">Thu, 09 Jul 2026 18:43:33 GMT</span></div>
+  <div class='news-summary'>摘要：DeepFabric 推出面向供应链全流程运营的 AI Agent 平台，体现智能体正向采购、规划、执行等垂直业务场景扩展。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNSkdLVW1OMjFyYlpXZTRScnF6T0ZlMUF4R0hDMkNBYVZRVkRPeXlzUWRuWUIzZnZyMFNlRVJ1dW1xb0Q3cUtzV3dPNFQ2X0cwdUhvSVo3VnROeldXcTFLRnJWU1hmblFUbnlCZk1DczBKdERnQlRqYmxaaDduemVxRkFKOTZwd1k3SU9kRkZn?oc=5" target="_blank">Visa 在直播电商概念验证中测试 AI Agent 支付</a><span class="news-date">Thu, 09 Jul 2026 17:57:56 GMT</span></div>
+  <div class='news-summary'>摘要：Visa 测试 AI Agent 在直播电商中的支付能力，值得关注授权控制、交易安全与代理消费等基础设施问题。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Hacker News</span><a class="news-title" href="https://openai.com/index/gpt-5-6/" target="_blank">GPT-5.6</a><span class="news-date">2026-07-10</span></div>
+  <div class='news-summary'>摘要：OpenAI 的 GPT-5.6 在 Hacker News 引发讨论，开发者关注其模型能力、实际应用与产品集成方式。</div>
+</div></div>
+<div class="stats">
+  <div><div class="sv">31</div><div class="sl">信息条数</div></div>
+  <div><div class="sv">5</div><div class="sl">GitHub 项目</div></div>
+  <div><div class="sv">9</div><div class="sl">Trending</div></div>
+  <div><div class="sv">3</div><div class="sl">官方动态</div></div>
+</div>
+<div class="ft">由 Hermes Agent 自动生成 | 2026-07-10 09:58</div>
+</div>
+<script>
+(() => {
+  const progressBar = document.getElementById('progress-bar');
+  const percentLabel = document.getElementById('reading-percent');
+  const currentLabel = document.getElementById('current-section-label');
+  const links = Array.from(document.querySelectorAll('.quick-link'));
+  const sections = links
+    .map(link => {
+      const id = link.getAttribute('data-target');
+      const section = document.getElementById(id);
+      return section ? { id, link, section, label: link.textContent.trim() } : null;
+    })
+    .filter(Boolean);
+
+  function updateProgress() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = maxScroll > 0 ? Math.min(100, Math.max(0, (scrollTop / maxScroll) * 100)) : 0;
+    progressBar.style.width = percent + '%';
+    percentLabel.textContent = Math.round(percent) + '%';
+  }
+
+  function updateActiveSection() {
+    const trigger = window.innerHeight * 0.22;
+    let current = sections[0];
+    for (const item of sections) {
+      const rect = item.section.getBoundingClientRect();
+      if (rect.top <= trigger) {
+        current = item;
+      }
+    }
+    if (!current) return;
+    links.forEach(link => link.classList.remove('active'));
+    current.link.classList.add('active');
+    currentLabel.textContent = current.label.replace(/^[^\s]+\s/, '');
+  }
+
+  function onScroll() {
+    updateProgress();
+    updateActiveSection();
+  }
+
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script></body></html>

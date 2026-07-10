@@ -1,0 +1,423 @@
+{
+  "date": "2026-07-10",
+  "github": [
+    {
+      "name": "openclaw/openclaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "desc": "Your own personal AI assistant. Any OS. Any Platform.",
+      "stars": 382364,
+      "lang": "TypeScript",
+      "updated": "2026-07-10",
+      "topics": [
+        "ai-assistant",
+        "agent"
+      ],
+      "releases": [],
+      "name_zh": "OpenClaw",
+      "desc_zh": "跨操作系统和平台的个人 AI 助手项目，聚焦将智能体能力带到用户自己的设备与日常工作环境。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "n8n-io/n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "desc": "Fair-code workflow automation platform with native AI capabilities.",
+      "stars": 195865,
+      "lang": "TypeScript",
+      "updated": "2026-07-10",
+      "topics": [
+        "workflow",
+        "automation",
+        "ai"
+      ],
+      "releases": [],
+      "name_zh": "n8n",
+      "desc_zh": "支持原生 AI 能力的公平代码工作流自动化平台，可组合可视化流程、自定义代码和数百种集成。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "langflow-ai/langflow",
+      "url": "https://github.com/langflow-ai/langflow",
+      "desc": "A tool for building and deploying AI-powered agents and workflows.",
+      "stars": 151459,
+      "lang": "Python",
+      "updated": "2026-07-10",
+      "topics": [
+        "agents",
+        "llm",
+        "workflow"
+      ],
+      "releases": [],
+      "name_zh": "Langflow",
+      "desc_zh": "用于构建、部署 AI Agent 与工作流的可视化工具，帮助团队更快搭建和测试基于大模型的应用。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "desc": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+      "stars": 105872,
+      "lang": "TypeScript",
+      "updated": "2026-07-10",
+      "topics": [
+        "gemini",
+        "cli",
+        "coding-agent"
+      ],
+      "releases": [],
+      "name_zh": "Gemini CLI",
+      "desc_zh": "Google 开源的终端 AI Agent，将 Gemini 模型能力直接带入命令行开发工作流。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "browser-use/browser-use",
+      "url": "https://github.com/browser-use/browser-use",
+      "desc": "Make websites accessible for AI agents and automate tasks online.",
+      "stars": 103988,
+      "lang": "Python",
+      "updated": "2026-07-10",
+      "topics": [
+        "browser-automation",
+        "agent"
+      ],
+      "releases": [],
+      "name_zh": "Browser Use",
+      "desc_zh": "让网站可被 AI Agent 操作的浏览器自动化框架，面向在线任务执行与网页工作流自动化。",
+      "lang_zh": "Python"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "desc": "Production-grade engineering skills for AI coding agents.",
+      "stars": 74275,
+      "today": 1297,
+      "lang": "JavaScript",
+      "topics": [
+        "ai-agent",
+        "coding-agent"
+      ],
+      "name_zh": "Agent Skills",
+      "desc_zh": "面向 AI 编程 Agent 的生产级工程技能库，把代码审查、测试、重构和交付等实践封装为可复用能力。它帮助 Claude、Codex 等工具以稳定、可组合的方式遵循团队研发规范，适合希望减少提示词重复、提升自动化编码可靠性的工程团队。",
+      "lang_zh": "JavaScript"
+    },
+    {
+      "name": "TencentCloud/TencentDB-Agent-Memory",
+      "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "desc": "Fully local long-term memory for AI Agents via a 4-tier progressive pipeline.",
+      "stars": 7708,
+      "today": 318,
+      "lang": "TypeScript",
+      "topics": [
+        "agent-memory",
+        "llm"
+      ],
+      "name_zh": "腾讯云 Agent Memory",
+      "desc_zh": "完全本地化的 AI Agent 长期记忆组件，采用四层渐进式处理管线且不依赖外部 API。它用于保存、检索和演化对话与任务上下文，降低长流程中遗忘历史的风险，适合重视数据驻留和私有化部署的智能体应用。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "desc": "AI agent skill that researches across major web sources and synthesizes a grounded summary.",
+      "stars": 50796,
+      "today": 352,
+      "lang": "Python",
+      "topics": [
+        "research",
+        "agent"
+      ],
+      "name_zh": "Last 30 Days Skill",
+      "desc_zh": "研究型 Agent 技能，可跨 Reddit、X、YouTube、HN、Polymarket 与网页搜集主题信息，再生成带依据的综合摘要。它把分散的信息源整合到单一研究流程，适用于市场调研、技术追踪和新闻监测等需要快速形成可靠结论的工作。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "iOfficeAI/OfficeCLI",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "desc": "Office suite for AI agents to read, edit and automate Word, Excel and PowerPoint files.",
+      "stars": 12016,
+      "today": 1717,
+      "lang": "C#",
+      "topics": [
+        "office",
+        "automation",
+        "agent"
+      ],
+      "name_zh": "OfficeCLI",
+      "desc_zh": "为 AI Agent 设计的 Office 自动化命令行套件，可读写和处理 Word、Excel、PowerPoint，且无需安装 Office。单二进制形态便于在沙箱和流水线部署，适合让 Agent 完成表格分析、文档修改与演示稿生成等企业办公自动化任务。",
+      "lang_zh": "C#"
+    },
+    {
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "desc": "An agentic skills framework and software development methodology.",
+      "stars": 249904,
+      "today": 1116,
+      "lang": "Shell",
+      "topics": [
+        "agent-skills",
+        "software-engineering"
+      ],
+      "name_zh": "Superpowers",
+      "desc_zh": "面向智能体软件开发的技能框架与方法论，把需求澄清、设计、实现、测试和复盘组织成可执行流程。重点在于让 Agent 持续遵守质量门槛，而非只追求一次性生成代码；适合希望将编码 Agent 纳入正式研发协作的团队。",
+      "lang_zh": "Shell"
+    },
+    {
+      "name": "alibaba/zvec",
+      "url": "https://github.com/alibaba/zvec",
+      "desc": "A lightweight, in-process vector database.",
+      "stars": 14442,
+      "today": 395,
+      "lang": "C++",
+      "topics": [
+        "vector-database",
+        "rag"
+      ],
+      "name_zh": "Zvec",
+      "desc_zh": "轻量、高性能的进程内向量数据库，适合嵌入 RAG、语义搜索和 Agent 记忆等应用。它不需要单独部署数据库服务，可直接作为应用组件运行，因而对本地开发、边缘部署和追求简洁架构的团队特别实用。",
+      "lang_zh": "C++"
+    },
+    {
+      "name": "wonderwhy-er/DesktopCommanderMCP",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+      "desc": "MCP server for Claude with terminal control and file editing capabilities.",
+      "stars": 6395,
+      "today": 28,
+      "lang": "TypeScript",
+      "topics": [
+        "mcp",
+        "claude"
+      ],
+      "name_zh": "DesktopCommanderMCP",
+      "desc_zh": "为 Claude 提供终端控制、文件系统搜索和差异编辑能力的 MCP 服务。它通过标准 MCP 接口将对话式助手接入受控本地开发环境，适合需要可审计工具调用、文件定位和代码修改自动化的开发者。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "bradautomates/claude-video",
+      "url": "https://github.com/bradautomates/claude-video",
+      "desc": "Give Claude the ability to inspect video through frame extraction and transcription.",
+      "stars": 6100,
+      "today": 951,
+      "lang": "Python",
+      "topics": [
+        "claude",
+        "multimodal"
+      ],
+      "name_zh": "Claude Video",
+      "desc_zh": "让 Claude 能理解视频的工具，自动下载视频、抽取关键帧并转录音频，再将多模态材料交给模型分析。它将视频处理流程封装为简单命令，适用于会议回顾、教程检索与媒体内容审阅等自动化任务。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "TencentCloud/CubeSandbox",
+      "url": "https://github.com/TencentCloud/CubeSandbox",
+      "desc": "Instant, concurrent, secure and lightweight sandbox for AI Agents.",
+      "stars": 8967,
+      "today": 564,
+      "lang": "Rust",
+      "topics": [
+        "ai-agent",
+        "sandbox"
+      ],
+      "name_zh": "CubeSandbox",
+      "desc_zh": "面向 AI Agent 的即时、并发、安全、轻量执行沙箱。Agent 调用代码和系统工具时需要隔离环境控制风险；该项目提供高并发场景可用的底层运行环境，帮助在保持响应速度的同时建立可靠的安全边界。",
+      "lang_zh": "Rust"
+    }
+  ],
+  "papers": [
+    {
+      "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+      "date": "2026-07-09",
+      "summary": "The rapid development of large language models and multimodal large language models has accelerated the emergence of proactive agents capable of operating everyday tools and assisting users in real-world environments. However, existing benchmarks struggle to evaluate such agents effectively, as they",
+      "url": "https://arxiv.org/abs/2607.08768v1",
+      "cats": [
+        "cs.CL"
+      ],
+      "title_zh": "UniClawBench：面向真实任务的主动式 Agent 通用基准",
+      "summary_zh": "该论文提出用于评测主动式 Agent 的通用基准，关注 Agent 在真实环境中操作日常工具、主动协助用户的能力。作者指出现有评测难以有效覆盖这类任务，并尝试建立更贴近现实使用情境的评价方式。"
+    },
+    {
+      "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation",
+      "date": "2026-07-09",
+      "summary": "Scientific ideas rarely start from a blank page. They inherit mechanisms, repair known limitations, and recombine pieces of earlier work, much like biological genomes. Current benchmarks still say little about whether AI systems can follow this inheritance structure. We present IdeaGene-Bench (IG-Be",
+      "url": "https://arxiv.org/abs/2607.08758v1",
+      "cats": [
+        "cs.AI"
+      ],
+      "title_zh": "创意也有基因：科学谱系推理与基于谱系的创意生成基准",
+      "summary_zh": "论文研究科学思想之间的谱系关系，提出评估模型追踪研究脉络、并在既有知识谱系上生成新想法的基准。该方向有助于衡量模型在科研辅助中的可解释推理与创新能力。"
+    },
+    {
+      "title": "SLORR: Simple and Efficient In-Training Low-Rank Regularization",
+      "date": "2026-07-09",
+      "summary": "Low-rank factorization is widely used to compress neural networks, but modern models are often not naturally amenable to aggressive factorization without significant accuracy loss. Existing training-time low-rank regularizers can improve compressibility, but they often require SVDs of large weight m",
+      "url": "https://arxiv.org/abs/2607.08754v1",
+      "cats": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "title_zh": "SLORR：简单高效的训练内低秩正则化",
+      "summary_zh": "论文提出 SLORR，一种在训练过程中加入的低秩正则化方法，旨在以较低复杂度改善模型训练的效率与表示质量。其关注点是用简洁机制获得稳定的优化收益。"
+    },
+    {
+      "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+      "date": "2026-07-09",
+      "summary": "Recent advances in Vision-Language Models, Large Language Models, and Multimodal Large Language Models have improved autonomous driving tasks such as scene understanding, decision making, trajectory prediction, and visual question answering. However, evaluating whether these models can reliably reas",
+      "url": "https://arxiv.org/abs/2607.08745v1",
+      "cats": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "title_zh": "AUTOPILOT VQA：面向事故场景行车记录仪理解的视觉语言模型基准",
+      "summary_zh": "该基准评估视觉语言模型对行车记录仪事故场景的理解能力，聚焦事件中心的视觉问答。研究可用于检验模型在驾驶安全、事件分析和复杂动态视觉情境中的可靠性。"
+    },
+    {
+      "title": "Workflow as Knowledge: Semantic Persistence for LLM-Mediated Workflows",
+      "date": "2026-07-09",
+      "summary": "Large language model (LLM) applications increasingly use explicit workflows for tool use, retrieval, branching, checkpointing, and human approval. Existing workflow systems already address many execution concerns. This paper proposes a Lisp-inspired but language-independent conceptual model: symboli",
+      "url": "https://arxiv.org/abs/2607.08740v1",
+      "cats": [
+        "cs.AI",
+        "cs.PL"
+      ],
+      "title_zh": "工作流即知识：LLM 中介工作流的语义持久化",
+      "summary_zh": "论文研究 LLM 中介工作流的语义持久化，将工作流沉淀为可检索、可复用的知识资产，以便后续任务理解并继承既有流程经验。"
+    }
+  ],
+  "hn": [
+    {
+      "title": "GPT-5.6",
+      "url": "https://openai.com/index/gpt-5-6/",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-10",
+      "page_content": "We’re launching the GPT‑5.6 family of models for general availability following our [limited preview⁠](https://openai.com/index/previewing-gpt-5-6-sol/): our new flagship, **Sol**, alongside **Terra**, a balanced model for everyday work, and **Luna**, our most cost-efficient model.\n\nGPT‑5.6 Sol sets a new standard for both intelligence and efficiency, achieving state-of-the-art results across coding, knowledge work, cybersecurity, and science while outperforming previous and competing frontier models with fewer tokens and at lower estimated cost. The result is stronger performance per dollar: more successful work for the same spend, or comparable results at a lower total cost. We also introduce a new way to accelerate the most demanding work: `ultra` is our highest-capability setting, coordinating multiple agents across parallel workstreams to finish complex tasks faster. Stronger computer use and design judgment make GPT‑5.6 Sol our most polished collaborator yet, helping it inspect, refine, and deliver ready-to-use results.\n\nWe trained GPT‑5.6 to get more useful work from every token. On [**Agents’ Last Exam**⁠(opens in a new window)](https://agents-last-exam.org/), an evaluation of long-running professional workflows across 55 fields, GPT‑5.6 Sol sets a new high of 53.6, eclipsing Claude Fable 5 (adaptive reasoning) by 13.1 points. Even at medium reasoning, it beats Fable 5 by 11.4 points at roughly one-quarter the estimated cost. That efficiency extends to smaller models, which are essential to making intelligence more abundant and affordable: GPT‑5.6 Terra and GPT‑5.6 Luna outperform Fable 5 at around one-sixteenth the cost. On the [**Artificial Analysis Intelligence Index**⁠(opens in a new window)](https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index), a broad measure of intelligence spanning agentic work, coding, scientific reasoning, and general capabilities, GPT‑5.6 Sol with max reasoning comes within one point of Fable 5 while completing tasks in 61% less time at roughly half the estimated cost.\n\nGPT‑5.6 launches with our most robust safeguards to date, designed to be resilient against determined and adaptive misuse without broadly limiting legitimate work. Before general availability, we put the models and safeguards through our most extensive evaluation period yet, combining human red teaming with large-scale automated testing. During the preview, we worked closely with expert organizations and with trusted partners to pressure-test defenses and strengthen safeguards before broader launch. The resulting system layers protections trained into the model with real-time checks, monitoring, and access calibrated to trust and risk.\n\nGPT‑5.6 Sol is our best coding model yet. On the **Artificial Analysis Coding Agent Index,** GPT‑5.6 Sol with max reasoning sets a new state of the art at 80, 2.8 points above Fable 5, while using less than half the output tokens, taking less than half the time, and costing about one-third less. That advantage extends across the family: Terra performs just above Fable 5, while Luna outperforms Opus 4.8; each does so in roughly one-third of the time, with about half as many output tokens, and at approximately one-quarter the estimated cost. It also sets new state-of-the-art results on Terminal‑Bench 2.1 and DeepSWE, which test complex command-line workflows and long-horizon engineering in real codebases.\n\n**_Artificial Analysis Coding Agent Index:_**_an independent index of coding-agent performance across implementation, terminal use, and real codebases._\n\nGPT‑5.6 can write and run lightweight programs that coordinate tools, process intermediate results, monitor progress, and choose the next action as work unfolds. This lets tool-heavy tasks advance with fewer tokens, fewer model round trips, and less guidance. Instead of requiring developers to script every step or passing every tool response back through the model, [Programmatic Tool Calling⁠(opens in a new window)](https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling) in the Responses API can filter large amounts of intermediate data, retain only what matters, and adapt its workflow along the way.\n\nFor problems that reward a greater investment of time and compute, GPT‑5.6 can push beyond this efficient default. `max` gives GPT‑5.6 even more time than `xhigh` to reason and explore alternatives, run checks, and revise its approach. `ultra` goes further by coordinating four agents in parallel by default, trading higher token use for stronger results and faster time-to-result on demanding tasks. The charts below compare ultra’s default four-agent setup with a one-agent baseline across BrowseComp, SEC-Bench Pro, and Terminal-Bench 2.1; BrowseComp and SEC-Bench Pro also show 16-agent configurations. Across all three evaluations, adding parallel agents shifts the score-latency frontier upward and to the left, reaching stronger results in less time. In the API, developers can build ultra-like experiences using the multi-agent beta in the Responses API.",
+      "title_zh": "GPT-5.6",
+      "summary_zh": "OpenAI 的 GPT-5.6 在 Hacker News 引发讨论，开发者关注其模型能力、实际应用与产品集成方式。"
+    }
+  ],
+  "news": [
+    {
+      "title": "An AI agent startup just let its agent run its $100M fundraise - TechCrunch",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQQkgtaERFdmRZejR5dnNKVXZWbXh1U3U3eXZRS2luZUpRMV9fQndUQ1MzNGNQcEN0MDFCRVQzeTBaeDF3b3JJOXNCT2xGQVhlZEVoaDVRUlJaSEMxaVJGNExPdXlVVlBRaXJZNDFtZUFaeVVoeDJocnh5bmxLTUE1V2hudC00WEhTbXRiYXBKMG5sQXEzMWNHUzAtVWlyVGc3cmVVQ2Zn?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 22:08:58 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQQkgtaERFdmRZejR5dnNKVXZWbXh1U3U3eXZRS2luZUpRMV9fQndUQ1MzNGNQcEN0MDFCRVQzeTBaeDF3b3JJOXNC",
+      "page_content": "",
+      "title_zh": "一家 AI Agent 创业公司让其 Agent 参与了 1 亿美元融资",
+      "summary_zh": "TechCrunch 报道一家 AI Agent 创业公司尝试让 Agent 参与其融资流程，反映 Agent 在高价值商业工作流中的应用边界正被探索。"
+    },
+    {
+      "title": "Biomni AI Agent Promises to Speed up Biomedical Research, Serve as 'Expert Collaborator' - GenomeWeb",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOFV2SjkyOV9OREU5UVlCWWtUNU9iRHpsSENkQ0dUSTJXMVdMdUlXdFJsY2swZFpxam9WWU1FNl9XMDh3cDA1SnlteGNQbTlxSEpTdFdvbzdSLUFKMk5xd1ZZZU5wd3FuSFFlaVQ3bHZEVHJJcjJ2MU1QT1lNRVBucFZIZGZuZk9zaXJ6QVdiM3Y5Z2xHTVdfYTlnek9UbVVSN3U4a3QySzIzSENmMHR4X1I1Z3Q?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 18:30:51 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPOFV2SjkyOV9OREU5UVlCWWtUNU9iRHpsSENkQ0dUSTJXMVdMdUlXdFJsY2swZFpxam9WWU1FNl9XMDh3cDA1Snlt",
+      "page_content": "",
+      "title_zh": "Biomni AI Agent 希望加速生物医学研究，充当“专家协作者”",
+      "summary_zh": "报道称 Biomni 试图以 AI Agent 身份协助生物医学研究，让模型参与数据处理、分析与假设生成等科研环节。"
+    },
+    {
+      "title": "AI agent startup Lyzr reportedly raising $100M at $500M valuation - SiliconANGLE",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTDdkUmdwY0dTcU1WTTUxdTJ6TGp0dGtTRkZvVnE3VjdGRHFXMVhsMTFVaEw0bnlYakktc0JYaGsxZFlBdW1VM2x1XzZacFJrYVI3Z3d3WllFaXpZWElwc1ZSU1lmMjZMOTlzOTAxYkMtSVloeGdNaEV4R1RzaHhjSmY2UEJ2MmZ3Z3VlTnVqMFhkLVppS2ZxSWFVZDk4Zw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 20:38:11 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPTDdkUmdwY0dTcU1WTTUxdTJ6TGp0dGtTRkZvVnE3VjdGRHFXMVhsMTFVaEw0bnlYakktc0JYaGsxZFlBdW1VM2x1",
+      "page_content": "",
+      "title_zh": "AI Agent 创业公司 Lyzr 据报以 5 亿美元估值融资 1 亿美元",
+      "summary_zh": "SiliconANGLE 报道 Lyzr 的融资消息，显示资本市场持续关注企业级 AI Agent 平台的商业化潜力。"
+    },
+    {
+      "title": "OpenAI Launches GPT-5.6 and ChatGPT Work AI Agent - Forbes",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQODBadkVpb1MzdzV0ajhXRHRVRVhRM1EyeWxsbGg0YVBsS1ZSOExnU2RQTHYySWpIY1MteHNJc2xKOG1LZVR5Q2RBSjVjekp2ZzFSRkdKeUdJSkg3d2FYQkJfcjBfY2pIaVE1UEFuVlo3ckw2M1ZVck5OZkFVOU9XRVJoSE04clhvTVlPNTctNGVIbERFc0RhdGxxa0FySW5XRi15ZXBVVWZBNVUwcWpHNkk4U3Npdw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 20:09:47 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQODBadkVpb1MzdzV0ajhXRHRVRVhRM1EyeWxsbGg0YVBsS1ZSOExnU2RQTHYySWpIY1MteHNJc2xKOG1LZVR5Q2RB",
+      "page_content": "",
+      "title_zh": "OpenAI 推出 GPT-5.6 与 ChatGPT Work AI Agent",
+      "summary_zh": "Forbes 报道 OpenAI 推出 GPT-5.6 与面向工作的 ChatGPT Agent，企业级知识工作和任务自动化将是重点观察方向。"
+    },
+    {
+      "title": "AI agent tests whether machines can speak for patients at life's end - Tech Xplore",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5iRzN2ZTlIdjN2S2RrbFFNMEctZFNJRmJPNDhrM3MxTkNfRThEMXBBQk9ncVlPMTlCcUptLWUwd2pVNmNxOHhvQ0NHX2ZfSHg4U3dudFNIR0xzcFBmaEZhYWd1MmFTUDFPc2cybm92a05xVjVUamkzSDI1a2k?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 15:30:01 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE5iRzN2ZTlIdjN2S2RrbFFNMEctZFNJRmJPNDhrM3MxTkNfRThEMXBBQk9ncVlPMTlCcUptLWUwd2pVNmNxOHhvQ0NH",
+      "page_content": "",
+      "title_zh": "AI Agent 测试机器能否在生命终点替患者发声",
+      "summary_zh": "报道讨论 AI Agent 在临终医疗沟通中的潜在角色，同时凸显代理决策、伦理边界与患者意愿表达等重要问题。"
+    },
+    {
+      "title": "Meet Biomni: the free powerful biomed AI agent turning data into hypotheses - South China Morning Post",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPMTlhSjFCVlRMbmlIME5FdW1nd05kYlpSSDR1aUFBRXFNVUthQm8yTU1ERkdieFR3YkpJZU1zdHZyZExlemlaenhVWWhnYjFtd1NsWXl0OUVqbHV1Si01cl95TktrRHhQYmVyWlNKQTZDYUF6TjlRTkJpTzJaRE9ua2tlM3FxbGRhNTVMUWFhaVZHRW91ZTF0N3VOb1h1Yk1zaHpxMllDWjZEemJWZ3ZkN0FQMGFLX1NRcXJIbEVR0gG-AUFVX3lxTE80b3gwRXJyWHdvNUJId3Z0eXU1MHhOZEp5NjJiWEd1S0h1VEtlTWZYNHo4R1R4QjFUaUM0d0JPVDBVNkM2STh1djYyc3phbE80dGpXMzNPNVljbW9xMnNFOGFtbzN4LWFiMTZYVEt3WUZGLU1ZcG8xbFJ3VkJtaWFqem1ZbldxTVlmVE5WSEk4SHVIZ1ltTnZzTXYxZ3k4YWw5YVlpUHZ3bEl5V3lNZkZwZDduUUtodWN4NTNjNEE?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 18:00:08 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxPMTlhSjFCVlRMbmlIME5FdW1nd05kYlpSSDR1aUFBRXFNVUthQm8yTU1ERkdieFR3YkpJZU1zdHZyZExlemlaenhV",
+      "page_content": "",
+      "title_zh": "认识 Biomni：将数据转化为假设的免费生物医学 AI Agent",
+      "summary_zh": "报道介绍 Biomni 这一生物医学 AI Agent，强调其将科研数据处理与假设生成结合，以协助研究人员推进探索。"
+    },
+    {
+      "title": "DeepFabric Releases AI Agent Platform for End-to-End Supply Chain Operations - Supply & Demand Chain Executive",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOZm1qbHhWRFItQkc4QWVzeUxPcUZod0h6MmRJbXM1STBlUl8ybEhDSXdLOS1ibVFlTU5acldJQU9kb3Nqb000QkY1Mnp1OUVTUFVSUkpqOWVGd3c4SUZnazZJcGdRcExsZXNSWm9QWmF6UjFtcjUtc0dxN1JuQi1qZEtBNnE4eE9ScWlsVFhrZndvRW5tZFZmTmhUdElxaXBoZm9ieVNiUGlDSkpYVXdpRlZQdUhYS2VUUEhPcGZVcjdLa1hxTzVra2h1MzQ1ODNyREFkSzdyb2x2Ym5xOGJ4MHpVcw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 18:43:33 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxOZm1qbHhWRFItQkc4QWVzeUxPcUZod0h6MmRJbXM1STBlUl8ybEhDSXdLOS1ibVFlTU5acldJQU9kb3Nqb000QkY1",
+      "page_content": "",
+      "title_zh": "DeepFabric 发布端到端供应链运营 AI Agent 平台",
+      "summary_zh": "DeepFabric 推出面向供应链全流程运营的 AI Agent 平台，体现智能体正向采购、规划、执行等垂直业务场景扩展。"
+    },
+    {
+      "title": "Visa (V) Tests AI Agent Payments in Live Commerce Proof of Concept - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSkdLVW1OMjFyYlpXZTRScnF6T0ZlMUF4R0hDMkNBYVZRVkRPeXlzUWRuWUIzZnZyMFNlRVJ1dW1xb0Q3cUtzV3dPNFQ2X0cwdUhvSVo3VnROeldXcTFLRnJWU1hmblFUbnlCZk1DczBKdERnQlRqYmxaaDduemVxRkFKOTZwd1k3SU9kRkZn?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Thu, 09 Jul 2026 17:57:56 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNSkdLVW1OMjFyYlpXZTRScnF6T0ZlMUF4R0hDMkNBYVZRVkRPeXlzUWRuWUIzZnZyMFNlRVJ1dW1xb0Q3cUtzV3dP",
+      "page_content": "",
+      "title_zh": "Visa 在直播电商概念验证中测试 AI Agent 支付",
+      "summary_zh": "Visa 测试 AI Agent 在直播电商中的支付能力，值得关注授权控制、交易安全与代理消费等基础设施问题。"
+    }
+  ],
+  "blogs": [
+    {
+      "title": "Introducing GPT-Live",
+      "url": "https://openai.com/news/company-announcements/",
+      "source": "OpenAI",
+      "date": "2026-07-08",
+      "page_content": "OpenAI 发布 GPT-Live。",
+      "title_zh": "推出 GPT-Live",
+      "summary_zh": "OpenAI 将 GPT-Live 列为最新产品动态，值得持续关注其对实时交互与 Agent 工作流的后续影响。"
+    },
+    {
+      "title": "The Making of Claude Code",
+      "url": "https://www.anthropic.com/news",
+      "source": "Anthropic",
+      "date": "2026-07-06",
+      "page_content": "Anthropic 回顾 Claude Code 从内部 CLI 成长为编程 Agent 的过程。",
+      "title_zh": "Claude Code 的诞生历程",
+      "summary_zh": "Anthropic 回顾 Claude Code 如何从内部 CLI 演化为编程 Agent，呈现工程实践与早期用户反馈共同塑造产品的过程。"
+    },
+    {
+      "title": "More details on Fable 5’s cyber safeguards and our jailbreak framework",
+      "url": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
+      "source": "Anthropic",
+      "date": "2026-07-02",
+      "page_content": "Anthropic 介绍 Fable 5 的网络安全分类器和越狱严重性框架。",
+      "title_zh": "Fable 5 的网络安全防护与越狱分级框架详解",
+      "summary_zh": "Anthropic 介绍 Fable 5 配套的网络安全分类器，并公布 AI 越狱严重性评估框架的早期草案。"
+    }
+  ],
+  "github_strategy": {
+    "query": "LLM OR AI agent OR machine learning",
+    "filters": "pushed:>2026-07-07",
+    "sort": "updated",
+    "label": "最近活跃（近 3 天 push）"
+  }
+}
