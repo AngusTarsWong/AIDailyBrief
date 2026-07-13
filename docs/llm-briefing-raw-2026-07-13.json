@@ -2,590 +2,113 @@
   "date": "2026-07-13",
   "github": [
     {
-      "name": "openclaw/openclaw",
-      "desc": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
-      "stars": 382711,
-      "lang": "TypeScript",
+      "name": "multica-ai/andrej-karpathy-skills",
+      "desc": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "stars": 191272,
+      "lang": "",
       "updated": "2026-07-13",
-      "url": "https://github.com/openclaw/openclaw",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "topics": [],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "AUTOMATIC1111/stable-diffusion-webui",
+      "desc": "Stable Diffusion web UI\nA web interface for Stable Diffusion, implemented using Gradio library.",
+      "stars": 164200,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
       "topics": [
         "ai",
-        "assistant",
-        "crustacean",
-        "molty",
-        "openclaw"
+        "ai-art",
+        "deep-learning",
+        "diffusion",
+        "gradio"
+      ],
+      "is_top": true,
+      "releases": [],
+      "page_content": "A web interface for Stable Diffusion, implemented using Gradio library.\n[![Image 1](https://github.com/AUTOMATIC1111/stable-diffusion-webui/raw/master/screenshot.png)](https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/master/screenshot.png)\n## Features\n[](https://github.com/AUTOMATIC1111/stable-diffusion-webui#features)\n[Detailed feature showcase with images](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features):\n*   Original txt2img and img2img modes\n*   One click install and run script (but you still must install python and git)\n*   Outpainting\n*   Inpainting\n*   Color Sketch\n*   Prompt Matrix\n*   Stable Diffusion Upscale\n*   Attention, specify parts of text that the model should pay more attention to\n*   a man in a `((tuxedo))` - will pay more attention to tuxedo\n*   a man in a `(tuxedo:1.21)` - alternative syntax"
+    },
+    {
+      "name": "xtekky/gpt4free",
+      "desc": "The official gpt4free repository | various collection of powerful language models | opus 4.6 gpt 5.3 kimi 2.5 deepseek v3.2 gemini 3",
+      "stars": 66465,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/xtekky/gpt4free",
+      "topics": [
+        "chatbot",
+        "chatbots",
+        "chatgpt",
+        "chatgpt-4",
+        "chatgpt-api"
       ],
       "is_top": true,
       "releases": [
         {
-          "tag": "v2026.7.1-beta.6",
-          "name": "openclaw 2026.7.1-beta.6",
-          "date": "2026-07-13",
-          "summary": "New models and providers；Control UI and native macOS chat；Conversational onboarding；Offline and spoken mobile chat"
+          "tag": "v7.8.5",
+          "name": "Release v7.8.5",
+          "date": "2026-07-12",
+          "summary": "Full Changelog: https://github.com/xtekky/gpt4free/compare/v7.8.4...v7.8.5；Python Package:；- PyPI: pip install g4f==v7.8.5"
         },
         {
-          "tag": "v2026.7.1-beta.5",
-          "name": "OpenClaw 2026.7.1-beta.5",
-          "date": "2026-07-11",
-          "summary": "Conversational onboarding；ClawRouter routing and quotas；Control UI and native macOS chat；Offline and spoken mobile chat"
+          "tag": "v7.8.4",
+          "name": "Release v7.8.4",
+          "date": "2026-07-12",
+          "summary": "Full Changelog: https://github.com/xtekky/gpt4free/compare/v7.8.3...v7.8.4；Python Package:；- PyPI: pip install g4f==v7.8.4"
         },
         {
-          "tag": "v2026.7.1-beta.2",
-          "name": "openclaw 2026.7.1-beta.2",
-          "date": "2026-07-05",
-          "summary": "OpenAI GPT-5.6 support；External harness attachment；Telegram Codex workflows；Event-driven cron runs"
+          "tag": "v7.8.3",
+          "name": "Release v7.8.3",
+          "date": "2026-07-12",
+          "summary": "Full Changelog: https://github.com/xtekky/gpt4free/compare/v7.8.2...v7.8.3；Python Package:；- PyPI: pip install g4f==v7.8.3"
         }
       ]
     },
     {
-      "name": "re4/LibreCode",
-      "desc": "LibreCode - A Ollama cursor like coding / Reversing Interface",
-      "stars": 284092,
-      "lang": "C#",
-      "updated": "2026-07-13",
-      "url": "https://github.com/re4/LibreCode",
+      "name": "AI4Finance-Foundation/FinGPT",
+      "desc": "FinGPT: Open-Source Financial Large Language Models!  Revolutionize 🔥    We release the trained model on HuggingFace.",
+      "stars": 20861,
+      "lang": "Jupyter Notebook",
+      "updated": "2026-07-12",
+      "url": "https://github.com/AI4Finance-Foundation/FinGPT",
       "topics": [
-        "ai",
-        "ai-agents",
-        "coding",
-        "csharp",
-        "decompiler"
+        "chatgpt",
+        "finance",
+        "fingpt",
+        "fintech",
+        "large-language-models"
       ],
       "is_top": true,
       "releases": [
-        {
-          "tag": "v1.1.0",
-          "name": "v1.1.0",
-          "date": "2026-06-16",
-          "summary": "Startup splash screen (new SplashWindow): starts Ollama, picks a default model by detected VRAM, dow；Cursor V2-style dark UI；Performance & memory pass across indexing, reversing, editor, and file-system subsystems."
-        },
         {
           "tag": "v1.0.0",
-          "name": "v1.0.0",
-          "date": "2026-06-11",
-          "summary": "Full Changelog: https://github.com/re4/LibreCode/commits/v1.0.0；First Stable Release"
+          "name": "FinGPT v1.0.0 – Open-Source Financial AI Platform",
+          "date": "2026-04-08",
+          "summary": "FinGPT v1.0.0；FinGPT is downloadable computer software for financial artificial intelligence, namely software for financial data analy；This release makes the FinGPT software available for download through the release assets and source code download o"
         }
       ]
     },
     {
-      "name": "obra/superpowers",
-      "desc": "An agentic skills framework & software development methodology that works.",
-      "stars": 253073,
-      "lang": "Shell",
+      "name": "BradyFU/Awesome-Multimodal-Large-Language-Models",
+      "desc": ":sparkles::sparkles:Latest Advances on Multimodal Large Language Models",
+      "stars": 17940,
+      "lang": "",
       "updated": "2026-07-13",
-      "url": "https://github.com/obra/superpowers",
+      "url": "https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models",
       "topics": [
-        "ai",
-        "brainstorming",
-        "coding",
-        "obra",
-        "sdlc"
-      ],
-      "is_top": true,
-      "releases": [
-        {
-          "tag": "v6.1.1",
-          "name": "v6.1.1",
-          "date": "2026-07-02",
-          "summary": "- Codex no longer re-registers the Claude SessionStart hook. v6.1.0 removed the Codex hook config and its manifest hooks；- Removed orphaned Codex session-start dead code. hooks/session-start-codex had no caller once the Codex hook config was；- New pa"
-        },
-        {
-          "tag": "v6.1.0",
-          "name": "v6.1.0",
-          "date": "2026-06-30",
-          "summary": "The using-superpowers bootstrap is injected into every session, so its size is paid for constantly. This release trims i；- Compressed the using-superpowers bootstrap. Replaced the graphviz skill-flow diagram with the prose it encoded, folded；- Pruned"
-        },
-        {
-          "tag": "v6.0.3",
-          "name": "v6.0.3",
-          "date": "2026-06-18",
-          "summary": "- SDD scratch files moved out of .git/. Claude Code treats .git/ as a protected path and denies agent writes there, so a"
-        }
-      ]
-    },
-    {
-      "name": "affaan-m/ECC",
-      "desc": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "stars": 228969,
-      "lang": "JavaScript",
-      "updated": "2026-07-13",
-      "url": "https://github.com/affaan-m/ECC",
-      "topics": [
-        "ai-agents",
-        "anthropic",
-        "claude",
-        "claude-code",
-        "developer-tools"
-      ],
-      "is_top": true,
-      "releases": [
-        {
-          "tag": "v2.0.0",
-          "name": "ECC 2.0.0 — The Agent Harness Operating System",
-          "date": "2026-06-10",
-          "summary": "The control-pane substrate；MCP inventory (ecc.mcp.v1)；worktree-lifecycle service；orch-* orchestrator skill family plus dynamic workflow team orchestration"
-        },
-        {
-          "tag": "v2.0.0-rc.1",
-          "name": "v2.0.0-rc.1",
-          "date": "2026-05-25",
-          "summary": "243 public skills packaged across coding, research, security, media, enterprise ops, and agent workf；A rollout-derived optimization pack for agents that need measured speedups instead of one-shot promp；A public teaser Itô prediction-market skill pack"
-        },
-        {
-          "tag": "v1.10.0",
-          "name": "ECC v1.10.0 — Surface Refresh, Operator Workflows, and ECC 2.0 Alpha",
-          "date": "2026-04-05",
-          "summary": "Harness reliability and cross-platform compatibility；Eval-driven quality improvements；Better workflow and operator ergonomics；@tupe12334 made their first contribution in https://github.com/affaan-m/everything-claude-code/pull/"
-        }
-      ]
-    },
-    {
-      "name": "NousResearch/hermes-agent",
-      "desc": "The agent that grows with you\n[![Image 1: Hermes Agent](https://github.com/NousResearch/hermes-agent/raw/main/assets/banner.png)](https://github.com/NousResearch/hermes-agent/blob/main/assets/banner.png)",
-      "stars": 213756,
-      "lang": "Python",
-      "updated": "2026-07-13",
-      "url": "https://github.com/NousResearch/hermes-agent",
-      "topics": [
-        "ai",
-        "ai-agent",
-        "ai-agents",
-        "anthropic",
-        "chatgpt"
-      ],
-      "is_top": true,
-      "releases": [
-        {
-          "tag": "v2026.7.7.2",
-          "name": "Hermes Agent v0.18.2 (2026.7.7.2)",
-          "date": "2026-07-08",
-          "summary": "fix(whatsapp): unpin Baileys from git commit, use published 7.0.0-rc13"
-        },
-        {
-          "tag": "v2026.7.7",
-          "name": "Hermes Agent v0.18.1 (2026.7.7)",
-          "date": "2026-07-08",
-          "summary": "Release Date: July 7, 2026；> Patch release. This tag rolls up the ~660 PRs merged since v0.18.0 (July 1) — bug fixes, hardening, and in-progress fe；This is an infrastructure-driven patch tag rather than a fully curated release. Since v0.18.0 shipped "
-        },
-        {
-          "tag": "v2026.7.1",
-          "name": "Hermes Agent v0.18.0 (2026.7.1) — The Judgment Release",
-          "date": "2026-07-01",
-          "summary": "Mixture-of-Agents is now a first-class model you can pick；See every model's reasoning, then watch the answer stream in；The agent verifies its own work；/learn"
-        }
-      ],
-      "page_content": "[![Image 1: Hermes Agent](https://github.com/NousResearch/hermes-agent/raw/main/assets/banner.png)](https://github.com/NousResearch/hermes-agent/blob/main/assets/banner.png)\n[Hermes Agent](https://hermes-agent.nousresearch.com/) | [Hermes Desktop](https://hermes-agent.nousresearch.com/)\n**The self-improving AI agent built by [Nous Research](https://nousresearch.com/).** It's the only agent with a built-in learning loop — it creates skills from experience, improves them during use, nudges itself to persist knowledge, searches its own past conversations, and builds a deepening model of who you are across sessions. Run it on a $5 VPS, a GPU cluster, or serverless infrastructure that costs nearly nothing when idle. It's not tied to your laptop — talk to it from Telegram while it works on a cloud VM.\nUse any model you want — [Nous Portal](https://portal.nousresearch.com/), OpenRouter, OpenAI, your own endpoint, and [many others](https://hermes-agent.nousresearch.com/docs/integrations/providers). Switch with `hermes model` — no code changes, no lock-in.\n**A real terminal interface**Full TUI with multiline editing, slash-command autocomplete, conversation history, interrupt-and-redirect, and streaming tool output.\n**Lives where you do**Telegram, Discord, Slack, WhatsApp, Signal, and CLI — all from a single gateway process. Voice memo transcription, cross-platform conversation continuity.\n**A closed learning loop**Agent-curated memory with periodic nudges. Autonomous skill creation after complex tasks. Skills self-improve during use. FTS5 session search with LLM summarization for cross-session recall. [Honcho](https://github.com/plastic-labs/honcho) dialectic user modeling. Compatible with the [agentskills.io](https://agentskills.io/) open standard.\n**Scheduled automations**Built-in cron scheduler with delivery to any platform. Daily reports, nightly backups, weekly audits — all in natural language, running unattended.\n**Delegates and parallelizes**Spawn isolated subagents "
-    },
-    {
-      "name": "n8n-io/n8n",
-      "desc": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
-      "stars": 196208,
-      "lang": "TypeScript",
-      "updated": "2026-07-13",
-      "url": "https://github.com/n8n-io/n8n",
-      "topics": [
-        "ai",
-        "apis",
-        "automation",
-        "cli",
-        "data-flow"
-      ],
-      "is_top": true,
-      "releases": [
-        {
-          "tag": "stable",
-          "name": "stable",
-          "date": "2026-07-10",
-          "summary": "Keep AI Assistant thread state intact on editor hand-off "
-        },
-        {
-          "tag": "n8n@2.29.10",
-          "name": "n8n@2.29.10",
-          "date": "2026-07-10",
-          "summary": "Keep AI Assistant thread state intact on editor hand-off "
-        },
-        {
-          "tag": "n8n@2.30.3",
-          "name": "n8n@2.30.3",
-          "date": "2026-07-10",
-          "summary": "Keep AI Assistant thread state intact on editor hand-off "
-        }
-      ]
-    },
-    {
-      "name": "ultraworkers/claw-code",
-      "desc": "An agent-managed museum exhibit, built in Rust with Gajae-Code / LazyCodex — developed and maintained with no human intervention.",
-      "stars": 194739,
-      "lang": "Rust",
-      "updated": "2026-07-13",
-      "url": "https://github.com/ultraworkers/claw-code",
-      "topics": [],
-      "is_top": true,
-      "releases": []
-    },
-    {
-      "name": "Significant-Gravitas/AutoGPT",
-      "desc": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
-      "stars": 185496,
-      "lang": "Python",
-      "updated": "2026-07-13",
-      "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "topics": [
-        "agentic-ai",
-        "agents",
-        "ai",
-        "artificial-intelligence",
-        "autonomous-agents"
-      ],
-      "is_top": true,
-      "releases": [
-        {
-          "tag": "autogpt-platform-beta-v0.6.66",
-          "name": "🚀 AutoGPT Platform v0.6.66",
-          "date": "2026-07-09",
-          "summary": "#13427 - Let users upload files to AutoPilot via Discord (；#13262 - Attach workspace files in copilot chat via picker and @mention (；#13365 - Add AutoGPT new layout sidebar behind feature flag (；#13453 - Add chat pinning to copilot sidebar ("
-        },
-        {
-          "tag": "autogpt-platform-beta-v0.6.65",
-          "name": "autogpt-platform-beta-v0.6.65",
-          "date": "2026-06-25",
-          "summary": "#13228 - AutoPilot Context Panel；#13360 - Global Search；#13238 - Read-Only Builder；#13298 - Copilot Webhook Triggers"
-        },
-        {
-          "tag": "autogpt-platform-beta-v0.6.64",
-          "name": "autogpt-platform-beta-v0.6.64",
-          "date": "2026-06-18",
-          "summary": "#13228 - AutoPilot Context Panel；#13360 - Global Search；#13238 - Read-Only Builder；#13298 - Copilot Webhook Triggers"
-        }
-      ]
-    },
-    {
-      "name": "anomalyco/opencode",
-      "desc": "The open source coding agent.\n[Skip to content](https://github.com/anomalyco/opencode#start-of-content)",
-      "stars": 185108,
-      "lang": "TypeScript",
-      "updated": "2026-07-13",
-      "url": "https://github.com/anomalyco/opencode",
-      "topics": [],
-      "is_top": true,
-      "releases": [
-        {
-          "tag": "pr-36567-evidence",
-          "name": "PR #36567 verification evidence",
-          "date": "2026-07-12",
-          "summary": "Automated OpenCode Drive verification artifact for PR #36567."
-        },
-        {
-          "tag": "pr-36516-evidence",
-          "name": "PR #36516 visual evidence",
-          "date": "2026-07-12",
-          "summary": "Visual evidence assets for PR #36516."
-        },
-        {
-          "tag": "v1.17.18",
-          "name": "v1.17.18",
-          "date": "2026-07-09",
-          "summary": "Prevent crashes and bad pricing data when GitHub Copilot returns models with a zero billing batch si；Add a model-specific system prompt for Meta Muse Spark."
-        }
-      ],
-      "page_content": "[Skip to content](https://github.com/anomalyco/opencode#start-of-content)\n## Navigation Menu\nToggle navigation\n[](https://github.com/)\n[Sign in](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fanomalyco%2Fopencode)\nAppearance settings\n*\nPlatform\n*\nAI CODE CREATION\n*   [GitHub Copilot Write better code with AI](https://github.com/features/copilot)\n*   [GitHub Copilot app Direct agents from issue to merge](https://github.com/features/ai/github-app)\n*   [MCP Registry New Integrate external tools](https://github.com/mcp)\n*\nDEVELOPER WORKFLOWS"
-    },
-    {
-      "name": "ollama/ollama",
-      "desc": "Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
-      "stars": 176001,
-      "lang": "Go",
-      "updated": "2026-07-13",
-      "url": "https://github.com/ollama/ollama",
-      "topics": [
-        "deepseek",
-        "gemma",
-        "gemma3",
-        "glm",
-        "go"
-      ],
-      "is_top": true,
-      "releases": [
-        {
-          "tag": "v0.32.0-rc0",
-          "name": "v0.32.0",
-          "date": "2026-07-11",
-          "summary": "select the qwen3.5 parser and renderer for Qwen3.5/Next in https://github.com/ollama/ollama/pull/170；warn before old agent models in https；agent UI in https"
-        },
-        {
-          "tag": "v0.31.2",
-          "name": "v0.31.2",
-          "date": "2026-07-06",
-          "summary": "Enabled flash attention on older NVIDIA GPUs (compute capability 6.x)；iGPU can now offload vision models with padding to fit available memory；Fixed structured output for thinking models when thinking is disabled；Hardened GGUF model creation"
-        },
-        {
-          "tag": "v0.31.1",
-          "name": "v0.31.1",
-          "date": "2026-06-30",
-          "summary": "Tightened Gemma 4 MoE model loading in the MLX engine；Updated the MLX engine to the latest version, including a new small-batch matmul kernel；Updated the underlying llama.cpp engine to build 9840；Improved Gemma 4 multi-token prediction (MTP) performa"
-        }
-      ]
-    },
-    {
-      "name": "f/prompts.chat",
-      "desc": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
-      "stars": 165569,
-      "lang": "HTML",
-      "updated": "2026-07-13",
-      "url": "https://github.com/f/prompts.chat",
-      "topics": [
-        "ai",
-        "artificial-intelligence",
-        "awesome-list",
-        "chatgpt",
-        "chatgpt-prompts"
+        "chain-of-thought",
+        "in-context-learning",
+        "instruction-following",
+        "instruction-tuning",
+        "large-language-models"
       ],
       "is_top": true,
       "releases": []
-    },
-    {
-      "name": "huggingface/transformers",
-      "desc": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
-      "stars": 162550,
-      "lang": "Python",
-      "updated": "2026-07-13",
-      "url": "https://github.com/huggingface/transformers",
-      "topics": [
-        "audio",
-        "deep-learning",
-        "deepseek",
-        "gemma",
-        "glm"
-      ],
-      "is_top": true,
-      "releases": [
-        {
-          "tag": "v5.13.1",
-          "name": "Patch release v5.13.1",
-          "date": "2026-07-11",
-          "summary": "This patch is focused on enabling transformers for the latest release of vllm!；- Be more defensive with remap_legacy_layer_types for custom models (#47245) from @hmellor；- Fix custom code which doesn't know about the new linear layer type names (#471"
-        },
-        {
-          "tag": "v5.13.0",
-          "name": "Release v5.13.0",
-          "date": "2026-07-03",
-          "summary": "🚨 Modeling changes for export, compile, and hybrid-attention standardization；🚨 [gemma 3/4] Fix bidirectional attention masking crossing sliding window boundaries；🚨 EP；Update workflow callers to use transformers-ci in [#47040"
-        },
-        {
-          "tag": "v5.12.1",
-          "name": "Patch release v5.12.1",
-          "date": "2026-06-15",
-          "summary": "Updated the lower bound for PEFT and a fix for auto tokenizer to properly resolve the mistral tokenizer (when mistral-co；* Fix peft lower bound #46605 by @hmellor (#46605)；* mistral common backend fix #46667 by @itazap (#46667)"
-        }
-      ]
-    },
-    {
-      "name": "anthropics/skills",
-      "desc": "Public repository for Agent Skills",
-      "stars": 160590,
-      "lang": "Python",
-      "updated": "2026-07-13",
-      "url": "https://github.com/anthropics/skills",
-      "topics": [
-        "agent-skills"
-      ],
-      "is_top": true,
-      "releases": []
-    },
-    {
-      "name": "Snailclimb/JavaGuide",
-      "desc": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
-      "stars": 156973,
-      "lang": "JavaScript",
-      "updated": "2026-07-13",
-      "url": "https://github.com/Snailclimb/JavaGuide",
-      "topics": [
-        "agent",
-        "ai",
-        "context-engineering",
-        "deepseek",
-        "interview"
-      ],
-      "is_top": true,
-      "releases": []
-    },
-    {
-      "name": "langflow-ai/langflow",
-      "desc": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.",
-      "stars": 151783,
-      "lang": "Python",
-      "updated": "2026-07-13",
-      "url": "https://github.com/langflow-ai/langflow",
-      "topics": [
-        "agents",
-        "chatgpt",
-        "generative-ai",
-        "large-language-models",
-        "multiagent"
-      ],
-      "is_top": true,
-      "releases": [
-        {
-          "tag": "v1.10.2",
-          "name": "1.10.2",
-          "date": "2026-07-07",
-          "summary": "add global variable model overrides in https://github.com/langflow-ai/langflow/pull/13935；use session exec in telemetry writer in https://github.com/langflow-ai/langflow/pull/13821；disable mem0 telemetry by default in https://github.com/langflow-ai/l"
-        },
-        {
-          "tag": "v1.10.1",
-          "name": "1.10.1",
-          "date": "2026-06-23",
-          "summary": "feat(ci)；first-class local-model support for the assistant in https://github.com/langflow-ai/langflow/pull/13；Model handling for tool calling in agents and update IBM models in https://github.com/langflow-ai/la；fix(ci)"
-        },
-        {
-          "tag": "1.10.1rc3",
-          "name": "1.10.1rc3",
-          "date": "2026-06-22",
-          "summary": "fix(i18n)；make IBM WatsonX models selectable and runnable in the Langflow Assistant in https://github.com/lang；fix(agents)；fix(component)"
-        }
-      ]
     }
   ],
-  "github_trending": [
-    {
-      "name": "Dicklesworthstone / destructive_command_guard",
-      "url": "https://github.com/Dicklesworthstone/destructive_command_guard",
-      "desc": "The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.",
-      "lang": "Rust",
-      "stars": "2,957",
-      "today": "444 stars today"
-    },
-    {
-      "name": "wonderwhy-er / DesktopCommanderMCP",
-      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
-      "desc": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
-      "lang": "TypeScript",
-      "stars": "8,004",
-      "today": "210 stars today"
-    },
-    {
-      "name": "HKUDS / Vibe-Trading",
-      "url": "https://github.com/HKUDS/Vibe-Trading",
-      "desc": "\"Vibe-Trading: Your Personal Trading Agent\"",
-      "lang": "Python",
-      "stars": "20,607",
-      "today": "768 stars today"
-    },
-    {
-      "name": "PrefectHQ / prefect",
-      "url": "https://github.com/PrefectHQ/prefect",
-      "desc": "Prefect is a workflow orchestration framework for building resilient data pipelines in Python.",
-      "lang": "Python",
-      "stars": "23,161",
-      "today": "66 stars today"
-    },
-    {
-      "name": "Shubhamsaboo / awesome-llm-apps",
-      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
-      "desc": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
-      "lang": "Python",
-      "stars": "118,605",
-      "today": "408 stars today"
-    },
-    {
-      "name": "anthropics / claude-cookbooks",
-      "url": "https://github.com/anthropics/claude-cookbooks",
-      "desc": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
-      "lang": "Jupyter Notebook",
-      "stars": "48,443",
-      "today": "459 stars today"
-    },
-    {
-      "name": "home-assistant / core",
-      "url": "https://github.com/home-assistant/core",
-      "desc": "🏡 Open source home automation that puts local control and privacy first.",
-      "lang": "Python",
-      "stars": "89,085",
-      "today": "400 stars today"
-    },
-    {
-      "name": "Crosstalk-Solutions / project-nomad",
-      "url": "https://github.com/Crosstalk-Solutions/project-nomad",
-      "desc": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
-      "lang": "TypeScript",
-      "stars": "33,819",
-      "today": "125 stars today"
-    },
-    {
-      "name": "ColeMurray / background-agents",
-      "url": "https://github.com/ColeMurray/background-agents",
-      "desc": "An open-source background agents coding system",
-      "lang": "TypeScript",
-      "stars": "2,267",
-      "today": "16 stars today"
-    },
-    {
-      "name": "k1tbyte / Wand-Enhancer",
-      "url": "https://github.com/k1tbyte/Wand-Enhancer",
-      "desc": "Advanced UX and interoperability extension for Wand (WeMod) app",
-      "lang": "C#",
-      "stars": "6,974",
-      "today": "609 stars today"
-    },
-    {
-      "name": "pingdotgg / t3code",
-      "url": "https://github.com/pingdotgg/t3code",
-      "desc": "[Skip to content](https://github.com/pingdotgg/t3code#start-of-content)",
-      "lang": "TypeScript",
-      "stars": "13,758",
-      "today": "75 stars today",
-      "page_content": "[Skip to content](https://github.com/pingdotgg/t3code#start-of-content)\n## Navigation Menu\nToggle navigation\n[](https://github.com/)\n[Sign in](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fpingdotgg%2Ft3code)\nAppearance settings\n*\nPlatform\n*\nAI CODE CREATION\n*   [GitHub Copilot Write better code with AI](https://github.com/features/copilot)\n*   [GitHub Copilot app Direct agents from issue to merge](https://github.com/features/ai/github-app)\n*   [MCP Registry New Integrate external tools](https://github.com/mcp)\n*\nDEVELOPER WORKFLOWS"
-    },
-    {
-      "name": "virattt / ai-hedge-fund",
-      "url": "https://github.com/virattt/ai-hedge-fund",
-      "desc": "An AI Hedge Fund Team\nThis is a proof of concept for an AI-powered hedge fund. The goal of this project is to explore the use of AI to make trading decisions. This project is for **educational** purposes only and is not in",
-      "lang": "Python",
-      "stars": "61,422",
-      "today": "115 stars today",
-      "page_content": "This is a proof of concept for an AI-powered hedge fund. The goal of this project is to explore the use of AI to make trading decisions. This project is for **educational** purposes only and is not intended for real trading or investment.\n> **🚧 The project is evolving.** We're rebuilding it into a persistent, always-on AI hedge fund — a _fund_ as a first-class entity you can backtest, paper-trade, and (opt-in) run live, with the investor agents reimagined as pluggable, backtestable \"alpha models.\" Read the **[Vision →](https://github.com/virattt/ai-hedge-fund/blob/main/VISION.md)** and the **[Roadmap →](https://github.com/virattt/ai-hedge-fund/blob/main/ROADMAP.md)**.\nThis system employs several agents working together:\n1.   Aswath Damodaran Agent - The Dean of Valuation, focuses on story, numbers, and disciplined valuation\n2.   Ben Graham Agent - The godfather of value investing, only buys hidden gems with a margin of safety\n3.   Bill Ackman Agent - An activist investor, takes bold positions and pushes for change\n4.   Cathie Wood Agent - The queen of growth investing, believes in the power of innovation and disruption\n5.   Charlie Munger Agent - Warren Buffett's partner, only buys wonderful businesses at fair prices\n6.   Michael Burry Agent - The Big Short contrarian who hunts for deep value\n7.   Mohnish Pabrai Agent - The Dhandho investor, who looks for doubles at low risk\n8.   Nassim Taleb Agent - The Black Swan risk analyst, focuses on tail risk, antifragility, and asymmetric payoffs\n9.   Peter Lynch Agent - Practical investor who seeks \"ten-baggers\" in everyday businesses\n10.   Phil Fisher Agent - Meticulous growth investor who uses deep \"scuttlebutt\" research\n11.   Rakesh Jhunjhunwala Agent - The Big Bull of India\n12.   Stanley Druckenmiller Agent - Macro legend who hunts for asymmetric opportunities with growth potential"
-    },
-    {
-      "name": "chen08209 / FlClash",
-      "url": "https://github.com/chen08209/FlClash",
-      "desc": "A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.",
-      "lang": "Dart",
-      "stars": "45,236",
-      "today": "154 stars today"
-    },
-    {
-      "name": "davila7 / claude-code-templates",
-      "url": "https://github.com/davila7/claude-code-templates",
-      "desc": "CLI tool for configuring and monitoring Claude Code",
-      "lang": "Python",
-      "stars": "29,248",
-      "today": "274 stars today"
-    },
-    {
-      "name": "par274 / sharpemu",
-      "url": "https://github.com/par274/sharpemu",
-      "desc": "An experimental PlayStation 5 emulator project.",
-      "lang": "C#",
-      "stars": "1,287",
-      "today": "314 stars today"
-    },
-    {
-      "name": "malisper / pgrust",
-      "url": "https://github.com/malisper/pgrust",
-      "desc": "Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
-      "lang": "Rust",
-      "stars": "2,489",
-      "today": "518 stars today"
-    },
-    {
-      "name": "Nutlope / hallmark",
-      "url": "https://github.com/Nutlope/hallmark",
-      "desc": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
-      "lang": "CSS",
-      "stars": "4,310",
-      "today": "155 stars today"
-    }
-  ],
+  "github_trending": [],
   "papers": [
     {
       "title": "Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models",
@@ -660,7 +183,7 @@
       "source": "Hacker News",
       "cls": "hn",
       "date": "2026-07-13",
-      "page_content": ""
+      "page_content": "We put Claude Code and OpenCode on the same model, the same machine, and the same tasks, then examined everything sent and received.\n\n**Claude Code is far hungrier:**\n\nWhen we asked both harnesses for a one-line reply, Claude Code used roughly 33,000 tokens of system prompt, tool schemas, and injected scaffolding before the prompt even arrived. OpenCode used about 7,000.\n\nThat first test was on Sonnet 4.5. Re-running on Claude Fable 5 narrowed the gap to about 3.3x, because Claude Code sends newer models a much smaller system prompt; still far hungrier, but the multiple is model-dependent.\n\n**Claude Code is far more cache inefficient:**\n\nOpenCode's request prefix was byte-identical in every run we captured; it paid to cache its payload once per session and read it back for pennies.\n\nClaude Code on the other hand re-wrote tens of thousands of prompt-cache tokens mid-session, run after run, and on the same task wrote up to 54x more cache tokens than OpenCode.\n\nCache writes of course are billed at a premium, which accounted for the usage dashboard climbing when using Claude Code."
     }
   ],
   "news": [
@@ -737,9 +260,31 @@
       "page_content": ""
     }
   ],
-  "blogs": [],
+  "blogs": [
+    {
+      "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "Today, OpenAI announced GPT‑5.6, which will become the new preferred model in Microsoft 365 Copilot—in Word, Excel, PowerPoint, Chat and Cowork. For Microsoft 365 customers, the update brings OpenAI's latest flagship model series into productivity tools people use every day, helping them create, analyze, and collaborate with more capable AI assistance across workstreams. GPT‑5.6 is OpenAI’s latest flagship model series, which delivers more useful work from every token, with stronger performance per dollar and on demand capability for the most complex tasks.\n\nWith GPT‑5.6, Microsoft 365 users will be able to create higher-quality work products with less effort across the apps they already rely on:\n\n*   In Word, GPT‑5.6 can help people draft, edit, and refine documents with fewer rounds of prompting.\n*   In Excel, it can support deeper analysis while using tokens more efficiently, helping users move faster from data to insights.\n*   In PowerPoint, it can help turn early ideas into more polished, visually compelling presentations with less manual guidance.\n*   In Cowork, it can help users complete complex, cross-functional work and produce higher-quality outputs with less manual coordination.\n\n“We can’t wait for customers to see what GPT‑5.6 in Microsoft 365 will do, enabling them to work even more effectively with AI in the tools they use every day,” said Nitin Agrawal, President, Copilot & Agents Core, Microsoft. “Using Copilot powered by OpenAI’s latest model, customers will be able to produce more polished outputs in Word, Excel, PowerPoint, Cowork, and Copilot Chat, whether they are drafting documents, analyzing data, creating presentations, or collaborating across teams. We’re excited to continue building with OpenAI to bring more powerful AI experiences to people and organizations around the world.”\n\n“Microsoft 365 is where millions of people write, analyze, create, and collaborate every day,” said Nikunj Handa, Head of API Product, OpenAI. “By bringing GPT‑5.6 to Microsoft 365 Copilot through the OpenAI API, we're helping organizations get more useful work from every token, and more value from AI in the tools they already use.”\n\nIn addition to serving the models natively, Microsoft will also access OpenAI models directly through the API to bring GPT‑5.6 to Microsoft 365 customers."
+    },
+    {
+      "title": "ChatGPT is now a partner for your most ambitious work",
+      "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "Introducing ChatGPT Work, an agent in ChatGPT that helps you take on more ambitious tasks. It can gather information across your apps and workflows to create finished materials like sheets, slides, docs, and web apps, and stay with complex projects for hours by breaking them into smaller steps and completing them independently.\n\nWith Codex technology built-in, ChatGPT can now move beyond answering questions to getting real work done across web, mobile, and desktop. More than 5 million people use Codex every week. Although it began as a coding agent for developers, more than 1 million people now use it for work outside software development, showing how its capabilities can support a wider range of tasks.\n\nTo better manage these tasks, ChatGPT Work is powered by our latest frontier model, GPT‑5.6, [which is also rolling out today⁠](https://openai.com/index/gpt-5-6/). GPT‑5.6 makes ChatGPT state of the art at reasoning through multi-step tasks and creating materials that follow your templates and reference files.\n\nThe best way to learn how to use ChatGPT Work is to give it a task you already know well: analyze a month-end budget variance, turn source materials into a marketing campaign brief, or prepare for a sales meeting. You can follow its progress, answer questions, change direction, and approve important actions.\n\nYou can even ask ChatGPT Work to take on entire workflows with a single request. For example, it can turn customer research into a campaign brief, use that brief to create marketing assets, and adapt those assets for different markets while carrying context through every step.\n\nEven when you’re away from your computer or phone, ChatGPT Work can keep projects moving forward with Scheduled Tasks. For example, it can independently turn new messages from Microsoft Teams and Slack into updated docs or slides, then share important changes with your team.\n\nIn early testing, we’ve seen how ChatGPT Work expands what users can do:\n\n1 of 4"
+    },
+    {
+      "title": "OpenAI Bio Bug Bounty",
+      "url": "https://openai.com/index/bio-bug-bounty/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "OpenAI Bio Bug Bounty | OpenAI\n\nTesting for universal jailbreaks for biorisks\n\n## Invitation\n\nAs part of our ongoing efforts to strengthen our safeguards for advanced AI capabilities in biology, we’re evolving our GPT‑5.5 Bio Bug Bounty to become an ongoing private program—the OpenAI Bio Bounty Program. The program will remain focused on universal jailbreaks that can defeat our predefined biosafety challenge against OpenAI’s frontier models, starting with GPT‑5.6 and going forward.\n\nWe’re also excited to announce that we’re increasing reward amounts. The reward for a universal jailbreak for the OpenAI Bio Bounty Program has been raised from $25,000 to $50,000 for both GPT‑5.6 and GPT‑5.5. Smaller awards may be granted for partial wins at our discretion.\n\nWe will continue to honor the scope for the GPT‑5.5 Bio Bounty Program as originally announced, with testing ending on July 27, 2026. After this date, only GPT‑5.6 will be in scope; we will continue to communicate any future changes in scope to our researchers.\n\nInterested applicants should apply through our rolling [application process⁠(opens in a new window)](https://docs.google.com/forms/d/e/1FAIpQLScIW9QJTq4J6zsl89Un-OmTCSDNWdWldcib8mYZEqoHzunukQ/viewform?usp=preview). Once selected, accepted applicants will be onboarded to the bio bug bounty platform. All past applicants to the GPT‑5.5 Bio Bounty Program will not need to reapply.\n\n## How to participate"
+    }
+  ],
   "github_strategy": {
-    "query": "LLM OR AI agent OR MCP OR RAG",
+    "query": "LLM OR AI agent OR \"large language model\" (保底)",
     "filters": "pushed:>2026-06-13",
     "sort": "stars",
     "label": "热门新势力（近 30 天活跃）"
