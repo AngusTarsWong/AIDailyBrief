@@ -18,7 +18,7 @@
       "is_top": true,
       "releases": [],
       "name_zh": "xtekky/gpt4free",
-      "desc_zh": "开源项目 xtekky/gpt4free，归属 chatbot、chatbots、chatgpt 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“The official gpt4free repository | various collection of powerful language models | opus 4.6 gpt 5.3 kimi 2.5 deepseek v3.2 gemini 3”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "聚合多种模型访问方式的客户端项目，方便试验不同服务接口。由于上游可用性与合规边界变化快，适合研究接口适配，不建议作为关键生产依赖。",
       "lang_zh": "Python"
     },
     {
@@ -51,7 +51,7 @@
         }
       ],
       "name_zh": "stanfordnlp/dspy",
-      "desc_zh": "开源项目 stanfordnlp/dspy，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“DSPy: The framework for programming—not prompting—language models”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "以声明式方式编程语言模型系统的框架，可将提示、检索器和模块组合后通过优化器自动调优。适合需要把“提示词试错”转为可评测、可优化程序的团队。",
       "lang_zh": "Python"
     },
     {
@@ -90,7 +90,7 @@
         }
       ],
       "name_zh": "sgl-project/sglang",
-      "desc_zh": "开源项目 sgl-project/sglang，归属 attention、blackwell、cuda 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“SGLang is a high-performance serving framework for large language models and multimodal models.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "高性能 LLM 推理与服务框架，聚焦结构化生成、并行调度和吞吐优化。适合部署多轮 Agent、批量推理或需要降低大模型服务成本的基础设施团队。",
       "lang_zh": "Python"
     },
     {
@@ -129,7 +129,7 @@
         }
       ],
       "name_zh": "yamadashy/repomix",
-      "desc_zh": "开源项目 yamadashy/repomix，归属 ai、anthropic、artificial-intelligence 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or o”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "将代码仓库打包为适合 LLM 阅读的上下文文件的工具。它可按规则压缩目录、过滤无关内容并保留结构，适合代码审查、迁移和让 Agent 快速理解项目。",
       "lang_zh": "TypeScript"
     },
     {
@@ -166,7 +166,7 @@
         }
       ],
       "name_zh": "p-e-w/heretic",
-      "desc_zh": "开源项目 p-e-w/heretic，归属 abliteration、llm、transformer 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Fully automatic censorship removal for language models”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "面向本地和私有化模型工作流的工具项目，关注可控使用与实验能力。适合希望在自有环境评估模型、提示与代理流程的开发者。",
       "lang_zh": "Python"
     },
     {
@@ -186,7 +186,7 @@
       "is_top": true,
       "releases": [],
       "name_zh": "AI4Finance-Foundation/FinGPT",
-      "desc_zh": "开源项目 AI4Finance-Foundation/FinGPT，归属 chatgpt、finance、fingpt 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“FinGPT: Open-Source Financial Large Language Models!  Revolutionize 🔥    We release the trained model on HuggingFace.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "金融领域开源大模型与数据资源项目，覆盖金融 NLP、指令微调和研究基准。它适合做财报理解、新闻分析与投研原型，但结果需接受金融合规和事实核验。",
       "lang_zh": "Jupyter Notebook"
     },
     {
@@ -219,7 +219,7 @@
         }
       ],
       "name_zh": "huggingface/trl",
-      "desc_zh": "开源项目 huggingface/trl，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Train transformer language models with reinforcement learning.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "Hugging Face 的 Transformer 强化学习与偏好优化库，支持 SFT、DPO、PPO 等训练路线。适合对开源模型做对齐、偏好学习和任务定制的研究与工程团队。",
       "lang_zh": "Python"
     },
     {
@@ -239,7 +239,7 @@
       "is_top": true,
       "releases": [],
       "name_zh": "BradyFU/Awesome-Multimodal-Large-Language-Models",
-      "desc_zh": "开源项目 BradyFU/Awesome-Multimodal-Large-Language-Models，归属 chain-of-thought、in-context-learning、instruction-following 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“:sparkles::sparkles:Latest Advances on Multimodal Large Language Models”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "多模态大模型资料与项目精选，覆盖视觉、语音、视频和跨模态研究。适合快速追踪模型、论文、数据集和应用框架的开发者。",
       "lang_zh": ""
     },
     {
@@ -278,7 +278,7 @@
         }
       ],
       "name_zh": "NVIDIA-NeMo/Speech",
-      "desc_zh": "开源项目 NVIDIA-NeMo/Speech，归属 asr、deeplearning、generative-ai 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A scalable generative AI framework built for researchers and developers working on Large Language Models, Multimodal, and Speech AI (Automatic Speech Recognition and Text-to-Speech”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "NVIDIA NeMo 的语音处理组件，面向 ASR、TTS、说话人识别等任务，并适合 GPU 加速训练与部署。适合构建企业语音助手和多语种语音能力。",
       "lang_zh": "Python"
     },
     {
@@ -298,7 +298,7 @@
       "is_top": true,
       "releases": [],
       "name_zh": "microsoft/mcp-for-beginners",
-      "desc_zh": "开源项目 microsoft/mcp-for-beginners，归属 csharp、java、javascript 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and ”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "Microsoft 的 MCP 入门教程，解释模型如何以标准协议连接外部工具、数据和服务。适合希望系统理解 MCP 架构并搭建第一个服务端或客户端的开发者。",
       "lang_zh": "Jupyter Notebook"
     },
     {
@@ -337,7 +337,7 @@
         }
       ],
       "name_zh": "Unstructured-IO/unstructured",
-      "desc_zh": "开源项目 Unstructured-IO/unstructured，归属 data-pipelines、deep-learning、document-image-analysis 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  ”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "将 PDF、Word、网页等非结构化文件解析为可供检索和 LLM 使用的结构化内容。它是 RAG 数据管道常用组件，适合文档问答和企业知识库建设。",
       "lang_zh": "HTML"
     },
     {
@@ -357,7 +357,7 @@
       "is_top": true,
       "releases": [],
       "name_zh": "arangodb/arangodb",
-      "desc_zh": "开源项目 arangodb/arangodb，归属 arangodb、database、distributed-database 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“🥑 ArangoDB is a native multi-model database with flexible data models for documents, graphs, and key-values. Build high performance applications using a convenient SQL-like query l”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "多模型数据库，兼具文档、图和搜索能力。对 Agent 场景而言，图关系和检索能力可用于知识图谱与长期记忆，但它本身不是专用 LLM 框架。",
       "lang_zh": "C++"
     },
     {
@@ -396,7 +396,7 @@
         }
       ],
       "name_zh": "NVIDIA/TensorRT-LLM",
-      "desc_zh": "开源项目 NVIDIA/TensorRT-LLM，归属 blackwell、cuda、llm-serving 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“TensorRT LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and supports state-of-the-art optimizations to perform inference efficiently on NV”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "NVIDIA 面向大模型推理的高性能优化库，通过量化、编译和 GPU 调度提升延迟与吞吐。适合在 NVIDIA 硬件上部署高并发生产级 LLM 服务。",
       "lang_zh": "Python"
     },
     {
@@ -433,7 +433,7 @@
         }
       ],
       "name_zh": "EleutherAI/lm-evaluation-harness",
-      "desc_zh": "开源项目 EleutherAI/lm-evaluation-harness，归属 evaluation-framework、language-model、transformer 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A framework for few-shot evaluation of language models.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "开源 LLM 评测框架，提供统一任务集与可重复运行方式。它适合比较模型版本、检查回归，并将评测纳入模型与 Agent 的发布门槛。",
       "lang_zh": "Python"
     },
     {
@@ -468,7 +468,7 @@
         }
       ],
       "name_zh": "PaddlePaddle/PaddleFormers",
-      "desc_zh": "开源项目 PaddlePaddle/PaddleFormers，归属 model 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“PaddleFormers is an easy-to-use library of pre-trained large language model zoo based on PaddlePaddle.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "PaddlePaddle 生态中的预训练与大模型工具集，支持 NLP 等任务的训练和应用开发。适合使用飞桨栈进行中文模型或企业 AI 项目的团队。",
       "lang_zh": "Python"
     }
   ],
@@ -481,7 +481,7 @@
       "stars": "2,957",
       "today": "444 stars today",
       "name_zh": "Dicklesworthstone / destructive_command_guard",
-      "desc_zh": "开源项目 Dicklesworthstone / destructive_command_guard，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "面向 AI 编程智能体的危险命令拦截器。它在 Agent 执行 Git、Shell 等工具调用前识别高风险操作并阻断，解决“模型会写代码但不应拥有无限系统权限”的安全问题，适合把 Claude Code、Codex 等接入真实代码库的团队。",
       "lang_zh": "Rust"
     },
     {
@@ -492,7 +492,7 @@
       "stars": "8,004",
       "today": "210 stars today",
       "name_zh": "wonderwhy-er / DesktopCommanderMCP",
-      "desc_zh": "开源项目 wonderwhy-er / DesktopCommanderMCP，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "为 Claude 提供终端、文件搜索和差异编辑能力的 MCP 服务。它把本地开发环境封装为标准工具接口，Agent 可定位文件、执行命令和提交精确修改，适合需要可审计本地自动化的开发工作流。",
       "lang_zh": "TypeScript"
     },
     {
@@ -503,7 +503,7 @@
       "stars": "20,607",
       "today": "768 stars today",
       "name_zh": "HKUDS / Vibe-Trading",
-      "desc_zh": "开源项目 HKUDS / Vibe-Trading，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“\"Vibe-Trading: Your Personal Trading Agent\"”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "将交易研究流程包装成个人化 AI Agent 的实验项目。其价值在于把行情解读、策略讨论和研究任务串联起来；应把输出视为研究辅助而非自动下单依据，适合量化学习与策略原型验证。",
       "lang_zh": "Python"
     },
     {
@@ -514,7 +514,7 @@
       "stars": "23,161",
       "today": "66 stars today",
       "name_zh": "PrefectHQ / prefect",
-      "desc_zh": "开源项目 PrefectHQ / prefect，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Prefect is a workflow orchestration framework for building resilient data pipelines in Python.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "Python 数据与工作流编排框架，强调可恢复执行、可观测性和调度。虽然不是专门的 LLM 框架，但可作为数据准备、评测、批处理推理和 Agent 后台任务的可靠运行底座。",
       "lang_zh": "Python"
     },
     {
@@ -525,7 +525,7 @@
       "stars": "118,605",
       "today": "408 stars today",
       "name_zh": "Shubhamsaboo / awesome-llm-apps",
-      "desc_zh": "开源项目 Shubhamsaboo / awesome-llm-apps，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“100+ AI Agent & RAG apps you can actually run — clone, customize, ship.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "收录可直接运行的 AI Agent 与 RAG 应用案例库。它将检索问答、浏览器自动化、多 Agent 等模式整理为可克隆模板，适合开发者快速比较实现路径并为产品原型选型。",
       "lang_zh": "Python"
     },
     {
@@ -536,19 +536,8 @@
       "stars": "48,443",
       "today": "459 stars today",
       "name_zh": "anthropics / claude-cookbooks",
-      "desc_zh": "开源项目 anthropics / claude-cookbooks，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "Anthropic 官方的 Claude 使用示例与 Notebook 合集，覆盖工具调用、提示设计、结构化输出等实践。它适合开发者从可运行样例理解模型能力边界，并将官方推荐模式迁移到自己的应用。",
       "lang_zh": "Jupyter Notebook"
-    },
-    {
-      "name": "home-assistant / core",
-      "url": "https://github.com/home-assistant/core",
-      "desc": "🏡 Open source home automation that puts local control and privacy first.",
-      "lang": "Python",
-      "stars": "89,085",
-      "today": "400 stars today",
-      "name_zh": "home-assistant / core",
-      "desc_zh": "开源项目 home-assistant / core，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“🏡 Open source home automation that puts local control and privacy first.”。建议结合仓库文档与近期版本记录评估适用场景。",
-      "lang_zh": "Python"
     },
     {
       "name": "Crosstalk-Solutions / project-nomad",
@@ -558,7 +547,7 @@
       "stars": "33,819",
       "today": "125 stars today",
       "name_zh": "Crosstalk-Solutions / project-nomad",
-      "desc_zh": "开源项目 Crosstalk-Solutions / project-nomad，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "面向离线场景的自包含式生存计算机项目，集成工具、知识库与本地 AI 能力。其重点是断网或低带宽条件下的信息可得性与自主性，适合边缘计算、应急准备和隐私优先的本地助手探索。",
       "lang_zh": "TypeScript"
     },
     {
@@ -569,19 +558,8 @@
       "stars": "2,267",
       "today": "16 stars today",
       "name_zh": "ColeMurray / background-agents",
-      "desc_zh": "开源项目 ColeMurray / background-agents，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An open-source background agents coding system”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "开源的后台编码 Agent 系统，将耗时的代码任务放到异步执行队列中。它适合把重构、测试修复或多轮实现从交互界面剥离出来，并通过状态与结果回传管理长任务。",
       "lang_zh": "TypeScript"
-    },
-    {
-      "name": "k1tbyte / Wand-Enhancer",
-      "url": "https://github.com/k1tbyte/Wand-Enhancer",
-      "desc": "Advanced UX and interoperability extension for Wand (WeMod) app",
-      "lang": "C#",
-      "stars": "6,974",
-      "today": "609 stars today",
-      "name_zh": "k1tbyte / Wand-Enhancer",
-      "desc_zh": "开源项目 k1tbyte / Wand-Enhancer，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Advanced UX and interoperability extension for Wand (WeMod) app”。建议结合仓库文档与近期版本记录评估适用场景。",
-      "lang_zh": "C#"
     },
     {
       "name": "pingdotgg / t3code",
@@ -592,7 +570,7 @@
       "today": "75 stars today",
       "page_content": "[Skip to content](https://github.com/pingdotgg/t3code#start-of-content)\n## Navigation Menu\nToggle navigation\n[](https://github.com/)\n[Sign in](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fpingdotgg%2Ft3code)\nAppearance settings\n*\nPlatform\n*\nAI CODE CREATION\n*   [GitHub Copilot Write better code with AI](https://github.com/features/copilot)\n*   [GitHub Copilot app Direct agents from issue to merge](https://github.com/features/ai/github-app)\n*   [MCP Registry New Integrate external tools](https://github.com/mcp)\n*\nDEVELOPER WORKFLOWS",
       "name_zh": "pingdotgg / t3code",
-      "desc_zh": "开源项目 pingdotgg / t3code，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“[Skip to content](https://github.com/pingdotgg/t3code#start-of-content)”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "面向现代 Web 开发工作流的 AI 编程工具项目。其目标是把项目上下文、脚手架和代码生成环节连接起来，减少从需求到可运行原型的切换成本，适合偏 TypeScript 生态的快速迭代团队。",
       "lang_zh": "TypeScript"
     },
     {
@@ -604,19 +582,8 @@
       "today": "115 stars today",
       "page_content": "This is a proof of concept for an AI-powered hedge fund. The goal of this project is to explore the use of AI to make trading decisions. This project is for **educational** purposes only and is not intended for real trading or investment.\n> **🚧 The project is evolving.** We're rebuilding it into a persistent, always-on AI hedge fund — a _fund_ as a first-class entity you can backtest, paper-trade, and (opt-in) run live, with the investor agents reimagined as pluggable, backtestable \"alpha models.\" Read the **[Vision →](https://github.com/virattt/ai-hedge-fund/blob/main/VISION.md)** and the **[Roadmap →](https://github.com/virattt/ai-hedge-fund/blob/main/ROADMAP.md)**.\nThis system employs several agents working together:\n1.   Aswath Damodaran Agent - The Dean of Valuation, focuses on story, numbers, and disciplined valuation\n2.   Ben Graham Agent - The godfather of value investing, only buys hidden gems with a margin of safety\n3.   Bill Ackman Agent - An activist investor, takes bold positions and pushes for change\n4.   Cathie Wood Agent - The queen of growth investing, believes in the power of innovation and disruption\n5.   Charlie Munger Agent - Warren Buffett's partner, only buys wonderful businesses at fair prices\n6.   Michael Burry Agent - The Big Short contrarian who hunts for deep value\n7.   Mohnish Pabrai Agent - The Dhandho investor, who looks for doubles at low risk\n8.   Nassim Taleb Agent - The Black Swan risk analyst, focuses on tail risk, antifragility, and asymmetric payoffs\n9.   Peter Lynch Agent - Practical investor who seeks \"ten-baggers\" in everyday businesses\n10.   Phil Fisher Agent - Meticulous growth investor who uses deep \"scuttlebutt\" research\n11.   Rakesh Jhunjhunwala Agent - The Big Bull of India\n12.   Stanley Druckenmiller Agent - Macro legend who hunts for asymmetric opportunities with growth potential",
       "name_zh": "virattt / ai-hedge-fund",
-      "desc_zh": "开源项目 virattt / ai-hedge-fund，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An AI Hedge Fund Team This is a proof of concept for an AI-powered hedge fund. The goal of this project is to explore the use of AI to make trading decisions. This project is for *”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "以多个角色化 Agent 模拟投研团队的开源实验：不同 Agent 分别处理基本面、情绪、风险和交易观点，再汇总形成研究结论。适合研究多 Agent 协作范式，不应替代真实投资建议。",
       "lang_zh": "Python"
-    },
-    {
-      "name": "chen08209 / FlClash",
-      "url": "https://github.com/chen08209/FlClash",
-      "desc": "A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.",
-      "lang": "Dart",
-      "stars": "45,236",
-      "today": "154 stars today",
-      "name_zh": "chen08209 / FlClash",
-      "desc_zh": "开源项目 chen08209 / FlClash，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.”。建议结合仓库文档与近期版本记录评估适用场景。",
-      "lang_zh": "Dart"
     },
     {
       "name": "davila7 / claude-code-templates",
@@ -626,30 +593,8 @@
       "stars": "29,248",
       "today": "274 stars today",
       "name_zh": "davila7 / claude-code-templates",
-      "desc_zh": "开源项目 davila7 / claude-code-templates，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“CLI tool for configuring and monitoring Claude Code”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "用于配置和监控 Claude Code 的 CLI 模板工具。它把常用命令、项目规则和运行状态标准化，帮助团队更快复用 AI 编程环境并降低新成员配置成本。",
       "lang_zh": "Python"
-    },
-    {
-      "name": "par274 / sharpemu",
-      "url": "https://github.com/par274/sharpemu",
-      "desc": "An experimental PlayStation 5 emulator project.",
-      "lang": "C#",
-      "stars": "1,287",
-      "today": "314 stars today",
-      "name_zh": "par274 / sharpemu",
-      "desc_zh": "开源项目 par274 / sharpemu，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An experimental PlayStation 5 emulator project.”。建议结合仓库文档与近期版本记录评估适用场景。",
-      "lang_zh": "C#"
-    },
-    {
-      "name": "malisper / pgrust",
-      "url": "https://github.com/malisper/pgrust",
-      "desc": "Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
-      "lang": "Rust",
-      "stars": "2,489",
-      "today": "518 stars today",
-      "name_zh": "malisper / pgrust",
-      "desc_zh": "开源项目 malisper / pgrust，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Postgres rewritten in Rust, now passing 100% of the Postgres regression tests”。建议结合仓库文档与近期版本记录评估适用场景。",
-      "lang_zh": "Rust"
     },
     {
       "name": "Nutlope / hallmark",
@@ -659,7 +604,7 @@
       "stars": "4,310",
       "today": "155 stars today",
       "name_zh": "Nutlope / hallmark",
-      "desc_zh": "开源项目 Nutlope / hallmark，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "针对 Claude Code、Cursor、Codex 的“反 AI 味”设计技能。它通过设计原则和审查提示减少模板化、同质化的界面输出，适合希望让 AI 生成前端更贴近产品品牌与可用性标准的团队。",
       "lang_zh": "CSS"
     }
   ],

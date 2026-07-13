@@ -18,7 +18,7 @@
       "is_top": true,
       "releases": [],
       "name_zh": "stas00/ml-engineering",
-      "desc_zh": "开源项目 stas00/ml-engineering，归属 ai、debugging、gpus 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Machine Learning Engineering Open Book”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "机器学习工程开放教材，系统覆盖 GPU、调试、训练和部署等工程问题。它把研究代码走向稳定生产系统的关键经验集中起来，适合从模型实验转向 ML 平台或大规模训练的工程师。",
       "lang_zh": "Python"
     },
     {
@@ -38,7 +38,7 @@
       "is_top": true,
       "releases": [],
       "name_zh": "liyupi/ai-guide",
-      "desc_zh": "开源项目 liyupi/ai-guide，归属 ai、artificial-intelligence、chatgpt 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“程序员鱼皮的 AI 资源大全 + Vibe Coding 零基础教程，分享 OpenClaw 保姆级教程、大模型玩法（DeepSeek / GPT / Gemini / Claude / GLM）、最新 AI 资讯、Prompt 提示词大全、AI 知识百科（Agent Skills / RAG / MCP / A2A）、AI 编程教程（Harness Eng”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "中文 AI 学习与实践资源库，覆盖主流模型、提示工程、RAG、MCP、Agent Skills 和 AI 编程教程。它更像一张持续更新的学习地图，适合希望快速建立全景认知的开发者。",
       "lang_zh": "JavaScript"
     },
     {
@@ -52,7 +52,7 @@
       "is_top": true,
       "releases": [],
       "name_zh": "chiphuyen/aie-book",
-      "desc_zh": "开源项目 chiphuyen/aie-book，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“[WIP] Resources for AI engineers. Also contains supporting materials for the book AI Engineering (Chip Huyen, 2025)”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "Chip Huyen《AI Engineering》配套资源与练习材料，聚焦把模型能力转化为可靠产品的工程方法。内容适合关注数据、评测、推理成本和应用架构的 AI 工程师。",
       "lang_zh": "Jupyter Notebook"
     },
     {
@@ -72,7 +72,7 @@
       "is_top": true,
       "releases": [],
       "name_zh": "visenger/awesome-mlops",
-      "desc_zh": "开源项目 visenger/awesome-mlops，归属 ai、data-science、devops 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A curated list of references for MLOps”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "MLOps 参考资料精选清单，覆盖实验跟踪、部署、监控、数据与模型生命周期。它适合为模型或 LLM 应用建立可重复交付、可观测运行链路时做技术选型。",
       "lang_zh": ""
     },
     {
@@ -86,7 +86,7 @@
       "is_top": true,
       "releases": [],
       "name_zh": "coleam00/context-engineering-intro",
-      "desc_zh": "开源项目 coleam00/context-engineering-intro，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Context engineering is the new vibe coding - it's the way to actually make AI coding assistants work. Claude Code is the best for this so that's what this repo is centered around, ”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "介绍 Context Engineering 的入门项目，重点不是单次写好提示词，而是组织代码库、规则、记忆和工具上下文，让 AI 编程助手在复杂项目中稳定工作。",
       "lang_zh": "Python"
     },
     {
@@ -125,7 +125,7 @@
         }
       ],
       "name_zh": "Orchestra-Research/AI-Research-SKILLs",
-      "desc_zh": "开源项目 Orchestra-Research/AI-Research-SKILLs，归属 ai、ai-research、claude 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Comprehensive open-source library of AI research and engineering skills for any AI model. Package the skills and your claude code/codex/gemini agent will be an AI research agent wi”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "面向 Claude Code、Codex、Gemini 等模型的研究与工程技能库。它把文献阅读、实验设计、数据分析等能力封装成可调用工作流，适合构建专用科研 Agent。",
       "lang_zh": "TeX"
     },
     {
@@ -145,7 +145,7 @@
       "is_top": true,
       "releases": [],
       "name_zh": "walkinglabs/learn-harness-engineering",
-      "desc_zh": "开源项目 walkinglabs/learn-harness-engineering，归属 agent、agentic、agentic-ai 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Harness engineering beginner tutorial, from 0 to 1”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "从零讲解 Harness Engineering 的教程，关注如何设计约束、工具和反馈循环来编排编码 Agent。适合想从“聊天式使用”升级到可复用 Agent 系统的开发者。",
       "lang_zh": "TypeScript"
     },
     {
@@ -165,7 +165,7 @@
       "is_top": true,
       "releases": [],
       "name_zh": "ZeroLu/awesome-nanobanana-pro",
-      "desc_zh": "开源项目 ZeroLu/awesome-nanobanana-pro，归属 gemini、nanobanana、nanobanana-pro 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“🚀 An awesome list of curated Nano Banana pro prompts and examples. Your go-to resource for mastering prompt engineering and exploring the creative potential of the Nano banana pro(”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "Nano Banana Pro 的提示词与案例集合，侧重图像生成与创意工作流的可复用模板。适合设计师和内容创作者快速理解模型擅长的视觉任务与提示结构。",
       "lang_zh": ""
     },
     {
@@ -204,7 +204,7 @@
         }
       ],
       "name_zh": "mrexodia/ida-pro-mcp",
-      "desc_zh": "开源项目 mrexodia/ida-pro-mcp，归属 ai、aiagent、binary-analysis 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“AI-powered reverse engineering assistant that bridges IDA Pro with language models through MCP.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "通过 MCP 将 IDA Pro 与语言模型连接的逆向工程助手。Agent 可获得反汇编上下文并辅助解释二进制逻辑，适合授权安全研究、漏洞分析和恶意样本研判。",
       "lang_zh": "Python"
     },
     {
@@ -243,7 +243,7 @@
         }
       ],
       "name_zh": "VoltAgent/voltagent",
-      "desc_zh": "开源项目 VoltAgent/voltagent，归属 agents、ai、ai-agents 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“AI Agent Engineering Platform built on an Open Source TypeScript AI Agent Framework”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "TypeScript 开源 AI Agent 工程平台，提供构建、运行和管理 Agent 的基础框架。它适合需要在应用中组合模型、工具、状态和评测的团队，而非只做一次性 Demo。",
       "lang_zh": "TypeScript"
     },
     {
@@ -280,7 +280,7 @@
         }
       ],
       "name_zh": "spring-projects/spring-ai",
-      "desc_zh": "开源项目 spring-projects/spring-ai，归属 artificial-intelligence、java、spring-ai 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An Application Framework for AI Engineering”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "Spring 生态的 AI 应用框架，为 Java 服务提供模型、向量库、工具调用和 RAG 抽象。它让企业可沿用熟悉的 Spring 依赖注入与可观测体系接入 AI 能力。",
       "lang_zh": "Java"
     },
     {
@@ -294,7 +294,7 @@
       "is_top": true,
       "releases": [],
       "name_zh": "zhaoxuya520/reverse-skill",
-      "desc_zh": "开源项目 zhaoxuya520/reverse-skill，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Su”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "针对授权逆向、渗透测试与安全研究的技能路由包。它按任务动态组合工具链与知识库，适合在明确授权范围内为安全 Agent 提供可复用工作流。",
       "lang_zh": "PowerShell"
     },
     {
@@ -314,7 +314,7 @@
       "is_top": true,
       "releases": [],
       "name_zh": "NirDiamant/Prompt_Engineering",
-      "desc_zh": "开源项目 NirDiamant/Prompt_Engineering，归属 ai、chain-of-thought、chatgpt 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“22 prompt engineering techniques with hands-on Jupyter Notebook tutorials, from fundamental concepts to advanced strategies for leveraging LLMs.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "包含 22 种提示工程方法及 Jupyter 实践教程的资源库。它将基础提示、链式推理、结构化任务等方法落到可运行实验，适合系统学习和验证 LLM 交互策略。",
       "lang_zh": "Jupyter Notebook"
     },
     {
@@ -353,7 +353,7 @@
         }
       ],
       "name_zh": "xirong/my-git",
-      "desc_zh": "开源项目 xirong/my-git，归属 ai-coding、ai-native-development、git 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A practical Git & GitHub handbook for modern engineering teams and AI-native development workflows. |  现代工程团队与 AI 编程时代的 Git / GitHub 实战手册”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "面向现代工程团队与 AI 原生开发的 Git/GitHub 实战手册。重点在协作规范、分支与交付流程，适合把 AI 编程辅助纳入现有版本控制与代码审查体系。",
       "lang_zh": "Python"
     },
     {
@@ -380,7 +380,7 @@
         }
       ],
       "name_zh": "cobusgreyling/loop-engineering",
-      "desc_zh": "开源项目 cobusgreyling/loop-engineering，归属 agentic-ai、ai-agents、ai-coding 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Practical patterns, starters & CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). I”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "为 AI 编程 Agent 设计提示、编排和反馈循环的实践模式与 CLI 工具。它关注如何让 Agent 在多轮执行中保持目标、验证结果并持续改进。",
       "lang_zh": "JavaScript"
     }
   ],
@@ -393,7 +393,7 @@
       "stars": "2,957",
       "today": "444 stars today",
       "name_zh": "Dicklesworthstone / destructive_command_guard",
-      "desc_zh": "开源项目 Dicklesworthstone / destructive_command_guard，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "面向 AI 编程智能体的危险命令拦截器。它在 Agent 执行 Git、Shell 等工具调用前识别高风险操作并阻断，解决“模型会写代码但不应拥有无限系统权限”的安全问题，适合把 Claude Code、Codex 等接入真实代码库的团队。",
       "lang_zh": "Rust"
     },
     {
@@ -404,7 +404,7 @@
       "stars": "8,004",
       "today": "210 stars today",
       "name_zh": "wonderwhy-er / DesktopCommanderMCP",
-      "desc_zh": "开源项目 wonderwhy-er / DesktopCommanderMCP，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "为 Claude 提供终端、文件搜索和差异编辑能力的 MCP 服务。它把本地开发环境封装为标准工具接口，Agent 可定位文件、执行命令和提交精确修改，适合需要可审计本地自动化的开发工作流。",
       "lang_zh": "TypeScript"
     },
     {
@@ -415,7 +415,7 @@
       "stars": "20,607",
       "today": "768 stars today",
       "name_zh": "HKUDS / Vibe-Trading",
-      "desc_zh": "开源项目 HKUDS / Vibe-Trading，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“\"Vibe-Trading: Your Personal Trading Agent\"”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "将交易研究流程包装成个人化 AI Agent 的实验项目。其价值在于把行情解读、策略讨论和研究任务串联起来；应把输出视为研究辅助而非自动下单依据，适合量化学习与策略原型验证。",
       "lang_zh": "Python"
     },
     {
@@ -426,7 +426,7 @@
       "stars": "23,161",
       "today": "66 stars today",
       "name_zh": "PrefectHQ / prefect",
-      "desc_zh": "开源项目 PrefectHQ / prefect，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Prefect is a workflow orchestration framework for building resilient data pipelines in Python.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "Python 数据与工作流编排框架，强调可恢复执行、可观测性和调度。虽然不是专门的 LLM 框架，但可作为数据准备、评测、批处理推理和 Agent 后台任务的可靠运行底座。",
       "lang_zh": "Python"
     },
     {
@@ -437,7 +437,7 @@
       "stars": "118,605",
       "today": "408 stars today",
       "name_zh": "Shubhamsaboo / awesome-llm-apps",
-      "desc_zh": "开源项目 Shubhamsaboo / awesome-llm-apps，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“100+ AI Agent & RAG apps you can actually run — clone, customize, ship.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "收录可直接运行的 AI Agent 与 RAG 应用案例库。它将检索问答、浏览器自动化、多 Agent 等模式整理为可克隆模板，适合开发者快速比较实现路径并为产品原型选型。",
       "lang_zh": "Python"
     },
     {
@@ -448,19 +448,8 @@
       "stars": "48,443",
       "today": "459 stars today",
       "name_zh": "anthropics / claude-cookbooks",
-      "desc_zh": "开源项目 anthropics / claude-cookbooks，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "Anthropic 官方的 Claude 使用示例与 Notebook 合集，覆盖工具调用、提示设计、结构化输出等实践。它适合开发者从可运行样例理解模型能力边界，并将官方推荐模式迁移到自己的应用。",
       "lang_zh": "Jupyter Notebook"
-    },
-    {
-      "name": "home-assistant / core",
-      "url": "https://github.com/home-assistant/core",
-      "desc": "🏡 Open source home automation that puts local control and privacy first.",
-      "lang": "Python",
-      "stars": "89,085",
-      "today": "400 stars today",
-      "name_zh": "home-assistant / core",
-      "desc_zh": "开源项目 home-assistant / core，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“🏡 Open source home automation that puts local control and privacy first.”。建议结合仓库文档与近期版本记录评估适用场景。",
-      "lang_zh": "Python"
     },
     {
       "name": "Crosstalk-Solutions / project-nomad",
@@ -470,7 +459,7 @@
       "stars": "33,819",
       "today": "125 stars today",
       "name_zh": "Crosstalk-Solutions / project-nomad",
-      "desc_zh": "开源项目 Crosstalk-Solutions / project-nomad，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "面向离线场景的自包含式生存计算机项目，集成工具、知识库与本地 AI 能力。其重点是断网或低带宽条件下的信息可得性与自主性，适合边缘计算、应急准备和隐私优先的本地助手探索。",
       "lang_zh": "TypeScript"
     },
     {
@@ -481,19 +470,8 @@
       "stars": "2,267",
       "today": "16 stars today",
       "name_zh": "ColeMurray / background-agents",
-      "desc_zh": "开源项目 ColeMurray / background-agents，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An open-source background agents coding system”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "开源的后台编码 Agent 系统，将耗时的代码任务放到异步执行队列中。它适合把重构、测试修复或多轮实现从交互界面剥离出来，并通过状态与结果回传管理长任务。",
       "lang_zh": "TypeScript"
-    },
-    {
-      "name": "k1tbyte / Wand-Enhancer",
-      "url": "https://github.com/k1tbyte/Wand-Enhancer",
-      "desc": "Advanced UX and interoperability extension for Wand (WeMod) app",
-      "lang": "C#",
-      "stars": "6,974",
-      "today": "609 stars today",
-      "name_zh": "k1tbyte / Wand-Enhancer",
-      "desc_zh": "开源项目 k1tbyte / Wand-Enhancer，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Advanced UX and interoperability extension for Wand (WeMod) app”。建议结合仓库文档与近期版本记录评估适用场景。",
-      "lang_zh": "C#"
     },
     {
       "name": "pingdotgg / t3code",
@@ -503,7 +481,7 @@
       "stars": "13,758",
       "today": "75 stars today",
       "name_zh": "pingdotgg / t3code",
-      "desc_zh": "开源项目 pingdotgg / t3code，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“pingdotgg / t3code”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "面向现代 Web 开发工作流的 AI 编程工具项目。其目标是把项目上下文、脚手架和代码生成环节连接起来，减少从需求到可运行原型的切换成本，适合偏 TypeScript 生态的快速迭代团队。",
       "lang_zh": "TypeScript"
     },
     {
@@ -514,19 +492,8 @@
       "stars": "61,422",
       "today": "115 stars today",
       "name_zh": "virattt / ai-hedge-fund",
-      "desc_zh": "开源项目 virattt / ai-hedge-fund，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An AI Hedge Fund Team”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "以多个角色化 Agent 模拟投研团队的开源实验：不同 Agent 分别处理基本面、情绪、风险和交易观点，再汇总形成研究结论。适合研究多 Agent 协作范式，不应替代真实投资建议。",
       "lang_zh": "Python"
-    },
-    {
-      "name": "chen08209 / FlClash",
-      "url": "https://github.com/chen08209/FlClash",
-      "desc": "A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.",
-      "lang": "Dart",
-      "stars": "45,236",
-      "today": "154 stars today",
-      "name_zh": "chen08209 / FlClash",
-      "desc_zh": "开源项目 chen08209 / FlClash，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.”。建议结合仓库文档与近期版本记录评估适用场景。",
-      "lang_zh": "Dart"
     },
     {
       "name": "davila7 / claude-code-templates",
@@ -536,30 +503,8 @@
       "stars": "29,248",
       "today": "274 stars today",
       "name_zh": "davila7 / claude-code-templates",
-      "desc_zh": "开源项目 davila7 / claude-code-templates，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“CLI tool for configuring and monitoring Claude Code”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "用于配置和监控 Claude Code 的 CLI 模板工具。它把常用命令、项目规则和运行状态标准化，帮助团队更快复用 AI 编程环境并降低新成员配置成本。",
       "lang_zh": "Python"
-    },
-    {
-      "name": "par274 / sharpemu",
-      "url": "https://github.com/par274/sharpemu",
-      "desc": "An experimental PlayStation 5 emulator project.",
-      "lang": "C#",
-      "stars": "1,287",
-      "today": "314 stars today",
-      "name_zh": "par274 / sharpemu",
-      "desc_zh": "开源项目 par274 / sharpemu，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An experimental PlayStation 5 emulator project.”。建议结合仓库文档与近期版本记录评估适用场景。",
-      "lang_zh": "C#"
-    },
-    {
-      "name": "malisper / pgrust",
-      "url": "https://github.com/malisper/pgrust",
-      "desc": "Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
-      "lang": "Rust",
-      "stars": "2,489",
-      "today": "518 stars today",
-      "name_zh": "malisper / pgrust",
-      "desc_zh": "开源项目 malisper / pgrust，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Postgres rewritten in Rust, now passing 100% of the Postgres regression tests”。建议结合仓库文档与近期版本记录评估适用场景。",
-      "lang_zh": "Rust"
     },
     {
       "name": "Nutlope / hallmark",
@@ -569,7 +514,7 @@
       "stars": "4,310",
       "today": "155 stars today",
       "name_zh": "Nutlope / hallmark",
-      "desc_zh": "开源项目 Nutlope / hallmark，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "desc_zh": "针对 Claude Code、Cursor、Codex 的“反 AI 味”设计技能。它通过设计原则和审查提示减少模板化、同质化的界面输出，适合希望让 AI 生成前端更贴近产品品牌与可用性标准的团队。",
       "lang_zh": "CSS"
     }
   ],
