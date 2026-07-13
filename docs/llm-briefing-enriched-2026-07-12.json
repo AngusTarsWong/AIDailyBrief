@@ -1,0 +1,856 @@
+{
+  "date": "2026-07-12",
+  "github": [
+    {
+      "name": "xtekky/gpt4free",
+      "desc": "The official gpt4free repository | various collection of powerful language models | opus 4.6 gpt 5.3 kimi 2.5 deepseek v3.2 gemini 3",
+      "stars": 66465,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/xtekky/gpt4free",
+      "topics": [
+        "chatbot",
+        "chatbots",
+        "chatgpt",
+        "chatgpt-4",
+        "chatgpt-api"
+      ],
+      "is_top": true,
+      "releases": [],
+      "name_zh": "xtekky/gpt4free",
+      "desc_zh": "开源项目 xtekky/gpt4free，归属 chatbot、chatbots、chatgpt 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“The official gpt4free repository | various collection of powerful language models | opus 4.6 gpt 5.3 kimi 2.5 deepseek v3.2 gemini 3”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "stanfordnlp/dspy",
+      "desc": "DSPy: The framework for programming—not prompting—language models",
+      "stars": 36075,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/stanfordnlp/dspy",
+      "topics": [],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "3.3.0b1",
+          "name": "3.3.0b1",
+          "date": "2026-05-28",
+          "summary": "Added core typed LM objects for provider-neutral requests, responses, messages, parts, tool specs, r；Added OpenAI/LiteLLM compatibility conversion helpers so current provider-shaped calls can move thro；Routed adapter __call__ and acall through the no"
+        },
+        {
+          "tag": "3.2.1",
+          "name": "3.2.1",
+          "date": "2026-05-05",
+          "summary": "Fixed async streaming LM calls so custom headers are forwarded to LiteLLM streaming completions. ；Fixed dspy.Embedder so per-call caching=False is honored for both sync and async embedding calls. "
+        },
+        {
+          "tag": "3.2.0",
+          "name": "3.2.0",
+          "date": "2026-04-21",
+          "summary": "Make BetterTogether compatible with all optimizers ；add verify parameter to Image for SSL bypass ；feat(signature)；add file output support to inspect_history and fix return type "
+        }
+      ],
+      "name_zh": "stanfordnlp/dspy",
+      "desc_zh": "开源项目 stanfordnlp/dspy，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“DSPy: The framework for programming—not prompting—language models”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "sgl-project/sglang",
+      "desc": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+      "stars": 30222,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/sgl-project/sglang",
+      "topics": [
+        "attention",
+        "blackwell",
+        "cuda",
+        "deepseek",
+        "diffusion"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v0.5.15",
+          "name": "v0.5.15",
+          "date": "2026-07-10",
+          "summary": "Hunyuan 3 (Hy3)；Hierarchical Reasoning Model (HRM-Text)；NVIDIA LocateAnything-3B；Baidu Unlimited-OCR"
+        },
+        {
+          "tag": "v0.5.14",
+          "name": "v0.5.14",
+          "date": "2026-06-26",
+          "summary": "GLM-5.2；LiquidAI LFM2.5；Kimi-K2.7-Code；Poolside Laguna-M.1"
+        },
+        {
+          "tag": "v0.5.13",
+          "name": "v0.5.13",
+          "date": "2026-06-13",
+          "summary": "Nemotron 3 Ultra (Day-0, blog), Step-3.7-Flash, Command A+；Cosmos3, LingBot-World, SANA-WM, Ernie-Image, FLUX.2-Klein 4B/9B, Ideogram 4；Context Parallel + MTP；Context Parallel + fused MoE kernel (non-DeepEP): #24947"
+        }
+      ],
+      "name_zh": "sgl-project/sglang",
+      "desc_zh": "开源项目 sgl-project/sglang，归属 attention、blackwell、cuda 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“SGLang is a high-performance serving framework for large language models and multimodal models.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "yamadashy/repomix",
+      "desc": "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
+      "stars": 27083,
+      "lang": "TypeScript",
+      "updated": "2026-07-13",
+      "url": "https://github.com/yamadashy/repomix",
+      "topics": [
+        "ai",
+        "anthropic",
+        "artificial-intelligence",
+        "chatbot",
+        "chatgpt"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.16.1",
+          "name": "v1.16.1",
+          "date": "2026-07-11",
+          "summary": "This release is a bug-fix patch: it plugs a WebAssembly memory leak, extends comment removal to more JavaScript/TypeScri；Parsed web-tree-sitter Tree objects were not released after use, leaking WebAssembly heap memory when parsing or compres；Special "
+        },
+        {
+          "tag": "v1.16.0",
+          "name": "v1.16.0",
+          "date": "2026-06-29",
+          "summary": "--compress is now resilient: a single file that Tree-sitter cannot parse；File extensions are now matched case-insensitively when selecting the comment manipulator, so files ；Split-output files are now copied correctly after remote packing ."
+        },
+        {
+          "tag": "v1.15.0",
+          "name": "v1.15.0",
+          "date": "2026-06-18",
+          "summary": "Fixed .gitignore handling edge cases；Fixed duplicate relative paths when packing multiple roots .；Updated root dependencies, including major bumps to v15 ."
+        }
+      ],
+      "name_zh": "yamadashy/repomix",
+      "desc_zh": "开源项目 yamadashy/repomix，归属 ai、anthropic、artificial-intelligence 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or o”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "p-e-w/heretic",
+      "desc": "Fully automatic censorship removal for language models",
+      "stars": 26154,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/p-e-w/heretic",
+      "topics": [
+        "abliteration",
+        "llm",
+        "transformer"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.4.0",
+          "name": "v1.4.0",
+          "date": "2026-06-14",
+          "summary": "@p-e-w implemented automatically reproducing a model from a reproduce.json file in https://github.co；@rocker-zhang added support for plain text files as prompt datasets in https://github.com/p-e-w/here；@anrp fixed LoRA export in https；@zaakirio imple"
+        },
+        {
+          "tag": "v1.3.0",
+          "name": "v1.3.0",
+          "date": "2026-05-05",
+          "summary": "@Vinay-Umrethe (who had previously contributed under the username @Vinayyyy7) implemented reproducib；@magiccodingman reduced peak VRAM usage in https://github.com/p-e-w/heretic/pull/239. @olekssy fixed；@farolone added support for Qwen3.5 models in ht"
+        },
+        {
+          "tag": "v1.2.0",
+          "name": "v1.2.0",
+          "date": "2026-02-14",
+          "summary": "@noctrex added a max_memory setting to limit memory usage in https://github.com/p-e-w/heretic/pull/8；@spikymoth added a mechanism to avoid excessive low-divergence iteration in https://github.com/p-e-w；@accemlcc implemented a new LoRA-based abliterat"
+        }
+      ],
+      "name_zh": "p-e-w/heretic",
+      "desc_zh": "开源项目 p-e-w/heretic，归属 abliteration、llm、transformer 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Fully automatic censorship removal for language models”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "AI4Finance-Foundation/FinGPT",
+      "desc": "FinGPT: Open-Source Financial Large Language Models!  Revolutionize 🔥    We release the trained model on HuggingFace.",
+      "stars": 20861,
+      "lang": "Jupyter Notebook",
+      "updated": "2026-07-12",
+      "url": "https://github.com/AI4Finance-Foundation/FinGPT",
+      "topics": [
+        "chatgpt",
+        "finance",
+        "fingpt",
+        "fintech",
+        "large-language-models"
+      ],
+      "is_top": true,
+      "releases": [],
+      "name_zh": "AI4Finance-Foundation/FinGPT",
+      "desc_zh": "开源项目 AI4Finance-Foundation/FinGPT，归属 chatgpt、finance、fingpt 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“FinGPT: Open-Source Financial Large Language Models!  Revolutionize 🔥    We release the trained model on HuggingFace.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Jupyter Notebook"
+    },
+    {
+      "name": "huggingface/trl",
+      "desc": "Train transformer language models with reinforcement learning.",
+      "stars": 18826,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/huggingface/trl",
+      "topics": [],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.8.0",
+          "name": "v1.8.0",
+          "date": "2026-07-09",
+          "summary": "Fix GRPO + vLLM colocate + PEFT hang on non-NVLink hardware in https://github.com/huggingface/trl/pu；Align CPO / ORPO / BCO / Distillation / TPO with DPO: fix ZeRO-3 + PEFT mixed-dtype error in https:/；Fix chunked_nll patch hiding VLM kwargs from gen"
+        },
+        {
+          "tag": "v1.7.1",
+          "name": "v1.7.1",
+          "date": "2026-07-04",
+          "summary": "Fix GRPO + vLLM colocate + PEFT hang on non-NVLink hardware in https://github.com/huggingface/trl/pu；Fix dataset fingerprinting in DPO/SFT tokenization in https://github.com/huggingface/trl/pull/6206；Pass GPU device_ids to barrier fix in GRPO + vLLM "
+        },
+        {
+          "tag": "v1.7.0",
+          "name": "v1.7.0",
+          "date": "2026-06-25",
+          "summary": "get_repetition_penalty_reward in https；get_cosine_scaled_reward in https；Share frozen layers with reference model instead of duplicating in memory；Fix chunked_nll mixed Tensor/DTensor error under FSDP2 + PEFT in https://github.com/huggingface/trl/"
+        }
+      ],
+      "name_zh": "huggingface/trl",
+      "desc_zh": "开源项目 huggingface/trl，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Train transformer language models with reinforcement learning.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "BradyFU/Awesome-Multimodal-Large-Language-Models",
+      "desc": ":sparkles::sparkles:Latest Advances on Multimodal Large Language Models",
+      "stars": 17939,
+      "lang": "",
+      "updated": "2026-07-12",
+      "url": "https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models",
+      "topics": [
+        "chain-of-thought",
+        "in-context-learning",
+        "instruction-following",
+        "instruction-tuning",
+        "large-language-models"
+      ],
+      "is_top": true,
+      "releases": [],
+      "name_zh": "BradyFU/Awesome-Multimodal-Large-Language-Models",
+      "desc_zh": "开源项目 BradyFU/Awesome-Multimodal-Large-Language-Models，归属 chain-of-thought、in-context-learning、instruction-following 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“:sparkles::sparkles:Latest Advances on Multimodal Large Language Models”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": ""
+    },
+    {
+      "name": "NVIDIA-NeMo/Speech",
+      "desc": "A scalable generative AI framework built for researchers and developers working on Large Language Models, Multimodal, and Speech AI (Automatic Speech Recognition and Text-to-Speech)",
+      "stars": 17764,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/NVIDIA-NeMo/Speech",
+      "topics": [
+        "asr",
+        "deeplearning",
+        "generative-ai",
+        "machine-translation",
+        "neural-networks"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v2.7.3",
+          "name": "NVIDIA Neural Modules 2.7.3",
+          "date": "2026-04-23",
+          "summary": "This release addresses known security issues. For the latest NVIDIA Vulnerability Disclosure Informa"
+        },
+        {
+          "tag": "v2.7.2",
+          "name": "NVIDIA Neural Modules 2.7.2",
+          "date": "2026-03-25",
+          "summary": "<details><summary>Changelog</summary>；- cp: Fix numba-cuda and cuda-python installation and usage (#15506) by @chtruong814 :: PR: #15540；<details><summary>Changelog</summary>"
+        },
+        {
+          "tag": "v2.7.1",
+          "name": "NVIDIA Neural Modules 2.7.1",
+          "date": "2026-03-20",
+          "summary": "<details><summary>Changelog</summary>；- cp: Fix cuda-python usage for CUDA graphs (#15416) by @ko3n1g :: PR: #15471；<details><summary>Changelog</summary>"
+        }
+      ],
+      "name_zh": "NVIDIA-NeMo/Speech",
+      "desc_zh": "开源项目 NVIDIA-NeMo/Speech，归属 asr、deeplearning、generative-ai 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A scalable generative AI framework built for researchers and developers working on Large Language Models, Multimodal, and Speech AI (Automatic Speech Recognition and Text-to-Speech”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "microsoft/mcp-for-beginners",
+      "desc": "This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.",
+      "stars": 16741,
+      "lang": "Jupyter Notebook",
+      "updated": "2026-07-12",
+      "url": "https://github.com/microsoft/mcp-for-beginners",
+      "topics": [
+        "csharp",
+        "java",
+        "javascript",
+        "javascript-applications",
+        "mcp"
+      ],
+      "is_top": true,
+      "releases": [],
+      "name_zh": "microsoft/mcp-for-beginners",
+      "desc_zh": "开源项目 microsoft/mcp-for-beginners，归属 csharp、java、javascript 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and ”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Jupyter Notebook"
+    },
+    {
+      "name": "Unstructured-IO/unstructured",
+      "desc": "Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  Visit our website to learn more about our enterprise grade Platform product for production grade workflows, partitioning, enrichments, chunking and embedding.",
+      "stars": 15122,
+      "lang": "HTML",
+      "updated": "2026-07-12",
+      "url": "https://github.com/Unstructured-IO/unstructured",
+      "topics": [
+        "data-pipelines",
+        "deep-learning",
+        "document-image-analysis",
+        "document-image-processing",
+        "document-parser"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "0.24.1",
+          "name": "0.24.1",
+          "date": "2026-07-11",
+          "summary": "sanitize v2 HTML output to prevent stored XSS (GHSA-v5mq-3xhg-98m9) in https://github.com/Unstructur"
+        },
+        {
+          "tag": "0.24.0",
+          "name": "0.24.0",
+          "date": "2026-07-06",
+          "summary": "derive category_depth from heading level in the v2 (ontology) HTML parser in https://github.com/Unst；fix(ci)；centralize URL fetching with host validation and default timeouts in https://github.com/Unstructured；@william-u10d made their first contribut"
+        },
+        {
+          "tag": "0.23.1",
+          "name": "0.23.1",
+          "date": "2026-06-11",
+          "summary": "extract filled AcroForm field text in PDF partitioning in https://github.com/Unstructured-IO/unstruc"
+        }
+      ],
+      "name_zh": "Unstructured-IO/unstructured",
+      "desc_zh": "开源项目 Unstructured-IO/unstructured，归属 data-pipelines、deep-learning、document-image-analysis 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  ”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "HTML"
+    },
+    {
+      "name": "arangodb/arangodb",
+      "desc": "🥑 ArangoDB is a native multi-model database with flexible data models for documents, graphs, and key-values. Build high performance applications using a convenient SQL-like query language or JavaScript extensions.",
+      "stars": 14232,
+      "lang": "C++",
+      "updated": "2026-07-10",
+      "url": "https://github.com/arangodb/arangodb",
+      "topics": [
+        "arangodb",
+        "database",
+        "distributed-database",
+        "document-database",
+        "graph-database"
+      ],
+      "is_top": true,
+      "releases": [],
+      "name_zh": "arangodb/arangodb",
+      "desc_zh": "开源项目 arangodb/arangodb，归属 arangodb、database、distributed-database 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“🥑 ArangoDB is a native multi-model database with flexible data models for documents, graphs, and key-values. Build high performance applications using a convenient SQL-like query l”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "C++"
+    },
+    {
+      "name": "NVIDIA/TensorRT-LLM",
+      "desc": "TensorRT LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and supports state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs. TensorRT LLM also contains components to create Python and C++ runtimes that orchestrate the inference execution in a performant way.",
+      "stars": 14104,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/NVIDIA/TensorRT-LLM",
+      "topics": [
+        "blackwell",
+        "cuda",
+        "llm-serving",
+        "moe",
+        "pytorch"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.3.0rc20",
+          "name": "v1.3.0rc20",
+          "date": "2026-06-30",
+          "summary": "None][fix] AutoDeploy；None][test] Waive 2 failed cases for main in QA CI in https://github.com/NVIDIA/TensorRT-LLM/pull/15；TRTLLMINF-81][feat] Avoid failed runners on infra retry in https://github.com/NVIDIA/TensorRT-LLM/pu；//nvbugs/6179661][fix] Har"
+        },
+        {
+          "tag": "v1.3.0rc19",
+          "name": "v1.3.0rc19",
+          "date": "2026-06-23",
+          "summary": "None][infra] Waive TestQwen3NextInstruct nvfp4 cases in https://github.com/NVIDIA/TensorRT-LLM/pull/；//nvbugs/6248757][fix] Avoid running all reduce in aux stream in https://github.com/NVIDIA/TensorRT-；//nvbugs/6221483][fix] AutoDeploy；None][feat] ad"
+        },
+        {
+          "tag": "v1.3.0rc18",
+          "name": "v1.3.0rc18",
+          "date": "2026-06-10",
+          "summary": "None][test] Update datasets path in https://github.com/NVIDIA/TensorRT-LLM/pull/14671；None][infra] Update new .test_durations in https://github.com/NVIDIA/TensorRT-LLM/pull/14661；TRTLLM-13015][feat] drop complex visual_gen CLI example scripts in http"
+        }
+      ],
+      "name_zh": "NVIDIA/TensorRT-LLM",
+      "desc_zh": "开源项目 NVIDIA/TensorRT-LLM，归属 blackwell、cuda、llm-serving 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“TensorRT LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and supports state-of-the-art optimizations to perform inference efficiently on NV”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "EleutherAI/lm-evaluation-harness",
+      "desc": "A framework for few-shot evaluation of language models.",
+      "stars": 13262,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "topics": [
+        "evaluation-framework",
+        "language-model",
+        "transformer"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v0.4.12",
+          "name": "v0.4.12",
+          "date": "2026-05-11",
+          "summary": "TensorRT-LLM (trt-llm)；Megatron-LM (megatron-lm)；Intel Gaudi；LiteLLM AI gateway (litellm)"
+        },
+        {
+          "tag": "v0.4.11",
+          "name": "v0.4.11",
+          "date": "2026-02-13",
+          "summary": "Windows ML Backend；BEAR knowledge probe in #3496；Fixed SQuAD v2 evaluation in #3535；Fixed MasakhaNEWS tasks"
+        },
+        {
+          "tag": "v0.4.10",
+          "name": "v0.4.10",
+          "date": "2026-01-27",
+          "summary": "Decoupled ContextSampler with new build_qa_turn helper ；Normalized gen_kwargs with truncation_side support for vLLM ；PISA task in #3412；SLR-Bench (Scalable Logical Reasoning Benchmark) in #3305"
+        }
+      ],
+      "name_zh": "EleutherAI/lm-evaluation-harness",
+      "desc_zh": "开源项目 EleutherAI/lm-evaluation-harness，归属 evaluation-framework、language-model、transformer 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A framework for few-shot evaluation of language models.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "PaddlePaddle/PaddleFormers",
+      "desc": "PaddleFormers is an easy-to-use library of pre-trained large language model zoo based on PaddlePaddle.",
+      "stars": 12983,
+      "lang": "Python",
+      "updated": "2026-07-12",
+      "url": "https://github.com/PaddlePaddle/PaddleFormers",
+      "topics": [
+        "model"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.2.0",
+          "name": "PaddleFormers v1.2",
+          "date": "2026-06-19",
+          "summary": "CI]add build scripts in https；CI]update bucket for daily build in https://github.com/PaddlePaddle/PaddleFormers/pull/2441；Add tensor parallelism on QLoRA in https://github.com/PaddlePaddle/PaddleFormers/pull/2424；Cherry-pick hybrid expert parallel sh"
+        },
+        {
+          "tag": "1.1.1",
+          "name": "PaddleFormers v1.1",
+          "date": "2026-04-02",
+          "summary": "PaddleFormers 1.1 is officially released! This release introduces several key features and improvements:；✨ New Features；1. Support multi-token prediction (MTP) training for GLM-4.5"
+        },
+        {
+          "tag": "v1.0.0",
+          "name": "PaddleFormers v1.0",
+          "date": "2026-01-21",
+          "summary": "paddleocr_vl；phi3；qwen2_5_vl；qwen3_next"
+        }
+      ],
+      "name_zh": "PaddlePaddle/PaddleFormers",
+      "desc_zh": "开源项目 PaddlePaddle/PaddleFormers，归属 model 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“PaddleFormers is an easy-to-use library of pre-trained large language model zoo based on PaddlePaddle.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "Dicklesworthstone / destructive_command_guard",
+      "url": "https://github.com/Dicklesworthstone/destructive_command_guard",
+      "desc": "The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.",
+      "lang": "Rust",
+      "stars": "2,957",
+      "today": "444 stars today",
+      "name_zh": "Dicklesworthstone / destructive_command_guard",
+      "desc_zh": "开源项目 Dicklesworthstone / destructive_command_guard，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Rust"
+    },
+    {
+      "name": "wonderwhy-er / DesktopCommanderMCP",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+      "desc": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+      "lang": "TypeScript",
+      "stars": "8,004",
+      "today": "210 stars today",
+      "name_zh": "wonderwhy-er / DesktopCommanderMCP",
+      "desc_zh": "开源项目 wonderwhy-er / DesktopCommanderMCP，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "HKUDS / Vibe-Trading",
+      "url": "https://github.com/HKUDS/Vibe-Trading",
+      "desc": "\"Vibe-Trading: Your Personal Trading Agent\"",
+      "lang": "Python",
+      "stars": "20,607",
+      "today": "768 stars today",
+      "name_zh": "HKUDS / Vibe-Trading",
+      "desc_zh": "开源项目 HKUDS / Vibe-Trading，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“\"Vibe-Trading: Your Personal Trading Agent\"”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "PrefectHQ / prefect",
+      "url": "https://github.com/PrefectHQ/prefect",
+      "desc": "Prefect is a workflow orchestration framework for building resilient data pipelines in Python.",
+      "lang": "Python",
+      "stars": "23,161",
+      "today": "66 stars today",
+      "name_zh": "PrefectHQ / prefect",
+      "desc_zh": "开源项目 PrefectHQ / prefect，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Prefect is a workflow orchestration framework for building resilient data pipelines in Python.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "Shubhamsaboo / awesome-llm-apps",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "desc": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+      "lang": "Python",
+      "stars": "118,605",
+      "today": "408 stars today",
+      "name_zh": "Shubhamsaboo / awesome-llm-apps",
+      "desc_zh": "开源项目 Shubhamsaboo / awesome-llm-apps，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“100+ AI Agent & RAG apps you can actually run — clone, customize, ship.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "anthropics / claude-cookbooks",
+      "url": "https://github.com/anthropics/claude-cookbooks",
+      "desc": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+      "lang": "Jupyter Notebook",
+      "stars": "48,443",
+      "today": "459 stars today",
+      "name_zh": "anthropics / claude-cookbooks",
+      "desc_zh": "开源项目 anthropics / claude-cookbooks，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Jupyter Notebook"
+    },
+    {
+      "name": "home-assistant / core",
+      "url": "https://github.com/home-assistant/core",
+      "desc": "🏡 Open source home automation that puts local control and privacy first.",
+      "lang": "Python",
+      "stars": "89,085",
+      "today": "400 stars today",
+      "name_zh": "home-assistant / core",
+      "desc_zh": "开源项目 home-assistant / core，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“🏡 Open source home automation that puts local control and privacy first.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "Crosstalk-Solutions / project-nomad",
+      "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+      "desc": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
+      "lang": "TypeScript",
+      "stars": "33,819",
+      "today": "125 stars today",
+      "name_zh": "Crosstalk-Solutions / project-nomad",
+      "desc_zh": "开源项目 Crosstalk-Solutions / project-nomad，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "ColeMurray / background-agents",
+      "url": "https://github.com/ColeMurray/background-agents",
+      "desc": "An open-source background agents coding system",
+      "lang": "TypeScript",
+      "stars": "2,267",
+      "today": "16 stars today",
+      "name_zh": "ColeMurray / background-agents",
+      "desc_zh": "开源项目 ColeMurray / background-agents，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An open-source background agents coding system”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "k1tbyte / Wand-Enhancer",
+      "url": "https://github.com/k1tbyte/Wand-Enhancer",
+      "desc": "Advanced UX and interoperability extension for Wand (WeMod) app",
+      "lang": "C#",
+      "stars": "6,974",
+      "today": "609 stars today",
+      "name_zh": "k1tbyte / Wand-Enhancer",
+      "desc_zh": "开源项目 k1tbyte / Wand-Enhancer，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Advanced UX and interoperability extension for Wand (WeMod) app”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "C#"
+    },
+    {
+      "name": "pingdotgg / t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "desc": "[Skip to content](https://github.com/pingdotgg/t3code#start-of-content)",
+      "lang": "TypeScript",
+      "stars": "13,758",
+      "today": "75 stars today",
+      "page_content": "[Skip to content](https://github.com/pingdotgg/t3code#start-of-content)\n## Navigation Menu\nToggle navigation\n[](https://github.com/)\n[Sign in](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fpingdotgg%2Ft3code)\nAppearance settings\n*\nPlatform\n*\nAI CODE CREATION\n*   [GitHub Copilot Write better code with AI](https://github.com/features/copilot)\n*   [GitHub Copilot app Direct agents from issue to merge](https://github.com/features/ai/github-app)\n*   [MCP Registry New Integrate external tools](https://github.com/mcp)\n*\nDEVELOPER WORKFLOWS",
+      "name_zh": "pingdotgg / t3code",
+      "desc_zh": "开源项目 pingdotgg / t3code，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“[Skip to content](https://github.com/pingdotgg/t3code#start-of-content)”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "virattt / ai-hedge-fund",
+      "url": "https://github.com/virattt/ai-hedge-fund",
+      "desc": "An AI Hedge Fund Team\nThis is a proof of concept for an AI-powered hedge fund. The goal of this project is to explore the use of AI to make trading decisions. This project is for **educational** purposes only and is not in",
+      "lang": "Python",
+      "stars": "61,422",
+      "today": "115 stars today",
+      "page_content": "This is a proof of concept for an AI-powered hedge fund. The goal of this project is to explore the use of AI to make trading decisions. This project is for **educational** purposes only and is not intended for real trading or investment.\n> **🚧 The project is evolving.** We're rebuilding it into a persistent, always-on AI hedge fund — a _fund_ as a first-class entity you can backtest, paper-trade, and (opt-in) run live, with the investor agents reimagined as pluggable, backtestable \"alpha models.\" Read the **[Vision →](https://github.com/virattt/ai-hedge-fund/blob/main/VISION.md)** and the **[Roadmap →](https://github.com/virattt/ai-hedge-fund/blob/main/ROADMAP.md)**.\nThis system employs several agents working together:\n1.   Aswath Damodaran Agent - The Dean of Valuation, focuses on story, numbers, and disciplined valuation\n2.   Ben Graham Agent - The godfather of value investing, only buys hidden gems with a margin of safety\n3.   Bill Ackman Agent - An activist investor, takes bold positions and pushes for change\n4.   Cathie Wood Agent - The queen of growth investing, believes in the power of innovation and disruption\n5.   Charlie Munger Agent - Warren Buffett's partner, only buys wonderful businesses at fair prices\n6.   Michael Burry Agent - The Big Short contrarian who hunts for deep value\n7.   Mohnish Pabrai Agent - The Dhandho investor, who looks for doubles at low risk\n8.   Nassim Taleb Agent - The Black Swan risk analyst, focuses on tail risk, antifragility, and asymmetric payoffs\n9.   Peter Lynch Agent - Practical investor who seeks \"ten-baggers\" in everyday businesses\n10.   Phil Fisher Agent - Meticulous growth investor who uses deep \"scuttlebutt\" research\n11.   Rakesh Jhunjhunwala Agent - The Big Bull of India\n12.   Stanley Druckenmiller Agent - Macro legend who hunts for asymmetric opportunities with growth potential",
+      "name_zh": "virattt / ai-hedge-fund",
+      "desc_zh": "开源项目 virattt / ai-hedge-fund，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An AI Hedge Fund Team This is a proof of concept for an AI-powered hedge fund. The goal of this project is to explore the use of AI to make trading decisions. This project is for *”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "chen08209 / FlClash",
+      "url": "https://github.com/chen08209/FlClash",
+      "desc": "A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.",
+      "lang": "Dart",
+      "stars": "45,236",
+      "today": "154 stars today",
+      "name_zh": "chen08209 / FlClash",
+      "desc_zh": "开源项目 chen08209 / FlClash，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Dart"
+    },
+    {
+      "name": "davila7 / claude-code-templates",
+      "url": "https://github.com/davila7/claude-code-templates",
+      "desc": "CLI tool for configuring and monitoring Claude Code",
+      "lang": "Python",
+      "stars": "29,248",
+      "today": "274 stars today",
+      "name_zh": "davila7 / claude-code-templates",
+      "desc_zh": "开源项目 davila7 / claude-code-templates，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“CLI tool for configuring and monitoring Claude Code”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "par274 / sharpemu",
+      "url": "https://github.com/par274/sharpemu",
+      "desc": "An experimental PlayStation 5 emulator project.",
+      "lang": "C#",
+      "stars": "1,287",
+      "today": "314 stars today",
+      "name_zh": "par274 / sharpemu",
+      "desc_zh": "开源项目 par274 / sharpemu，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An experimental PlayStation 5 emulator project.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "C#"
+    },
+    {
+      "name": "malisper / pgrust",
+      "url": "https://github.com/malisper/pgrust",
+      "desc": "Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
+      "lang": "Rust",
+      "stars": "2,489",
+      "today": "518 stars today",
+      "name_zh": "malisper / pgrust",
+      "desc_zh": "开源项目 malisper / pgrust，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Postgres rewritten in Rust, now passing 100% of the Postgres regression tests”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Rust"
+    },
+    {
+      "name": "Nutlope / hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "desc": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "lang": "CSS",
+      "stars": "4,310",
+      "today": "155 stars today",
+      "name_zh": "Nutlope / hallmark",
+      "desc_zh": "开源项目 Nutlope / hallmark，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "CSS"
+    }
+  ],
+  "papers": [
+    {
+      "title": "Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models",
+      "date": "2026-07-10",
+      "summary": "Vision language models (VLMs) have made remarkable progress in visual reasoning during the last decade. Most evaluations have used simple scenes (MS-COCO) that do not showcase complex human interactions or behaviors, only a handful of non-curated human descriptions as a benchmark, and have not focus",
+      "url": "https://arxiv.org/abs/2607.09654v1",
+      "cats": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "title_zh": "论文速读：Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models",
+      "summary_zh": "该论文围绕 AI/LLM 研究展开。核心摘要：Vision language models (VLMs) have made remarkable progress in visual reasoning during the last decade. Most evaluations have used simple scenes (MS-COCO) that do not showcase complex human interactions or behaviors, onl。建议通过 arXiv 原文进一步核验实验设置、数据集与结论。"
+    },
+    {
+      "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
+      "date": "2026-07-10",
+      "summary": "Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testing approaches. While recent adoptions of Large Language Model (LLM) agents have demonstrated promise",
+      "url": "https://arxiv.org/abs/2607.09653v1",
+      "cats": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "title_zh": "论文速读：VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
+      "summary_zh": "该论文围绕 AI/LLM 研究展开。核心摘要：Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testing approaches. While。建议通过 arXiv 原文进一步核验实验设置、数据集与结论。"
+    },
+    {
+      "title": "Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
+      "date": "2026-07-10",
+      "summary": "Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance anomaly interdiction with customer friction. To overcome this without distortive data resampling, w",
+      "url": "https://arxiv.org/abs/2607.09641v1",
+      "cats": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "title_zh": "论文速读：Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
+      "summary_zh": "该论文围绕 AI/LLM 研究展开。核心摘要：Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance anomaly interdictio。建议通过 arXiv 原文进一步核验实验设置、数据集与结论。"
+    },
+    {
+      "title": "Indirect and Direct AI Scaffolding for Computational Problem Posing: A Pilot Experience Report",
+      "date": "2026-07-10",
+      "summary": "Problem posing is a valuable learning activity in computing education, encouraging learners to actively construct, refine, and reflect on problems rather than simply solving them. This experience report presents the design and pilot deployment of two LLM-powered scaffolding systems for supporting pr",
+      "url": "https://arxiv.org/abs/2607.09628v1",
+      "cats": [
+        "cs.HC"
+      ],
+      "title_zh": "论文速读：Indirect and Direct AI Scaffolding for Computational Problem Posing: A Pilot Experience Report",
+      "summary_zh": "该论文围绕 AI/LLM 研究展开。核心摘要：Problem posing is a valuable learning activity in computing education, encouraging learners to actively construct, refine, and reflect on problems rather than simply solving them. This experience report presents the desi。建议通过 arXiv 原文进一步核验实验设置、数据集与结论。"
+    },
+    {
+      "title": "LLM for EDA in Front-End Design: Challenges and Opportunities",
+      "date": "2026-07-10",
+      "summary": "As chip complexity increases and time-to-market pressures grow, front-end design has become a critical bottleneck in chip development. Recently, Large Language Models (LLMs) have shown great potential in Electronic Design Automation (EDA). Beyond specification understanding, LLMs show the potential ",
+      "url": "https://arxiv.org/abs/2607.09616v1",
+      "cats": [
+        "cs.ET",
+        "cs.AR"
+      ],
+      "title_zh": "论文速读：LLM for EDA in Front-End Design: Challenges and Opportunities",
+      "summary_zh": "该论文围绕 AI/LLM 研究展开。核心摘要：As chip complexity increases and time-to-market pressures grow, front-end design has become a critical bottleneck in chip development. Recently, Large Language Models (LLMs) have shown great potential in Electronic Desig。建议通过 arXiv 原文进一步核验实验设置、数据集与结论。"
+    }
+  ],
+  "hn": [
+    {
+      "title": "Old and new apps, via modern coding agents",
+      "url": "https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-12",
+      "page_content": "[![Image 4](https://terrytao.wordpress.com/wp-content/uploads/2020/03/cropped-covid-19-curves-graphic-social-v3.gif)](https://terrytao.wordpress.com/ \"Return to front page\")\n\n[What's new](https://terrytao.wordpress.com/ \"Return to front page\")\nUpdates on my research and expository papers, discussion of open problems, and other maths-related topics. By Terence Tao\n\n*   [Home](https://terrytao.wordpress.com/ \"Return to front page\")\n*   [About](https://terrytao.wordpress.com/about/)\n*   [Career advice](https://terrytao.wordpress.com/career-advice/)\n*   [On writing](https://terrytao.wordpress.com/advice-on-writing-papers/)\n*   [Books](https://terrytao.wordpress.com/books/)\n*   [Mastodon+](https://terrytao.wordpress.com/mastodon-posts/)\n*   [Applets](https://terrytao.wordpress.com/applets/)\n\n*   [Subscribe to feed](https://terrytao.wordpress.com/feed/ \"Subscribe to the What's new feed\")",
+      "title_zh": "行业动态：Old and new apps, via modern coding agents",
+      "summary_zh": "该动态来自 Hacker News，聚焦 AI、模型或智能体进展。"
+    },
+    {
+      "title": "Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper",
+      "url": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-13",
+      "page_content": "![Image 1: Colorful Ploy inflatable forms connected by a translucent tube, representing a production AI agent migrating between model systems](https://storage.googleapis.com/ployai/d21bf4ad-2458-43ee-9561-54c28ab0e85f/user/98bfdea9-ai-generated-1783640379759.webp)\n\nAs of today, Ploy’s agent runs on GPT-5.6 Sol, the flagship tier of the model family OpenAI released this morning. For months, we couldn’t find a model that challenges Claude Opus given our incredibly high bar for quality. That changed with GPT 5.6 Sol. After running it head-to-head against Claude Opus, we’ve made GPT 5.6 Sol the default model powering every Ploy workspace.\n\nThat’s a bigger switch than it sounds. Ploy’s agent builds and edits real marketing websites. It plans a page, reads the codebase, writes components, generates imagery, screenshots its own work, and decides when it’s done. That job description sets a very high bar for a model, and we test every frontier release against it. For the four months Opus held the default slot (first Opus 4.7, then 4.8), nothing we tested beat it. GPT-5.6 is the first model that did.\n\nNot that the first eval run was perfect. It had real failure modes, which we’ll show you. But it did extremely well, and the promise was immediate and specific: builds finishing in less than half the wall-clock time, at 27% lower cost, scoring at or above our incumbent on completed work. Numbers like that buy a model a real migration effort.\n\nDespite using Vercel’s [AI SDK](https://ai-sdk.dev/docs/introduction), a universal LLM SDK, switching from Claude Opus 4.8 to GPT 5.6 Sol required discovering, one eval failure at a time, that the things we think of as “the model” are provider-specific behaviors our whole stack has quietly specialized around: how it fills in tool arguments, how its prompt cache works, how it replays its own reasoning between turns.\n\nHere’s what it took: fix the eval harness, then the tool schemas, then caching, then reasoning replay.\n\n## Step 0: Fix your harness before you trust a single number\n\nOur eval suite runs the real agent against real fixture workspaces. Hundreds of cases, from “build a homepage from scratch” to “is this clone request safe to execute.” Build cases are scored by a visual judge running binary checks against a reference design, ten yes/no questions like _“the hero is a full-bleed photographic scene”_ or _“primary CTAs are rounded rectangles, not pills”_, plus content checks, tool-trajectory checks, and file assertions. Every failed case gets triaged against its full trace: the actual tool calls and model text, not just the score.",
+      "title_zh": "行业动态：Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper",
+      "summary_zh": "该动态来自 Hacker News，聚焦 AI、模型或智能体进展。"
+    },
+    {
+      "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
+      "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-13",
+      "page_content": "We put Claude Code and OpenCode on the same model, the same machine, and the same tasks, then examined everything sent and received.\n\n**Claude Code is far hungrier:**\n\nWhen we asked both harnesses for a one-line reply, Claude Code used roughly 33,000 tokens of system prompt, tool schemas, and injected scaffolding before the prompt even arrived. OpenCode used about 7,000.\n\nThat first test was on Sonnet 4.5. Re-running on Claude Fable 5 narrowed the gap to about 3.3x, because Claude Code sends newer models a much smaller system prompt; still far hungrier, but the multiple is model-dependent.\n\n**Claude Code is far more cache inefficient:**\n\nOpenCode's request prefix was byte-identical in every run we captured; it paid to cache its payload once per session and read it back for pennies.\n\nClaude Code on the other hand re-wrote tens of thousands of prompt-cache tokens mid-session, run after run, and on the same task wrote up to 54x more cache tokens than OpenCode.\n\nCache writes of course are billed at a premium, which accounted for the usage dashboard climbing when using Claude Code.",
+      "title_zh": "行业动态：Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
+      "summary_zh": "该动态来自 Hacker News，聚焦 AI、模型或智能体进展。"
+    }
+  ],
+  "news": [
+    {
+      "title": "Anthropic Illuminates LLM J-Space With J-Lens - Forbes",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPNVNTeE9sNGQwOUtyd3BubjBDR2Zod2wtMUtjbTNRb0dvd0VSVnV2ZUo3U241c3oyRnVLQkFsS1l4bWNIc2xuMEJJVE9pLUtQWDhiSVBfNVQwWXdxakRDYWhnZ0lUbG5FamlhZ0UtZGlBbVl3SGZXdXN2YVFtdWNJWmZVVXFTcWMzaF9TdG9ickFIVU5sMU1Pb1pwY080Zw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Sun, 12 Jul 2026 15:56:50 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPNVNTeE9sNGQwOUtyd3BubjBDR2Zod2wtMUtjbTNRb0dvd0VSVnV2ZUo3U241c3oyRnVLQkFsS1l4bWNIc2xuMEJJ",
+      "page_content": "",
+      "title_zh": "行业动态：Anthropic Illuminates LLM J-Space With J-Lens - Forbes",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPNVNTeE9sNGQwOUtyd3BubjBDR2Zod2wtMUtjbTNRb0dvd0VSVnV2ZUo3U241c3oyRnVLQkFsS1l4bWNIc2xuMEJJ"
+    },
+    {
+      "title": "Robinhood Brings AI Agent Trading to Crypto After 70,000 Accounts Join Beta - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQd3RwdUVUWE5CeFAwRkNBY2hWRjUxeUtEaWQ5a1gzX0VxMzBFNHhCTXY0VThTdTlMVl9HYVJDMGJnYXZvZDNKU2pOUU0xTGxnWFZnUXFocDhoSWh6SDhyS2lHclpkU0IweU42NXRONkJ1UTVXZk9mVmNwTVBSRzlIMi00ZWtkaXJWOVZETWtrWWFvWEZwbFhTdDhUSmlzVVk?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Sun, 12 Jul 2026 23:46:00 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQd3RwdUVUWE5CeFAwRkNBY2hWRjUxeUtEaWQ5a1gzX0VxMzBFNHhCTXY0VThTdTlMVl9HYVJDMGJnYXZvZDNKU2pO",
+      "page_content": "",
+      "title_zh": "行业动态：Robinhood Brings AI Agent Trading to Crypto After 70,000 Accounts Join Beta - Yahoo Finance",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQd3RwdUVUWE5CeFAwRkNBY2hWRjUxeUtEaWQ5a1gzX0VxMzBFNHhCTXY0VThTdTlMVl9HYVJDMGJnYXZvZDNKU2pO"
+    },
+    {
+      "title": "One Way to Build a Great AI Agent: Just Start With a Dashboard, Then Add the Agent - saastr.com",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPX09tZG5BNTVBWVFrdUtqOUFmUGU2Uk9zNlplSTN1OTZhdzFPMlItejhSMjhsZExpb2FReWc4aXp4N29EblB0YXJCUTYwd0YxM2lXWHFrWHBlTUMxckk4cThOUng1UUl2TmdRNHZxVUNDQjc4amliTDBLbE9BZ0VZOXp6ajVjTGMwYVBYcWhCaEx6TDg1SkZZZnNPd2dGT1VCUk1qcVRPZw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Sat, 11 Jul 2026 17:36:29 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPX09tZG5BNTVBWVFrdUtqOUFmUGU2Uk9zNlplSTN1OTZhdzFPMlItejhSMjhsZExpb2FReWc4aXp4N29EblB0YXJC",
+      "page_content": "",
+      "title_zh": "行业动态：One Way to Build a Great AI Agent: Just Start With a Dashboard, Then Add the Agent - saastr.com",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPX09tZG5BNTVBWVFrdUtqOUFmUGU2Uk9zNlplSTN1OTZhdzFPMlItejhSMjhsZExpb2FReWc4aXp4N29EblB0YXJC"
+    },
+    {
+      "title": "AI Model Co-Design: Hardware-Friendly LLM Design | NVIDIA Technical Blog - NVIDIA Developer",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NHeEdVSXgzTTYteWEyNzdvX3FXd1ZOM2FWVjJzcXZvenppcVFIckx3azVJRmh0Rkw1NFV0UzVQR21Wb3RFWHhmd3c?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 10 Jul 2026 17:16:10 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NH",
+      "page_content": "",
+      "title_zh": "行业动态：AI Model Co-Design: Hardware-Friendly LLM Design | NVIDIA Technical Blog - NVIDIA Developer",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NH"
+    },
+    {
+      "title": "Similarweb: Large LLM Contracts Represent A New Era For This Analytics Company - Seeking Alpha",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPQm51ai1FLTFmWjRjaGZ0eGlwc1ZWbGlETEtPOEpTOW9yRHA4MEdUQmVQV2trbWZSTUZ3U25oQ3VDMUV6NTFzS1AwVEMwSVMzNFMxWWdkMFNQb3RHVEhzT1FyMU11ZTI4a3hOXzNBem9zM2FrellxZkZ6Tm5CaFM0Ni1rMkZ4RUZvZ2Y4dGR2TDdScGhpU1VSTDloVFZ3RWYwN0FpcVZTWnFJa3RTMVJBWGtnSzViU1dHMXc?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Mon, 13 Jul 2026 00:14:30 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPQm51ai1FLTFmWjRjaGZ0eGlwc1ZWbGlETEtPOEpTOW9yRHA4MEdUQmVQV2trbWZSTUZ3U25oQ3VDMUV6NTFzS1Aw",
+      "page_content": "",
+      "title_zh": "行业动态：Similarweb: Large LLM Contracts Represent A New Era For This Analytics Company - Seeking Alpha",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPQm51ai1FLTFmWjRjaGZ0eGlwc1ZWbGlETEtPOEpTOW9yRHA4MEdUQmVQV2trbWZSTUZ3U25oQ3VDMUV6NTFzS1Aw"
+    },
+    {
+      "title": "Introducing Oracle AI Agent Memory 26.6: Memory With Receipts - Oracle Blogs",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE05TkZDVTVkYUtNbXNyTENFa19YYXIzeGFuSGl5bi1iT2tqOFB5VlZ1VFgyMDloVUsySE03ZjI0MFR6NFN0bWF2ZTFnUENJcW1uMHZBNVB3emdJODdpZGhjX0ZHendNbmdxU18tUzd3?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 10 Jul 2026 14:41:39 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE05TkZDVTVkYUtNbXNyTENFa19YYXIzeGFuSGl5bi1iT2tqOFB5VlZ1VFgyMDloVUsySE03ZjI0MFR6NFN0bWF2ZTFn",
+      "page_content": "",
+      "title_zh": "行业动态：Introducing Oracle AI Agent Memory 26.6: Memory With Receipts - Oracle Blogs",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE05TkZDVTVkYUtNbXNyTENFa19YYXIzeGFuSGl5bi1iT2tqOFB5VlZ1VFgyMDloVUsySE03ZjI0MFR6NFN0bWF2ZTFn"
+    },
+    {
+      "title": "2026 Model Context Protocol Server and AI Agent Hackathon - GSA (.gov)",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUkZoLXF1TXpZMWVJUG90WkstdjR6elRYX1IzV0tjcFVLRV95R0FBd1oxdEV2b0FxaGpMNHhrUFliUnlyNV9ZWmRaLUdIaUozQWIybGd3RXlYdDc1MkdNa3FFbTdEU2ljUmRUWk54QkRJYVlkOGswcTN1OUxRZy1MTnQ5NXI0YVc1WEk0SDROSXFibjQ3bGlrYV9zRzE5WWQyOURNTnZ6LUZzdw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 10 Jul 2026 19:01:57 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUkZoLXF1TXpZMWVJUG90WkstdjR6elRYX1IzV0tjcFVLRV95R0FBd1oxdEV2b0FxaGpMNHhrUFliUnlyNV9ZWmRa",
+      "page_content": "",
+      "title_zh": "行业动态：2026 Model Context Protocol Server and AI Agent Hackathon - GSA (.gov)",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUkZoLXF1TXpZMWVJUG90WkstdjR6elRYX1IzV0tjcFVLRV95R0FBd1oxdEV2b0FxaGpMNHhrUFliUnlyNV9ZWmRa"
+    },
+    {
+      "title": "(OPINION) Liability in hiring: Who answers for AI agent decisions? - Oil City News",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNX0xFMXJ5Y2dyU1FORTJINzZTMk1oeWotN05OTTcyanExdldPcnZqSXVKWHJOaVdqN0lNTnJ3Tlk4NUZrSjh2UHZiemd1dXc3MkZqOTI1Mjh5cklCSXBxM3kyUGxzelo1UXpKVUpIUHpXeklYU2U4ckoxRHRzUU91ZVdHUEZUcGQzbE9PNUJrNU5Ddm8yUEl1eW9ydWtMZDNKX0FlT0Z3?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Sat, 11 Jul 2026 14:13:00 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNX0xFMXJ5Y2dyU1FORTJINzZTMk1oeWotN05OTTcyanExdldPcnZqSXVKWHJOaVdqN0lNTnJ3Tlk4NUZrSjh2UHZi",
+      "page_content": "",
+      "title_zh": "行业动态：(OPINION) Liability in hiring: Who answers for AI agent decisions? - Oil City News",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNX0xFMXJ5Y2dyU1FORTJINzZTMk1oeWotN05OTTcyanExdldPcnZqSXVKWHJOaVdqN0lNTnJ3Tlk4NUZrSjh2UHZi"
+    }
+  ],
+  "blogs": [],
+  "github_strategy": {
+    "query": "LLM OR AI agent OR \"large language model\"",
+    "filters": "pushed:>2026-06-12",
+    "sort": "stars",
+    "label": "经典热门（近 30 天活跃）"
+  }
+}

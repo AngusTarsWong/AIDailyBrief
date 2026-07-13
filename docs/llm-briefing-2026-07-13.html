@@ -1,0 +1,690 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LLM & Agent Daily Briefing | 2026-07-13</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+  background: #1B2838;
+  color: #e2e8f0;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(56, 189, 248, 0.2), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 40%, rgba(139, 92, 246, 0.15), transparent),
+    radial-gradient(ellipse 50% 60% at 5% 85%, rgba(52, 211, 153, 0.1), transparent),
+    repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(148, 163, 184, 0.08) 49px, rgba(148, 163, 184, 0.08) 50px),
+    repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(148, 163, 184, 0.08) 49px, rgba(148, 163, 184, 0.08) 50px);
+  pointer-events: none;
+  z-index: 0;
+}
+.container { max-width:1080px; margin:0 auto; padding:2rem; position: relative; z-index: 1; }
+.header { text-align:center; margin-bottom:2.5rem; position: relative; padding-bottom:1.5rem; }
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.6), rgba(139, 92, 246, 0.6), transparent);
+}
+.header h1 {
+  font-size:2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom:0.4rem;
+  letter-spacing: -0.02em;
+}
+.sub { color:#64748b; font-size:0.9rem; font-weight: 500; letter-spacing: 0.05em; }
+.progress-rail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(148, 163, 184, 0.08);
+  z-index: 20;
+}
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #34d399, #38bdf8, #a78bfa);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+  transition: width 0.12s ease-out;
+}
+.quick-nav {
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 1.2rem;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+.quick-nav-links {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+.quick-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(30, 41, 59, 0.65);
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+.quick-link:hover {
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.48);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(30, 41, 59, 0.88));
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22), 0 0 0 1px rgba(96, 165, 250, 0.12);
+}
+.quick-link.active {
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.35);
+  background: rgba(37, 99, 235, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.12);
+}
+.quick-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.quick-status strong {
+  color: #f8fafc;
+  font-weight: 700;
+}
+.section {
+  margin-bottom:2rem;
+  padding: 1.2rem;
+  border-radius: 20px;
+  position: relative;
+  background: rgba(27, 40, 56, 0.5);
+  scroll-margin-top: 88px;
+}
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(148, 163, 184, 0.1), transparent, rgba(148, 163, 184, 0.05));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.sh {
+  display:flex;
+  align-items:center;
+  gap:0.8rem;
+  margin-bottom:1rem;
+  padding-bottom:0.5rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+.sh .icon { font-size:1.3rem; }
+.sh .title { font-size:1.2rem; font-weight:700; color:#f1f5f9; letter-spacing: -0.01em; }
+.sh.trending .title { color:#34d399; }
+.sh.github .title { color:#60a5fa; }
+.sh.paper .title { color:#a78bfa; }
+.sh.blog .title { color:#38bdf8; }
+.sh.news .title { color:#fb923c; }
+.cnt {
+  font-size:0.7rem;
+  color:#94a3b8;
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  padding:0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-left:auto;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.card {
+  background: linear-gradient(135deg, rgba(22, 35, 50, 0.9), rgba(22, 35, 50, 0.75));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  border-left: 3px solid rgba(96, 165, 250, 0.4);
+  border-radius: 14px;
+  padding:1.1rem 1.3rem;
+  margin-bottom:0.7rem;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+.card::after {
+  content: '';
+  position: absolute;
+  inset: -20% auto auto -10%;
+  width: 42%;
+  height: 140%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.0), rgba(255,255,255,0.06), rgba(255,255,255,0.0));
+  transform: translateX(-140%) skewX(-18deg);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+.card:hover {
+  border-color: rgba(96, 165, 250, 0.42);
+  border-left-color: #60a5fa;
+  background: linear-gradient(135deg, rgba(36, 50, 72, 0.96), rgba(28, 39, 58, 0.84));
+  transform: translateY(-4px) translateX(6px) scale(1.008);
+  box-shadow: 0 14px 34px rgba(96, 165, 250, 0.18), 0 0 0 1px rgba(96, 165, 250, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+.card:hover::after {
+  transform: translateX(280%) skewX(-18deg);
+}
+/* Section-specific card accent colors */
+.section:has(.sh.trending) .card { border-left-color: rgba(52, 211, 153, 0.5); }
+.section:has(.sh.trending) .card:hover { border-left-color: #34d399; box-shadow: 0 14px 34px rgba(52, 211, 153, 0.16), 0 0 0 1px rgba(52, 211, 153, 0.08), inset 0 1px 0 rgba(255,255,255,0.06); }
+.section:has(.sh.paper) .card { border-left-color: rgba(167, 139, 250, 0.5); }
+.section:has(.sh.paper) .card:hover { border-left-color: #a78bfa; box-shadow: 0 14px 34px rgba(167, 139, 250, 0.16), 0 0 0 1px rgba(167, 139, 250, 0.08), inset 0 1px 0 rgba(255,255,255,0.06); }
+
+.ct { font-size:1rem; font-weight:600; margin-bottom:0.35rem; letter-spacing: -0.01em; }
+.ct a { color:#60a5fa; text-decoration:none; transition: color 0.2s; }
+.ct a:hover { color:#93c5fd; text-decoration:underline; }
+.cm { display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.78rem; color:#64748b; margin-bottom:0.4rem; }
+.stars { color:#fbbf24; font-weight:600; }
+.lang {
+  background: rgba(56, 189, 248, 0.1);
+  color:#38bdf8;
+  padding:0.12rem 0.5rem;
+  border-radius: 10px;
+  font-size:0.72rem;
+  font-weight: 500;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+}
+.topic {
+  background: rgba(167, 139, 250, 0.1);
+  color:#a78bfa;
+  padding:0.12rem 0.45rem;
+  border-radius: 10px;
+  font-size:0.68rem;
+  font-weight: 500;
+  border: 1px solid rgba(167, 139, 250, 0.15);
+}
+.cd { color:#cbd5e1; font-size:0.88rem; margin-top:0.4rem; line-height: 1.65; }
+.releases-section { margin-top:0.8rem; display:flex; flex-direction:column; gap:0.5rem; }
+.release-item {
+  background: rgba(34, 197, 94, 0.04);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  border-radius: 10px;
+  padding:0.6rem 0.8rem;
+  transition: all 0.2s ease;
+}
+.release-item:hover {
+  background: rgba(34, 197, 94, 0.08);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+.release-tag { color:#22c55e; font-weight:600; font-size:0.82rem; margin-right:0.5rem; }
+.release-date { color:#475569; font-size:0.72rem; }
+.release-summary { color:#94a3b8; font-size:0.78rem; margin-top:0.25rem; line-height:1.5; }
+.blog-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  border-left: 3px solid rgba(56, 189, 248, 0.4);
+  border-radius: 12px;
+  padding:0.8rem 1.2rem;
+  margin-bottom:0.6rem;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.blog-card::after {
+  content: '';
+  position: absolute;
+  inset: -15% auto auto -10%;
+  width: 36%;
+  height: 130%;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.06), rgba(255,255,255,0));
+  transform: translateX(-150%) skewX(-18deg);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+.blog-card:hover {
+  border-color: rgba(56, 189, 248, 0.42);
+  border-left-color: #38bdf8;
+  background: linear-gradient(135deg, rgba(36, 53, 76, 0.94), rgba(28, 41, 61, 0.82));
+  transform: translateY(-4px) translateX(6px) scale(1.008);
+  box-shadow: 0 14px 32px rgba(56, 189, 248, 0.16), 0 0 0 1px rgba(56, 189, 248, 0.08);
+}
+.blog-card:hover::after {
+  transform: translateX(285%) skewX(-18deg);
+}
+.blog-src {
+  display:inline-block;
+  font-size:0.68rem;
+  color:#38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  padding:0.12rem 0.45rem;
+  border-radius: 8px;
+  margin-right:0.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.blog-title { color:#60a5fa; font-size:0.92rem; font-weight:500; text-decoration:none; }
+.blog-title:hover { color:#93c5fd; text-decoration:underline; }
+.blog-date { color:#475569; font-size:0.72rem; margin-left:0.4rem; }
+.blog-summary { color:#94a3b8; font-size:0.83rem; margin-top:0.35rem; line-height: 1.5; }
+.news-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(251, 146, 60, 0.12);
+  border-left: 3px solid rgba(251, 146, 60, 0.4);
+  border-radius: 12px;
+  padding:0.8rem 1.2rem;
+  margin-bottom:0.6rem;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.news-card::after {
+  content: '';
+  position: absolute;
+  inset: -15% auto auto -10%;
+  width: 36%;
+  height: 130%;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.06), rgba(255,255,255,0));
+  transform: translateX(-150%) skewX(-18deg);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+.news-card:hover {
+  border-color: rgba(251, 146, 60, 0.46);
+  border-left-color: #fb923c;
+  background: linear-gradient(135deg, rgba(56, 44, 33, 0.94), rgba(40, 34, 30, 0.84));
+  transform: translateY(-4px) translateX(6px) scale(1.008);
+  box-shadow: 0 14px 32px rgba(251, 146, 60, 0.18), 0 0 0 1px rgba(251, 146, 60, 0.08);
+}
+.news-card:hover::after {
+  transform: translateX(285%) skewX(-18deg);
+}
+.news-src {
+  display:inline-block;
+  font-size:0.68rem;
+  color:#fb923c;
+  background: rgba(251, 146, 60, 0.08);
+  border: 1px solid rgba(251, 146, 60, 0.15);
+  padding:0.12rem 0.45rem;
+  border-radius: 8px;
+  margin-right:0.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.news-title { color:#fbbf24; font-size:0.92rem; font-weight:500; text-decoration:none; }
+.news-title:hover { color:#fcd34d; text-decoration:underline; }
+.news-date { color:#475569; font-size:0.72rem; margin-left:0.4rem; }
+.news-summary { color:#94a3b8; font-size:0.83rem; margin-top:0.35rem; line-height: 1.5; }
+.stats {
+  display:flex;
+  justify-content:center;
+  gap:2.5rem;
+  margin-top:2rem;
+  padding-top:1.2rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+.sv { font-size:1.3rem; font-weight:700; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.sl { font-size:0.72rem; color:#64748b; margin-top:0.15rem; letter-spacing: 0.02em; }
+.ft { color:#475569; font-size:0.78rem; text-align:center; margin-top:1.2rem; letter-spacing: 0.02em; }
+@media(max-width:640px) {
+  .container { padding:1rem; }
+  .header h1 { font-size:1.5rem; }
+  .card { padding:1rem 1.1rem; }
+  .section { padding: 1rem 0.8rem; }
+  .quick-nav {
+    top: 8px;
+    padding: 0.75rem 0.8rem;
+  }
+  .quick-status {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+</style></head><body><div class="progress-rail"><div id="progress-bar" class="progress-bar"></div></div><div class="container">
+<div class="header"><h1>📡 LLM & Agent Daily Briefing</h1><p class="sub">2026-07-13</p></div>
+<div class="quick-nav">
+  <div class="quick-nav-links">
+    <a class="quick-link" data-target="section-trending" href="#section-trending">🔥 Trending</a>
+    <a class="quick-link" data-target="section-github" href="#section-github">🚀 GitHub</a>
+    <a class="quick-link" data-target="section-paper" href="#section-paper">📄 论文</a>
+    <a class="quick-link" data-target="section-blog" href="#section-blog">📢 官方动态</a>
+    <a class="quick-link" data-target="section-news" href="#section-news">🏭 行业动态</a>
+  </div>
+  <div class="quick-status">当前阅读：<strong id="current-section-label">Trending</strong><span id="reading-percent">0%</span></div>
+</div><div id="section-trending" class="section"><div class="sh trending"><span class="icon">🔥</span><span class="title">GitHub Trending 今日热门</span><span class="cnt">17 条</span></div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Dicklesworthstone/destructive_command_guard" target="_blank">Dicklesworthstone / destructive_command_guard</a></div>
+  <div class="cm"><span class="stars">⭐ 2,957</span><span class="lang">Rust</span>444 stars today</div>
+  <div class="cd">开源项目 Dicklesworthstone / destructive_command_guard，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/wonderwhy-er/DesktopCommanderMCP" target="_blank">wonderwhy-er / DesktopCommanderMCP</a></div>
+  <div class="cm"><span class="stars">⭐ 8,004</span><span class="lang">TypeScript</span>210 stars today</div>
+  <div class="cd">开源项目 wonderwhy-er / DesktopCommanderMCP，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/HKUDS/Vibe-Trading" target="_blank">HKUDS / Vibe-Trading</a></div>
+  <div class="cm"><span class="stars">⭐ 20,607</span><span class="lang">Python</span>768 stars today</div>
+  <div class="cd">开源项目 HKUDS / Vibe-Trading，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“"Vibe-Trading: Your Personal Trading Agent"”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/PrefectHQ/prefect" target="_blank">PrefectHQ / prefect</a></div>
+  <div class="cm"><span class="stars">⭐ 23,161</span><span class="lang">Python</span>66 stars today</div>
+  <div class="cd">开源项目 PrefectHQ / prefect，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Prefect is a workflow orchestration framework for building resilient data pipelines in Python.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank">Shubhamsaboo / awesome-llm-apps</a></div>
+  <div class="cm"><span class="stars">⭐ 118,605</span><span class="lang">Python</span>408 stars today</div>
+  <div class="cd">开源项目 Shubhamsaboo / awesome-llm-apps，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“100+ AI Agent & RAG apps you can actually run — clone, customize, ship.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/anthropics/claude-cookbooks" target="_blank">anthropics / claude-cookbooks</a></div>
+  <div class="cm"><span class="stars">⭐ 48,443</span><span class="lang">Jupyter Notebook</span>459 stars today</div>
+  <div class="cd">开源项目 anthropics / claude-cookbooks，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/home-assistant/core" target="_blank">home-assistant / core</a></div>
+  <div class="cm"><span class="stars">⭐ 89,085</span><span class="lang">Python</span>400 stars today</div>
+  <div class="cd">开源项目 home-assistant / core，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“🏡 Open source home automation that puts local control and privacy first.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Crosstalk-Solutions/project-nomad" target="_blank">Crosstalk-Solutions / project-nomad</a></div>
+  <div class="cm"><span class="stars">⭐ 33,819</span><span class="lang">TypeScript</span>125 stars today</div>
+  <div class="cd">开源项目 Crosstalk-Solutions / project-nomad，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/ColeMurray/background-agents" target="_blank">ColeMurray / background-agents</a></div>
+  <div class="cm"><span class="stars">⭐ 2,267</span><span class="lang">TypeScript</span>16 stars today</div>
+  <div class="cd">开源项目 ColeMurray / background-agents，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An open-source background agents coding system”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/k1tbyte/Wand-Enhancer" target="_blank">k1tbyte / Wand-Enhancer</a></div>
+  <div class="cm"><span class="stars">⭐ 6,974</span><span class="lang">C#</span>609 stars today</div>
+  <div class="cd">开源项目 k1tbyte / Wand-Enhancer，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Advanced UX and interoperability extension for Wand (WeMod) app”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/pingdotgg/t3code" target="_blank">pingdotgg / t3code</a></div>
+  <div class="cm"><span class="stars">⭐ 13,758</span><span class="lang">TypeScript</span>75 stars today</div>
+  <div class="cd">开源项目 pingdotgg / t3code，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“[Skip to content](https://github.com/pingdotgg/t3code#start-of-content)”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/virattt/ai-hedge-fund" target="_blank">virattt / ai-hedge-fund</a></div>
+  <div class="cm"><span class="stars">⭐ 61,422</span><span class="lang">Python</span>115 stars today</div>
+  <div class="cd">开源项目 virattt / ai-hedge-fund，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An AI Hedge Fund Team This is a proof of concept for an AI-powered hedge fund. The goal of this project is to explore the use of AI to make trading decisions. This project is for *”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/chen08209/FlClash" target="_blank">chen08209 / FlClash</a></div>
+  <div class="cm"><span class="stars">⭐ 45,236</span><span class="lang">Dart</span>154 stars today</div>
+  <div class="cd">开源项目 chen08209 / FlClash，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/davila7/claude-code-templates" target="_blank">davila7 / claude-code-templates</a></div>
+  <div class="cm"><span class="stars">⭐ 29,248</span><span class="lang">Python</span>274 stars today</div>
+  <div class="cd">开源项目 davila7 / claude-code-templates，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“CLI tool for configuring and monitoring Claude Code”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/par274/sharpemu" target="_blank">par274 / sharpemu</a></div>
+  <div class="cm"><span class="stars">⭐ 1,287</span><span class="lang">C#</span>314 stars today</div>
+  <div class="cd">开源项目 par274 / sharpemu，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An experimental PlayStation 5 emulator project.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/malisper/pgrust" target="_blank">malisper / pgrust</a></div>
+  <div class="cm"><span class="stars">⭐ 2,489</span><span class="lang">Rust</span>518 stars today</div>
+  <div class="cd">开源项目 malisper / pgrust，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Postgres rewritten in Rust, now passing 100% of the Postgres regression tests”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Nutlope/hallmark" target="_blank">Nutlope / hallmark</a></div>
+  <div class="cm"><span class="stars">⭐ 4,310</span><span class="lang">CSS</span>155 stars today</div>
+  <div class="cd">开源项目 Nutlope / hallmark，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+</div></div><div id="section-github" class="section"><div class="sh github"><span class="icon">🚀</span><span class="title">GitHub 热门项目</span><span class="cnt">15 项</span></div>
+<p style="color:#64748b;font-size:0.85rem;margin-bottom:0.8rem;line-height:1.5">📅 热门新势力（近 30 天活跃） | 🔍 pushed:>2026-06-13 | 🔑 LLM OR AI agent OR MCP OR RAG</p>
+<div class="card">
+  <div class="ct"><a href="https://github.com/openclaw/openclaw" target="_blank">openclaw/openclaw</a></div>
+  <div class="cm"><span class="stars">⭐ 382,711</span><span class="lang">TypeScript</span><span class="topic">ai</span><span class="topic">assistant</span><span class="topic">crustacean</span><span>更新于 2026-07-13</span></div>
+  <div class="cd">开源项目 openclaw/openclaw，归属 ai、assistant、crustacean 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+  <div class="releases-section"><div class="release-item"><span class="release-tag">🏷️ openclaw 2026.7.1-beta.6</span><span class="release-date">2026-07-13</span><div class="release-summary">New models and providers；Control UI and native macOS chat；Conversational onboarding；Offline and spoken mobile chat</div></div><div class="release-item"><span class="release-tag">🏷️ OpenClaw 2026.7.1-beta.5</span><span class="release-date">2026-07-11</span><div class="release-summary">Conversational onboarding；ClawRouter routing and quotas；Control UI and native macOS chat；Offline and spoken mobile chat</div></div><div class="release-item"><span class="release-tag">🏷️ openclaw 2026.7.1-beta.2</span><span class="release-date">2026-07-05</span><div class="release-summary">OpenAI GPT-5.6 support；External harness attachment；Telegram Codex workflows；Event-driven cron runs</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/re4/LibreCode" target="_blank">re4/LibreCode</a></div>
+  <div class="cm"><span class="stars">⭐ 284,092</span><span class="lang">C#</span><span class="topic">ai</span><span class="topic">ai-agents</span><span class="topic">coding</span><span>更新于 2026-07-13</span></div>
+  <div class="cd">开源项目 re4/LibreCode，归属 ai、ai-agents、coding 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“LibreCode - A Ollama cursor like coding / Reversing Interface”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+  <div class="releases-section"><div class="release-item"><span class="release-tag">🏷️ v1.1.0</span><span class="release-date">2026-06-16</span><div class="release-summary">Startup splash screen (new SplashWindow): starts Ollama, picks a default model by detected VRAM, dow；Cursor V2-style dark UI；Performance & memory pass across indexing, reversing, editor, and file-system subsystems.</div></div><div class="release-item"><span class="release-tag">🏷️ v1.0.0</span><span class="release-date">2026-06-11</span><div class="release-summary">Full Changelog: https://github.com/re4/LibreCode/commits/v1.0.0；First Stable Release</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/obra/superpowers" target="_blank">obra/superpowers</a></div>
+  <div class="cm"><span class="stars">⭐ 253,073</span><span class="lang">Shell</span><span class="topic">ai</span><span class="topic">brainstorming</span><span class="topic">coding</span><span>更新于 2026-07-13</span></div>
+  <div class="cd">开源项目 obra/superpowers，归属 ai、brainstorming、coding 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An agentic skills framework & software development methodology that works.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+  <div class="releases-section"><div class="release-item"><span class="release-tag">🏷️ v6.1.1</span><span class="release-date">2026-07-02</span><div class="release-summary">- Codex no longer re-registers the Claude SessionStart hook. v6.1.0 removed the Codex hook config and its manifest hooks；- Removed orphaned Codex session-start dead code. hooks/session-start-codex had no caller once the Codex hook config was；- New pa</div></div><div class="release-item"><span class="release-tag">🏷️ v6.1.0</span><span class="release-date">2026-06-30</span><div class="release-summary">The using-superpowers bootstrap is injected into every session, so its size is paid for constantly. This release trims i；- Compressed the using-superpowers bootstrap. Replaced the graphviz skill-flow diagram with the prose it encoded, folded；- Pruned</div></div><div class="release-item"><span class="release-tag">🏷️ v6.0.3</span><span class="release-date">2026-06-18</span><div class="release-summary">- SDD scratch files moved out of .git/. Claude Code treats .git/ as a protected path and denies agent writes there, so a</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/affaan-m/ECC" target="_blank">affaan-m/ECC</a></div>
+  <div class="cm"><span class="stars">⭐ 228,969</span><span class="lang">JavaScript</span><span class="topic">ai-agents</span><span class="topic">anthropic</span><span class="topic">claude</span><span>更新于 2026-07-13</span></div>
+  <div class="cd">开源项目 affaan-m/ECC，归属 ai-agents、anthropic、claude 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+  <div class="releases-section"><div class="release-item"><span class="release-tag">🏷️ ECC 2.0.0 — The Agent Harness Operating System</span><span class="release-date">2026-06-10</span><div class="release-summary">The control-pane substrate；MCP inventory (ecc.mcp.v1)；worktree-lifecycle service；orch-* orchestrator skill family plus dynamic workflow team orchestration</div></div><div class="release-item"><span class="release-tag">🏷️ v2.0.0-rc.1</span><span class="release-date">2026-05-25</span><div class="release-summary">243 public skills packaged across coding, research, security, media, enterprise ops, and agent workf；A rollout-derived optimization pack for agents that need measured speedups instead of one-shot promp；A public teaser Itô prediction-market skill pack</div></div><div class="release-item"><span class="release-tag">🏷️ ECC v1.10.0 — Surface Refresh, Operator Workflows, and ECC 2.0 Alpha</span><span class="release-date">2026-04-05</span><div class="release-summary">Harness reliability and cross-platform compatibility；Eval-driven quality improvements；Better workflow and operator ergonomics；@tupe12334 made their first contribution in https://github.com/affaan-m/everything-claude-code/pull/</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/NousResearch/hermes-agent" target="_blank">NousResearch/hermes-agent</a></div>
+  <div class="cm"><span class="stars">⭐ 213,756</span><span class="lang">Python</span><span class="topic">ai</span><span class="topic">ai-agent</span><span class="topic">ai-agents</span><span>更新于 2026-07-13</span></div>
+  <div class="cd">开源项目 NousResearch/hermes-agent，归属 ai、ai-agent、ai-agents 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“The agent that grows with you [![Image 1: Hermes Agent](https://github.com/NousResearch/hermes-agent/raw/main/assets/banner.png)](https://github.com/NousResearch/hermes-agent/blob/”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+  <div class="releases-section"><div class="release-item"><span class="release-tag">🏷️ Hermes Agent v0.18.2 (2026.7.7.2)</span><span class="release-date">2026-07-08</span><div class="release-summary">fix(whatsapp): unpin Baileys from git commit, use published 7.0.0-rc13</div></div><div class="release-item"><span class="release-tag">🏷️ Hermes Agent v0.18.1 (2026.7.7)</span><span class="release-date">2026-07-08</span><div class="release-summary">Release Date: July 7, 2026；> Patch release. This tag rolls up the ~660 PRs merged since v0.18.0 (July 1) — bug fixes, hardening, and in-progress fe；This is an infrastructure-driven patch tag rather than a fully curated release. Since v0.18.0 shipped </div></div><div class="release-item"><span class="release-tag">🏷️ Hermes Agent v0.18.0 (2026.7.1) — The Judgment Release</span><span class="release-date">2026-07-01</span><div class="release-summary">Mixture-of-Agents is now a first-class model you can pick；See every model's reasoning, then watch the answer stream in；The agent verifies its own work；/learn</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/n8n-io/n8n" target="_blank">n8n-io/n8n</a></div>
+  <div class="cm"><span class="stars">⭐ 196,208</span><span class="lang">TypeScript</span><span class="topic">ai</span><span class="topic">apis</span><span class="topic">automation</span><span>更新于 2026-07-13</span></div>
+  <div class="cd">开源项目 n8n-io/n8n，归属 ai、apis、automation 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+  <div class="releases-section"><div class="release-item"><span class="release-tag">🏷️ stable</span><span class="release-date">2026-07-10</span><div class="release-summary">Keep AI Assistant thread state intact on editor hand-off </div></div><div class="release-item"><span class="release-tag">🏷️ n8n@2.29.10</span><span class="release-date">2026-07-10</span><div class="release-summary">Keep AI Assistant thread state intact on editor hand-off </div></div><div class="release-item"><span class="release-tag">🏷️ n8n@2.30.3</span><span class="release-date">2026-07-10</span><div class="release-summary">Keep AI Assistant thread state intact on editor hand-off </div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/ultraworkers/claw-code" target="_blank">ultraworkers/claw-code</a></div>
+  <div class="cm"><span class="stars">⭐ 194,739</span><span class="lang">Rust</span><span>更新于 2026-07-13</span></div>
+  <div class="cd">开源项目 ultraworkers/claw-code，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An agent-managed museum exhibit, built in Rust with Gajae-Code / LazyCodex — developed and maintained with no human intervention.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank">Significant-Gravitas/AutoGPT</a></div>
+  <div class="cm"><span class="stars">⭐ 185,496</span><span class="lang">Python</span><span class="topic">agentic-ai</span><span class="topic">agents</span><span class="topic">ai</span><span>更新于 2026-07-13</span></div>
+  <div class="cd">开源项目 Significant-Gravitas/AutoGPT，归属 agentic-ai、agents、ai 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+  <div class="releases-section"><div class="release-item"><span class="release-tag">🏷️ 🚀 AutoGPT Platform v0.6.66</span><span class="release-date">2026-07-09</span><div class="release-summary">#13427 - Let users upload files to AutoPilot via Discord (；#13262 - Attach workspace files in copilot chat via picker and @mention (；#13365 - Add AutoGPT new layout sidebar behind feature flag (；#13453 - Add chat pinning to copilot sidebar (</div></div><div class="release-item"><span class="release-tag">🏷️ autogpt-platform-beta-v0.6.65</span><span class="release-date">2026-06-25</span><div class="release-summary">#13228 - AutoPilot Context Panel；#13360 - Global Search；#13238 - Read-Only Builder；#13298 - Copilot Webhook Triggers</div></div><div class="release-item"><span class="release-tag">🏷️ autogpt-platform-beta-v0.6.64</span><span class="release-date">2026-06-18</span><div class="release-summary">#13228 - AutoPilot Context Panel；#13360 - Global Search；#13238 - Read-Only Builder；#13298 - Copilot Webhook Triggers</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/anomalyco/opencode" target="_blank">anomalyco/opencode</a></div>
+  <div class="cm"><span class="stars">⭐ 185,108</span><span class="lang">TypeScript</span><span>更新于 2026-07-13</span></div>
+  <div class="cd">开源项目 anomalyco/opencode，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“The open source coding agent. [Skip to content](https://github.com/anomalyco/opencode#start-of-content)”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+  <div class="releases-section"><div class="release-item"><span class="release-tag">🏷️ PR #36567 verification evidence</span><span class="release-date">2026-07-12</span><div class="release-summary">Automated OpenCode Drive verification artifact for PR #36567.</div></div><div class="release-item"><span class="release-tag">🏷️ PR #36516 visual evidence</span><span class="release-date">2026-07-12</span><div class="release-summary">Visual evidence assets for PR #36516.</div></div><div class="release-item"><span class="release-tag">🏷️ v1.17.18</span><span class="release-date">2026-07-09</span><div class="release-summary">Prevent crashes and bad pricing data when GitHub Copilot returns models with a zero billing batch si；Add a model-specific system prompt for Meta Muse Spark.</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/ollama/ollama" target="_blank">ollama/ollama</a></div>
+  <div class="cm"><span class="stars">⭐ 176,001</span><span class="lang">Go</span><span class="topic">deepseek</span><span class="topic">gemma</span><span class="topic">gemma3</span><span>更新于 2026-07-13</span></div>
+  <div class="cd">开源项目 ollama/ollama，归属 deepseek、gemma、gemma3 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+  <div class="releases-section"><div class="release-item"><span class="release-tag">🏷️ v0.32.0</span><span class="release-date">2026-07-11</span><div class="release-summary">select the qwen3.5 parser and renderer for Qwen3.5/Next in https://github.com/ollama/ollama/pull/170；warn before old agent models in https；agent UI in https</div></div><div class="release-item"><span class="release-tag">🏷️ v0.31.2</span><span class="release-date">2026-07-06</span><div class="release-summary">Enabled flash attention on older NVIDIA GPUs (compute capability 6.x)；iGPU can now offload vision models with padding to fit available memory；Fixed structured output for thinking models when thinking is disabled；Hardened GGUF model creation</div></div><div class="release-item"><span class="release-tag">🏷️ v0.31.1</span><span class="release-date">2026-06-30</span><div class="release-summary">Tightened Gemma 4 MoE model loading in the MLX engine；Updated the MLX engine to the latest version, including a new small-batch matmul kernel；Updated the underlying llama.cpp engine to build 9840；Improved Gemma 4 multi-token prediction (MTP) performa</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/f/prompts.chat" target="_blank">f/prompts.chat</a></div>
+  <div class="cm"><span class="stars">⭐ 165,569</span><span class="lang">HTML</span><span class="topic">ai</span><span class="topic">artificial-intelligence</span><span class="topic">awesome-list</span><span>更新于 2026-07-13</span></div>
+  <div class="cd">开源项目 f/prompts.chat，归属 ai、artificial-intelligence、awesome-list 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/huggingface/transformers" target="_blank">huggingface/transformers</a></div>
+  <div class="cm"><span class="stars">⭐ 162,550</span><span class="lang">Python</span><span class="topic">audio</span><span class="topic">deep-learning</span><span class="topic">deepseek</span><span>更新于 2026-07-13</span></div>
+  <div class="cd">开源项目 huggingface/transformers，归属 audio、deep-learning、deepseek 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+  <div class="releases-section"><div class="release-item"><span class="release-tag">🏷️ Patch release v5.13.1</span><span class="release-date">2026-07-11</span><div class="release-summary">This patch is focused on enabling transformers for the latest release of vllm!；- Be more defensive with remap_legacy_layer_types for custom models (#47245) from @hmellor；- Fix custom code which doesn't know about the new linear layer type names (#471</div></div><div class="release-item"><span class="release-tag">🏷️ Release v5.13.0</span><span class="release-date">2026-07-03</span><div class="release-summary">🚨 Modeling changes for export, compile, and hybrid-attention standardization；🚨 [gemma 3/4] Fix bidirectional attention masking crossing sliding window boundaries；🚨 EP；Update workflow callers to use transformers-ci in [#47040</div></div><div class="release-item"><span class="release-tag">🏷️ Patch release v5.12.1</span><span class="release-date">2026-06-15</span><div class="release-summary">Updated the lower bound for PEFT and a fix for auto tokenizer to properly resolve the mistral tokenizer (when mistral-co；* Fix peft lower bound #46605 by @hmellor (#46605)；* mistral common backend fix #46667 by @itazap (#46667)</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/anthropics/skills" target="_blank">anthropics/skills</a></div>
+  <div class="cm"><span class="stars">⭐ 160,590</span><span class="lang">Python</span><span class="topic">agent-skills</span><span>更新于 2026-07-13</span></div>
+  <div class="cd">开源项目 anthropics/skills，归属 agent-skills 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Public repository for Agent Skills”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Snailclimb/JavaGuide" target="_blank">Snailclimb/JavaGuide</a></div>
+  <div class="cm"><span class="stars">⭐ 156,973</span><span class="lang">JavaScript</span><span class="topic">agent</span><span class="topic">ai</span><span class="topic">context-engineering</span><span>更新于 2026-07-13</span></div>
+  <div class="cd">开源项目 Snailclimb/JavaGuide，归属 agent、ai、context-engineering 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/langflow-ai/langflow" target="_blank">langflow-ai/langflow</a></div>
+  <div class="cm"><span class="stars">⭐ 151,783</span><span class="lang">Python</span><span class="topic">agents</span><span class="topic">chatgpt</span><span class="topic">generative-ai</span><span>更新于 2026-07-13</span></div>
+  <div class="cd">开源项目 langflow-ai/langflow，归属 agents、chatgpt、generative-ai 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Langflow is a powerful tool for building and deploying AI-powered agents and workflows.”。建议结合仓库文档与近期版本记录评估适用场景。</div>
+  <div class="releases-section"><div class="release-item"><span class="release-tag">🏷️ 1.10.2</span><span class="release-date">2026-07-07</span><div class="release-summary">add global variable model overrides in https://github.com/langflow-ai/langflow/pull/13935；use session exec in telemetry writer in https://github.com/langflow-ai/langflow/pull/13821；disable mem0 telemetry by default in https://github.com/langflow-ai/l</div></div><div class="release-item"><span class="release-tag">🏷️ 1.10.1</span><span class="release-date">2026-06-23</span><div class="release-summary">feat(ci)；first-class local-model support for the assistant in https://github.com/langflow-ai/langflow/pull/13；Model handling for tool calling in agents and update IBM models in https://github.com/langflow-ai/la；fix(ci)</div></div><div class="release-item"><span class="release-tag">🏷️ 1.10.1rc3</span><span class="release-date">2026-06-22</span><div class="release-summary">fix(i18n)；make IBM WatsonX models selectable and runnable in the Langflow Assistant in https://github.com/lang；fix(agents)；fix(component)</div></div></div>
+</div></div><div id="section-paper" class="section"><div class="sh paper"><span class="icon">📄</span><span class="title">论文速读</span><span class="cnt">5 篇</span></div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.09654v1" target="_blank">论文速读：Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models</a></div>
+  <div class="cm">2026-07-10 · cs.CV, cs.AI</div>
+  <div class="cd"><b>摘要：</b>该论文围绕 AI/LLM 研究展开。核心摘要：Vision language models (VLMs) have made remarkable progress in visual reasoning during the last decade. Most evaluations have used simple scenes (MS-COCO) that do not showcase complex human interactions or behaviors, onl。建议通过 arXiv 原文进一步核验实验设置、数据集与结论。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.09653v1" target="_blank">论文速读：VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents</a></div>
+  <div class="cm">2026-07-10 · cs.CR, cs.AI</div>
+  <div class="cd"><b>摘要：</b>该论文围绕 AI/LLM 研究展开。核心摘要：Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testing approaches. While。建议通过 arXiv 原文进一步核验实验设置、数据集与结论。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.09641v1" target="_blank">论文速读：Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection</a></div>
+  <div class="cm">2026-07-10 · cs.LG, cs.AI</div>
+  <div class="cd"><b>摘要：</b>该论文围绕 AI/LLM 研究展开。核心摘要：Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance anomaly interdictio。建议通过 arXiv 原文进一步核验实验设置、数据集与结论。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.09628v1" target="_blank">论文速读：Indirect and Direct AI Scaffolding for Computational Problem Posing: A Pilot Experience Report</a></div>
+  <div class="cm">2026-07-10 · cs.HC</div>
+  <div class="cd"><b>摘要：</b>该论文围绕 AI/LLM 研究展开。核心摘要：Problem posing is a valuable learning activity in computing education, encouraging learners to actively construct, refine, and reflect on problems rather than simply solving them. This experience report presents the desi。建议通过 arXiv 原文进一步核验实验设置、数据集与结论。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.09616v1" target="_blank">论文速读：LLM for EDA in Front-End Design: Challenges and Opportunities</a></div>
+  <div class="cm">2026-07-10 · cs.ET, cs.AR</div>
+  <div class="cd"><b>摘要：</b>该论文围绕 AI/LLM 研究展开。核心摘要：As chip complexity increases and time-to-market pressures grow, front-end design has become a critical bottleneck in chip development. Recently, Large Language Models (LLMs) have shown great potential in Electronic Desig。建议通过 arXiv 原文进一步核验实验设置、数据集与结论。</div>
+</div></div><div id="section-blog" class="section"><div class="sh blog"><span class="icon">📢</span><span class="title">官方动态</span><span class="cnt">0 条</span></div></div><div id="section-news" class="section"><div class="sh news"><span class="icon">🏭</span><span class="title">行业动态</span><span class="cnt">11 条</span></div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMingFBVV95cUxPNVNTeE9sNGQwOUtyd3BubjBDR2Zod2wtMUtjbTNRb0dvd0VSVnV2ZUo3U241c3oyRnVLQkFsS1l4bWNIc2xuMEJJVE9pLUtQWDhiSVBfNVQwWXdxakRDYWhnZ0lUbG5FamlhZ0UtZGlBbVl3SGZXdXN2YVFtdWNJWmZVVXFTcWMzaF9TdG9ickFIVU5sMU1Pb1pwY080Zw?oc=5" target="_blank">行业动态：Anthropic Illuminates LLM J-Space With J-Lens - Forbes</a><span class="news-date">Sun, 12 Jul 2026 15:56:50 GMT</span></div>
+  <div class='news-summary'>摘要：该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPNVNTeE9sNGQwOUtyd3BubjBDR2Zod2wtMUtjbTNRb0dvd0VSVnV2ZUo3U241c3oyRnVLQkFsS1l4bWNIc2xuMEJJ</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQd3RwdUVUWE5CeFAwRkNBY2hWRjUxeUtEaWQ5a1gzX0VxMzBFNHhCTXY0VThTdTlMVl9HYVJDMGJnYXZvZDNKU2pOUU0xTGxnWFZnUXFocDhoSWh6SDhyS2lHclpkU0IweU42NXRONkJ1UTVXZk9mVmNwTVBSRzlIMi00ZWtkaXJWOVZETWtrWWFvWEZwbFhTdDhUSmlzVVk?oc=5" target="_blank">行业动态：Robinhood Brings AI Agent Trading to Crypto After 70,000 Accounts Join Beta - Yahoo Finance</a><span class="news-date">Sun, 12 Jul 2026 23:46:00 GMT</span></div>
+  <div class='news-summary'>摘要：该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQd3RwdUVUWE5CeFAwRkNBY2hWRjUxeUtEaWQ5a1gzX0VxMzBFNHhCTXY0VThTdTlMVl9HYVJDMGJnYXZvZDNKU2pO</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPX09tZG5BNTVBWVFrdUtqOUFmUGU2Uk9zNlplSTN1OTZhdzFPMlItejhSMjhsZExpb2FReWc4aXp4N29EblB0YXJCUTYwd0YxM2lXWHFrWHBlTUMxckk4cThOUng1UUl2TmdRNHZxVUNDQjc4amliTDBLbE9BZ0VZOXp6ajVjTGMwYVBYcWhCaEx6TDg1SkZZZnNPd2dGT1VCUk1qcVRPZw?oc=5" target="_blank">行业动态：One Way to Build a Great AI Agent: Just Start With a Dashboard, Then Add the Agent - saastr.com</a><span class="news-date">Sat, 11 Jul 2026 17:36:29 GMT</span></div>
+  <div class='news-summary'>摘要：该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPX09tZG5BNTVBWVFrdUtqOUFmUGU2Uk9zNlplSTN1OTZhdzFPMlItejhSMjhsZExpb2FReWc4aXp4N29EblB0YXJC</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NHeEdVSXgzTTYteWEyNzdvX3FXd1ZOM2FWVjJzcXZvenppcVFIckx3azVJRmh0Rkw1NFV0UzVQR21Wb3RFWHhmd3c?oc=5" target="_blank">行业动态：AI Model Co-Design: Hardware-Friendly LLM Design | NVIDIA Technical Blog - NVIDIA Developer</a><span class="news-date">Fri, 10 Jul 2026 17:16:10 GMT</span></div>
+  <div class='news-summary'>摘要：该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NH</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMiugFBVV95cUxPQm51ai1FLTFmWjRjaGZ0eGlwc1ZWbGlETEtPOEpTOW9yRHA4MEdUQmVQV2trbWZSTUZ3U25oQ3VDMUV6NTFzS1AwVEMwSVMzNFMxWWdkMFNQb3RHVEhzT1FyMU11ZTI4a3hOXzNBem9zM2FrellxZkZ6Tm5CaFM0Ni1rMkZ4RUZvZ2Y4dGR2TDdScGhpU1VSTDloVFZ3RWYwN0FpcVZTWnFJa3RTMVJBWGtnSzViU1dHMXc?oc=5" target="_blank">行业动态：Similarweb: Large LLM Contracts Represent A New Era For This Analytics Company - Seeking Alpha</a><span class="news-date">Mon, 13 Jul 2026 00:14:30 GMT</span></div>
+  <div class='news-summary'>摘要：该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxPQm51ai1FLTFmWjRjaGZ0eGlwc1ZWbGlETEtPOEpTOW9yRHA4MEdUQmVQV2trbWZSTUZ3U25oQ3VDMUV6NTFzS1Aw</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMibkFVX3lxTE05TkZDVTVkYUtNbXNyTENFa19YYXIzeGFuSGl5bi1iT2tqOFB5VlZ1VFgyMDloVUsySE03ZjI0MFR6NFN0bWF2ZTFnUENJcW1uMHZBNVB3emdJODdpZGhjX0ZHendNbmdxU18tUzd3?oc=5" target="_blank">行业动态：Introducing Oracle AI Agent Memory 26.6: Memory With Receipts - Oracle Blogs</a><span class="news-date">Fri, 10 Jul 2026 14:41:39 GMT</span></div>
+  <div class='news-summary'>摘要：该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE05TkZDVTVkYUtNbXNyTENFa19YYXIzeGFuSGl5bi1iT2tqOFB5VlZ1VFgyMDloVUsySE03ZjI0MFR6NFN0bWF2ZTFn</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUkZoLXF1TXpZMWVJUG90WkstdjR6elRYX1IzV0tjcFVLRV95R0FBd1oxdEV2b0FxaGpMNHhrUFliUnlyNV9ZWmRaLUdIaUozQWIybGd3RXlYdDc1MkdNa3FFbTdEU2ljUmRUWk54QkRJYVlkOGswcTN1OUxRZy1MTnQ5NXI0YVc1WEk0SDROSXFibjQ3bGlrYV9zRzE5WWQyOURNTnZ6LUZzdw?oc=5" target="_blank">行业动态：2026 Model Context Protocol Server and AI Agent Hackathon - GSA (.gov)</a><span class="news-date">Fri, 10 Jul 2026 19:01:57 GMT</span></div>
+  <div class='news-summary'>摘要：该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUkZoLXF1TXpZMWVJUG90WkstdjR6elRYX1IzV0tjcFVLRV95R0FBd1oxdEV2b0FxaGpMNHhrUFliUnlyNV9ZWmRa</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNX0xFMXJ5Y2dyU1FORTJINzZTMk1oeWotN05OTTcyanExdldPcnZqSXVKWHJOaVdqN0lNTnJ3Tlk4NUZrSjh2UHZiemd1dXc3MkZqOTI1Mjh5cklCSXBxM3kyUGxzelo1UXpKVUpIUHpXeklYU2U4ckoxRHRzUU91ZVdHUEZUcGQzbE9PNUJrNU5Ddm8yUEl1eW9ydWtMZDNKX0FlT0Z3?oc=5" target="_blank">行业动态：(OPINION) Liability in hiring: Who answers for AI agent decisions? - Oil City News</a><span class="news-date">Sat, 11 Jul 2026 14:13:00 GMT</span></div>
+  <div class='news-summary'>摘要：该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNX0xFMXJ5Y2dyU1FORTJINzZTMk1oeWotN05OTTcyanExdldPcnZqSXVKWHJOaVdqN0lNTnJ3Tlk4NUZrSjh2UHZi</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Hacker News</span><a class="news-title" href="https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/" target="_blank">行业动态：Old and new apps, via modern coding agents</a><span class="news-date">2026-07-12</span></div>
+  <div class='news-summary'>摘要：该动态来自 Hacker News，聚焦 AI、模型或智能体进展。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Hacker News</span><a class="news-title" href="https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6" target="_blank">行业动态：Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper</a><span class="news-date">2026-07-13</span></div>
+  <div class='news-summary'>摘要：该动态来自 Hacker News，聚焦 AI、模型或智能体进展。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Hacker News</span><a class="news-title" href="https://systima.ai/blog/claude-code-vs-opencode-token-overhead" target="_blank">行业动态：Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k</a><span class="news-date">2026-07-13</span></div>
+  <div class='news-summary'>摘要：该动态来自 Hacker News，聚焦 AI、模型或智能体进展。</div>
+</div></div>
+<div class="stats">
+  <div><div class="sv">48</div><div class="sl">信息条数</div></div>
+  <div><div class="sv">15</div><div class="sl">GitHub 项目</div></div>
+  <div><div class="sv">17</div><div class="sl">Trending</div></div>
+  <div><div class="sv">0</div><div class="sl">官方动态</div></div>
+</div>
+<div class="ft">由 Hermes Agent 自动生成 | 2026-07-13 10:05</div>
+</div>
+<script>
+(() => {
+  const progressBar = document.getElementById('progress-bar');
+  const percentLabel = document.getElementById('reading-percent');
+  const currentLabel = document.getElementById('current-section-label');
+  const links = Array.from(document.querySelectorAll('.quick-link'));
+  const sections = links
+    .map(link => {
+      const id = link.getAttribute('data-target');
+      const section = document.getElementById(id);
+      return section ? { id, link, section, label: link.textContent.trim() } : null;
+    })
+    .filter(Boolean);
+
+  function updateProgress() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = maxScroll > 0 ? Math.min(100, Math.max(0, (scrollTop / maxScroll) * 100)) : 0;
+    progressBar.style.width = percent + '%';
+    percentLabel.textContent = Math.round(percent) + '%';
+  }
+
+  function updateActiveSection() {
+    const trigger = window.innerHeight * 0.22;
+    let current = sections[0];
+    for (const item of sections) {
+      const rect = item.section.getBoundingClientRect();
+      if (rect.top <= trigger) {
+        current = item;
+      }
+    }
+    if (!current) return;
+    links.forEach(link => link.classList.remove('active'));
+    current.link.classList.add('active');
+    currentLabel.textContent = current.label.replace(/^[^\s]+\s/, '');
+  }
+
+  function onScroll() {
+    updateProgress();
+    updateActiveSection();
+  }
+
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script></body></html>

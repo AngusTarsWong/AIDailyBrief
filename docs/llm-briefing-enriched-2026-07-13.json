@@ -1,0 +1,875 @@
+{
+  "date": "2026-07-13",
+  "github": [
+    {
+      "name": "openclaw/openclaw",
+      "desc": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
+      "stars": 382711,
+      "lang": "TypeScript",
+      "updated": "2026-07-13",
+      "url": "https://github.com/openclaw/openclaw",
+      "topics": [
+        "ai",
+        "assistant",
+        "crustacean",
+        "molty",
+        "openclaw"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v2026.7.1-beta.6",
+          "name": "openclaw 2026.7.1-beta.6",
+          "date": "2026-07-13",
+          "summary": "New models and providers；Control UI and native macOS chat；Conversational onboarding；Offline and spoken mobile chat"
+        },
+        {
+          "tag": "v2026.7.1-beta.5",
+          "name": "OpenClaw 2026.7.1-beta.5",
+          "date": "2026-07-11",
+          "summary": "Conversational onboarding；ClawRouter routing and quotas；Control UI and native macOS chat；Offline and spoken mobile chat"
+        },
+        {
+          "tag": "v2026.7.1-beta.2",
+          "name": "openclaw 2026.7.1-beta.2",
+          "date": "2026-07-05",
+          "summary": "OpenAI GPT-5.6 support；External harness attachment；Telegram Codex workflows；Event-driven cron runs"
+        }
+      ],
+      "name_zh": "openclaw/openclaw",
+      "desc_zh": "开源项目 openclaw/openclaw，归属 ai、assistant、crustacean 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "re4/LibreCode",
+      "desc": "LibreCode - A Ollama cursor like coding / Reversing Interface",
+      "stars": 284092,
+      "lang": "C#",
+      "updated": "2026-07-13",
+      "url": "https://github.com/re4/LibreCode",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "coding",
+        "csharp",
+        "decompiler"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.1.0",
+          "name": "v1.1.0",
+          "date": "2026-06-16",
+          "summary": "Startup splash screen (new SplashWindow): starts Ollama, picks a default model by detected VRAM, dow；Cursor V2-style dark UI；Performance & memory pass across indexing, reversing, editor, and file-system subsystems."
+        },
+        {
+          "tag": "v1.0.0",
+          "name": "v1.0.0",
+          "date": "2026-06-11",
+          "summary": "Full Changelog: https://github.com/re4/LibreCode/commits/v1.0.0；First Stable Release"
+        }
+      ],
+      "name_zh": "re4/LibreCode",
+      "desc_zh": "开源项目 re4/LibreCode，归属 ai、ai-agents、coding 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“LibreCode - A Ollama cursor like coding / Reversing Interface”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "C#"
+    },
+    {
+      "name": "obra/superpowers",
+      "desc": "An agentic skills framework & software development methodology that works.",
+      "stars": 253073,
+      "lang": "Shell",
+      "updated": "2026-07-13",
+      "url": "https://github.com/obra/superpowers",
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v6.1.1",
+          "name": "v6.1.1",
+          "date": "2026-07-02",
+          "summary": "- Codex no longer re-registers the Claude SessionStart hook. v6.1.0 removed the Codex hook config and its manifest hooks；- Removed orphaned Codex session-start dead code. hooks/session-start-codex had no caller once the Codex hook config was；- New pa"
+        },
+        {
+          "tag": "v6.1.0",
+          "name": "v6.1.0",
+          "date": "2026-06-30",
+          "summary": "The using-superpowers bootstrap is injected into every session, so its size is paid for constantly. This release trims i；- Compressed the using-superpowers bootstrap. Replaced the graphviz skill-flow diagram with the prose it encoded, folded；- Pruned"
+        },
+        {
+          "tag": "v6.0.3",
+          "name": "v6.0.3",
+          "date": "2026-06-18",
+          "summary": "- SDD scratch files moved out of .git/. Claude Code treats .git/ as a protected path and denies agent writes there, so a"
+        }
+      ],
+      "name_zh": "obra/superpowers",
+      "desc_zh": "开源项目 obra/superpowers，归属 ai、brainstorming、coding 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An agentic skills framework & software development methodology that works.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Shell"
+    },
+    {
+      "name": "affaan-m/ECC",
+      "desc": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "stars": 228969,
+      "lang": "JavaScript",
+      "updated": "2026-07-13",
+      "url": "https://github.com/affaan-m/ECC",
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v2.0.0",
+          "name": "ECC 2.0.0 — The Agent Harness Operating System",
+          "date": "2026-06-10",
+          "summary": "The control-pane substrate；MCP inventory (ecc.mcp.v1)；worktree-lifecycle service；orch-* orchestrator skill family plus dynamic workflow team orchestration"
+        },
+        {
+          "tag": "v2.0.0-rc.1",
+          "name": "v2.0.0-rc.1",
+          "date": "2026-05-25",
+          "summary": "243 public skills packaged across coding, research, security, media, enterprise ops, and agent workf；A rollout-derived optimization pack for agents that need measured speedups instead of one-shot promp；A public teaser Itô prediction-market skill pack"
+        },
+        {
+          "tag": "v1.10.0",
+          "name": "ECC v1.10.0 — Surface Refresh, Operator Workflows, and ECC 2.0 Alpha",
+          "date": "2026-04-05",
+          "summary": "Harness reliability and cross-platform compatibility；Eval-driven quality improvements；Better workflow and operator ergonomics；@tupe12334 made their first contribution in https://github.com/affaan-m/everything-claude-code/pull/"
+        }
+      ],
+      "name_zh": "affaan-m/ECC",
+      "desc_zh": "开源项目 affaan-m/ECC，归属 ai-agents、anthropic、claude 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "JavaScript"
+    },
+    {
+      "name": "NousResearch/hermes-agent",
+      "desc": "The agent that grows with you\n[![Image 1: Hermes Agent](https://github.com/NousResearch/hermes-agent/raw/main/assets/banner.png)](https://github.com/NousResearch/hermes-agent/blob/main/assets/banner.png)",
+      "stars": 213756,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v2026.7.7.2",
+          "name": "Hermes Agent v0.18.2 (2026.7.7.2)",
+          "date": "2026-07-08",
+          "summary": "fix(whatsapp): unpin Baileys from git commit, use published 7.0.0-rc13"
+        },
+        {
+          "tag": "v2026.7.7",
+          "name": "Hermes Agent v0.18.1 (2026.7.7)",
+          "date": "2026-07-08",
+          "summary": "Release Date: July 7, 2026；> Patch release. This tag rolls up the ~660 PRs merged since v0.18.0 (July 1) — bug fixes, hardening, and in-progress fe；This is an infrastructure-driven patch tag rather than a fully curated release. Since v0.18.0 shipped "
+        },
+        {
+          "tag": "v2026.7.1",
+          "name": "Hermes Agent v0.18.0 (2026.7.1) — The Judgment Release",
+          "date": "2026-07-01",
+          "summary": "Mixture-of-Agents is now a first-class model you can pick；See every model's reasoning, then watch the answer stream in；The agent verifies its own work；/learn"
+        }
+      ],
+      "page_content": "[![Image 1: Hermes Agent](https://github.com/NousResearch/hermes-agent/raw/main/assets/banner.png)](https://github.com/NousResearch/hermes-agent/blob/main/assets/banner.png)\n[Hermes Agent](https://hermes-agent.nousresearch.com/) | [Hermes Desktop](https://hermes-agent.nousresearch.com/)\n**The self-improving AI agent built by [Nous Research](https://nousresearch.com/).** It's the only agent with a built-in learning loop — it creates skills from experience, improves them during use, nudges itself to persist knowledge, searches its own past conversations, and builds a deepening model of who you are across sessions. Run it on a $5 VPS, a GPU cluster, or serverless infrastructure that costs nearly nothing when idle. It's not tied to your laptop — talk to it from Telegram while it works on a cloud VM.\nUse any model you want — [Nous Portal](https://portal.nousresearch.com/), OpenRouter, OpenAI, your own endpoint, and [many others](https://hermes-agent.nousresearch.com/docs/integrations/providers). Switch with `hermes model` — no code changes, no lock-in.\n**A real terminal interface**Full TUI with multiline editing, slash-command autocomplete, conversation history, interrupt-and-redirect, and streaming tool output.\n**Lives where you do**Telegram, Discord, Slack, WhatsApp, Signal, and CLI — all from a single gateway process. Voice memo transcription, cross-platform conversation continuity.\n**A closed learning loop**Agent-curated memory with periodic nudges. Autonomous skill creation after complex tasks. Skills self-improve during use. FTS5 session search with LLM summarization for cross-session recall. [Honcho](https://github.com/plastic-labs/honcho) dialectic user modeling. Compatible with the [agentskills.io](https://agentskills.io/) open standard.\n**Scheduled automations**Built-in cron scheduler with delivery to any platform. Daily reports, nightly backups, weekly audits — all in natural language, running unattended.\n**Delegates and parallelizes**Spawn isolated subagents ",
+      "name_zh": "NousResearch/hermes-agent",
+      "desc_zh": "开源项目 NousResearch/hermes-agent，归属 ai、ai-agent、ai-agents 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“The agent that grows with you [![Image 1: Hermes Agent](https://github.com/NousResearch/hermes-agent/raw/main/assets/banner.png)](https://github.com/NousResearch/hermes-agent/blob/”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "n8n-io/n8n",
+      "desc": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "stars": 196208,
+      "lang": "TypeScript",
+      "updated": "2026-07-13",
+      "url": "https://github.com/n8n-io/n8n",
+      "topics": [
+        "ai",
+        "apis",
+        "automation",
+        "cli",
+        "data-flow"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "stable",
+          "name": "stable",
+          "date": "2026-07-10",
+          "summary": "Keep AI Assistant thread state intact on editor hand-off "
+        },
+        {
+          "tag": "n8n@2.29.10",
+          "name": "n8n@2.29.10",
+          "date": "2026-07-10",
+          "summary": "Keep AI Assistant thread state intact on editor hand-off "
+        },
+        {
+          "tag": "n8n@2.30.3",
+          "name": "n8n@2.30.3",
+          "date": "2026-07-10",
+          "summary": "Keep AI Assistant thread state intact on editor hand-off "
+        }
+      ],
+      "name_zh": "n8n-io/n8n",
+      "desc_zh": "开源项目 n8n-io/n8n，归属 ai、apis、automation 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "ultraworkers/claw-code",
+      "desc": "An agent-managed museum exhibit, built in Rust with Gajae-Code / LazyCodex — developed and maintained with no human intervention.",
+      "stars": 194739,
+      "lang": "Rust",
+      "updated": "2026-07-13",
+      "url": "https://github.com/ultraworkers/claw-code",
+      "topics": [],
+      "is_top": true,
+      "releases": [],
+      "name_zh": "ultraworkers/claw-code",
+      "desc_zh": "开源项目 ultraworkers/claw-code，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An agent-managed museum exhibit, built in Rust with Gajae-Code / LazyCodex — developed and maintained with no human intervention.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Rust"
+    },
+    {
+      "name": "Significant-Gravitas/AutoGPT",
+      "desc": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "stars": 185496,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "topics": [
+        "agentic-ai",
+        "agents",
+        "ai",
+        "artificial-intelligence",
+        "autonomous-agents"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "autogpt-platform-beta-v0.6.66",
+          "name": "🚀 AutoGPT Platform v0.6.66",
+          "date": "2026-07-09",
+          "summary": "#13427 - Let users upload files to AutoPilot via Discord (；#13262 - Attach workspace files in copilot chat via picker and @mention (；#13365 - Add AutoGPT new layout sidebar behind feature flag (；#13453 - Add chat pinning to copilot sidebar ("
+        },
+        {
+          "tag": "autogpt-platform-beta-v0.6.65",
+          "name": "autogpt-platform-beta-v0.6.65",
+          "date": "2026-06-25",
+          "summary": "#13228 - AutoPilot Context Panel；#13360 - Global Search；#13238 - Read-Only Builder；#13298 - Copilot Webhook Triggers"
+        },
+        {
+          "tag": "autogpt-platform-beta-v0.6.64",
+          "name": "autogpt-platform-beta-v0.6.64",
+          "date": "2026-06-18",
+          "summary": "#13228 - AutoPilot Context Panel；#13360 - Global Search；#13238 - Read-Only Builder；#13298 - Copilot Webhook Triggers"
+        }
+      ],
+      "name_zh": "Significant-Gravitas/AutoGPT",
+      "desc_zh": "开源项目 Significant-Gravitas/AutoGPT，归属 agentic-ai、agents、ai 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "anomalyco/opencode",
+      "desc": "The open source coding agent.\n[Skip to content](https://github.com/anomalyco/opencode#start-of-content)",
+      "stars": 185108,
+      "lang": "TypeScript",
+      "updated": "2026-07-13",
+      "url": "https://github.com/anomalyco/opencode",
+      "topics": [],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "pr-36567-evidence",
+          "name": "PR #36567 verification evidence",
+          "date": "2026-07-12",
+          "summary": "Automated OpenCode Drive verification artifact for PR #36567."
+        },
+        {
+          "tag": "pr-36516-evidence",
+          "name": "PR #36516 visual evidence",
+          "date": "2026-07-12",
+          "summary": "Visual evidence assets for PR #36516."
+        },
+        {
+          "tag": "v1.17.18",
+          "name": "v1.17.18",
+          "date": "2026-07-09",
+          "summary": "Prevent crashes and bad pricing data when GitHub Copilot returns models with a zero billing batch si；Add a model-specific system prompt for Meta Muse Spark."
+        }
+      ],
+      "page_content": "[Skip to content](https://github.com/anomalyco/opencode#start-of-content)\n## Navigation Menu\nToggle navigation\n[](https://github.com/)\n[Sign in](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fanomalyco%2Fopencode)\nAppearance settings\n*\nPlatform\n*\nAI CODE CREATION\n*   [GitHub Copilot Write better code with AI](https://github.com/features/copilot)\n*   [GitHub Copilot app Direct agents from issue to merge](https://github.com/features/ai/github-app)\n*   [MCP Registry New Integrate external tools](https://github.com/mcp)\n*\nDEVELOPER WORKFLOWS",
+      "name_zh": "anomalyco/opencode",
+      "desc_zh": "开源项目 anomalyco/opencode，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“The open source coding agent. [Skip to content](https://github.com/anomalyco/opencode#start-of-content)”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "ollama/ollama",
+      "desc": "Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+      "stars": 176001,
+      "lang": "Go",
+      "updated": "2026-07-13",
+      "url": "https://github.com/ollama/ollama",
+      "topics": [
+        "deepseek",
+        "gemma",
+        "gemma3",
+        "glm",
+        "go"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v0.32.0-rc0",
+          "name": "v0.32.0",
+          "date": "2026-07-11",
+          "summary": "select the qwen3.5 parser and renderer for Qwen3.5/Next in https://github.com/ollama/ollama/pull/170；warn before old agent models in https；agent UI in https"
+        },
+        {
+          "tag": "v0.31.2",
+          "name": "v0.31.2",
+          "date": "2026-07-06",
+          "summary": "Enabled flash attention on older NVIDIA GPUs (compute capability 6.x)；iGPU can now offload vision models with padding to fit available memory；Fixed structured output for thinking models when thinking is disabled；Hardened GGUF model creation"
+        },
+        {
+          "tag": "v0.31.1",
+          "name": "v0.31.1",
+          "date": "2026-06-30",
+          "summary": "Tightened Gemma 4 MoE model loading in the MLX engine；Updated the MLX engine to the latest version, including a new small-batch matmul kernel；Updated the underlying llama.cpp engine to build 9840；Improved Gemma 4 multi-token prediction (MTP) performa"
+        }
+      ],
+      "name_zh": "ollama/ollama",
+      "desc_zh": "开源项目 ollama/ollama，归属 deepseek、gemma、gemma3 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Go"
+    },
+    {
+      "name": "f/prompts.chat",
+      "desc": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+      "stars": 165569,
+      "lang": "HTML",
+      "updated": "2026-07-13",
+      "url": "https://github.com/f/prompts.chat",
+      "topics": [
+        "ai",
+        "artificial-intelligence",
+        "awesome-list",
+        "chatgpt",
+        "chatgpt-prompts"
+      ],
+      "is_top": true,
+      "releases": [],
+      "name_zh": "f/prompts.chat",
+      "desc_zh": "开源项目 f/prompts.chat，归属 ai、artificial-intelligence、awesome-list 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "HTML"
+    },
+    {
+      "name": "huggingface/transformers",
+      "desc": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+      "stars": 162550,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/huggingface/transformers",
+      "topics": [
+        "audio",
+        "deep-learning",
+        "deepseek",
+        "gemma",
+        "glm"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v5.13.1",
+          "name": "Patch release v5.13.1",
+          "date": "2026-07-11",
+          "summary": "This patch is focused on enabling transformers for the latest release of vllm!；- Be more defensive with remap_legacy_layer_types for custom models (#47245) from @hmellor；- Fix custom code which doesn't know about the new linear layer type names (#471"
+        },
+        {
+          "tag": "v5.13.0",
+          "name": "Release v5.13.0",
+          "date": "2026-07-03",
+          "summary": "🚨 Modeling changes for export, compile, and hybrid-attention standardization；🚨 [gemma 3/4] Fix bidirectional attention masking crossing sliding window boundaries；🚨 EP；Update workflow callers to use transformers-ci in [#47040"
+        },
+        {
+          "tag": "v5.12.1",
+          "name": "Patch release v5.12.1",
+          "date": "2026-06-15",
+          "summary": "Updated the lower bound for PEFT and a fix for auto tokenizer to properly resolve the mistral tokenizer (when mistral-co；* Fix peft lower bound #46605 by @hmellor (#46605)；* mistral common backend fix #46667 by @itazap (#46667)"
+        }
+      ],
+      "name_zh": "huggingface/transformers",
+      "desc_zh": "开源项目 huggingface/transformers，归属 audio、deep-learning、deepseek 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "anthropics/skills",
+      "desc": "Public repository for Agent Skills",
+      "stars": 160590,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/anthropics/skills",
+      "topics": [
+        "agent-skills"
+      ],
+      "is_top": true,
+      "releases": [],
+      "name_zh": "anthropics/skills",
+      "desc_zh": "开源项目 anthropics/skills，归属 agent-skills 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Public repository for Agent Skills”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "Snailclimb/JavaGuide",
+      "desc": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
+      "stars": 156973,
+      "lang": "JavaScript",
+      "updated": "2026-07-13",
+      "url": "https://github.com/Snailclimb/JavaGuide",
+      "topics": [
+        "agent",
+        "ai",
+        "context-engineering",
+        "deepseek",
+        "interview"
+      ],
+      "is_top": true,
+      "releases": [],
+      "name_zh": "Snailclimb/JavaGuide",
+      "desc_zh": "开源项目 Snailclimb/JavaGuide，归属 agent、ai、context-engineering 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "JavaScript"
+    },
+    {
+      "name": "langflow-ai/langflow",
+      "desc": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.",
+      "stars": 151783,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/langflow-ai/langflow",
+      "topics": [
+        "agents",
+        "chatgpt",
+        "generative-ai",
+        "large-language-models",
+        "multiagent"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.10.2",
+          "name": "1.10.2",
+          "date": "2026-07-07",
+          "summary": "add global variable model overrides in https://github.com/langflow-ai/langflow/pull/13935；use session exec in telemetry writer in https://github.com/langflow-ai/langflow/pull/13821；disable mem0 telemetry by default in https://github.com/langflow-ai/l"
+        },
+        {
+          "tag": "v1.10.1",
+          "name": "1.10.1",
+          "date": "2026-06-23",
+          "summary": "feat(ci)；first-class local-model support for the assistant in https://github.com/langflow-ai/langflow/pull/13；Model handling for tool calling in agents and update IBM models in https://github.com/langflow-ai/la；fix(ci)"
+        },
+        {
+          "tag": "1.10.1rc3",
+          "name": "1.10.1rc3",
+          "date": "2026-06-22",
+          "summary": "fix(i18n)；make IBM WatsonX models selectable and runnable in the Langflow Assistant in https://github.com/lang；fix(agents)；fix(component)"
+        }
+      ],
+      "name_zh": "langflow-ai/langflow",
+      "desc_zh": "开源项目 langflow-ai/langflow，归属 agents、chatgpt、generative-ai 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Langflow is a powerful tool for building and deploying AI-powered agents and workflows.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "Dicklesworthstone / destructive_command_guard",
+      "url": "https://github.com/Dicklesworthstone/destructive_command_guard",
+      "desc": "The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.",
+      "lang": "Rust",
+      "stars": "2,957",
+      "today": "444 stars today",
+      "name_zh": "Dicklesworthstone / destructive_command_guard",
+      "desc_zh": "开源项目 Dicklesworthstone / destructive_command_guard，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Rust"
+    },
+    {
+      "name": "wonderwhy-er / DesktopCommanderMCP",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+      "desc": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+      "lang": "TypeScript",
+      "stars": "8,004",
+      "today": "210 stars today",
+      "name_zh": "wonderwhy-er / DesktopCommanderMCP",
+      "desc_zh": "开源项目 wonderwhy-er / DesktopCommanderMCP，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "HKUDS / Vibe-Trading",
+      "url": "https://github.com/HKUDS/Vibe-Trading",
+      "desc": "\"Vibe-Trading: Your Personal Trading Agent\"",
+      "lang": "Python",
+      "stars": "20,607",
+      "today": "768 stars today",
+      "name_zh": "HKUDS / Vibe-Trading",
+      "desc_zh": "开源项目 HKUDS / Vibe-Trading，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“\"Vibe-Trading: Your Personal Trading Agent\"”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "PrefectHQ / prefect",
+      "url": "https://github.com/PrefectHQ/prefect",
+      "desc": "Prefect is a workflow orchestration framework for building resilient data pipelines in Python.",
+      "lang": "Python",
+      "stars": "23,161",
+      "today": "66 stars today",
+      "name_zh": "PrefectHQ / prefect",
+      "desc_zh": "开源项目 PrefectHQ / prefect，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Prefect is a workflow orchestration framework for building resilient data pipelines in Python.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "Shubhamsaboo / awesome-llm-apps",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "desc": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+      "lang": "Python",
+      "stars": "118,605",
+      "today": "408 stars today",
+      "name_zh": "Shubhamsaboo / awesome-llm-apps",
+      "desc_zh": "开源项目 Shubhamsaboo / awesome-llm-apps，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“100+ AI Agent & RAG apps you can actually run — clone, customize, ship.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "anthropics / claude-cookbooks",
+      "url": "https://github.com/anthropics/claude-cookbooks",
+      "desc": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+      "lang": "Jupyter Notebook",
+      "stars": "48,443",
+      "today": "459 stars today",
+      "name_zh": "anthropics / claude-cookbooks",
+      "desc_zh": "开源项目 anthropics / claude-cookbooks，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Jupyter Notebook"
+    },
+    {
+      "name": "home-assistant / core",
+      "url": "https://github.com/home-assistant/core",
+      "desc": "🏡 Open source home automation that puts local control and privacy first.",
+      "lang": "Python",
+      "stars": "89,085",
+      "today": "400 stars today",
+      "name_zh": "home-assistant / core",
+      "desc_zh": "开源项目 home-assistant / core，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“🏡 Open source home automation that puts local control and privacy first.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "Crosstalk-Solutions / project-nomad",
+      "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+      "desc": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
+      "lang": "TypeScript",
+      "stars": "33,819",
+      "today": "125 stars today",
+      "name_zh": "Crosstalk-Solutions / project-nomad",
+      "desc_zh": "开源项目 Crosstalk-Solutions / project-nomad，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "ColeMurray / background-agents",
+      "url": "https://github.com/ColeMurray/background-agents",
+      "desc": "An open-source background agents coding system",
+      "lang": "TypeScript",
+      "stars": "2,267",
+      "today": "16 stars today",
+      "name_zh": "ColeMurray / background-agents",
+      "desc_zh": "开源项目 ColeMurray / background-agents，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An open-source background agents coding system”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "k1tbyte / Wand-Enhancer",
+      "url": "https://github.com/k1tbyte/Wand-Enhancer",
+      "desc": "Advanced UX and interoperability extension for Wand (WeMod) app",
+      "lang": "C#",
+      "stars": "6,974",
+      "today": "609 stars today",
+      "name_zh": "k1tbyte / Wand-Enhancer",
+      "desc_zh": "开源项目 k1tbyte / Wand-Enhancer，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Advanced UX and interoperability extension for Wand (WeMod) app”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "C#"
+    },
+    {
+      "name": "pingdotgg / t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "desc": "[Skip to content](https://github.com/pingdotgg/t3code#start-of-content)",
+      "lang": "TypeScript",
+      "stars": "13,758",
+      "today": "75 stars today",
+      "page_content": "[Skip to content](https://github.com/pingdotgg/t3code#start-of-content)\n## Navigation Menu\nToggle navigation\n[](https://github.com/)\n[Sign in](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fpingdotgg%2Ft3code)\nAppearance settings\n*\nPlatform\n*\nAI CODE CREATION\n*   [GitHub Copilot Write better code with AI](https://github.com/features/copilot)\n*   [GitHub Copilot app Direct agents from issue to merge](https://github.com/features/ai/github-app)\n*   [MCP Registry New Integrate external tools](https://github.com/mcp)\n*\nDEVELOPER WORKFLOWS",
+      "name_zh": "pingdotgg / t3code",
+      "desc_zh": "开源项目 pingdotgg / t3code，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“[Skip to content](https://github.com/pingdotgg/t3code#start-of-content)”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "virattt / ai-hedge-fund",
+      "url": "https://github.com/virattt/ai-hedge-fund",
+      "desc": "An AI Hedge Fund Team\nThis is a proof of concept for an AI-powered hedge fund. The goal of this project is to explore the use of AI to make trading decisions. This project is for **educational** purposes only and is not in",
+      "lang": "Python",
+      "stars": "61,422",
+      "today": "115 stars today",
+      "page_content": "This is a proof of concept for an AI-powered hedge fund. The goal of this project is to explore the use of AI to make trading decisions. This project is for **educational** purposes only and is not intended for real trading or investment.\n> **🚧 The project is evolving.** We're rebuilding it into a persistent, always-on AI hedge fund — a _fund_ as a first-class entity you can backtest, paper-trade, and (opt-in) run live, with the investor agents reimagined as pluggable, backtestable \"alpha models.\" Read the **[Vision →](https://github.com/virattt/ai-hedge-fund/blob/main/VISION.md)** and the **[Roadmap →](https://github.com/virattt/ai-hedge-fund/blob/main/ROADMAP.md)**.\nThis system employs several agents working together:\n1.   Aswath Damodaran Agent - The Dean of Valuation, focuses on story, numbers, and disciplined valuation\n2.   Ben Graham Agent - The godfather of value investing, only buys hidden gems with a margin of safety\n3.   Bill Ackman Agent - An activist investor, takes bold positions and pushes for change\n4.   Cathie Wood Agent - The queen of growth investing, believes in the power of innovation and disruption\n5.   Charlie Munger Agent - Warren Buffett's partner, only buys wonderful businesses at fair prices\n6.   Michael Burry Agent - The Big Short contrarian who hunts for deep value\n7.   Mohnish Pabrai Agent - The Dhandho investor, who looks for doubles at low risk\n8.   Nassim Taleb Agent - The Black Swan risk analyst, focuses on tail risk, antifragility, and asymmetric payoffs\n9.   Peter Lynch Agent - Practical investor who seeks \"ten-baggers\" in everyday businesses\n10.   Phil Fisher Agent - Meticulous growth investor who uses deep \"scuttlebutt\" research\n11.   Rakesh Jhunjhunwala Agent - The Big Bull of India\n12.   Stanley Druckenmiller Agent - Macro legend who hunts for asymmetric opportunities with growth potential",
+      "name_zh": "virattt / ai-hedge-fund",
+      "desc_zh": "开源项目 virattt / ai-hedge-fund，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An AI Hedge Fund Team This is a proof of concept for an AI-powered hedge fund. The goal of this project is to explore the use of AI to make trading decisions. This project is for *”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "chen08209 / FlClash",
+      "url": "https://github.com/chen08209/FlClash",
+      "desc": "A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.",
+      "lang": "Dart",
+      "stars": "45,236",
+      "today": "154 stars today",
+      "name_zh": "chen08209 / FlClash",
+      "desc_zh": "开源项目 chen08209 / FlClash，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Dart"
+    },
+    {
+      "name": "davila7 / claude-code-templates",
+      "url": "https://github.com/davila7/claude-code-templates",
+      "desc": "CLI tool for configuring and monitoring Claude Code",
+      "lang": "Python",
+      "stars": "29,248",
+      "today": "274 stars today",
+      "name_zh": "davila7 / claude-code-templates",
+      "desc_zh": "开源项目 davila7 / claude-code-templates，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“CLI tool for configuring and monitoring Claude Code”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "par274 / sharpemu",
+      "url": "https://github.com/par274/sharpemu",
+      "desc": "An experimental PlayStation 5 emulator project.",
+      "lang": "C#",
+      "stars": "1,287",
+      "today": "314 stars today",
+      "name_zh": "par274 / sharpemu",
+      "desc_zh": "开源项目 par274 / sharpemu，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“An experimental PlayStation 5 emulator project.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "C#"
+    },
+    {
+      "name": "malisper / pgrust",
+      "url": "https://github.com/malisper/pgrust",
+      "desc": "Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
+      "lang": "Rust",
+      "stars": "2,489",
+      "today": "518 stars today",
+      "name_zh": "malisper / pgrust",
+      "desc_zh": "开源项目 malisper / pgrust，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Postgres rewritten in Rust, now passing 100% of the Postgres regression tests”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "Rust"
+    },
+    {
+      "name": "Nutlope / hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "desc": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "lang": "CSS",
+      "stars": "4,310",
+      "today": "155 stars today",
+      "name_zh": "Nutlope / hallmark",
+      "desc_zh": "开源项目 Nutlope / hallmark，归属 AI/Agent 开源生态 方向。它面向大模型、智能体或相关开发工作流；项目原始介绍为“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”。建议结合仓库文档与近期版本记录评估适用场景。",
+      "lang_zh": "CSS"
+    }
+  ],
+  "papers": [
+    {
+      "title": "Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models",
+      "date": "2026-07-10",
+      "summary": "Vision language models (VLMs) have made remarkable progress in visual reasoning during the last decade. Most evaluations have used simple scenes (MS-COCO) that do not showcase complex human interactions or behaviors, only a handful of non-curated human descriptions as a benchmark, and have not focus",
+      "url": "https://arxiv.org/abs/2607.09654v1",
+      "cats": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "title_zh": "论文速读：Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models",
+      "summary_zh": "该论文围绕 AI/LLM 研究展开。核心摘要：Vision language models (VLMs) have made remarkable progress in visual reasoning during the last decade. Most evaluations have used simple scenes (MS-COCO) that do not showcase complex human interactions or behaviors, onl。建议通过 arXiv 原文进一步核验实验设置、数据集与结论。"
+    },
+    {
+      "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
+      "date": "2026-07-10",
+      "summary": "Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testing approaches. While recent adoptions of Large Language Model (LLM) agents have demonstrated promise",
+      "url": "https://arxiv.org/abs/2607.09653v1",
+      "cats": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "title_zh": "论文速读：VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
+      "summary_zh": "该论文围绕 AI/LLM 研究展开。核心摘要：Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testing approaches. While。建议通过 arXiv 原文进一步核验实验设置、数据集与结论。"
+    },
+    {
+      "title": "Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
+      "date": "2026-07-10",
+      "summary": "Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance anomaly interdiction with customer friction. To overcome this without distortive data resampling, w",
+      "url": "https://arxiv.org/abs/2607.09641v1",
+      "cats": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "title_zh": "论文速读：Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
+      "summary_zh": "该论文围绕 AI/LLM 研究展开。核心摘要：Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance anomaly interdictio。建议通过 arXiv 原文进一步核验实验设置、数据集与结论。"
+    },
+    {
+      "title": "Indirect and Direct AI Scaffolding for Computational Problem Posing: A Pilot Experience Report",
+      "date": "2026-07-10",
+      "summary": "Problem posing is a valuable learning activity in computing education, encouraging learners to actively construct, refine, and reflect on problems rather than simply solving them. This experience report presents the design and pilot deployment of two LLM-powered scaffolding systems for supporting pr",
+      "url": "https://arxiv.org/abs/2607.09628v1",
+      "cats": [
+        "cs.HC"
+      ],
+      "title_zh": "论文速读：Indirect and Direct AI Scaffolding for Computational Problem Posing: A Pilot Experience Report",
+      "summary_zh": "该论文围绕 AI/LLM 研究展开。核心摘要：Problem posing is a valuable learning activity in computing education, encouraging learners to actively construct, refine, and reflect on problems rather than simply solving them. This experience report presents the desi。建议通过 arXiv 原文进一步核验实验设置、数据集与结论。"
+    },
+    {
+      "title": "LLM for EDA in Front-End Design: Challenges and Opportunities",
+      "date": "2026-07-10",
+      "summary": "As chip complexity increases and time-to-market pressures grow, front-end design has become a critical bottleneck in chip development. Recently, Large Language Models (LLMs) have shown great potential in Electronic Design Automation (EDA). Beyond specification understanding, LLMs show the potential ",
+      "url": "https://arxiv.org/abs/2607.09616v1",
+      "cats": [
+        "cs.ET",
+        "cs.AR"
+      ],
+      "title_zh": "论文速读：LLM for EDA in Front-End Design: Challenges and Opportunities",
+      "summary_zh": "该论文围绕 AI/LLM 研究展开。核心摘要：As chip complexity increases and time-to-market pressures grow, front-end design has become a critical bottleneck in chip development. Recently, Large Language Models (LLMs) have shown great potential in Electronic Desig。建议通过 arXiv 原文进一步核验实验设置、数据集与结论。"
+    }
+  ],
+  "hn": [
+    {
+      "title": "Old and new apps, via modern coding agents",
+      "url": "https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-12",
+      "page_content": "[![Image 4](https://terrytao.wordpress.com/wp-content/uploads/2020/03/cropped-covid-19-curves-graphic-social-v3.gif)](https://terrytao.wordpress.com/ \"Return to front page\")\n\n[What's new](https://terrytao.wordpress.com/ \"Return to front page\")\nUpdates on my research and expository papers, discussion of open problems, and other maths-related topics. By Terence Tao\n\n*   [Home](https://terrytao.wordpress.com/ \"Return to front page\")\n*   [About](https://terrytao.wordpress.com/about/)\n*   [Career advice](https://terrytao.wordpress.com/career-advice/)\n*   [On writing](https://terrytao.wordpress.com/advice-on-writing-papers/)\n*   [Books](https://terrytao.wordpress.com/books/)\n*   [Mastodon+](https://terrytao.wordpress.com/mastodon-posts/)\n*   [Applets](https://terrytao.wordpress.com/applets/)\n\n*   [Subscribe to feed](https://terrytao.wordpress.com/feed/ \"Subscribe to the What's new feed\")",
+      "title_zh": "行业动态：Old and new apps, via modern coding agents",
+      "summary_zh": "该动态来自 Hacker News，聚焦 AI、模型或智能体进展。"
+    },
+    {
+      "title": "Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper",
+      "url": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-13",
+      "page_content": "![Image 1: Colorful Ploy inflatable forms connected by a translucent tube, representing a production AI agent migrating between model systems](https://storage.googleapis.com/ployai/d21bf4ad-2458-43ee-9561-54c28ab0e85f/user/98bfdea9-ai-generated-1783640379759.webp)\n\nAs of today, Ploy’s agent runs on GPT-5.6 Sol, the flagship tier of the model family OpenAI released this morning. For months, we couldn’t find a model that challenges Claude Opus given our incredibly high bar for quality. That changed with GPT 5.6 Sol. After running it head-to-head against Claude Opus, we’ve made GPT 5.6 Sol the default model powering every Ploy workspace.\n\nThat’s a bigger switch than it sounds. Ploy’s agent builds and edits real marketing websites. It plans a page, reads the codebase, writes components, generates imagery, screenshots its own work, and decides when it’s done. That job description sets a very high bar for a model, and we test every frontier release against it. For the four months Opus held the default slot (first Opus 4.7, then 4.8), nothing we tested beat it. GPT-5.6 is the first model that did.\n\nNot that the first eval run was perfect. It had real failure modes, which we’ll show you. But it did extremely well, and the promise was immediate and specific: builds finishing in less than half the wall-clock time, at 27% lower cost, scoring at or above our incumbent on completed work. Numbers like that buy a model a real migration effort.\n\nDespite using Vercel’s [AI SDK](https://ai-sdk.dev/docs/introduction), a universal LLM SDK, switching from Claude Opus 4.8 to GPT 5.6 Sol required discovering, one eval failure at a time, that the things we think of as “the model” are provider-specific behaviors our whole stack has quietly specialized around: how it fills in tool arguments, how its prompt cache works, how it replays its own reasoning between turns.\n\nHere’s what it took: fix the eval harness, then the tool schemas, then caching, then reasoning replay.\n\n## Step 0: Fix your harness before you trust a single number\n\nOur eval suite runs the real agent against real fixture workspaces. Hundreds of cases, from “build a homepage from scratch” to “is this clone request safe to execute.” Build cases are scored by a visual judge running binary checks against a reference design, ten yes/no questions like _“the hero is a full-bleed photographic scene”_ or _“primary CTAs are rounded rectangles, not pills”_, plus content checks, tool-trajectory checks, and file assertions. Every failed case gets triaged against its full trace: the actual tool calls and model text, not just the score.",
+      "title_zh": "行业动态：Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper",
+      "summary_zh": "该动态来自 Hacker News，聚焦 AI、模型或智能体进展。"
+    },
+    {
+      "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
+      "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-13",
+      "page_content": "",
+      "title_zh": "行业动态：Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
+      "summary_zh": "该动态来自 Hacker News，聚焦 AI、模型或智能体进展。"
+    }
+  ],
+  "news": [
+    {
+      "title": "Anthropic Illuminates LLM J-Space With J-Lens - Forbes",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPNVNTeE9sNGQwOUtyd3BubjBDR2Zod2wtMUtjbTNRb0dvd0VSVnV2ZUo3U241c3oyRnVLQkFsS1l4bWNIc2xuMEJJVE9pLUtQWDhiSVBfNVQwWXdxakRDYWhnZ0lUbG5FamlhZ0UtZGlBbVl3SGZXdXN2YVFtdWNJWmZVVXFTcWMzaF9TdG9ickFIVU5sMU1Pb1pwY080Zw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Sun, 12 Jul 2026 15:56:50 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPNVNTeE9sNGQwOUtyd3BubjBDR2Zod2wtMUtjbTNRb0dvd0VSVnV2ZUo3U241c3oyRnVLQkFsS1l4bWNIc2xuMEJJ",
+      "page_content": "",
+      "title_zh": "行业动态：Anthropic Illuminates LLM J-Space With J-Lens - Forbes",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPNVNTeE9sNGQwOUtyd3BubjBDR2Zod2wtMUtjbTNRb0dvd0VSVnV2ZUo3U241c3oyRnVLQkFsS1l4bWNIc2xuMEJJ"
+    },
+    {
+      "title": "Robinhood Brings AI Agent Trading to Crypto After 70,000 Accounts Join Beta - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQd3RwdUVUWE5CeFAwRkNBY2hWRjUxeUtEaWQ5a1gzX0VxMzBFNHhCTXY0VThTdTlMVl9HYVJDMGJnYXZvZDNKU2pOUU0xTGxnWFZnUXFocDhoSWh6SDhyS2lHclpkU0IweU42NXRONkJ1UTVXZk9mVmNwTVBSRzlIMi00ZWtkaXJWOVZETWtrWWFvWEZwbFhTdDhUSmlzVVk?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Sun, 12 Jul 2026 23:46:00 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQd3RwdUVUWE5CeFAwRkNBY2hWRjUxeUtEaWQ5a1gzX0VxMzBFNHhCTXY0VThTdTlMVl9HYVJDMGJnYXZvZDNKU2pO",
+      "page_content": "",
+      "title_zh": "行业动态：Robinhood Brings AI Agent Trading to Crypto After 70,000 Accounts Join Beta - Yahoo Finance",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQd3RwdUVUWE5CeFAwRkNBY2hWRjUxeUtEaWQ5a1gzX0VxMzBFNHhCTXY0VThTdTlMVl9HYVJDMGJnYXZvZDNKU2pO"
+    },
+    {
+      "title": "One Way to Build a Great AI Agent: Just Start With a Dashboard, Then Add the Agent - saastr.com",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPX09tZG5BNTVBWVFrdUtqOUFmUGU2Uk9zNlplSTN1OTZhdzFPMlItejhSMjhsZExpb2FReWc4aXp4N29EblB0YXJCUTYwd0YxM2lXWHFrWHBlTUMxckk4cThOUng1UUl2TmdRNHZxVUNDQjc4amliTDBLbE9BZ0VZOXp6ajVjTGMwYVBYcWhCaEx6TDg1SkZZZnNPd2dGT1VCUk1qcVRPZw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Sat, 11 Jul 2026 17:36:29 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPX09tZG5BNTVBWVFrdUtqOUFmUGU2Uk9zNlplSTN1OTZhdzFPMlItejhSMjhsZExpb2FReWc4aXp4N29EblB0YXJC",
+      "page_content": "",
+      "title_zh": "行业动态：One Way to Build a Great AI Agent: Just Start With a Dashboard, Then Add the Agent - saastr.com",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPX09tZG5BNTVBWVFrdUtqOUFmUGU2Uk9zNlplSTN1OTZhdzFPMlItejhSMjhsZExpb2FReWc4aXp4N29EblB0YXJC"
+    },
+    {
+      "title": "AI Model Co-Design: Hardware-Friendly LLM Design | NVIDIA Technical Blog - NVIDIA Developer",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NHeEdVSXgzTTYteWEyNzdvX3FXd1ZOM2FWVjJzcXZvenppcVFIckx3azVJRmh0Rkw1NFV0UzVQR21Wb3RFWHhmd3c?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 10 Jul 2026 17:16:10 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NH",
+      "page_content": "",
+      "title_zh": "行业动态：AI Model Co-Design: Hardware-Friendly LLM Design | NVIDIA Technical Blog - NVIDIA Developer",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NH"
+    },
+    {
+      "title": "Similarweb: Large LLM Contracts Represent A New Era For This Analytics Company - Seeking Alpha",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPQm51ai1FLTFmWjRjaGZ0eGlwc1ZWbGlETEtPOEpTOW9yRHA4MEdUQmVQV2trbWZSTUZ3U25oQ3VDMUV6NTFzS1AwVEMwSVMzNFMxWWdkMFNQb3RHVEhzT1FyMU11ZTI4a3hOXzNBem9zM2FrellxZkZ6Tm5CaFM0Ni1rMkZ4RUZvZ2Y4dGR2TDdScGhpU1VSTDloVFZ3RWYwN0FpcVZTWnFJa3RTMVJBWGtnSzViU1dHMXc?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Mon, 13 Jul 2026 00:14:30 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPQm51ai1FLTFmWjRjaGZ0eGlwc1ZWbGlETEtPOEpTOW9yRHA4MEdUQmVQV2trbWZSTUZ3U25oQ3VDMUV6NTFzS1Aw",
+      "page_content": "",
+      "title_zh": "行业动态：Similarweb: Large LLM Contracts Represent A New Era For This Analytics Company - Seeking Alpha",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPQm51ai1FLTFmWjRjaGZ0eGlwc1ZWbGlETEtPOEpTOW9yRHA4MEdUQmVQV2trbWZSTUZ3U25oQ3VDMUV6NTFzS1Aw"
+    },
+    {
+      "title": "Introducing Oracle AI Agent Memory 26.6: Memory With Receipts - Oracle Blogs",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE05TkZDVTVkYUtNbXNyTENFa19YYXIzeGFuSGl5bi1iT2tqOFB5VlZ1VFgyMDloVUsySE03ZjI0MFR6NFN0bWF2ZTFnUENJcW1uMHZBNVB3emdJODdpZGhjX0ZHendNbmdxU18tUzd3?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 10 Jul 2026 14:41:39 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE05TkZDVTVkYUtNbXNyTENFa19YYXIzeGFuSGl5bi1iT2tqOFB5VlZ1VFgyMDloVUsySE03ZjI0MFR6NFN0bWF2ZTFn",
+      "page_content": "",
+      "title_zh": "行业动态：Introducing Oracle AI Agent Memory 26.6: Memory With Receipts - Oracle Blogs",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE05TkZDVTVkYUtNbXNyTENFa19YYXIzeGFuSGl5bi1iT2tqOFB5VlZ1VFgyMDloVUsySE03ZjI0MFR6NFN0bWF2ZTFn"
+    },
+    {
+      "title": "2026 Model Context Protocol Server and AI Agent Hackathon - GSA (.gov)",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUkZoLXF1TXpZMWVJUG90WkstdjR6elRYX1IzV0tjcFVLRV95R0FBd1oxdEV2b0FxaGpMNHhrUFliUnlyNV9ZWmRaLUdIaUozQWIybGd3RXlYdDc1MkdNa3FFbTdEU2ljUmRUWk54QkRJYVlkOGswcTN1OUxRZy1MTnQ5NXI0YVc1WEk0SDROSXFibjQ3bGlrYV9zRzE5WWQyOURNTnZ6LUZzdw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 10 Jul 2026 19:01:57 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUkZoLXF1TXpZMWVJUG90WkstdjR6elRYX1IzV0tjcFVLRV95R0FBd1oxdEV2b0FxaGpMNHhrUFliUnlyNV9ZWmRa",
+      "page_content": "",
+      "title_zh": "行业动态：2026 Model Context Protocol Server and AI Agent Hackathon - GSA (.gov)",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUkZoLXF1TXpZMWVJUG90WkstdjR6elRYX1IzV0tjcFVLRV95R0FBd1oxdEV2b0FxaGpMNHhrUFliUnlyNV9ZWmRa"
+    },
+    {
+      "title": "(OPINION) Liability in hiring: Who answers for AI agent decisions? - Oil City News",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNX0xFMXJ5Y2dyU1FORTJINzZTMk1oeWotN05OTTcyanExdldPcnZqSXVKWHJOaVdqN0lNTnJ3Tlk4NUZrSjh2UHZiemd1dXc3MkZqOTI1Mjh5cklCSXBxM3kyUGxzelo1UXpKVUpIUHpXeklYU2U4ckoxRHRzUU91ZVdHUEZUcGQzbE9PNUJrNU5Ddm8yUEl1eW9ydWtMZDNKX0FlT0Z3?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Sat, 11 Jul 2026 14:13:00 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNX0xFMXJ5Y2dyU1FORTJINzZTMk1oeWotN05OTTcyanExdldPcnZqSXVKWHJOaVdqN0lNTnJ3Tlk4NUZrSjh2UHZi",
+      "page_content": "",
+      "title_zh": "行业动态：(OPINION) Liability in hiring: Who answers for AI agent decisions? - Oil City News",
+      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNX0xFMXJ5Y2dyU1FORTJINzZTMk1oeWotN05OTTcyanExdldPcnZqSXVKWHJOaVdqN0lNTnJ3Tlk4NUZrSjh2UHZi"
+    }
+  ],
+  "blogs": [],
+  "github_strategy": {
+    "query": "LLM OR AI agent OR MCP OR RAG",
+    "filters": "pushed:>2026-06-13",
+    "sort": "stars",
+    "label": "热门新势力（近 30 天活跃）"
+  }
+}
