@@ -587,8 +587,8 @@
       "cls": "hn",
       "date": "2026-07-12",
       "page_content": "[![Image 4](https://terrytao.wordpress.com/wp-content/uploads/2020/03/cropped-covid-19-curves-graphic-social-v3.gif)](https://terrytao.wordpress.com/ \"Return to front page\")\n\n[What's new](https://terrytao.wordpress.com/ \"Return to front page\")\nUpdates on my research and expository papers, discussion of open problems, and other maths-related topics. By Terence Tao\n\n*   [Home](https://terrytao.wordpress.com/ \"Return to front page\")\n*   [About](https://terrytao.wordpress.com/about/)\n*   [Career advice](https://terrytao.wordpress.com/career-advice/)\n*   [On writing](https://terrytao.wordpress.com/advice-on-writing-papers/)\n*   [Books](https://terrytao.wordpress.com/books/)\n*   [Mastodon+](https://terrytao.wordpress.com/mastodon-posts/)\n*   [Applets](https://terrytao.wordpress.com/applets/)\n\n*   [Subscribe to feed](https://terrytao.wordpress.com/feed/ \"Subscribe to the What's new feed\")",
-      "title_zh": "行业动态：Old and new apps, via modern coding agents",
-      "summary_zh": "该动态来自 Hacker News，聚焦 AI、模型或智能体进展。"
+      "title_zh": "借助现代编码 Agent 改造新旧应用",
+      "summary_zh": "文章讨论开发者如何利用现代编码 Agent 理解遗留系统、生成改造方案并加快新功能实现。核心价值不只是生成代码，而是让 Agent 在现有架构、测试和业务约束下参与渐进式现代化。"
     },
     {
       "title": "Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper",
@@ -597,8 +597,8 @@
       "cls": "hn",
       "date": "2026-07-13",
       "page_content": "![Image 1: Colorful Ploy inflatable forms connected by a translucent tube, representing a production AI agent migrating between model systems](https://storage.googleapis.com/ployai/d21bf4ad-2458-43ee-9561-54c28ab0e85f/user/98bfdea9-ai-generated-1783640379759.webp)\n\nAs of today, Ploy’s agent runs on GPT-5.6 Sol, the flagship tier of the model family OpenAI released this morning. For months, we couldn’t find a model that challenges Claude Opus given our incredibly high bar for quality. That changed with GPT 5.6 Sol. After running it head-to-head against Claude Opus, we’ve made GPT 5.6 Sol the default model powering every Ploy workspace.\n\nThat’s a bigger switch than it sounds. Ploy’s agent builds and edits real marketing websites. It plans a page, reads the codebase, writes components, generates imagery, screenshots its own work, and decides when it’s done. That job description sets a very high bar for a model, and we test every frontier release against it. For the four months Opus held the default slot (first Opus 4.7, then 4.8), nothing we tested beat it. GPT-5.6 is the first model that did.\n\nNot that the first eval run was perfect. It had real failure modes, which we’ll show you. But it did extremely well, and the promise was immediate and specific: builds finishing in less than half the wall-clock time, at 27% lower cost, scoring at or above our incumbent on completed work. Numbers like that buy a model a real migration effort.\n\nDespite using Vercel’s [AI SDK](https://ai-sdk.dev/docs/introduction), a universal LLM SDK, switching from Claude Opus 4.8 to GPT 5.6 Sol required discovering, one eval failure at a time, that the things we think of as “the model” are provider-specific behaviors our whole stack has quietly specialized around: how it fills in tool arguments, how its prompt cache works, how it replays its own reasoning between turns.\n\nHere’s what it took: fix the eval harness, then the tool schemas, then caching, then reasoning replay.\n\n## Step 0: Fix your harness before you trust a single number\n\nOur eval suite runs the real agent against real fixture workspaces. Hundreds of cases, from “build a homepage from scratch” to “is this clone request safe to execute.” Build cases are scored by a visual judge running binary checks against a reference design, ten yes/no questions like _“the hero is a full-bleed photographic scene”_ or _“primary CTAs are rounded rectangles, not pills”_, plus content checks, tool-trajectory checks, and file assertions. Every failed case gets triaged against its full trace: the actual tool calls and model text, not just the score.",
-      "title_zh": "行业动态：Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper",
-      "summary_zh": "该动态来自 Hacker News，聚焦 AI、模型或智能体进展。"
+      "title_zh": "生产级 AI Agent 迁移至 GPT-5.6：速度提升 2.2 倍、成本下降 27%",
+      "summary_zh": "案例分享一个生产 Agent 迁移到 GPT-5.6 后的实测结果：端到端运行速度约提升 2.2 倍，成本下降约 27%。文章提醒迁移应结合真实负载、提示词、工具调用和质量评测，而非只比较模型基准。"
     },
     {
       "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
@@ -607,8 +607,8 @@
       "cls": "hn",
       "date": "2026-07-13",
       "page_content": "We put Claude Code and OpenCode on the same model, the same machine, and the same tasks, then examined everything sent and received.\n\n**Claude Code is far hungrier:**\n\nWhen we asked both harnesses for a one-line reply, Claude Code used roughly 33,000 tokens of system prompt, tool schemas, and injected scaffolding before the prompt even arrived. OpenCode used about 7,000.\n\nThat first test was on Sonnet 4.5. Re-running on Claude Fable 5 narrowed the gap to about 3.3x, because Claude Code sends newer models a much smaller system prompt; still far hungrier, but the multiple is model-dependent.\n\n**Claude Code is far more cache inefficient:**\n\nOpenCode's request prefix was byte-identical in every run we captured; it paid to cache its payload once per session and read it back for pennies.\n\nClaude Code on the other hand re-wrote tens of thousands of prompt-cache tokens mid-session, run after run, and on the same task wrote up to 54x more cache tokens than OpenCode.\n\nCache writes of course are billed at a premium, which accounted for the usage dashboard climbing when using Claude Code.",
-      "title_zh": "行业动态：Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
-      "summary_zh": "该动态来自 Hacker News，聚焦 AI、模型或智能体进展。"
+      "title_zh": "Claude Code 与 OpenCode 的预置上下文开销比较",
+      "summary_zh": "文章比较两种编码 Agent 在真正读取用户提示前发送的上下文 token：Claude Code 约 3.3 万、OpenCode 约 7000。该差异会影响首轮延迟、成本和上下文余量，也提示开发者需关注系统提示、工具定义与项目索引的上下文预算。"
     }
   ],
   "news": [
@@ -620,8 +620,8 @@
       "date": "Sun, 12 Jul 2026 15:56:50 GMT",
       "desc": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPNVNTeE9sNGQwOUtyd3BubjBDR2Zod2wtMUtjbTNRb0dvd0VSVnV2ZUo3U241c3oyRnVLQkFsS1l4bWNIc2xuMEJJ",
       "page_content": "",
-      "title_zh": "行业动态：Anthropic Illuminates LLM J-Space With J-Lens - Forbes",
-      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPNVNTeE9sNGQwOUtyd3BubjBDR2Zod2wtMUtjbTNRb0dvd0VSVnV2ZUo3U241c3oyRnVLQkFsS1l4bWNIc2xuMEJJ"
+      "title_zh": "Anthropic 用 J-Lens 揭示 LLM 的 J-space 内部表征",
+      "summary_zh": "报道解读 Anthropic 的可解释性研究：研究者借助 Jacobian lens 识别出语言模型激活中的稀疏子空间 J-space，认为它可能承担类似“全局工作空间”的内部信息共享作用。该结果有助于理解模型如何在隐藏状态中整合、表述和调控信息。"
     },
     {
       "title": "Robinhood Brings AI Agent Trading to Crypto After 70,000 Accounts Join Beta - Yahoo Finance",
@@ -631,8 +631,8 @@
       "date": "Sun, 12 Jul 2026 23:46:00 GMT",
       "desc": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQd3RwdUVUWE5CeFAwRkNBY2hWRjUxeUtEaWQ5a1gzX0VxMzBFNHhCTXY0VThTdTlMVl9HYVJDMGJnYXZvZDNKU2pO",
       "page_content": "",
-      "title_zh": "行业动态：Robinhood Brings AI Agent Trading to Crypto After 70,000 Accounts Join Beta - Yahoo Finance",
-      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQd3RwdUVUWE5CeFAwRkNBY2hWRjUxeUtEaWQ5a1gzX0VxMzBFNHhCTXY0VThTdTlMVl9HYVJDMGJnYXZvZDNKU2pO"
+      "title_zh": "Robinhood 将 AI Agent 交易扩展至加密资产",
+      "summary_zh": "Robinhood 在股票和期权 Agentic Trading 测试获得约 7 万账户后，计划把能力扩展到加密资产。符合条件的用户可通过 Trading MCP 连接自己选择的 AI 模型，并在独立账户中查看盈亏、监控或随时断开代理。"
     },
     {
       "title": "One Way to Build a Great AI Agent: Just Start With a Dashboard, Then Add the Agent - saastr.com",
@@ -642,8 +642,8 @@
       "date": "Sat, 11 Jul 2026 17:36:29 GMT",
       "desc": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPX09tZG5BNTVBWVFrdUtqOUFmUGU2Uk9zNlplSTN1OTZhdzFPMlItejhSMjhsZExpb2FReWc4aXp4N29EblB0YXJC",
       "page_content": "",
-      "title_zh": "行业动态：One Way to Build a Great AI Agent: Just Start With a Dashboard, Then Add the Agent - saastr.com",
-      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPX09tZG5BNTVBWVFrdUtqOUFmUGU2Uk9zNlplSTN1OTZhdzFPMlItejhSMjhsZExpb2FReWc4aXp4N29EblB0YXJC"
+      "title_zh": "构建 AI Agent 的务实路径：先做可观测仪表盘",
+      "summary_zh": "文章主张先搭建能展示数据、任务状态和人工操作的仪表盘，再逐步把重复步骤交给 Agent。这样团队能先验证工作流与数据质量，并为代理行为保留人工审核、回退和可观测性。"
     },
     {
       "title": "AI Model Co-Design: Hardware-Friendly LLM Design | NVIDIA Technical Blog - NVIDIA Developer",
@@ -653,8 +653,8 @@
       "date": "Fri, 10 Jul 2026 17:16:10 GMT",
       "desc": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NH",
       "page_content": "",
-      "title_zh": "行业动态：AI Model Co-Design: Hardware-Friendly LLM Design | NVIDIA Technical Blog - NVIDIA Developer",
-      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NH"
+      "title_zh": "NVIDIA：通过软硬件协同设计打造更高效的 LLM",
+      "summary_zh": "NVIDIA 技术文章讨论模型架构、量化与推理硬件的协同优化：模型设计若能匹配 GPU 的计算和内存特性，便可在不显著损失效果的前提下降低延迟、显存占用和单位推理成本。"
     },
     {
       "title": "Similarweb: Large LLM Contracts Represent A New Era For This Analytics Company - Seeking Alpha",
@@ -664,8 +664,8 @@
       "date": "Mon, 13 Jul 2026 00:14:30 GMT",
       "desc": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPQm51ai1FLTFmWjRjaGZ0eGlwc1ZWbGlETEtPOEpTOW9yRHA4MEdUQmVQV2trbWZSTUZ3U25oQ3VDMUV6NTFzS1Aw",
       "page_content": "",
-      "title_zh": "行业动态：Similarweb: Large LLM Contracts Represent A New Era For This Analytics Company - Seeking Alpha",
-      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPQm51ai1FLTFmWjRjaGZ0eGlwc1ZWbGlETEtPOEpTOW9yRHA4MEdUQmVQV2trbWZSTUZ3U25oQ3VDMUV6NTFzS1Aw"
+      "title_zh": "Similarweb 大型 LLM 合同推动数据分析业务进入新阶段",
+      "summary_zh": "文章关注 Similarweb 向大模型客户提供数据与分析服务的商业机会。随着模型训练、检索和 Agent 产品需要持续的高质量网络数据，数据供应商的长期合同和授权模式可能成为新的增长来源。"
     },
     {
       "title": "Introducing Oracle AI Agent Memory 26.6: Memory With Receipts - Oracle Blogs",
@@ -675,8 +675,8 @@
       "date": "Fri, 10 Jul 2026 14:41:39 GMT",
       "desc": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE05TkZDVTVkYUtNbXNyTENFa19YYXIzeGFuSGl5bi1iT2tqOFB5VlZ1VFgyMDloVUsySE03ZjI0MFR6NFN0bWF2ZTFn",
       "page_content": "",
-      "title_zh": "行业动态：Introducing Oracle AI Agent Memory 26.6: Memory With Receipts - Oracle Blogs",
-      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE05TkZDVTVkYUtNbXNyTENFa19YYXIzeGFuSGl5bi1iT2tqOFB5VlZ1VFgyMDloVUsySE03ZjI0MFR6NFN0bWF2ZTFn"
+      "title_zh": "Oracle 发布 AI Agent Memory 26.6：带“凭据”的记忆",
+      "summary_zh": "Oracle 为 Agent Memory 26.6 引入“Memory With Receipts”理念：Agent 不只保存结论，也保留来源、上下文和可追溯证据。该设计旨在让长期记忆更可审计、可验证，降低代理在企业任务中无依据引用或遗忘出处的风险。"
     },
     {
       "title": "2026 Model Context Protocol Server and AI Agent Hackathon - GSA (.gov)",
@@ -686,8 +686,8 @@
       "date": "Fri, 10 Jul 2026 19:01:57 GMT",
       "desc": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUkZoLXF1TXpZMWVJUG90WkstdjR6elRYX1IzV0tjcFVLRV95R0FBd1oxdEV2b0FxaGpMNHhrUFliUnlyNV9ZWmRa",
       "page_content": "",
-      "title_zh": "行业动态：2026 Model Context Protocol Server and AI Agent Hackathon - GSA (.gov)",
-      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUkZoLXF1TXpZMWVJUG90WkstdjR6elRYX1IzV0tjcFVLRV95R0FBd1oxdEV2b0FxaGpMNHhrUFliUnlyNV9ZWmRa"
+      "title_zh": "美国 GSA 举办 MCP Server 与 AI Agent 黑客松",
+      "summary_zh": "美国总务管理局发起面向 Model Context Protocol 服务端和 AI Agent 的黑客松，鼓励参赛者探索政府数据、工具与模型的安全连接方式。活动反映公共部门也在关注可互操作、可控的 Agent 基础设施。"
     },
     {
       "title": "(OPINION) Liability in hiring: Who answers for AI agent decisions? - Oil City News",
@@ -697,8 +697,8 @@
       "date": "Sat, 11 Jul 2026 14:13:00 GMT",
       "desc": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNX0xFMXJ5Y2dyU1FORTJINzZTMk1oeWotN05OTTcyanExdldPcnZqSXVKWHJOaVdqN0lNTnJ3Tlk4NUZrSjh2UHZi",
       "page_content": "",
-      "title_zh": "行业动态：(OPINION) Liability in hiring: Who answers for AI agent decisions? - Oil City News",
-      "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNX0xFMXJ5Y2dyU1FORTJINzZTMk1oeWotN05OTTcyanExdldPcnZqSXVKWHJOaVdqN0lNTnJ3Tlk4NUZrSjh2UHZi"
+      "title_zh": "招聘中的 AI Agent 决策：责任由谁承担？",
+      "summary_zh": "评论文章讨论 AI 代理参与筛选候选人、推荐或拒绝决策后的责任归属。重点在于组织不能把歧视、错误或合规风险简单归因于工具，而应保留人工监督、申诉渠道、记录与明确的责任主体。"
     }
   ],
   "blogs": [],
