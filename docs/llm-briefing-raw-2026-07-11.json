@@ -1,0 +1,638 @@
+{
+  "date": "2026-07-11",
+  "github": [
+    {
+      "name": "stas00/ml-engineering",
+      "desc": "Machine Learning Engineering Open Book",
+      "stars": 18386,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/stas00/ml-engineering",
+      "topics": [
+        "ai",
+        "debugging",
+        "gpus",
+        "inference",
+        "large-language-models"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "liyupi/ai-guide",
+      "desc": "程序员鱼皮的 AI 资源大全 + Vibe Coding 零基础教程，分享 OpenClaw 保姆级教程、大模型玩法（DeepSeek / GPT / Gemini / Claude / GLM）、最新 AI 资讯、Prompt 提示词大全、AI 知识百科（Agent Skills / RAG / MCP / A2A）、AI 编程教程（Harness Engineering）、AI 工具用法（Cursor / Claude Code / TRAE / Codex / Copilot）、AI 开发框架教程（Spring AI / LangChain）、AI 产品变现指南，帮你快速掌握 AI 技术，走在时代前沿。本项目为开源文档 aiguide，已升级为鱼皮 AI 导航网站",
+      "stars": 17166,
+      "lang": "JavaScript",
+      "updated": "2026-07-13",
+      "url": "https://github.com/liyupi/ai-guide",
+      "topics": [
+        "ai",
+        "artificial-intelligence",
+        "chatgpt",
+        "claude",
+        "codex"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "chiphuyen/aie-book",
+      "desc": "[WIP] Resources for AI engineers. Also contains supporting materials for the book AI Engineering (Chip Huyen, 2025)",
+      "stars": 16473,
+      "lang": "Jupyter Notebook",
+      "updated": "2026-07-12",
+      "url": "https://github.com/chiphuyen/aie-book",
+      "topics": [],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "visenger/awesome-mlops",
+      "desc": "A curated list of references for MLOps ",
+      "stars": 13953,
+      "lang": "",
+      "updated": "2026-07-12",
+      "url": "https://github.com/visenger/awesome-mlops",
+      "topics": [
+        "ai",
+        "data-science",
+        "devops",
+        "engineering",
+        "federated-learning"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "coleam00/context-engineering-intro",
+      "desc": "Context engineering is the new vibe coding - it's the way to actually make AI coding assistants work. Claude Code is the best for this so that's what this repo is centered around, but you can apply this strategy with any AI coding assistant!",
+      "stars": 13696,
+      "lang": "Python",
+      "updated": "2026-07-13",
+      "url": "https://github.com/coleam00/context-engineering-intro",
+      "topics": [],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "Orchestra-Research/AI-Research-SKILLs",
+      "desc": "Comprehensive open-source library of AI research and engineering skills for any AI model. Package the skills and your claude code/codex/gemini agent will be an AI research agent with full horsepower. Maintained by Orchestra Research.",
+      "stars": 10638,
+      "lang": "TeX",
+      "updated": "2026-07-13",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+      "topics": [
+        "ai",
+        "ai-research",
+        "claude",
+        "claude-code",
+        "claude-skills"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.7.2",
+          "name": "v1.7.2 — Qoder Agent Support",
+          "date": "2026-06-16",
+          "summary": "Qoder is now a first-class supported agent. The installer auto-detects Qoder and installs skills natively to ~/.qoder/sk；npx @orchestra-research/ai-research-skills；The model-merging skill (19-emerging-techniques) gains a label-free coefficient-select"
+        },
+        {
+          "tag": "v1.7.1",
+          "name": "v1.7.1 — Inventory Consistency, Drift Guard & Security Hardening",
+          "date": "2026-06-15",
+          "summary": "Maintenance & hardening release. (The 98-skill content milestone shipped in v1.6.0 with the ARA category.)；Corrected stale counts that had drifted apart across CLAUDE.md (said 90), CONTRIBUTING.md (86/22), the README sync line ；New scripts/check-inve"
+        },
+        {
+          "tag": "v1.4.0",
+          "name": "v1.4.0 - Autoresearch: Autonomous AI Research from Idea to Paper",
+          "date": "2026-03-16",
+          "summary": "WELCOME.md: cold-start bootstrap；Agent-friendly install path；Windows support；Research Ideation (21-research-ideation) added to npm installer categories"
+        }
+      ]
+    },
+    {
+      "name": "walkinglabs/learn-harness-engineering",
+      "desc": "Harness engineering beginner tutorial, from 0 to 1",
+      "stars": 10306,
+      "lang": "TypeScript",
+      "updated": "2026-07-13",
+      "url": "https://github.com/walkinglabs/learn-harness-engineering",
+      "topics": [
+        "agent",
+        "agentic",
+        "agentic-ai",
+        "ai",
+        "ai-agent"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "ZeroLu/awesome-nanobanana-pro",
+      "desc": "🚀 An awesome list of curated Nano Banana pro prompts and examples. Your go-to resource for mastering prompt engineering and exploring the creative potential of the Nano banana pro(Nano banana 2) AI image model.",
+      "stars": 10171,
+      "lang": "",
+      "updated": "2026-07-13",
+      "url": "https://github.com/ZeroLu/awesome-nanobanana-pro",
+      "topics": [
+        "gemini",
+        "nanobanana",
+        "nanobanana-pro",
+        "nanobanana2",
+        "nanobananapro"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "mrexodia/ida-pro-mcp",
+      "desc": "AI-powered reverse engineering assistant that bridges IDA Pro with language models through MCP.",
+      "stars": 10058,
+      "lang": "Python",
+      "updated": "2026-07-12",
+      "url": "https://github.com/mrexodia/ida-pro-mcp",
+      "topics": [
+        "ai",
+        "aiagent",
+        "binary-analysis",
+        "ida-plugin",
+        "ida-pro"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "1.4.0",
+          "name": "1.4.0",
+          "date": "2025-10-06",
+          "summary": "add idalib-based MCP server in https；Add debugger mpc function in https；Add functionality to list globals in https://github.com/mrexodia/ida-pro-mcp/pull/47；Added command to find xrefs to struct fields in https://github.com/mrexodia/ida-pro-mcp/pull/"
+        },
+        {
+          "tag": "1.3.0",
+          "name": "1.3.0",
+          "date": "2025-04-09",
+          "summary": "add rename & retype for gloabl variable in https://github.com/mrexodia/ida-pro-mcp/pull/14；Implement list_strings and search_strings in https://github.com/mrexodia/ida-pro-mcp/pull/12；handle tinfo_t() exception when ctor not supported in https://gith"
+        },
+        {
+          "tag": "1.2.0",
+          "name": "1.2.0",
+          "date": "2025-03-29",
+          "summary": "add some tips in https；Fix resolve get_function compatibility in https://github.com/mrexodia/ida-pro-mcp/pull/5；Added support to resolve demangled names found in HexRays output in https://github.com/mrexodia/ida-；@gmh5225 made their first contributio"
+        }
+      ]
+    },
+    {
+      "name": "VoltAgent/voltagent",
+      "desc": "AI Agent Engineering Platform built on an Open Source TypeScript AI Agent Framework",
+      "stars": 10028,
+      "lang": "TypeScript",
+      "updated": "2026-07-13",
+      "url": "https://github.com/VoltAgent/voltagent",
+      "topics": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "ai-agents-framework",
+        "aiagentframework"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "@voltagent/core@2.9.0",
+          "name": "@voltagent/core@2.9.0",
+          "date": "2026-07-08",
+          "summary": "#1372 4a3100b"
+        },
+        {
+          "tag": "@voltagent/server-core@2.1.19",
+          "name": "@voltagent/server-core@2.1.19",
+          "date": "2026-07-01",
+          "summary": "#1331 887213b；Updated dependencies [6b26a8f, 9dc0314]；@voltagent/core@2.8.1"
+        },
+        {
+          "tag": "@voltagent/sandbox-e2b@2.0.3",
+          "name": "@voltagent/sandbox-e2b@2.0.3",
+          "date": "2026-07-01",
+          "summary": "#1356 2b66ae3"
+        }
+      ]
+    },
+    {
+      "name": "spring-projects/spring-ai",
+      "desc": "An Application Framework for AI Engineering",
+      "stars": 9115,
+      "lang": "Java",
+      "updated": "2026-07-13",
+      "url": "https://github.com/spring-projects/spring-ai",
+      "topics": [
+        "artificial-intelligence",
+        "java",
+        "spring-ai"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v2.0.0",
+          "name": "Spring AI 2.0.0",
+          "date": "2026-06-12",
+          "summary": "Update Google GenAI models #6406；Use only Jackson 2 in OpenAiChatModel #6392；Make org.springframework.ai.image.observation null-marked #6388；Polish Prompt #6387"
+        },
+        {
+          "tag": "v1.1.8",
+          "name": "Spring AI 1.1.8",
+          "date": "2026-06-12",
+          "summary": "Add missing values to ZhiPuAiApi.ChatCompletionFinishReason #5532"
+        },
+        {
+          "tag": "v1.0.9",
+          "name": "Spring AI 1.0.9",
+          "date": "2026-06-12",
+          "summary": "Deprecate Pixtral models #6148"
+        }
+      ]
+    },
+    {
+      "name": "zhaoxuya520/reverse-skill",
+      "desc": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+      "stars": 8143,
+      "lang": "PowerShell",
+      "updated": "2026-07-13",
+      "url": "https://github.com/zhaoxuya520/reverse-skill",
+      "topics": [],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "NirDiamant/Prompt_Engineering",
+      "desc": "22 prompt engineering techniques with hands-on Jupyter Notebook tutorials, from fundamental concepts to advanced strategies for leveraging LLMs.",
+      "stars": 7671,
+      "lang": "Jupyter Notebook",
+      "updated": "2026-07-12",
+      "url": "https://github.com/NirDiamant/Prompt_Engineering",
+      "topics": [
+        "ai",
+        "chain-of-thought",
+        "chatgpt",
+        "claude",
+        "few-shot-learning"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "xirong/my-git",
+      "desc": "A practical Git & GitHub handbook for modern engineering teams and AI-native development workflows. |  现代工程团队与 AI 编程时代的 Git / GitHub 实战手册",
+      "stars": 7397,
+      "lang": "Python",
+      "updated": "2026-07-10",
+      "url": "https://github.com/xirong/my-git",
+      "topics": [
+        "ai-coding",
+        "ai-native-development",
+        "git",
+        "git-flow",
+        "git-workflow"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v2.1.0",
+          "name": "v2.1.0: AI Agent Governance and Conventions",
+          "date": "2026-06-11",
+          "summary": "Added the AI Agent Governance guide；Added the AGENTS.md template, copyable into team repositories, with setup commands, required verific；This repository now follows its own recommendations: a root AGENTS.md, AI-assisted contribution rule；Expanded Mul"
+        },
+        {
+          "tag": "v2.0.1",
+          "name": "v2.0.1: Open Source Governance and Maintenance Updates",
+          "date": "2026-06-07",
+          "summary": "Added a root LICENSE；Added root CONTRIBUTING.md；Added root ROADMAP.md；Added root MAINTAINERS.md"
+        },
+        {
+          "tag": "v2.0.0",
+          "name": "v2.0.0: Modern Git & AI-Native Engineering Handbook",
+          "date": "2026-06-03",
+          "summary": "更新仓库定位，面向现代工程团队与 AI 编程时代的 Git / GitHub 实战场景；新增 AI Native Git Workflow、AI 代码 Review、AI 变更审查实战样例；新增团队 Git 工作流指南，覆盖 GitHub Flow、GitLab Flow、Gitflow、Trunk-Based Development、Release Branch 等选型；新增 GitHub 工程治理内容，覆盖分支保护、Rulesets、CODEOWNERS、Merge Queue、Action"
+        }
+      ]
+    },
+    {
+      "name": "cobusgreyling/loop-engineering",
+      "desc": "Practical patterns, starters & CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). Includes loop-audit, loop-init, loop-cost.",
+      "stars": 7212,
+      "lang": "JavaScript",
+      "updated": "2026-07-13",
+      "url": "https://github.com/cobusgreyling/loop-engineering",
+      "topics": [
+        "agentic-ai",
+        "ai-agents",
+        "ai-coding",
+        "anthropic",
+        "automation"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.5.0",
+          "name": "v1.5.0 — Community Tools Drop",
+          "date": "2026-06-30",
+          "summary": "Seven community PRs merged. Three new tools ship. One command to try everything.；npx @cobusgreyling/loop-init . --pattern daily-triage --tool grok；npx @cobusgreyling/loop-cost --pattern daily-triage --level L1 --cadence 1d"
+        }
+      ]
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "Dicklesworthstone / destructive_command_guard",
+      "url": "https://github.com/Dicklesworthstone/destructive_command_guard",
+      "desc": "The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.",
+      "lang": "Rust",
+      "stars": "2,957",
+      "today": "444 stars today"
+    },
+    {
+      "name": "wonderwhy-er / DesktopCommanderMCP",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+      "desc": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+      "lang": "TypeScript",
+      "stars": "8,004",
+      "today": "210 stars today"
+    },
+    {
+      "name": "HKUDS / Vibe-Trading",
+      "url": "https://github.com/HKUDS/Vibe-Trading",
+      "desc": "\"Vibe-Trading: Your Personal Trading Agent\"",
+      "lang": "Python",
+      "stars": "20,607",
+      "today": "768 stars today"
+    },
+    {
+      "name": "PrefectHQ / prefect",
+      "url": "https://github.com/PrefectHQ/prefect",
+      "desc": "Prefect is a workflow orchestration framework for building resilient data pipelines in Python.",
+      "lang": "Python",
+      "stars": "23,161",
+      "today": "66 stars today"
+    },
+    {
+      "name": "Shubhamsaboo / awesome-llm-apps",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "desc": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+      "lang": "Python",
+      "stars": "118,605",
+      "today": "408 stars today"
+    },
+    {
+      "name": "anthropics / claude-cookbooks",
+      "url": "https://github.com/anthropics/claude-cookbooks",
+      "desc": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+      "lang": "Jupyter Notebook",
+      "stars": "48,443",
+      "today": "459 stars today"
+    },
+    {
+      "name": "home-assistant / core",
+      "url": "https://github.com/home-assistant/core",
+      "desc": "🏡 Open source home automation that puts local control and privacy first.",
+      "lang": "Python",
+      "stars": "89,085",
+      "today": "400 stars today"
+    },
+    {
+      "name": "Crosstalk-Solutions / project-nomad",
+      "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+      "desc": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
+      "lang": "TypeScript",
+      "stars": "33,819",
+      "today": "125 stars today"
+    },
+    {
+      "name": "ColeMurray / background-agents",
+      "url": "https://github.com/ColeMurray/background-agents",
+      "desc": "An open-source background agents coding system",
+      "lang": "TypeScript",
+      "stars": "2,267",
+      "today": "16 stars today"
+    },
+    {
+      "name": "k1tbyte / Wand-Enhancer",
+      "url": "https://github.com/k1tbyte/Wand-Enhancer",
+      "desc": "Advanced UX and interoperability extension for Wand (WeMod) app",
+      "lang": "C#",
+      "stars": "6,974",
+      "today": "609 stars today"
+    },
+    {
+      "name": "pingdotgg / t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "desc": "pingdotgg / t3code",
+      "lang": "TypeScript",
+      "stars": "13,758",
+      "today": "75 stars today"
+    },
+    {
+      "name": "virattt / ai-hedge-fund",
+      "url": "https://github.com/virattt/ai-hedge-fund",
+      "desc": "An AI Hedge Fund Team",
+      "lang": "Python",
+      "stars": "61,422",
+      "today": "115 stars today"
+    },
+    {
+      "name": "chen08209 / FlClash",
+      "url": "https://github.com/chen08209/FlClash",
+      "desc": "A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.",
+      "lang": "Dart",
+      "stars": "45,236",
+      "today": "154 stars today"
+    },
+    {
+      "name": "davila7 / claude-code-templates",
+      "url": "https://github.com/davila7/claude-code-templates",
+      "desc": "CLI tool for configuring and monitoring Claude Code",
+      "lang": "Python",
+      "stars": "29,248",
+      "today": "274 stars today"
+    },
+    {
+      "name": "par274 / sharpemu",
+      "url": "https://github.com/par274/sharpemu",
+      "desc": "An experimental PlayStation 5 emulator project.",
+      "lang": "C#",
+      "stars": "1,287",
+      "today": "314 stars today"
+    },
+    {
+      "name": "malisper / pgrust",
+      "url": "https://github.com/malisper/pgrust",
+      "desc": "Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
+      "lang": "Rust",
+      "stars": "2,489",
+      "today": "518 stars today"
+    },
+    {
+      "name": "Nutlope / hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "desc": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "lang": "CSS",
+      "stars": "4,310",
+      "today": "155 stars today"
+    }
+  ],
+  "papers": [
+    {
+      "title": "Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models",
+      "date": "2026-07-10",
+      "summary": "Vision language models (VLMs) have made remarkable progress in visual reasoning during the last decade. Most evaluations have used simple scenes (MS-COCO) that do not showcase complex human interactions or behaviors, only a handful of non-curated human descriptions as a benchmark, and have not focus",
+      "url": "https://arxiv.org/abs/2607.09654v1",
+      "cats": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
+      "date": "2026-07-10",
+      "summary": "Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testing approaches. While recent adoptions of Large Language Model (LLM) agents have demonstrated promise",
+      "url": "https://arxiv.org/abs/2607.09653v1",
+      "cats": [
+        "cs.CR",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
+      "date": "2026-07-10",
+      "summary": "Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance anomaly interdiction with customer friction. To overcome this without distortive data resampling, w",
+      "url": "https://arxiv.org/abs/2607.09641v1",
+      "cats": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Indirect and Direct AI Scaffolding for Computational Problem Posing: A Pilot Experience Report",
+      "date": "2026-07-10",
+      "summary": "Problem posing is a valuable learning activity in computing education, encouraging learners to actively construct, refine, and reflect on problems rather than simply solving them. This experience report presents the design and pilot deployment of two LLM-powered scaffolding systems for supporting pr",
+      "url": "https://arxiv.org/abs/2607.09628v1",
+      "cats": [
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "LLM for EDA in Front-End Design: Challenges and Opportunities",
+      "date": "2026-07-10",
+      "summary": "As chip complexity increases and time-to-market pressures grow, front-end design has become a critical bottleneck in chip development. Recently, Large Language Models (LLMs) have shown great potential in Electronic Design Automation (EDA). Beyond specification understanding, LLMs show the potential ",
+      "url": "https://arxiv.org/abs/2607.09616v1",
+      "cats": [
+        "cs.ET",
+        "cs.AR"
+      ]
+    }
+  ],
+  "hn": [
+    {
+      "title": "Old and new apps, via modern coding agents",
+      "url": "https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-12",
+      "page_content": "[![Image 4](https://terrytao.wordpress.com/wp-content/uploads/2020/03/cropped-covid-19-curves-graphic-social-v3.gif)](https://terrytao.wordpress.com/ \"Return to front page\")\n\n[What's new](https://terrytao.wordpress.com/ \"Return to front page\")\nUpdates on my research and expository papers, discussion of open problems, and other maths-related topics. By Terence Tao\n\n*   [Home](https://terrytao.wordpress.com/ \"Return to front page\")\n*   [About](https://terrytao.wordpress.com/about/)\n*   [Career advice](https://terrytao.wordpress.com/career-advice/)\n*   [On writing](https://terrytao.wordpress.com/advice-on-writing-papers/)\n*   [Books](https://terrytao.wordpress.com/books/)\n*   [Mastodon+](https://terrytao.wordpress.com/mastodon-posts/)\n*   [Applets](https://terrytao.wordpress.com/applets/)\n\n*   [Subscribe to feed](https://terrytao.wordpress.com/feed/ \"Subscribe to the What's new feed\")"
+    },
+    {
+      "title": "Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper",
+      "url": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-13",
+      "page_content": "![Image 1: Colorful Ploy inflatable forms connected by a translucent tube, representing a production AI agent migrating between model systems](https://storage.googleapis.com/ployai/d21bf4ad-2458-43ee-9561-54c28ab0e85f/user/98bfdea9-ai-generated-1783640379759.webp)\n\nAs of today, Ploy’s agent runs on GPT-5.6 Sol, the flagship tier of the model family OpenAI released this morning. For months, we couldn’t find a model that challenges Claude Opus given our incredibly high bar for quality. That changed with GPT 5.6 Sol. After running it head-to-head against Claude Opus, we’ve made GPT 5.6 Sol the default model powering every Ploy workspace.\n\nThat’s a bigger switch than it sounds. Ploy’s agent builds and edits real marketing websites. It plans a page, reads the codebase, writes components, generates imagery, screenshots its own work, and decides when it’s done. That job description sets a very high bar for a model, and we test every frontier release against it. For the four months Opus held the default slot (first Opus 4.7, then 4.8), nothing we tested beat it. GPT-5.6 is the first model that did.\n\nNot that the first eval run was perfect. It had real failure modes, which we’ll show you. But it did extremely well, and the promise was immediate and specific: builds finishing in less than half the wall-clock time, at 27% lower cost, scoring at or above our incumbent on completed work. Numbers like that buy a model a real migration effort.\n\nDespite using Vercel’s [AI SDK](https://ai-sdk.dev/docs/introduction), a universal LLM SDK, switching from Claude Opus 4.8 to GPT 5.6 Sol required discovering, one eval failure at a time, that the things we think of as “the model” are provider-specific behaviors our whole stack has quietly specialized around: how it fills in tool arguments, how its prompt cache works, how it replays its own reasoning between turns.\n\nHere’s what it took: fix the eval harness, then the tool schemas, then caching, then reasoning replay.\n\n## Step 0: Fix your harness before you trust a single number\n\nOur eval suite runs the real agent against real fixture workspaces. Hundreds of cases, from “build a homepage from scratch” to “is this clone request safe to execute.” Build cases are scored by a visual judge running binary checks against a reference design, ten yes/no questions like _“the hero is a full-bleed photographic scene”_ or _“primary CTAs are rounded rectangles, not pills”_, plus content checks, tool-trajectory checks, and file assertions. Every failed case gets triaged against its full trace: the actual tool calls and model text, not just the score."
+    },
+    {
+      "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
+      "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-13",
+      "page_content": "We put Claude Code and OpenCode on the same model, the same machine, and the same tasks, then examined everything sent and received.\n\n**Claude Code is far hungrier:**\n\nWhen we asked both harnesses for a one-line reply, Claude Code used roughly 33,000 tokens of system prompt, tool schemas, and injected scaffolding before the prompt even arrived. OpenCode used about 7,000.\n\nThat first test was on Sonnet 4.5. Re-running on Claude Fable 5 narrowed the gap to about 3.3x, because Claude Code sends newer models a much smaller system prompt; still far hungrier, but the multiple is model-dependent.\n\n**Claude Code is far more cache inefficient:**\n\nOpenCode's request prefix was byte-identical in every run we captured; it paid to cache its payload once per session and read it back for pennies.\n\nClaude Code on the other hand re-wrote tens of thousands of prompt-cache tokens mid-session, run after run, and on the same task wrote up to 54x more cache tokens than OpenCode.\n\nCache writes of course are billed at a premium, which accounted for the usage dashboard climbing when using Claude Code."
+    }
+  ],
+  "news": [
+    {
+      "title": "Anthropic Illuminates LLM J-Space With J-Lens - Forbes",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPNVNTeE9sNGQwOUtyd3BubjBDR2Zod2wtMUtjbTNRb0dvd0VSVnV2ZUo3U241c3oyRnVLQkFsS1l4bWNIc2xuMEJJVE9pLUtQWDhiSVBfNVQwWXdxakRDYWhnZ0lUbG5FamlhZ0UtZGlBbVl3SGZXdXN2YVFtdWNJWmZVVXFTcWMzaF9TdG9ickFIVU5sMU1Pb1pwY080Zw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Sun, 12 Jul 2026 15:56:50 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPNVNTeE9sNGQwOUtyd3BubjBDR2Zod2wtMUtjbTNRb0dvd0VSVnV2ZUo3U241c3oyRnVLQkFsS1l4bWNIc2xuMEJJ",
+      "page_content": ""
+    },
+    {
+      "title": "Robinhood Brings AI Agent Trading to Crypto After 70,000 Accounts Join Beta - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQd3RwdUVUWE5CeFAwRkNBY2hWRjUxeUtEaWQ5a1gzX0VxMzBFNHhCTXY0VThTdTlMVl9HYVJDMGJnYXZvZDNKU2pOUU0xTGxnWFZnUXFocDhoSWh6SDhyS2lHclpkU0IweU42NXRONkJ1UTVXZk9mVmNwTVBSRzlIMi00ZWtkaXJWOVZETWtrWWFvWEZwbFhTdDhUSmlzVVk?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Sun, 12 Jul 2026 23:46:00 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQd3RwdUVUWE5CeFAwRkNBY2hWRjUxeUtEaWQ5a1gzX0VxMzBFNHhCTXY0VThTdTlMVl9HYVJDMGJnYXZvZDNKU2pO",
+      "page_content": ""
+    },
+    {
+      "title": "One Way to Build a Great AI Agent: Just Start With a Dashboard, Then Add the Agent - saastr.com",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPX09tZG5BNTVBWVFrdUtqOUFmUGU2Uk9zNlplSTN1OTZhdzFPMlItejhSMjhsZExpb2FReWc4aXp4N29EblB0YXJCUTYwd0YxM2lXWHFrWHBlTUMxckk4cThOUng1UUl2TmdRNHZxVUNDQjc4amliTDBLbE9BZ0VZOXp6ajVjTGMwYVBYcWhCaEx6TDg1SkZZZnNPd2dGT1VCUk1qcVRPZw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Sat, 11 Jul 2026 17:36:29 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPX09tZG5BNTVBWVFrdUtqOUFmUGU2Uk9zNlplSTN1OTZhdzFPMlItejhSMjhsZExpb2FReWc4aXp4N29EblB0YXJC",
+      "page_content": ""
+    },
+    {
+      "title": "AI Model Co-Design: Hardware-Friendly LLM Design | NVIDIA Technical Blog - NVIDIA Developer",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NHeEdVSXgzTTYteWEyNzdvX3FXd1ZOM2FWVjJzcXZvenppcVFIckx3azVJRmh0Rkw1NFV0UzVQR21Wb3RFWHhmd3c?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 10 Jul 2026 17:16:10 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NH",
+      "page_content": ""
+    },
+    {
+      "title": "Similarweb: Large LLM Contracts Represent A New Era For This Analytics Company - Seeking Alpha",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPQm51ai1FLTFmWjRjaGZ0eGlwc1ZWbGlETEtPOEpTOW9yRHA4MEdUQmVQV2trbWZSTUZ3U25oQ3VDMUV6NTFzS1AwVEMwSVMzNFMxWWdkMFNQb3RHVEhzT1FyMU11ZTI4a3hOXzNBem9zM2FrellxZkZ6Tm5CaFM0Ni1rMkZ4RUZvZ2Y4dGR2TDdScGhpU1VSTDloVFZ3RWYwN0FpcVZTWnFJa3RTMVJBWGtnSzViU1dHMXc?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Mon, 13 Jul 2026 00:14:30 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPQm51ai1FLTFmWjRjaGZ0eGlwc1ZWbGlETEtPOEpTOW9yRHA4MEdUQmVQV2trbWZSTUZ3U25oQ3VDMUV6NTFzS1Aw",
+      "page_content": ""
+    },
+    {
+      "title": "Introducing Oracle AI Agent Memory 26.6: Memory With Receipts - Oracle Blogs",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE05TkZDVTVkYUtNbXNyTENFa19YYXIzeGFuSGl5bi1iT2tqOFB5VlZ1VFgyMDloVUsySE03ZjI0MFR6NFN0bWF2ZTFnUENJcW1uMHZBNVB3emdJODdpZGhjX0ZHendNbmdxU18tUzd3?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 10 Jul 2026 14:41:39 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE05TkZDVTVkYUtNbXNyTENFa19YYXIzeGFuSGl5bi1iT2tqOFB5VlZ1VFgyMDloVUsySE03ZjI0MFR6NFN0bWF2ZTFn",
+      "page_content": ""
+    },
+    {
+      "title": "2026 Model Context Protocol Server and AI Agent Hackathon - GSA (.gov)",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUkZoLXF1TXpZMWVJUG90WkstdjR6elRYX1IzV0tjcFVLRV95R0FBd1oxdEV2b0FxaGpMNHhrUFliUnlyNV9ZWmRaLUdIaUozQWIybGd3RXlYdDc1MkdNa3FFbTdEU2ljUmRUWk54QkRJYVlkOGswcTN1OUxRZy1MTnQ5NXI0YVc1WEk0SDROSXFibjQ3bGlrYV9zRzE5WWQyOURNTnZ6LUZzdw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 10 Jul 2026 19:01:57 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUkZoLXF1TXpZMWVJUG90WkstdjR6elRYX1IzV0tjcFVLRV95R0FBd1oxdEV2b0FxaGpMNHhrUFliUnlyNV9ZWmRa",
+      "page_content": ""
+    },
+    {
+      "title": "(OPINION) Liability in hiring: Who answers for AI agent decisions? - Oil City News",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNX0xFMXJ5Y2dyU1FORTJINzZTMk1oeWotN05OTTcyanExdldPcnZqSXVKWHJOaVdqN0lNTnJ3Tlk4NUZrSjh2UHZiemd1dXc3MkZqOTI1Mjh5cklCSXBxM3kyUGxzelo1UXpKVUpIUHpXeklYU2U4ckoxRHRzUU91ZVdHUEZUcGQzbE9PNUJrNU5Ddm8yUEl1eW9ydWtMZDNKX0FlT0Z3?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Sat, 11 Jul 2026 14:13:00 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNX0xFMXJ5Y2dyU1FORTJINzZTMk1oeWotN05OTTcyanExdldPcnZqSXVKWHJOaVdqN0lNTnJ3Tlk4NUZrSjh2UHZi",
+      "page_content": ""
+    }
+  ],
+  "blogs": [],
+  "github_strategy": {
+    "query": "AI plugin OR agent skill OR prompt engineering",
+    "filters": "stars:100..20000",
+    "sort": "stars",
+    "label": "AI 工具生态（插件/技能）"
+  }
+}
