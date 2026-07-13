@@ -772,22 +772,60 @@ for n in results['news'][:3]:
             print(f"    ✅ {n['title'][:40]}: {len(content)} chars")
 
 # ── 7. 官网 Blog ───────────────────────────────────
+# 不把官方动态采集绑定到本地 CDP 浏览器：定时环境通常没有 3456 服务。
+def fetch_blog_list_jina(src, limit=3):
+    """通过 Jina Reader 读取官方列表页，提取最近文章链接。"""
+    try:
+        out = run(
+            f'curl -s --connect-timeout 8 -m 20 -x {PROXY} "https://r.jina.ai/{src["url"]}"',
+            timeout=25,
+        )
+        if not out or 'Markdown Content:' not in out:
+            return []
+        posts, seen = [], set()
+        for title, url in re.findall(r'\[([^\]]+)\]\((https?://[^)\s]+)\)', out):
+            title = re.sub(r'^Image\s+\d+:\s*', '', title).strip()
+            # 列表卡片常把类别与日期拼在标题末尾；保留文章标题本身。
+            title = re.sub(
+                r'\s+(Product|Research|Safety|Engineering|Company|Announcements?|Policy|'
+                r'Applied AI|Global Affairs|AI Adoption)\s+'
+                r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2},\s+\d{4}.*$',
+                '', title,
+            ).strip()
+            title_lower = title.lower()
+            if (len(title) < 12 or len(title) > 180 or url in seen or
+                    title.startswith('![') or title_lower.startswith('skip to ') or
+                    title_lower in {'announcements', 'newsroom', 'view more news'} or
+                    any(token in url for token in ('images.', 'videos.', 'cdn.'))):
+                continue
+            seen.add(url)
+            posts.append({'title': title, 'url': url})
+            if len(posts) >= limit:
+                break
+        return posts
+    except Exception as e:
+        print(f"  ⚠️ {src['name']} Jina: {e}")
+        return []
+
 print("🌐 官网 Blog 列表...")
 blog_sources = [
-    {'name': 'OpenAI', 'url': 'https://openai.com/blog', 'pattern': '/index/'},
-    {'name': 'Anthropic', 'url': 'https://www.anthropic.com/research', 'pattern': '/research/'},
+    {'name': 'OpenAI', 'url': 'https://openai.com/news/', 'pattern': '/index/'},
+    {'name': 'Anthropic', 'url': 'https://www.anthropic.com/news', 'pattern': '/news/'},
     {'name': 'Hugging Face', 'url': 'https://huggingface.co/blog', 'pattern': '/blog/'},
     {'name': '魔搭 ModelScope', 'url': 'https://modelscope.cn/blogs', 'pattern': '/blogs/'},
     {'name': 'OpenRouter', 'url': 'https://openrouter.ai/blog', 'pattern': '/blog/'},
 ]
 for src in blog_sources:
+    posts = fetch_blog_list_jina(src)
     try:
-        tid = cdp_navigate(src['url'])
-        if not tid: continue
-        time.sleep(6)
-        pattern = src['pattern']
-        posts = cdp_eval(tid, rf'(() => {{ const links = document.querySelectorAll("a"); const posts = []; const seen = new Set(); for (const a of links) {{ const t = a.textContent.trim().replace(/\s+/g, " "); const h = a.getAttribute("href"); if (t && t.length > 15 && t.length < 150 && h && h.includes("{pattern}") && !seen.has(t)) {{ seen.add(t); const fullUrl = h.startsWith("http") ? h : new URL(h, window.location.origin).href; posts.push({{title: t, url: fullUrl}}); }} if (posts.length >= 3) break; }} return JSON.stringify(posts); }})()', timeout=10)
-        cdp_close(tid)
+        if not posts:
+            tid = cdp_navigate(src['url'])
+            if not tid:
+                continue
+            time.sleep(6)
+            pattern = src['pattern']
+            posts = cdp_eval(tid, rf'(() => {{ const links = document.querySelectorAll("a"); const posts = []; const seen = new Set(); for (const a of links) {{ const t = a.textContent.trim().replace(/\s+/g, " "); const h = a.getAttribute("href"); if (t && t.length > 15 && t.length < 150 && h && h.includes("{pattern}") && !seen.has(t)) {{ seen.add(t); const fullUrl = h.startsWith("http") ? h : new URL(h, window.location.origin).href; posts.push({{title: t, url: fullUrl}}); }} if (posts.length >= 3) break; }} return JSON.stringify(posts); }})()', timeout=10)
+            cdp_close(tid)
         if posts and isinstance(posts, list):
             for p in posts[:3]:
                 title = p.get('title', '').strip()

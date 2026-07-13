@@ -810,7 +810,35 @@
       "summary_zh": "该动态来自 Google News，聚焦 AI、模型或智能体进展。<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNX0xFMXJ5Y2dyU1FORTJINzZTMk1oeWotN05OTTcyanExdldPcnZqSXVKWHJOaVdqN0lNTnJ3Tlk4NUZrSjh2UHZi"
     }
   ],
-  "blogs": [],
+  "blogs": [
+    {
+      "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "Today, OpenAI announced GPT‑5.6, which will become the new preferred model in Microsoft 365 Copilot—in Word, Excel, PowerPoint, Chat and Cowork. For Microsoft 365 customers, the update brings OpenAI's latest flagship model series into productivity tools people use every day, helping them create, analyze, and collaborate with more capable AI assistance across workstreams. GPT‑5.6 is OpenAI’s latest flagship model series, which delivers more useful work from every token, with stronger performance per dollar and on demand capability for the most complex tasks.\n\nWith GPT‑5.6, Microsoft 365 users will be able to create higher-quality work products with less effort across the apps they already rely on:\n\n*   In Word, GPT‑5.6 can help people draft, edit, and refine documents with fewer rounds of prompting.\n*   In Excel, it can support deeper analysis while using tokens more efficiently, helping users move faster from data to insights.\n*   In PowerPoint, it can help turn early ideas into more polished, visually compelling presentations with less manual guidance.\n*   In Cowork, it can help users complete complex, cross-functional work and produce higher-quality outputs with less manual coordination.\n\n“We can’t wait for customers to see what GPT‑5.6 in Microsoft 365 will do, enabling them to work even more effectively with AI in the tools they use every day,” said Nitin Agrawal, President, Copilot & Agents Core, Microsoft. “Using Copilot powered by OpenAI’s latest model, customers will be able to produce more polished outputs in Word, Excel, PowerPoint, Cowork, and Copilot Chat, whether they are drafting documents, analyzing data, creating presentations, or collaborating across teams. We’re excited to continue building with OpenAI to bring more powerful AI experiences to people and organizations around the world.”\n\n“Microsoft 365 is where millions of people write, analyze, create, and collaborate every day,” said Nikunj Handa, Head of API Product, OpenAI. “By bringing GPT‑5.6 to Microsoft 365 Copilot through the OpenAI API, we're helping organizations get more useful work from every token, and more value from AI in the tools they already use.”\n\nIn addition to serving the models natively, Microsoft will also access OpenAI models directly through the API to bring GPT‑5.6 to Microsoft 365 customers.",
+      "title_zh": "GPT-5.6 成为 Microsoft 365 Copilot 的首选模型",
+      "summary_zh": "OpenAI 宣布 GPT-5.6 成为 Microsoft 365 Copilot 的首选模型，反映前沿模型正进一步进入企业办公软件与知识工作流程。"
+    },
+    {
+      "title": "ChatGPT is now a partner for your most ambitious work",
+      "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "Introducing ChatGPT Work, an agent in ChatGPT that helps you take on more ambitious tasks. It can gather information across your apps and workflows to create finished materials like sheets, slides, docs, and web apps, and stay with complex projects for hours by breaking them into smaller steps and completing them independently.\n\nWith Codex technology built-in, ChatGPT can now move beyond answering questions to getting real work done across web, mobile, and desktop. More than 5 million people use Codex every week. Although it began as a coding agent for developers, more than 1 million people now use it for work outside software development, showing how its capabilities can support a wider range of tasks.\n\nTo better manage these tasks, ChatGPT Work is powered by our latest frontier model, GPT‑5.6, [which is also rolling out today⁠](https://openai.com/index/gpt-5-6/). GPT‑5.6 makes ChatGPT state of the art at reasoning through multi-step tasks and creating materials that follow your templates and reference files.\n\nThe best way to learn how to use ChatGPT Work is to give it a task you already know well: analyze a month-end budget variance, turn source materials into a marketing campaign brief, or prepare for a sales meeting. You can follow its progress, answer questions, change direction, and approve important actions.\n\nYou can even ask ChatGPT Work to take on entire workflows with a single request. For example, it can turn customer research into a campaign brief, use that brief to create marketing assets, and adapt those assets for different markets while carrying context through every step.\n\nEven when you’re away from your computer or phone, ChatGPT Work can keep projects moving forward with Scheduled Tasks. For example, it can independently turn new messages from Microsoft Teams and Slack into updated docs or slides, then share important changes with your team.\n\nIn early testing, we’ve seen how ChatGPT Work expands what users can do:\n\n1 of 4",
+      "title_zh": "ChatGPT 成为复杂工作的协作伙伴",
+      "summary_zh": "OpenAI 介绍 ChatGPT 面向更复杂工作任务的协作能力，重点关注长流程知识工作、规划和执行支持。"
+    },
+    {
+      "title": "OpenAI Bio Bug Bounty",
+      "url": "https://openai.com/index/bio-bug-bounty/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "OpenAI Bio Bug Bounty | OpenAI\n\nTesting for universal jailbreaks for biorisks\n\n## Invitation\n\nAs part of our ongoing efforts to strengthen our safeguards for advanced AI capabilities in biology, we’re evolving our GPT‑5.5 Bio Bug Bounty to become an ongoing private program—the OpenAI Bio Bounty Program. The program will remain focused on universal jailbreaks that can defeat our predefined biosafety challenge against OpenAI’s frontier models, starting with GPT‑5.6 and going forward.\n\nWe’re also excited to announce that we’re increasing reward amounts. The reward for a universal jailbreak for the OpenAI Bio Bounty Program has been raised from $25,000 to $50,000 for both GPT‑5.6 and GPT‑5.5. Smaller awards may be granted for partial wins at our discretion.\n\nWe will continue to honor the scope for the GPT‑5.5 Bio Bounty Program as originally announced, with testing ending on July 27, 2026. After this date, only GPT‑5.6 will be in scope; we will continue to communicate any future changes in scope to our researchers.\n\nInterested applicants should apply through our rolling [application process⁠(opens in a new window)](https://docs.google.com/forms/d/e/1FAIpQLScIW9QJTq4J6zsl89Un-OmTCSDNWdWldcib8mYZEqoHzunukQ/viewform?usp=preview). Once selected, accepted applicants will be onboarded to the bio bug bounty platform. All past applicants to the GPT‑5.5 Bio Bounty Program will not need to reapply.\n\n## How to participate",
+      "title_zh": "OpenAI 启动生物安全漏洞赏金计划",
+      "summary_zh": "OpenAI 推出面向生物安全风险的漏洞赏金计划，邀请外部研究者帮助发现和缓解模型潜在滥用风险。"
+    }
+  ],
   "github_strategy": {
     "query": "LLM OR AI agent OR MCP OR RAG",
     "filters": "pushed:>2026-06-13",
