@@ -1,0 +1,574 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LLM & Agent Daily Briefing | 2026-07-14</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+  background: #1B2838;
+  color: #e2e8f0;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(56, 189, 248, 0.2), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 40%, rgba(139, 92, 246, 0.15), transparent),
+    radial-gradient(ellipse 50% 60% at 5% 85%, rgba(52, 211, 153, 0.1), transparent),
+    repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(148, 163, 184, 0.08) 49px, rgba(148, 163, 184, 0.08) 50px),
+    repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(148, 163, 184, 0.08) 49px, rgba(148, 163, 184, 0.08) 50px);
+  pointer-events: none;
+  z-index: 0;
+}
+.container { max-width:1080px; margin:0 auto; padding:2rem; position: relative; z-index: 1; }
+.header { text-align:center; margin-bottom:2.5rem; position: relative; padding-bottom:1.5rem; }
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.6), rgba(139, 92, 246, 0.6), transparent);
+}
+.header h1 {
+  font-size:2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom:0.4rem;
+  letter-spacing: -0.02em;
+}
+.sub { color:#64748b; font-size:0.9rem; font-weight: 500; letter-spacing: 0.05em; }
+.progress-rail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(148, 163, 184, 0.08);
+  z-index: 20;
+}
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #34d399, #38bdf8, #a78bfa);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+  transition: width 0.12s ease-out;
+}
+.quick-nav {
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 1.2rem;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+.quick-nav-links {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+.quick-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(30, 41, 59, 0.65);
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+.quick-link:hover {
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.48);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(30, 41, 59, 0.88));
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22), 0 0 0 1px rgba(96, 165, 250, 0.12);
+}
+.quick-link.active {
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.35);
+  background: rgba(37, 99, 235, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.12);
+}
+.quick-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.quick-status strong {
+  color: #f8fafc;
+  font-weight: 700;
+}
+.section {
+  margin-bottom:2rem;
+  padding: 1.2rem;
+  border-radius: 20px;
+  position: relative;
+  background: rgba(27, 40, 56, 0.5);
+  scroll-margin-top: 88px;
+}
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(148, 163, 184, 0.1), transparent, rgba(148, 163, 184, 0.05));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.sh {
+  display:flex;
+  align-items:center;
+  gap:0.8rem;
+  margin-bottom:1rem;
+  padding-bottom:0.5rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+.sh .icon { font-size:1.3rem; }
+.sh .title { font-size:1.2rem; font-weight:700; color:#f1f5f9; letter-spacing: -0.01em; }
+.sh.trending .title { color:#34d399; }
+.sh.github .title { color:#60a5fa; }
+.sh.paper .title { color:#a78bfa; }
+.sh.blog .title { color:#38bdf8; }
+.sh.news .title { color:#fb923c; }
+.cnt {
+  font-size:0.7rem;
+  color:#94a3b8;
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  padding:0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-left:auto;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.card {
+  background: linear-gradient(135deg, rgba(22, 35, 50, 0.9), rgba(22, 35, 50, 0.75));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  border-left: 3px solid rgba(96, 165, 250, 0.4);
+  border-radius: 14px;
+  padding:1.1rem 1.3rem;
+  margin-bottom:0.7rem;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+.card::after {
+  content: '';
+  position: absolute;
+  inset: -20% auto auto -10%;
+  width: 42%;
+  height: 140%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.0), rgba(255,255,255,0.06), rgba(255,255,255,0.0));
+  transform: translateX(-140%) skewX(-18deg);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+.card:hover {
+  border-color: rgba(96, 165, 250, 0.42);
+  border-left-color: #60a5fa;
+  background: linear-gradient(135deg, rgba(36, 50, 72, 0.96), rgba(28, 39, 58, 0.84));
+  transform: translateY(-4px) translateX(6px) scale(1.008);
+  box-shadow: 0 14px 34px rgba(96, 165, 250, 0.18), 0 0 0 1px rgba(96, 165, 250, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+.card:hover::after {
+  transform: translateX(280%) skewX(-18deg);
+}
+/* Section-specific card accent colors */
+.section:has(.sh.trending) .card { border-left-color: rgba(52, 211, 153, 0.5); }
+.section:has(.sh.trending) .card:hover { border-left-color: #34d399; box-shadow: 0 14px 34px rgba(52, 211, 153, 0.16), 0 0 0 1px rgba(52, 211, 153, 0.08), inset 0 1px 0 rgba(255,255,255,0.06); }
+.section:has(.sh.paper) .card { border-left-color: rgba(167, 139, 250, 0.5); }
+.section:has(.sh.paper) .card:hover { border-left-color: #a78bfa; box-shadow: 0 14px 34px rgba(167, 139, 250, 0.16), 0 0 0 1px rgba(167, 139, 250, 0.08), inset 0 1px 0 rgba(255,255,255,0.06); }
+
+.ct { font-size:1rem; font-weight:600; margin-bottom:0.35rem; letter-spacing: -0.01em; }
+.ct a { color:#60a5fa; text-decoration:none; transition: color 0.2s; }
+.ct a:hover { color:#93c5fd; text-decoration:underline; }
+.cm { display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.78rem; color:#64748b; margin-bottom:0.4rem; }
+.stars { color:#fbbf24; font-weight:600; }
+.lang {
+  background: rgba(56, 189, 248, 0.1);
+  color:#38bdf8;
+  padding:0.12rem 0.5rem;
+  border-radius: 10px;
+  font-size:0.72rem;
+  font-weight: 500;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+}
+.topic {
+  background: rgba(167, 139, 250, 0.1);
+  color:#a78bfa;
+  padding:0.12rem 0.45rem;
+  border-radius: 10px;
+  font-size:0.68rem;
+  font-weight: 500;
+  border: 1px solid rgba(167, 139, 250, 0.15);
+}
+.cd { color:#cbd5e1; font-size:0.88rem; margin-top:0.4rem; line-height: 1.65; }
+.releases-section { margin-top:0.8rem; display:flex; flex-direction:column; gap:0.5rem; }
+.release-item {
+  background: rgba(34, 197, 94, 0.04);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  border-radius: 10px;
+  padding:0.6rem 0.8rem;
+  transition: all 0.2s ease;
+}
+.release-item:hover {
+  background: rgba(34, 197, 94, 0.08);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+.release-tag { color:#22c55e; font-weight:600; font-size:0.82rem; margin-right:0.5rem; }
+.release-date { color:#475569; font-size:0.72rem; }
+.release-summary { color:#94a3b8; font-size:0.78rem; margin-top:0.25rem; line-height:1.5; }
+.blog-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  border-left: 3px solid rgba(56, 189, 248, 0.4);
+  border-radius: 12px;
+  padding:0.8rem 1.2rem;
+  margin-bottom:0.6rem;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.blog-card::after {
+  content: '';
+  position: absolute;
+  inset: -15% auto auto -10%;
+  width: 36%;
+  height: 130%;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.06), rgba(255,255,255,0));
+  transform: translateX(-150%) skewX(-18deg);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+.blog-card:hover {
+  border-color: rgba(56, 189, 248, 0.42);
+  border-left-color: #38bdf8;
+  background: linear-gradient(135deg, rgba(36, 53, 76, 0.94), rgba(28, 41, 61, 0.82));
+  transform: translateY(-4px) translateX(6px) scale(1.008);
+  box-shadow: 0 14px 32px rgba(56, 189, 248, 0.16), 0 0 0 1px rgba(56, 189, 248, 0.08);
+}
+.blog-card:hover::after {
+  transform: translateX(285%) skewX(-18deg);
+}
+.blog-src {
+  display:inline-block;
+  font-size:0.68rem;
+  color:#38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  padding:0.12rem 0.45rem;
+  border-radius: 8px;
+  margin-right:0.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.blog-title { color:#60a5fa; font-size:0.92rem; font-weight:500; text-decoration:none; }
+.blog-title:hover { color:#93c5fd; text-decoration:underline; }
+.blog-date { color:#475569; font-size:0.72rem; margin-left:0.4rem; }
+.blog-summary { color:#94a3b8; font-size:0.83rem; margin-top:0.35rem; line-height: 1.5; }
+.news-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(251, 146, 60, 0.12);
+  border-left: 3px solid rgba(251, 146, 60, 0.4);
+  border-radius: 12px;
+  padding:0.8rem 1.2rem;
+  margin-bottom:0.6rem;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.news-card::after {
+  content: '';
+  position: absolute;
+  inset: -15% auto auto -10%;
+  width: 36%;
+  height: 130%;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.06), rgba(255,255,255,0));
+  transform: translateX(-150%) skewX(-18deg);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+.news-card:hover {
+  border-color: rgba(251, 146, 60, 0.46);
+  border-left-color: #fb923c;
+  background: linear-gradient(135deg, rgba(56, 44, 33, 0.94), rgba(40, 34, 30, 0.84));
+  transform: translateY(-4px) translateX(6px) scale(1.008);
+  box-shadow: 0 14px 32px rgba(251, 146, 60, 0.18), 0 0 0 1px rgba(251, 146, 60, 0.08);
+}
+.news-card:hover::after {
+  transform: translateX(285%) skewX(-18deg);
+}
+.news-src {
+  display:inline-block;
+  font-size:0.68rem;
+  color:#fb923c;
+  background: rgba(251, 146, 60, 0.08);
+  border: 1px solid rgba(251, 146, 60, 0.15);
+  padding:0.12rem 0.45rem;
+  border-radius: 8px;
+  margin-right:0.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.news-title { color:#fbbf24; font-size:0.92rem; font-weight:500; text-decoration:none; }
+.news-title:hover { color:#fcd34d; text-decoration:underline; }
+.news-date { color:#475569; font-size:0.72rem; margin-left:0.4rem; }
+.news-summary { color:#94a3b8; font-size:0.83rem; margin-top:0.35rem; line-height: 1.5; }
+.stats {
+  display:flex;
+  justify-content:center;
+  gap:2.5rem;
+  margin-top:2rem;
+  padding-top:1.2rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+.sv { font-size:1.3rem; font-weight:700; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.sl { font-size:0.72rem; color:#64748b; margin-top:0.15rem; letter-spacing: 0.02em; }
+.ft { color:#475569; font-size:0.78rem; text-align:center; margin-top:1.2rem; letter-spacing: 0.02em; }
+@media(max-width:640px) {
+  .container { padding:1rem; }
+  .header h1 { font-size:1.5rem; }
+  .card { padding:1rem 1.1rem; }
+  .section { padding: 1rem 0.8rem; }
+  .quick-nav {
+    top: 8px;
+    padding: 0.75rem 0.8rem;
+  }
+  .quick-status {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+</style></head><body><div class="progress-rail"><div id="progress-bar" class="progress-bar"></div></div><div class="container">
+<div class="header"><h1>📡 LLM & Agent Daily Briefing</h1><p class="sub">2026-07-14</p></div>
+<div class="quick-nav">
+  <div class="quick-nav-links">
+    <a class="quick-link" data-target="section-trending" href="#section-trending">🔥 Trending</a>
+    <a class="quick-link" data-target="section-github" href="#section-github">🚀 GitHub</a>
+    <a class="quick-link" data-target="section-paper" href="#section-paper">📄 论文</a>
+    <a class="quick-link" data-target="section-blog" href="#section-blog">📢 官方动态</a>
+    <a class="quick-link" data-target="section-news" href="#section-news">🏭 行业动态</a>
+  </div>
+  <div class="quick-status">当前阅读：<strong id="current-section-label">Trending</strong><span id="reading-percent">0%</span></div>
+</div><div id="section-trending" class="section"><div class="sh trending"><span class="icon">🔥</span><span class="title">GitHub Trending 今日热门</span><span class="cnt">7 条</span></div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/HKUDS/Vibe-Trading" target="_blank">HKUDS/Vibe-Trading</a></div>
+  <div class="cm"><span class="stars">⭐ </span><span class="lang">Python</span></div>
+  <div class="cd">开源的 AI 驱动量化交易研究平台，把市场数据、策略构建、回测与交易决策串成可追溯的工作流。它面向希望将 LLM 辅助分析引入投研流程的开发者与量化团队，重点是让策略假设、信号和执行环节能够协同迭代。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/moeru-ai/airi" target="_blank">moeru-ai/airi</a></div>
+  <div class="cm"><span class="stars">⭐ </span><span class="lang">TypeScript</span></div>
+  <div class="cd">面向个人陪伴与桌面交互的开源 AI 代理项目，尝试把角色人格、语音/视觉交互和长期记忆组合为可本地运行的数字伙伴。适合关注具身化交互、虚拟角色或个人代理产品原型的开发者参考。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank">Shubhamsaboo/awesome-llm-apps</a></div>
+  <div class="cm"><span class="stars">⭐ </span><span class="lang">Python</span></div>
+  <div class="cd">可直接运行的 LLM、RAG 与 AI Agent 应用案例库，覆盖多代理协作、文档问答、浏览器自动化和生产级工作流。它的价值在于提供可复用的端到端实现，而不是只罗列模型或提示词。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Nutlope/hallmark" target="_blank">Nutlope/hallmark</a></div>
+  <div class="cm"><span class="stars">⭐ </span><span class="lang">TypeScript</span></div>
+  <div class="cd">将自然语言产品需求转化为可执行设计与开发产物的 AI 应用原型，聚焦把创意、界面和实现步骤连接起来。对探索“从想法到可交付产品”的生成式开发体验有参考价值。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Graphify-Labs/graphify" target="_blank">Graphify-Labs/graphify</a></div>
+  <div class="cm"><span class="stars">⭐ </span><span class="lang">Python</span></div>
+  <div class="cd">图数据与知识图谱构建工具，帮助把分散文本、实体和关系整理成可查询的图结构。它可作为 RAG 或 Agent 的结构化知识层，适用于需要关系推理、溯源或复杂检索的应用。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/github/spec-kit" target="_blank">github/spec-kit</a></div>
+  <div class="cm"><span class="stars">⭐ </span><span class="lang">Python</span></div>
+  <div class="cd">GitHub 推出的规格驱动开发工具包，把需求、约束和验收标准沉淀为结构化规格，再辅助生成实施计划与代码改动。它强调先明确“做什么、如何验收”，以降低 AI 编程中需求漂移和返工。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/coreyhaines31/marketingskills" target="_blank">coreyhaines31/marketingskills</a></div>
+  <div class="cm"><span class="stars">⭐ </span><span class="lang">Markdown</span></div>
+  <div class="cd">面向 AI 助手的营销技能库，将市场研究、定位、内容策划、增长实验等专业流程封装为可调用的技能。适合希望把营销方法论嵌入 Claude Code、Codex 等代理工作流的团队。</div>
+</div></div><div id="section-github" class="section"><div class="sh github"><span class="icon">🚀</span><span class="title">GitHub 热门项目</span><span class="cnt">2 项</span></div>
+<p style="color:#64748b;font-size:0.85rem;margin-bottom:0.8rem;line-height:1.5">📅 新创建项目（近 7 天） | 🔑 AI agent OR autonomous OR workflow automation (无过滤)</p>
+<div class="card">
+  <div class="ct"><a href="https://github.com/ComPDF/docslight" target="_blank">ComPDF/docslight</a></div>
+  <div class="cm"><span class="stars">⭐ 48</span><span class="lang">Vue</span><span class="topic">document-data-extraction</span><span class="topic">document-information-extraction</span><span class="topic">document-parser</span><span>更新于 2026-07-14</span></div>
+  <div class="cd">KDAN 生态的文档解析组件，可对 PDF、扫描件、图片和 Office 文件执行 OCR、版面理解与结构化抽取。它为 RAG、企业文档自动化和 AI Agent 提供可直接消费的文本、表格与字段输出。</div>
+  <div class="releases-section"><div class="release-item"><span class="release-tag">🏷️ V1.0.0</span><span class="release-date">2026-07-09</span><div class="release-summary">First public release of DocSlight.；DocSlight is a lightweight Python SDK and CLI for parsing documents and extracting structured data from PDFs, images, an；- Initial Python SDK release</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/magnus919/agent-skills" target="_blank">magnus919/agent-skills</a></div>
+  <div class="cm"><span class="stars">⭐ 5</span><span class="lang">Python</span><span class="topic">agent-skills</span><span class="topic">agentskills</span><span class="topic">ai-agents</span><span>更新于 2026-07-14</span></div>
+  <div class="cd">面向 Hermes 与其他代理框架的精选技能仓库，提供可复用的任务指令、工具约定和领域流程。它帮助团队把个人经验沉淀为代理能稳定调用的模块，而非一次性提示词。</div>
+  
+</div></div><div id="section-paper" class="section"><div class="sh paper"><span class="icon">📄</span><span class="title">论文速读</span><span class="cnt">5 篇</span></div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.08774" target="_blank">CogniConsole：将推理时控制外化为可靠 LLM 交互的正式抽象</a></div>
+  <div class="cm">2026-07-13 · cs.AI</div>
+  <div class="cd"><b>摘要：</b>论文指出，LLM 系统的可靠性不仅由模型能力决定，也取决于推理时如何组织任务与选择上下文。CogniConsole 将这层控制外化为由程序协调和受限提示推理组成的结构化界面，并用交互实验评估其可控性。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.08894" target="_blank">GATS：结合分层世界模型的图增强树搜索，实现高效代理规划</a></div>
+  <div class="cm">2026-07-13 · cs.AI</div>
+  <div class="cd"><b>摘要：</b>GATS 将 UCB1 树搜索与三层世界模型结合，在规划阶段尽量避免反复调用 LLM：符号动作匹配、执行日志统计与 LLM 辅助预测共同支持状态判断。目标是在降低推理成本和随机性的同时提升多步规划表现。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.08964" target="_blank">Long-Horizon-Terminal-Bench：以密集奖励评估长程终端任务中的智能体</a></div>
+  <div class="cm">2026-07-13 · cs.AI</div>
+  <div class="cd"><b>摘要：</b>该基准包含 46 个跨九类场景的长程终端任务，覆盖复现实验、软件工程、多模态分析、交互游戏和科学计算。它通过对中间进展进行密集奖励评分，补足只看最终成败所带来的能力评估盲区。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.09076" target="_blank">神经智能体控制：由深度学习与 LLM 驱动的安全控制框架</a></div>
+  <div class="cm">2026-07-13 · cs.AI</div>
+  <div class="cd"><b>摘要：</b>论文面向工业物联网控制的安全需求，将 LLM 规划器与时间序列基础模型结合，避免让有幻觉风险的语言模型单独闭环控制。该框架以数据驱动的预测和受约束决策来提高对安全控制系统的可用性。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.09099" target="_blank">L-MAD：法律推理中多智能体辩论结构的系统评估</a></div>
+  <div class="cm">2026-07-13 · cs.AI</div>
+  <div class="cd"><b>摘要：</b>研究在法律文本蕴含任务中比较多智能体辩论的组织方式和聚合方法。L-MAD 通过赋予代理不同专家角色，相比强单代理基线获得提升，同时揭示代理数量增加在一致性、准确率与成本之间的权衡。</div>
+</div></div><div id="section-blog" class="section"><div class="sh blog"><span class="icon">📢</span><span class="title">官方动态</span><span class="cnt">4 条</span></div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenAI</span><a class="blog-title" href="https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/" target="_blank">GPT-5.6 成为 Microsoft 365 Copilot 的首选模型</a><span class="blog-date"></span></div>
+  <div class='blog-summary'>摘要：OpenAI 宣布 GPT-5.6 将接入 Word、Excel、PowerPoint、Copilot Chat 与 Cowork。重点是以更高的每 token 效率支持文档撰写、数据分析、演示制作和跨职能协作。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenAI</span><a class="blog-title" href="https://openai.com/index/chatgpt-for-your-most-ambitious-work/" target="_blank">ChatGPT 成为处理高难度工作的协作伙伴</a><span class="blog-date"></span></div>
+  <div class='blog-summary'>摘要：OpenAI 介绍 ChatGPT 面向复杂工作任务的协作能力与产品定位，强调把研究、构思、执行和复盘连接为连续工作流。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenAI</span><a class="blog-title" href="https://openai.com/index/bio-bug-bounty/" target="_blank">OpenAI 启动生物安全漏洞赏金计划</a><span class="blog-date"></span></div>
+  <div class='blog-summary'>摘要：OpenAI 公开生物安全漏洞赏金项目，邀请安全研究人员在明确规则下报告可能绕过防护的风险，以提升模型与产品的安全性。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">Anthropic</span><a class="blog-title" href="https://www.anthropic.com/news/hard-questions" target="_blank">欢迎提出尖锐问题</a><span class="blog-date"></span></div>
+  <div class='blog-summary'>摘要：Anthropic 就其模型、安全或社会影响相关议题邀请外部提出并讨论关键问题，体现其对公开审视与安全治理的持续关注。</div>
+</div></div><div id="section-news" class="section"><div class="sh news"><span class="icon">🏭</span><span class="title">行业动态</span><span class="cnt">10 条</span></div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMigAFBVV95cUxONjVwbDBYR0UxVmY5Rk9wU2FEU1Z2Yl9CcmcxalNubk1zRGdfTmpQcEkzSnB2Qk04UlN0U1BCMTU1NVNzMy1taE45M29kQzdaQzlsSEp3WHhBcjQ4cXRUWkl6Z192eEV0emNDV05KMXZJUzItc3pueEtrYWtCRzhFNA?oc=5" target="_blank">谁将掌握 AI Agent 经济？</a><span class="news-date">Mon, 13 Jul 2026 16:04:04 GMT</span></div>
+  <div class='news-summary'>摘要：MIT Sloan 讨论 AI Agent 经济中平台、模型提供方、应用开发者与数据入口的竞争关系。文章关注价值链控制点将如何影响企业采购、生态合作和长期利润分配。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMipAFBVV95cUxNV3BMeGMySXBpWG5ZYTVKaWZaNDJicGFDS1N6ejFqNWtmc1FTVXFrazJ3TVVRRWRaRWdnZ0g3U25qTV9TZUk5YzBxeGp1anBUbUtqX1Y3SUUxY2dpanJHN1JfbGF4Um5RTkwxcjlSRlhwdWJlUlBoRWF3ZEh2VzBfOVRBdmxwdDRTTVgtWHJYa3RnU2gyY0g2T2VtaVlKbWI0MmFBSQ?oc=5" target="_blank">AI 模型协同设计：面向硬件的 LLM 设计</a><span class="news-date">Tue, 14 Jul 2026 01:55:10 GMT</span></div>
+  <div class='news-summary'>摘要：NVIDIA 从软硬件协同角度讨论 LLM 架构与部署优化：模型设计需要同时考虑内存、带宽、并行计算和推理效率，而不是只追逐参数规模或单项基准。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NHeEdVSXgzTTYteWEyNzdvX3FXd1ZOM2FWVjJzcXZvenppcVFIckx3azVJRmh0Rkw1NFV0UzVQR21Wb3RFWHhmd3c?oc=5" target="_blank">Salesforce 36 亿美元 Fin 收购案检验企业 AI Agent 准备度</a><span class="news-date">Fri, 10 Jul 2026 17:16:10 GMT</span></div>
+  <div class='news-summary'>摘要：CMSWire 以 Salesforce 的收购交易为切口，分析企业要部署 AI Agent 所需的数据治理、流程标准化和集成能力。重点不在模型本身，而在组织是否已具备可被代理执行的基础。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMibkFVX3lxTE01bDJXLVRzSVgwUXNYZXJNM255c3dNV1N5Vk1GZGpaVEVxOWpyMllKY2R4cThNLV84cUd0WXJSQ216dFhmbUNnejRnR3BhRnc3dzBxT2JEMDk3NlZiYTFfRC0tSnhKeUpqcGk2aHd3?oc=5" target="_blank">构建优秀 AI Agent：先做仪表盘，再加入 Agent</a><span class="news-date">Mon, 13 Jul 2026 14:08:14 GMT</span></div>
+  <div class='news-summary'>摘要：SaaStr 提出务实的产品路径：先用仪表盘让用户看清数据和决策流程，再把 Agent 嵌入其中执行辅助任务。这样可先验证价值与可控性，避免把不透明自动化直接交给用户。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxQZHFRWnF4Ny1ma25vbzRHYUswSS1IenE5Mkx5emFibk1xOTdDblJxbVpGMTJ5Rkw4bkgyS3liY3NYVnZSd3RmTDVWWlRFNHhPMnRjUVBKdWxlTktTbXlUV2cwVVd1WGgtRnp0N3pSc3BTQjZXLWlRdjBlREw4RzlTMzVUcV9SQzNuclg3Y3dRcTNMUXc4WGFRb3o1WW5oNjllS2huNUJDS3pPMmtiTGhkWXJrdzNNQQ?oc=5" target="_blank">你的 AI Agent 不该无所不知，而应知道该问谁</a><span class="news-date">Mon, 13 Jul 2026 22:23:09 GMT</span></div>
+  <div class='news-summary'>摘要：CIO 文章强调企业 Agent 应通过权限、目录和专家路由获取正确知识，而非把所有数据塞进单一上下文。该思路有助于兼顾准确性、权限控制和组织知识维护。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPX09tZG5BNTVBWVFrdUtqOUFmUGU2Uk9zNlplSTN1OTZhdzFPMlItejhSMjhsZExpb2FReWc4aXp4N29EblB0YXJCUTYwd0YxM2lXWHFrWHBlTUMxckk4cThOUng1UUl2TmdRNHZxVUNDQjc4amliTDBLbE9BZ0VZOXp6ajVjTGMwYVBYcWhCaEx6TDg1SkZZZnNPd2dGT1VCUk1qcVRPZw?oc=5" target="_blank">Okta：AI Agent 推动动态统一身份安全需求</a><span class="news-date">Sat, 11 Jul 2026 17:36:29 GMT</span></div>
+  <div class='news-summary'>摘要：Okta 指出 Agent 的非人类身份、动态权限和跨系统调用会增加身份治理复杂度。企业需要对代理身份、会话、授权与审计建立统一且可持续的控制机制。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZEtvVmxLWV9jb2JzbTN1dFk1ZDA4S3VueUFnNF9IQTJJWGtnZGU4SWVYSFJsclBoMmxnZF90dHk5S0paV2FfaGdqQXphZy1ySnJPUUhFQWp5NFdKZzdybFhDdG1KZUR0U3MyelVYS1NuTGZWN2RnOGp1S2JwQmdmdE9iV2MxQk1iRjN6MTNNZHQtcXdzclBJTXM4bG1LZC1mSWc1NUVRMHk?oc=5" target="_blank">Keeper 为终端管理加入 AI Agent 治理</a><span class="news-date">Mon, 13 Jul 2026 08:07:34 GMT</span></div>
+  <div class='news-summary'>摘要：Keeper 在终端管理能力中加入针对 AI Agent 的治理功能，意在让组织可见、可控地管理代理使用的凭据和访问范围，降低端点上的权限与数据泄露风险。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMihgJBVV95cUxPUTYyQndaTEZQWFl6ZVRQQ0RRY2lTeGlSX0dMZXpIWlBkZU52OG9MWHVKVFE4TXZHMDhNTDFVUDhDd1IySEpha2pJZTBvN3VndUQ5bUdwTHFMRzloMTVpeW1wNVIwR0ROSnRsV2lYdjNIWHNmOFVzV0tzWFJ6REJnY3NLRXY5NmZpcVNRYjhQVTg0TWdzLW1Db1oyUEF6U0ZObGdURWNXdDZPaUlVaWpFQUZNcFVwTFVxU1VsTE1mSjJacXFfeHkyQkUyRHg5dUVnOU54d2RtVmNIRG92cG5Pdk9IQW9ISDZiaWJyNG5HcGdxSVAxUWR6dmsyQmE3ZFpIaW1pdG1B?oc=5" target="_blank">用 Workflow SDK 与 AI SDK 构建可持久运行的 AI Agent</a><span class="news-date">Mon, 13 Jul 2026 23:20:10 GMT</span></div>
+  <div class='news-summary'>摘要：文章介绍如何结合工作流框架和 AI SDK，使 Agent 的调用、状态、重试与长时间任务具备更可靠的编排方式。重点是从一次性对话转向可观测、可恢复的生产流程。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Hacker News</span><a class="news-title" href="https://careersatdoordash.com/blog/building-food-metadata-with-llm-juries-context-optimization-multimodal-ai/" target="_blank">Show HN：Sx 2.0——通过 Dropbox 文件夹向团队共享 AI 技能</a><span class="news-date">2026-07-14</span></div>
+  <div class='news-summary'>摘要：Sx 2.0 推出跨平台桌面应用，将团队共享文件夹作为 AI 技能分发层，并把 Markdown 技能转换安装到多种 AI 客户端。它面向不使用 Git 或命令行的业务团队，降低技能共享门槛。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Hacker News</span><a class="news-title" href="https://sleuth-io.github.io/sx/2026/07/10/your-dropbox-is-now-a-skill-server.html" target="_blank">Show HN：Sx 2.0——通过 Dropbox 文件夹向团队共享 AI 技能</a><span class="news-date">2026-07-14</span></div>
+  <div class='news-summary'>摘要：Sx 2.0 推出跨平台桌面应用，将团队共享文件夹作为 AI 技能分发层，并把 Markdown 技能转换安装到多种 AI 客户端。它面向不使用 Git 或命令行的业务团队，降低技能共享门槛。</div>
+</div></div>
+<div class="stats">
+  <div><div class="sv">28</div><div class="sl">信息条数</div></div>
+  <div><div class="sv">2</div><div class="sl">GitHub 项目</div></div>
+  <div><div class="sv">7</div><div class="sl">Trending</div></div>
+  <div><div class="sv">4</div><div class="sl">官方动态</div></div>
+</div>
+<div class="ft">由 Hermes Agent 自动生成 | 2026-07-14 10:19</div>
+</div>
+<script>
+(() => {
+  const progressBar = document.getElementById('progress-bar');
+  const percentLabel = document.getElementById('reading-percent');
+  const currentLabel = document.getElementById('current-section-label');
+  const links = Array.from(document.querySelectorAll('.quick-link'));
+  const sections = links
+    .map(link => {
+      const id = link.getAttribute('data-target');
+      const section = document.getElementById(id);
+      return section ? { id, link, section, label: link.textContent.trim() } : null;
+    })
+    .filter(Boolean);
+
+  function updateProgress() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = maxScroll > 0 ? Math.min(100, Math.max(0, (scrollTop / maxScroll) * 100)) : 0;
+    progressBar.style.width = percent + '%';
+    percentLabel.textContent = Math.round(percent) + '%';
+  }
+
+  function updateActiveSection() {
+    const trigger = window.innerHeight * 0.22;
+    let current = sections[0];
+    for (const item of sections) {
+      const rect = item.section.getBoundingClientRect();
+      if (rect.top <= trigger) {
+        current = item;
+      }
+    }
+    if (!current) return;
+    links.forEach(link => link.classList.remove('active'));
+    current.link.classList.add('active');
+    currentLabel.textContent = current.label.replace(/^[^\s]+\s/, '');
+  }
+
+  function onScroll() {
+    updateProgress();
+    updateActiveSection();
+  }
+
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script></body></html>

@@ -1,0 +1,344 @@
+{
+  "date": "2026-07-14",
+  "github": [
+    {
+      "name": "ComPDF/docslight",
+      "desc": "Part of the KDAN ecosystem, DocSlight offers document parsing, OCR, and data extraction that turn PDFs, scans, images, and Office files into structured outputs for RAG pipelines, AI agents, and enterprise document automation.",
+      "stars": 48,
+      "lang": "Vue",
+      "updated": "2026-07-14",
+      "url": "https://github.com/ComPDF/docslight",
+      "topics": [
+        "document-data-extraction",
+        "document-information-extraction",
+        "document-parser",
+        "document-parsing",
+        "docx-to-json"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "V1.0.0",
+          "name": "V1.0.0",
+          "date": "2026-07-09",
+          "summary": "First public release of DocSlight.；DocSlight is a lightweight Python SDK and CLI for parsing documents and extracting structured data from PDFs, images, an；- Initial Python SDK release"
+        }
+      ],
+      "name_zh": "ComPDF/docslight",
+      "desc_zh": "KDAN 生态的文档解析组件，可对 PDF、扫描件、图片和 Office 文件执行 OCR、版面理解与结构化抽取。它为 RAG、企业文档自动化和 AI Agent 提供可直接消费的文本、表格与字段输出。",
+      "lang_zh": "Vue"
+    },
+    {
+      "name": "magnus919/agent-skills",
+      "desc": "Curated collection of AI agent skills for Hermes and other agent frameworks",
+      "stars": 5,
+      "lang": "Python",
+      "updated": "2026-07-14",
+      "url": "https://github.com/magnus919/agent-skills",
+      "topics": [
+        "agent-skills",
+        "agentskills",
+        "ai-agents",
+        "automation",
+        "llm"
+      ],
+      "is_top": true,
+      "releases": [],
+      "name_zh": "magnus919/agent-skills",
+      "desc_zh": "面向 Hermes 与其他代理框架的精选技能仓库，提供可复用的任务指令、工具约定和领域流程。它帮助团队把个人经验沉淀为代理能稳定调用的模块，而非一次性提示词。",
+      "lang_zh": "Python"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "HKUDS/Vibe-Trading",
+      "name_zh": "HKUDS/Vibe-Trading",
+      "desc": "开源的 AI 驱动量化交易研究平台，把市场数据、策略构建、回测与交易决策串成可追溯的工作流。它面向希望将 LLM 辅助分析引入投研流程的开发者与量化团队，重点是让策略假设、信号和执行环节能够协同迭代。",
+      "desc_zh": "开源的 AI 驱动量化交易研究平台，把市场数据、策略构建、回测与交易决策串成可追溯的工作流。它面向希望将 LLM 辅助分析引入投研流程的开发者与量化团队，重点是让策略假设、信号和执行环节能够协同迭代。",
+      "lang": "Python",
+      "lang_zh": "Python",
+      "url": "https://github.com/HKUDS/Vibe-Trading",
+      "stars": "",
+      "today": ""
+    },
+    {
+      "name": "moeru-ai/airi",
+      "name_zh": "moeru-ai/airi",
+      "desc": "面向个人陪伴与桌面交互的开源 AI 代理项目，尝试把角色人格、语音/视觉交互和长期记忆组合为可本地运行的数字伙伴。适合关注具身化交互、虚拟角色或个人代理产品原型的开发者参考。",
+      "desc_zh": "面向个人陪伴与桌面交互的开源 AI 代理项目，尝试把角色人格、语音/视觉交互和长期记忆组合为可本地运行的数字伙伴。适合关注具身化交互、虚拟角色或个人代理产品原型的开发者参考。",
+      "lang": "TypeScript",
+      "lang_zh": "TypeScript",
+      "url": "https://github.com/moeru-ai/airi",
+      "stars": "",
+      "today": ""
+    },
+    {
+      "name": "Shubhamsaboo/awesome-llm-apps",
+      "name_zh": "Shubhamsaboo/awesome-llm-apps",
+      "desc": "可直接运行的 LLM、RAG 与 AI Agent 应用案例库，覆盖多代理协作、文档问答、浏览器自动化和生产级工作流。它的价值在于提供可复用的端到端实现，而不是只罗列模型或提示词。",
+      "desc_zh": "可直接运行的 LLM、RAG 与 AI Agent 应用案例库，覆盖多代理协作、文档问答、浏览器自动化和生产级工作流。它的价值在于提供可复用的端到端实现，而不是只罗列模型或提示词。",
+      "lang": "Python",
+      "lang_zh": "Python",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "stars": "",
+      "today": ""
+    },
+    {
+      "name": "Nutlope/hallmark",
+      "name_zh": "Nutlope/hallmark",
+      "desc": "将自然语言产品需求转化为可执行设计与开发产物的 AI 应用原型，聚焦把创意、界面和实现步骤连接起来。对探索“从想法到可交付产品”的生成式开发体验有参考价值。",
+      "desc_zh": "将自然语言产品需求转化为可执行设计与开发产物的 AI 应用原型，聚焦把创意、界面和实现步骤连接起来。对探索“从想法到可交付产品”的生成式开发体验有参考价值。",
+      "lang": "TypeScript",
+      "lang_zh": "TypeScript",
+      "url": "https://github.com/Nutlope/hallmark",
+      "stars": "",
+      "today": ""
+    },
+    {
+      "name": "Graphify-Labs/graphify",
+      "name_zh": "Graphify-Labs/graphify",
+      "desc": "图数据与知识图谱构建工具，帮助把分散文本、实体和关系整理成可查询的图结构。它可作为 RAG 或 Agent 的结构化知识层，适用于需要关系推理、溯源或复杂检索的应用。",
+      "desc_zh": "图数据与知识图谱构建工具，帮助把分散文本、实体和关系整理成可查询的图结构。它可作为 RAG 或 Agent 的结构化知识层，适用于需要关系推理、溯源或复杂检索的应用。",
+      "lang": "Python",
+      "lang_zh": "Python",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "stars": "",
+      "today": ""
+    },
+    {
+      "name": "github/spec-kit",
+      "name_zh": "github/spec-kit",
+      "desc": "GitHub 推出的规格驱动开发工具包，把需求、约束和验收标准沉淀为结构化规格，再辅助生成实施计划与代码改动。它强调先明确“做什么、如何验收”，以降低 AI 编程中需求漂移和返工。",
+      "desc_zh": "GitHub 推出的规格驱动开发工具包，把需求、约束和验收标准沉淀为结构化规格，再辅助生成实施计划与代码改动。它强调先明确“做什么、如何验收”，以降低 AI 编程中需求漂移和返工。",
+      "lang": "Python",
+      "lang_zh": "Python",
+      "url": "https://github.com/github/spec-kit",
+      "stars": "",
+      "today": ""
+    },
+    {
+      "name": "coreyhaines31/marketingskills",
+      "name_zh": "coreyhaines31/marketingskills",
+      "desc": "面向 AI 助手的营销技能库，将市场研究、定位、内容策划、增长实验等专业流程封装为可调用的技能。适合希望把营销方法论嵌入 Claude Code、Codex 等代理工作流的团队。",
+      "desc_zh": "面向 AI 助手的营销技能库，将市场研究、定位、内容策划、增长实验等专业流程封装为可调用的技能。适合希望把营销方法论嵌入 Claude Code、Codex 等代理工作流的团队。",
+      "lang": "Markdown",
+      "lang_zh": "Markdown",
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "stars": "",
+      "today": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "CogniConsole: Externalizing Inference-Time Control as a Formal Abstraction for Reliable LLM Interactions",
+      "title_zh": "CogniConsole：将推理时控制外化为可靠 LLM 交互的正式抽象",
+      "date": "2026-07-13",
+      "summary": "Reliability in large language model (LLM) systems is typically framed as a function of model capability. We challenge this by demonstrating that reliability is significantly influenced by \\emph{inference-time control} -- the computational layer governing task framing and context selection. We introduce \\emph{CogniConsole}, an architectural instantiation that externalizes this control into a structured interface combining programmatic coordination with bounded prompt-based reasoning. Through \\emp",
+      "summary_zh": "论文指出，LLM 系统的可靠性不仅由模型能力决定，也取决于推理时如何组织任务与选择上下文。CogniConsole 将这层控制外化为由程序协调和受限提示推理组成的结构化界面，并用交互实验评估其可控性。",
+      "url": "https://arxiv.org/abs/2607.08774",
+      "cats": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "GATS: Graph-Augmented Tree Search with Layered World Models for Efficient Agent Planning",
+      "title_zh": "GATS：结合分层世界模型的图增强树搜索，实现高效代理规划",
+      "date": "2026-07-13",
+      "summary": "Large Language Model (LLM) agents have shown promise in multi-step planning tasks, but existing approaches like LATS (Language Agent Tree Search) and ReAct rely heavily on LLM inference during planning, leading to high computational costs and stochastic behavior. We present \\textbf{GATS} (Graph-Augmented Tree Search), a planning framework that combines systematic UCB1-based tree search with a layered world model to eliminate LLM calls during inference while achieving superior planning performanc",
+      "summary_zh": "GATS 将 UCB1 树搜索与三层世界模型结合，在规划阶段尽量避免反复调用 LLM：符号动作匹配、执行日志统计与 LLM 辅助预测共同支持状态判断。目标是在降低推理成本和随机性的同时提升多步规划表现。",
+      "url": "https://arxiv.org/abs/2607.08894",
+      "cats": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading",
+      "title_zh": "Long-Horizon-Terminal-Bench：以密集奖励评估长程终端任务中的智能体",
+      "date": "2026-07-13",
+      "summary": "AI agents have become capable of autonomously completing short, well-specified tasks. However, existing terminal benchmarks largely focus on simple problems that finish within minutes and are evaluated only by their final outcome. This setup overlooks intermediate progress and partial solutions, yielding sparse reward signals and an incomplete picture of agent capability. We introduce Long-Horizon-Terminal-Bench, a terminal benchmark of 46 long-horizon tasks spanning nine categories, including e",
+      "summary_zh": "该基准包含 46 个跨九类场景的长程终端任务，覆盖复现实验、软件工程、多模态分析、交互游戏和科学计算。它通过对中间进展进行密集奖励评分，补足只看最终成败所带来的能力评估盲区。",
+      "url": "https://arxiv.org/abs/2607.08964",
+      "cats": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Neuro-Agentic Control: A Deep Learning-based LLM-Powered Agentic AI Framework for Controlling Security Controls",
+      "title_zh": "神经智能体控制：由深度学习与 LLM 驱动的安全控制框架",
+      "date": "2026-07-13",
+      "summary": "Cyberattacks on operational technology are increasingly causing costly downtime and physical damage, exposing the limitations of traditional rule-based monitoring in industrial IoT environments. While Large Language Models (LLMs) have strong semantic reasoning abilities to assist in decision support, their hallucinatory nature presents unacceptable safety liabilities for closed-loop control. This paper introduces a neuro-agentic control framework, a novel architecture that couples an LLM-based p",
+      "summary_zh": "论文面向工业物联网控制的安全需求，将 LLM 规划器与时间序列基础模型结合，避免让有幻觉风险的语言模型单独闭环控制。该框架以数据驱动的预测和受约束决策来提高对安全控制系统的可用性。",
+      "url": "https://arxiv.org/abs/2607.09076",
+      "cats": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "L-MAD: A Systematic Evaluation of Multi-Agent Debate Structures in Legal Reasoning",
+      "title_zh": "L-MAD：法律推理中多智能体辩论结构的系统评估",
+      "date": "2026-07-13",
+      "summary": "While multi-agent debate (MAD) frameworks have shown significant potential in general reasoning, their effectiveness in highly structured, knowledge-heavy legal domains remains under-explored. In this work, we introduce the Legal Multi-Agent Debate (L-MAD) framework to systematically evaluate different debate structures and aggregation methods within Legal Textual Entailment. By assigning distinct expert personas to multiple agents, L-MAD improves upon strong single-agent baselines by up to 8\\%.",
+      "summary_zh": "研究在法律文本蕴含任务中比较多智能体辩论的组织方式和聚合方法。L-MAD 通过赋予代理不同专家角色，相比强单代理基线获得提升，同时揭示代理数量增加在一致性、准确率与成本之间的权衡。",
+      "url": "https://arxiv.org/abs/2607.09099",
+      "cats": [
+        "cs.AI"
+      ]
+    }
+  ],
+  "hn": [
+    {
+      "title": "Building Food Metadata with LLM Juries",
+      "url": "https://careersatdoordash.com/blog/building-food-metadata-with-llm-juries-context-optimization-multimodal-ai/",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-14",
+      "page_content": "Blog\n\nJuly 2, 2026\n\n|\n\nDavid Lindsay\n\nShuang Liu\n\nYing Yang\n\n![Image 1](https://careersatdoordash.com/wp-content/uploads/2026/06/Building-Food-Metadata-with-LLM-Juries-Context-Optimization-Multimodal-AI-Main-image.png)\n\nDoorDash serves a vast and diverse set of merchants, with every restaurant, menu, and dish expressed in its own unique way. A high-quality food catalog forms the backbone for customer search and the personalization experience, representing a key driver of restaurant success. Unlike standardized catalogs, food is deeply contextual, culturally rich, and highly non-standardized; the same dish can be described in countless ways, while entirely different dishes may share similar names, descriptions, or images. Add to this that, at DoorDash’s scale, there are millions of unique items and constant menu updates. This variability and volume make it extremely challenging to generate reliable metadata via traditional approaches.",
+      "title_zh": "Show HN：Sx 2.0——通过 Dropbox 文件夹向团队共享 AI 技能",
+      "summary_zh": "Sx 2.0 推出跨平台桌面应用，将团队共享文件夹作为 AI 技能分发层，并把 Markdown 技能转换安装到多种 AI 客户端。它面向不使用 Git 或命令行的业务团队，降低技能共享门槛。"
+    },
+    {
+      "title": "Show HN: Sx 2.0 – Share AI skills with your team through a Dropbox folder",
+      "url": "https://sleuth-io.github.io/sx/2026/07/10/your-dropbox-is-now-a-skill-server.html",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-14",
+      "page_content": "![Image 1: sx 2.0](https://sleuth-io.github.io/sx/assets/skill-server-hero.png)\n\n_sx 2.0 is out: a native app for Mac, Windows, and Linux that lets anyone share AI skills with their team, no git and no terminal required._\n\nA few months ago I wrote that there’s an [npm-shaped hole in the AI tooling stack](https://sleuth-io.github.io/2026/06/05/a-package-manager-for-ai-assets.html). Your best AI users build up skills, MCP configs, and commands that multiply their output, and that knowledge stays trapped on their machines because there’s no clean way to distribute it. We built sx, an open source package manager for AI assets, to fill that hole. It worked. Developers use it to version skills in git vaults and install them across Claude Code, Cursor, Copilot, Codex, Gemini, Cline, and Kiro with a lock file and deterministic installs.\n\nThen I made a mistake I should have seen coming, because I’ve watched Atlassian make it twice. I built the sharing layer for developers and assumed everyone else would eventually meet us at the command line. They won’t. In the sixty or so discovery interviews we’ve run this year, the people getting the most out of skills are increasingly in marketing, legal, sales, and ops. They write great skills. They have no git, no terminal, and no interest in acquiring either. Asking a marketing team to `sx init --type git` is asking them to not share skills.\n\nsx 2.0 is the fix. It’s a real desktop app, and the distribution model it leans on is one every team already has: a shared folder.\n\nHere’s the workflow for a non-technical team. You open the app, point your library at a folder in Dropbox, Google Drive, OneDrive, or iCloud, and drag your skills in. Markdown goes in, skills come out. Your teammates point the app at the same folder and everything you publish shows up for them. There’s no server and no accounts. The file sync product your company already pays for does the replication.\n\nThis works because of the other big change in 2.0: vault format v2. The latest version of every asset now lives directly on disk at `assets/<name>/` as plain, readable markdown. Version history lives in `.sx/versions/` next to it. You can grep the vault. You can open it in Obsidian. You can point `.claude/skills` straight at it and it just works, because there’s nothing to unpack.\n\nThe obvious comparison is exactly that Obsidian setup, a markdown vault in a synced folder, and plenty of teams do run their skills that way today. The difference is what happens after the files sync. sx knows about the AI clients natively. When you hit Sync in the app, it runs an `sx install` in the background: it resolves what should be installed for you, translates each asset into every client’s format (Claude Code skills, Cursor rules, Copilot instructions, and so on), and writes it to the right place on your machine. Your teammate drops a skill in the shared folder, you click one button, and it’s live in your AI client. That translation layer is the part a folder full of markdown can’t do for you.",
+      "title_zh": "Show HN：Sx 2.0——通过 Dropbox 文件夹向团队共享 AI 技能",
+      "summary_zh": "Sx 2.0 推出跨平台桌面应用，将团队共享文件夹作为 AI 技能分发层，并把 Markdown 技能转换安装到多种 AI 客户端。它面向不使用 Git 或命令行的业务团队，降低技能共享门槛。"
+    }
+  ],
+  "news": [
+    {
+      "title": "Who will own the AI agent economy? - MIT Sloan",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxONjVwbDBYR0UxVmY5Rk9wU2FEU1Z2Yl9CcmcxalNubk1zRGdfTmpQcEkzSnB2Qk04UlN0U1BCMTU1NVNzMy1taE45M29kQzdaQzlsSEp3WHhBcjQ4cXRUWkl6Z192eEV0emNDV05KMXZJUzItc3pueEtrYWtCRzhFNA?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Mon, 13 Jul 2026 16:04:04 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxONjVwbDBYR0UxVmY5Rk9wU2FEU1Z2Yl9CcmcxalNubk1zRGdfTmpQcEkzSnB2Qk04UlN0U1BCMTU1NVNzMy1taE45",
+      "page_content": "",
+      "title_zh": "谁将掌握 AI Agent 经济？",
+      "summary_zh": "MIT Sloan 讨论 AI Agent 经济中平台、模型提供方、应用开发者与数据入口的竞争关系。文章关注价值链控制点将如何影响企业采购、生态合作和长期利润分配。"
+    },
+    {
+      "title": "My Journey From Simple LLM Calls to Fully Agent App Relay on Documentation Only - HackerNoon",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNV3BMeGMySXBpWG5ZYTVKaWZaNDJicGFDS1N6ejFqNWtmc1FTVXFrazJ3TVVRRWRaRWdnZ0g3U25qTV9TZUk5YzBxeGp1anBUbUtqX1Y3SUUxY2dpanJHN1JfbGF4Um5RTkwxcjlSRlhwdWJlUlBoRWF3ZEh2VzBfOVRBdmxwdDRTTVgtWHJYa3RnU2gyY0g2T2VtaVlKbWI0MmFBSQ?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Tue, 14 Jul 2026 01:55:10 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNV3BMeGMySXBpWG5ZYTVKaWZaNDJicGFDS1N6ejFqNWtmc1FTVXFrazJ3TVVRRWRaRWdnZ0g3U25qTV9TZUk5YzBx",
+      "page_content": "",
+      "title_zh": "AI 模型协同设计：面向硬件的 LLM 设计",
+      "summary_zh": "NVIDIA 从软硬件协同角度讨论 LLM 架构与部署优化：模型设计需要同时考虑内存、带宽、并行计算和推理效率，而不是只追逐参数规模或单项基准。"
+    },
+    {
+      "title": "AI Model Co-Design: Hardware-Friendly LLM Design | NVIDIA Technical Blog - NVIDIA Developer",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NHeEdVSXgzTTYteWEyNzdvX3FXd1ZOM2FWVjJzcXZvenppcVFIckx3azVJRmh0Rkw1NFV0UzVQR21Wb3RFWHhmd3c?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 10 Jul 2026 17:16:10 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NH",
+      "page_content": "",
+      "title_zh": "Salesforce 36 亿美元 Fin 收购案检验企业 AI Agent 准备度",
+      "summary_zh": "CMSWire 以 Salesforce 的收购交易为切口，分析企业要部署 AI Agent 所需的数据治理、流程标准化和集成能力。重点不在模型本身，而在组织是否已具备可被代理执行的基础。"
+    },
+    {
+      "title": "How DoorDash Built an AI Shopping Assistant That Doesn’t Rely on the LLM Alone - infoq.com",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE01bDJXLVRzSVgwUXNYZXJNM255c3dNV1N5Vk1GZGpaVEVxOWpyMllKY2R4cThNLV84cUd0WXJSQ216dFhmbUNnejRnR3BhRnc3dzBxT2JEMDk3NlZiYTFfRC0tSnhKeUpqcGk2aHd3?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Mon, 13 Jul 2026 14:08:14 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE01bDJXLVRzSVgwUXNYZXJNM255c3dNV1N5Vk1GZGpaVEVxOWpyMllKY2R4cThNLV84cUd0WXJSQ216dFhmbUNnejRn",
+      "page_content": "",
+      "title_zh": "构建优秀 AI Agent：先做仪表盘，再加入 Agent",
+      "summary_zh": "SaaStr 提出务实的产品路径：先用仪表盘让用户看清数据和决策流程，再把 Agent 嵌入其中执行辅助任务。这样可先验证价值与可控性，避免把不透明自动化直接交给用户。"
+    },
+    {
+      "title": "Salesforce's $3.6 Billion Fin Deal Signals a New AI Agent Readiness Test - CMSWire",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQZHFRWnF4Ny1ma25vbzRHYUswSS1IenE5Mkx5emFibk1xOTdDblJxbVpGMTJ5Rkw4bkgyS3liY3NYVnZSd3RmTDVWWlRFNHhPMnRjUVBKdWxlTktTbXlUV2cwVVd1WGgtRnp0N3pSc3BTQjZXLWlRdjBlREw4RzlTMzVUcV9SQzNuclg3Y3dRcTNMUXc4WGFRb3o1WW5oNjllS2huNUJDS3pPMmtiTGhkWXJrdzNNQQ?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Mon, 13 Jul 2026 22:23:09 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQZHFRWnF4Ny1ma25vbzRHYUswSS1IenE5Mkx5emFibk1xOTdDblJxbVpGMTJ5Rkw4bkgyS3liY3NYVnZSd3RmTDVW",
+      "page_content": "",
+      "title_zh": "你的 AI Agent 不该无所不知，而应知道该问谁",
+      "summary_zh": "CIO 文章强调企业 Agent 应通过权限、目录和专家路由获取正确知识，而非把所有数据塞进单一上下文。该思路有助于兼顾准确性、权限控制和组织知识维护。"
+    },
+    {
+      "title": "One Way to Build a Great AI Agent: Just Start With a Dashboard, Then Add the Agent - saastr.com",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPX09tZG5BNTVBWVFrdUtqOUFmUGU2Uk9zNlplSTN1OTZhdzFPMlItejhSMjhsZExpb2FReWc4aXp4N29EblB0YXJCUTYwd0YxM2lXWHFrWHBlTUMxckk4cThOUng1UUl2TmdRNHZxVUNDQjc4amliTDBLbE9BZ0VZOXp6ajVjTGMwYVBYcWhCaEx6TDg1SkZZZnNPd2dGT1VCUk1qcVRPZw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Sat, 11 Jul 2026 17:36:29 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPX09tZG5BNTVBWVFrdUtqOUFmUGU2Uk9zNlplSTN1OTZhdzFPMlItejhSMjhsZExpb2FReWc4aXp4N29EblB0YXJC",
+      "page_content": "",
+      "title_zh": "Okta：AI Agent 推动动态统一身份安全需求",
+      "summary_zh": "Okta 指出 Agent 的非人类身份、动态权限和跨系统调用会增加身份治理复杂度。企业需要对代理身份、会话、授权与审计建立统一且可持续的控制机制。"
+    },
+    {
+      "title": "Your AI agent shouldn’t know everything – it should know who to ask - cio.com",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZEtvVmxLWV9jb2JzbTN1dFk1ZDA4S3VueUFnNF9IQTJJWGtnZGU4SWVYSFJsclBoMmxnZF90dHk5S0paV2FfaGdqQXphZy1ySnJPUUhFQWp5NFdKZzdybFhDdG1KZUR0U3MyelVYS1NuTGZWN2RnOGp1S2JwQmdmdE9iV2MxQk1iRjN6MTNNZHQtcXdzclBJTXM4bG1LZC1mSWc1NUVRMHk?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Mon, 13 Jul 2026 08:07:34 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZEtvVmxLWV9jb2JzbTN1dFk1ZDA4S3VueUFnNF9IQTJJWGtnZGU4SWVYSFJsclBoMmxnZF90dHk5S0paV2FfaGdq",
+      "page_content": "",
+      "title_zh": "Keeper 为终端管理加入 AI Agent 治理",
+      "summary_zh": "Keeper 在终端管理能力中加入针对 AI Agent 的治理功能，意在让组织可见、可控地管理代理使用的凭据和访问范围，降低端点上的权限与数据泄露风险。"
+    },
+    {
+      "title": "OKTA: AI agent adoption is driving demand for dynamic, unified identity security platforms - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPUTYyQndaTEZQWFl6ZVRQQ0RRY2lTeGlSX0dMZXpIWlBkZU52OG9MWHVKVFE4TXZHMDhNTDFVUDhDd1IySEpha2pJZTBvN3VndUQ5bUdwTHFMRzloMTVpeW1wNVIwR0ROSnRsV2lYdjNIWHNmOFVzV0tzWFJ6REJnY3NLRXY5NmZpcVNRYjhQVTg0TWdzLW1Db1oyUEF6U0ZObGdURWNXdDZPaUlVaWpFQUZNcFVwTFVxU1VsTE1mSjJacXFfeHkyQkUyRHg5dUVnOU54d2RtVmNIRG92cG5Pdk9IQW9ISDZiaWJyNG5HcGdxSVAxUWR6dmsyQmE3ZFpIaW1pdG1B?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Mon, 13 Jul 2026 23:20:10 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMihgJBVV95cUxPUTYyQndaTEZQWFl6ZVRQQ0RRY2lTeGlSX0dMZXpIWlBkZU52OG9MWHVKVFE4TXZHMDhNTDFVUDhDd1IySEpha2pJ",
+      "page_content": "",
+      "title_zh": "用 Workflow SDK 与 AI SDK 构建可持久运行的 AI Agent",
+      "summary_zh": "文章介绍如何结合工作流框架和 AI SDK，使 Agent 的调用、状态、重试与长时间任务具备更可靠的编排方式。重点是从一次性对话转向可观测、可恢复的生产流程。"
+    }
+  ],
+  "blogs": [
+    {
+      "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "Today, OpenAI announced GPT‑5.6, which will become the new preferred model in Microsoft 365 Copilot—in Word, Excel, PowerPoint, Chat and Cowork. For Microsoft 365 customers, the update brings OpenAI's latest flagship model series into productivity tools people use every day, helping them create, analyze, and collaborate with more capable AI assistance across workstreams. GPT‑5.6 is OpenAI’s latest flagship model series, which delivers more useful work from every token, with stronger performance per dollar and on demand capability for the most complex tasks.\n\nWith GPT‑5.6, Microsoft 365 users will be able to create higher-quality work products with less effort across the apps they already rely on:\n\n*   In Word, GPT‑5.6 can help people draft, edit, and refine documents with fewer rounds of prompting.\n*   In Excel, it can support deeper analysis while using tokens more efficiently, helping users move faster from data to insights.\n*   In PowerPoint, it can help turn early ideas into more polished, visually compelling presentations with less manual guidance.\n*   In Cowork, it can help users complete complex, cross-functional work and produce higher-quality outputs with less manual coordination.\n\n“We can’t wait for customers to see what GPT‑5.6 in Microsoft 365 will do, enabling them to work even more effectively with AI in the tools they use every day,” said Nitin Agrawal, President, Copilot & Agents Core, Microsoft. “Using Copilot powered by OpenAI’s latest model, customers will be able to produce more polished outputs in Word, Excel, PowerPoint, Cowork, and Copilot Chat, whether they are drafting documents, analyzing data, creating presentations, or collaborating across teams. We’re excited to continue building with OpenAI to bring more powerful AI experiences to people and organizations around the world.”\n\n“Microsoft 365 is where millions of people write, analyze, create, and collaborate every day,” said Nikunj Handa, Head of API Product, OpenAI. “By bringing GPT‑5.6 to Microsoft 365 Copilot through the OpenAI API, we're helping organizations get more useful work from every token, and more value from AI in the tools they already use.”\n\nIn addition to serving the models natively, Microsoft will also access OpenAI models directly through the API to bring GPT‑5.6 to Microsoft 365 customers.",
+      "title_zh": "GPT-5.6 成为 Microsoft 365 Copilot 的首选模型",
+      "summary_zh": "OpenAI 宣布 GPT-5.6 将接入 Word、Excel、PowerPoint、Copilot Chat 与 Cowork。重点是以更高的每 token 效率支持文档撰写、数据分析、演示制作和跨职能协作。"
+    },
+    {
+      "title": "ChatGPT is now a partner for your most ambitious work",
+      "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "Introducing ChatGPT Work, an agent in ChatGPT that helps you take on more ambitious tasks. It can gather information across your apps and workflows to create finished materials like sheets, slides, docs, and web apps, and stay with complex projects for hours by breaking them into smaller steps and completing them independently.\n\nWith Codex technology built-in, ChatGPT can now move beyond answering questions to getting real work done across web, mobile, and desktop. More than 5 million people use Codex every week. Although it began as a coding agent for developers, more than 1 million people now use it for work outside software development, showing how its capabilities can support a wider range of tasks.\n\nTo better manage these tasks, ChatGPT Work is powered by our latest frontier model, GPT‑5.6, [which is also rolling out today⁠](https://openai.com/index/gpt-5-6/). GPT‑5.6 makes ChatGPT state of the art at reasoning through multi-step tasks and creating materials that follow your templates and reference files.\n\nThe best way to learn how to use ChatGPT Work is to give it a task you already know well: analyze a month-end budget variance, turn source materials into a marketing campaign brief, or prepare for a sales meeting. You can follow its progress, answer questions, change direction, and approve important actions.\n\nYou can even ask ChatGPT Work to take on entire workflows with a single request. For example, it can turn customer research into a campaign brief, use that brief to create marketing assets, and adapt those assets for different markets while carrying context through every step.\n\nEven when you’re away from your computer or phone, ChatGPT Work can keep projects moving forward with Scheduled Tasks. For example, it can independently turn new messages from Microsoft Teams and Slack into updated docs or slides, then share important changes with your team.\n\nIn early testing, we’ve seen how ChatGPT Work expands what users can do:\n\n1 of 4",
+      "title_zh": "ChatGPT 成为处理高难度工作的协作伙伴",
+      "summary_zh": "OpenAI 介绍 ChatGPT 面向复杂工作任务的协作能力与产品定位，强调把研究、构思、执行和复盘连接为连续工作流。"
+    },
+    {
+      "title": "OpenAI Bio Bug Bounty",
+      "url": "https://openai.com/index/bio-bug-bounty/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "OpenAI Bio Bug Bounty | OpenAI\n\nTesting for universal jailbreaks for biorisks\n\n## Invitation\n\nAs part of our ongoing efforts to strengthen our safeguards for advanced AI capabilities in biology, we’re evolving our GPT‑5.5 Bio Bug Bounty to become an ongoing private program—the OpenAI Bio Bounty Program. The program will remain focused on universal jailbreaks that can defeat our predefined biosafety challenge against OpenAI’s frontier models, starting with GPT‑5.6 and going forward.\n\nWe’re also excited to announce that we’re increasing reward amounts. The reward for a universal jailbreak for the OpenAI Bio Bounty Program has been raised from $25,000 to $50,000 for both GPT‑5.6 and GPT‑5.5. Smaller awards may be granted for partial wins at our discretion.\n\nWe will continue to honor the scope for the GPT‑5.5 Bio Bounty Program as originally announced, with testing ending on July 27, 2026. After this date, only GPT‑5.6 will be in scope; we will continue to communicate any future changes in scope to our researchers.\n\nInterested applicants should apply through our rolling [application process⁠(opens in a new window)](https://docs.google.com/forms/d/e/1FAIpQLScIW9QJTq4J6zsl89Un-OmTCSDNWdWldcib8mYZEqoHzunukQ/viewform?usp=preview). Once selected, accepted applicants will be onboarded to the bio bug bounty platform. All past applicants to the GPT‑5.5 Bio Bounty Program will not need to reapply.\n\n## How to participate",
+      "title_zh": "OpenAI 启动生物安全漏洞赏金计划",
+      "summary_zh": "OpenAI 公开生物安全漏洞赏金项目，邀请安全研究人员在明确规则下报告可能绕过防护的风险，以提升模型与产品的安全性。"
+    },
+    {
+      "title": "Inviting hard questions",
+      "url": "https://www.anthropic.com/news/hard-questions",
+      "source": "Anthropic",
+      "date": "",
+      "page_content": "",
+      "title_zh": "欢迎提出尖锐问题",
+      "summary_zh": "Anthropic 就其模型、安全或社会影响相关议题邀请外部提出并讨论关键问题，体现其对公开审视与安全治理的持续关注。"
+    }
+  ],
+  "github_strategy": {
+    "query": "AI agent OR autonomous OR workflow automation (无过滤)",
+    "filters": "",
+    "sort": "stars",
+    "label": "新创建项目（近 7 天）"
+  }
+}

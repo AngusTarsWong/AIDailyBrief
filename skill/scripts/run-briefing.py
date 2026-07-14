@@ -509,6 +509,45 @@ try:
         print(f"  ✅ {len(results['github_trending'])} 个项目（全部保留，由 LLM 筛选）")
 except Exception as e:
     print(f"  ⚠️ Trending 抓取失败: {e}")
+
+# Jina 偶发超时或返回非 Markdown 时，直接读取 GitHub 页面作为备用源，
+# 避免把采集失败误当成“今天没有 Trending 项目”。
+if not results['github_trending']:
+    try:
+        trending_html = run(
+            f'curl -sL --connect-timeout 10 -m 30 -x {PROXY} "https://github.com/trending"',
+            timeout=35,
+        )
+        articles = re.findall(r'<article[^>]*Box-row[^>]*>(.*?)</article>', trending_html, re.DOTALL)
+        projects = []
+        for article in articles:
+            repo = re.search(r'href="/([^"?#]+/[^"?#]+)"', article)
+            if not repo:
+                continue
+            name = repo.group(1).strip('/')
+            if '/' not in name or name in {p.get('name') for p in projects}:
+                continue
+            desc = ''
+            desc_match = re.search(r'<p[^>]*>(.*?)</p>', article, re.DOTALL)
+            if desc_match:
+                desc = html_mod.unescape(re.sub(r'<[^>]+>', ' ', desc_match.group(1))).strip()
+                desc = re.sub(r'\s+', ' ', desc)
+            language = ''
+            lang_match = re.search(r'itemprop="programmingLanguage"[^>]*>(.*?)</span>', article, re.DOTALL)
+            if lang_match:
+                language = html_mod.unescape(re.sub(r'<[^>]+>', '', lang_match.group(1))).strip()
+            stars = re.search(r'([\d,]+)\s+stars\s+today', html_mod.unescape(re.sub(r'<[^>]+>', ' ', article)), re.I)
+            projects.append({
+                'name': name,
+                'url': f'https://github.com/{name}',
+                'desc': desc,
+                'lang': language,
+                'today': f'{stars.group(1)} stars today' if stars else '',
+            })
+        results['github_trending'] = projects
+        print(f"  ↪️ Jina 无有效结果，GitHub 页面备用源补齐 {len(projects)} 个项目")
+    except Exception as e:
+        print(f"  ⚠️ Trending 备用源失败: {e}")
 print(f"  ✅ {len(results['github_trending'])} 个项目")
 
 # ── 1.5 用 Jina 补充 Trending 项目详情 ────────────
@@ -699,6 +738,48 @@ for entry in entries[:5]:
             'url': link.group(1) if link else '',
             'cats': cats[:2],
         })
+
+# export.arxiv.org 在代理网络下偶有空响应；改用 arXiv 当日 new listing 作为备用源。
+# 备用源只在 API 未返回论文时启用，并保留真实的 listing 日期与论文链接。
+if not results['papers']:
+    try:
+        listing = run(
+            f'curl -sL --connect-timeout 15 -m 30 -x {PROXY} "https://arxiv.org/list/cs.AI/new"',
+            timeout=35,
+        )
+        records = re.findall(r'<dt>(.*?)</dt>\s*<dd>(.*?)</dd>', listing, re.DOTALL)
+        keywords = ('llm', 'large language', 'agent', 'language model', 'multi-agent', 'agentic')
+        for dt, dd in records:
+            title_match = re.search(r'<div class="list-title[^>]*>.*?</span>(.*?)</div>', dd, re.DOTALL)
+            id_match = re.search(r'href="/abs/([^"?#]+)"', dt)
+            if not title_match or not id_match:
+                continue
+            title = html_mod.unescape(re.sub(r'<[^>]+>', ' ', title_match.group(1)))
+            title = re.sub(r'\s+', ' ', title).strip()
+            if not any(keyword in title.lower() for keyword in keywords):
+                continue
+            paper_id = id_match.group(1)
+            abstract_html = run(
+                f'curl -sL --connect-timeout 10 -m 20 -x {PROXY} "https://arxiv.org/abs/{paper_id}"',
+                timeout=25,
+            )
+            abstract_match = re.search(r'<blockquote class="abstract mathjax">.*?</span>(.*?)</blockquote>', abstract_html, re.DOTALL)
+            summary = ''
+            if abstract_match:
+                summary = html_mod.unescape(re.sub(r'<[^>]+>', ' ', abstract_match.group(1)))
+                summary = re.sub(r'\s+', ' ', summary).strip()[:500]
+            results['papers'].append({
+                'title': title,
+                'date': DATE_STR,
+                'summary': summary,
+                'url': f'https://arxiv.org/abs/{paper_id}',
+                'cats': ['cs.AI'],
+            })
+            if len(results['papers']) >= 5:
+                break
+        print(f"  ↪️ arXiv API 无有效结果，new listing 备用源补齐 {len(results['papers'])} 篇论文")
+    except Exception as e:
+        print(f"  ⚠️ arXiv 备用源失败: {e}")
 print(f"  ✅ {len(results['papers'])} 论文")
 
 # ── 5. Hacker News ─────────────────────────────────
