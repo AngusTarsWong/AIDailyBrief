@@ -750,8 +750,8 @@ if not results['papers']:
         records = re.findall(r'<dt>(.*?)</dt>\s*<dd>(.*?)</dd>', listing, re.DOTALL)
         keywords = ('llm', 'large language', 'agent', 'language model', 'multi-agent', 'agentic')
         for dt, dd in records:
-            title_match = re.search(r'<div class="list-title[^>]*>.*?</span>(.*?)</div>', dd, re.DOTALL)
-            id_match = re.search(r'href="/abs/([^"?#]+)"', dt)
+            title_match = re.search(r"<div class=['\"]list-title[^>]*>.*?</span>(.*?)</div>", dd, re.DOTALL)
+            id_match = re.search(r"href=['\"]/abs/([^'\"?#]+)['\"]", dt)
             if not title_match or not id_match:
                 continue
             title = html_mod.unescape(re.sub(r'<[^>]+>', ' ', title_match.group(1)))

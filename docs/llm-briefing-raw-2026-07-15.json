@@ -1,0 +1,730 @@
+{
+  "date": "2026-07-15",
+  "github": [
+    {
+      "name": "CherryHQ/cherry-studio",
+      "desc": "AI productivity studio with smart chat, autonomous agents, and 300+ assistants. Unified access to frontier LLMs",
+      "stars": 48582,
+      "lang": "TypeScript",
+      "updated": "2026-07-15",
+      "url": "https://github.com/CherryHQ/cherry-studio",
+      "topics": [
+        "agent-skills",
+        "ai-agent",
+        "awesome-skills",
+        "claude-code",
+        "codex"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.9.12",
+          "name": "v1.9.12",
+          "date": "2026-07-05",
+          "summary": "forward DeepSeek V4+ reasoning_effort for openai-compatible providers in https://github.com/CherryHQ；fix(model)；fix(models)；fix(tools)"
+        },
+        {
+          "tag": "v1.9.11",
+          "name": "v1.9.11",
+          "date": "2026-06-07",
+          "summary": "chore(models)；encode gemini model list api key in https://github.com/CherryHQ/cherry-studio/pull/15575；infer custom provider model groups in https://github.com/CherryHQ/cherry-studio/pull/15577；clean up agent session messages on delete in https://git"
+        },
+        {
+          "tag": "v1.9.9",
+          "name": "v1.9.9",
+          "date": "2026-06-02",
+          "summary": "guard OV OCR availability CPU detection in https://github.com/CherryHQ/cherry-studio/pull/15538；respect topic naming setting for agent sessions in https://github.com/CherryHQ/cherry-studio/pull/15；feat(models)；@kapelame made their first contribution "
+        }
+      ]
+    },
+    {
+      "name": "zhayujie/CowAgent",
+      "desc": "Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-model, multi-channel. Lightweight, extensible, one-line install. (formerly chatgpt-on-wechat)",
+      "stars": 45981,
+      "lang": "Python",
+      "updated": "2026-07-15",
+      "url": "https://github.com/zhayujie/CowAgent",
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "chatgpt-on-wechat",
+        "claude"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "2.1.3",
+          "name": "2.1.3",
+          "date": "2026-07-08",
+          "summary": "Added support for claude-sonnet-5 and claude-fable-5；Added support for doubao-seed-2-1-pro and doubao-seed-2-1-turbo；Custom provider support；More reliable file editing"
+        },
+        {
+          "tag": "2.1.2",
+          "name": "2.1.2",
+          "date": "2026-06-18",
+          "summary": "Scheduled task management；Knowledge base categories and document management: The knowledge base can now be organized by catego；Multiple custom model providers；Session renaming"
+        },
+        {
+          "tag": "2.1.1",
+          "name": "2.1.1",
+          "date": "2026-06-09",
+          "summary": "Added and set as the default model, with the M2.7 series kept as an option.；Qwen3.7-plus；Selectable ASR model；Simplified install menu"
+        }
+      ]
+    },
+    {
+      "name": "chatboxai/chatbox",
+      "desc": "Powerful AI Client",
+      "stars": 41000,
+      "lang": "TypeScript",
+      "updated": "2026-07-15",
+      "url": "https://github.com/chatboxai/chatbox",
+      "topics": [
+        "assistant",
+        "chatbot",
+        "chatgpt",
+        "claude",
+        "claude-code"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.21.1",
+          "name": "v1.21.1",
+          "date": "2026-06-12",
+          "summary": "- macOS Intel；- macOS Apple Silicon；- Linux x64"
+        },
+        {
+          "tag": "v1.21.0",
+          "name": "v1.21.0",
+          "date": "2026-06-10",
+          "summary": "- macOS Intel；- macOS Apple Silicon；- Linux x64"
+        },
+        {
+          "tag": "v1.20.3",
+          "name": "v1.20.3",
+          "date": "2026-05-31",
+          "summary": "- macOS Intel；- macOS Apple Silicon；- Linux x64"
+        }
+      ]
+    },
+    {
+      "name": "calesthio/OpenMontage",
+      "desc": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
+      "stars": 38550,
+      "lang": "Python",
+      "updated": "2026-07-15",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "topics": [
+        "agent",
+        "agentic-ai",
+        "ai",
+        "claude",
+        "copilot"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "LAION-AI/Open-Assistant",
+      "desc": "OpenAssistant is a chat-based assistant that understands tasks, can interact with third-party systems, and retrieve information dynamically to do so.",
+      "stars": 37385,
+      "lang": "Python",
+      "updated": "2026-07-15",
+      "url": "https://github.com/LAION-AI/Open-Assistant",
+      "topics": [
+        "ai",
+        "assistant",
+        "chatgpt",
+        "discord-bot",
+        "language-model"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v0.0.4-alpha2",
+          "name": "v0.0.4-alpha2",
+          "date": "2023-11-25",
+          "summary": "Full Changelog: https://github.com/LAION-AI/Open-Assistant/compare/v0.0.4-alpha1...v0.0.4-alpha2；* build fixes by @yk"
+        },
+        {
+          "tag": "v0.0.4-alpha1",
+          "name": "v0.0.4-alpha1",
+          "date": "2023-11-25",
+          "summary": "Full Changelog: https://github.com/LAION-AI/Open-Assistant/compare/v0.0.4-alpha0...v0.0.4-alpha1；* more redirects by @yk"
+        },
+        {
+          "tag": "v0.0.4-alpha0",
+          "name": "v0.0.4-alpha0",
+          "date": "2023-11-25",
+          "summary": "bye page；Fix] Consume much more gpt memory running eval_rm in https://github.com/LAION-AI/Open-Assistant/pull；add blog of video about project being completed in https://github.com/LAION-AI/Open-Assistant/pull/3；add note to readme about project being "
+        }
+      ]
+    },
+    {
+      "name": "AstrBotDevs/AstrBot",
+      "desc": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+      "stars": 36342,
+      "lang": "Python",
+      "updated": "2026-07-15",
+      "url": "https://github.com/AstrBotDevs/AstrBot",
+      "topics": [
+        "agent",
+        "ai",
+        "astrbot",
+        "chatbot",
+        "chatgpt"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v4.26.6",
+          "name": "v4.26.6",
+          "date": "2026-07-14",
+          "summary": "Validated dashboard account username updates. ；Removed an unsupported force argument from LINE response parsing. ；Handled invalid response cleanup regular expressions without interrupting message delivery. ；Fixed the mobile chat input freeze and mult"
+        },
+        {
+          "tag": "v4.26.5",
+          "name": "v4.26.5",
+          "date": "2026-07-07",
+          "summary": "Enabled only synced ModelScope MCP servers. ；Improved MCP client startup and shutdown handling to avoid idle spinning and clean up on errors, tim；Replaced fragile knowledge-base duplicate-name error matching with a pre-check. ；Improved knowledge-base"
+        },
+        {
+          "tag": "v4.26.4",
+          "name": "v4.26.4",
+          "date": "2026-07-02",
+          "summary": "Return clear errors when astrbot_file_read_tool receives a directory path instead of reporting a mis；Reduce markdown streaming lag ；Resample and downmix WAV files for Tencent Silk encoding ；Guard desktop-managed core restart "
+        }
+      ]
+    },
+    {
+      "name": "CopilotKit/CopilotKit",
+      "desc": "The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol",
+      "stars": 36034,
+      "lang": "TypeScript",
+      "updated": "2026-07-15",
+      "url": "https://github.com/CopilotKit/CopilotKit",
+      "topics": [
+        "agent",
+        "agent-native",
+        "agentic-ai",
+        "agents",
+        "ai"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "channels/v0.1.1",
+          "name": "channels/v0.1.1",
+          "date": "2026-07-10",
+          "summary": "Release channels/v0.1.1"
+        },
+        {
+          "tag": "channels-whatsapp/v0.0.2",
+          "name": "channels-whatsapp/v0.0.2",
+          "date": "2026-07-10",
+          "summary": "Release channels-whatsapp/v0.0.2"
+        },
+        {
+          "tag": "channels-telegram/v0.0.4",
+          "name": "channels-telegram/v0.0.4",
+          "date": "2026-07-10",
+          "summary": "Release channels-telegram/v0.0.4"
+        }
+      ]
+    },
+    {
+      "name": "lfnovo/open-notebook",
+      "desc": "An Open Source implementation of Notebook LM with more flexibility and features",
+      "stars": 35660,
+      "lang": "TypeScript",
+      "updated": "2026-07-15",
+      "url": "https://github.com/lfnovo/open-notebook",
+      "topics": [
+        "assistant",
+        "learning",
+        "note-taking",
+        "notebook",
+        "notes-app"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.13.0",
+          "name": "v1.13.0 — Content Core 2.0: Our Biggest Content-Processing Upgrade",
+          "date": "2026-07-14",
+          "summary": "Podcast correctness；Clicking a chat/Ask citation that points at a deleted source, insight or note now shows a friendly \"；Source insights get created/updated timestamps and the API returns null (not the literal string \"Non；Optional model defaults (tra"
+        },
+        {
+          "tag": "v1.12.0",
+          "name": "v1.12.0 — Maintainability & Correctness",
+          "date": "2026-07-12",
+          "summary": "Live Anthropic model discovery；GET /api/providers；Math rendering in chat；Translations interpolate correctly in all 14 languages: counters, names and plurals no longer risk s"
+        },
+        {
+          "tag": "v1.11.0",
+          "name": "v1.11.0 — Security Hardening & Quality of Life",
+          "date": "2026-07-11",
+          "summary": "Sort the Sources table by any column；Recently Viewed section on the Notebooks page ；List view for notebooks；Per-transformation model selection"
+        }
+      ]
+    },
+    {
+      "name": "PostHog/posthog",
+      "desc": "🦔 PostHog is an all-in-one developer platform for building successful products. We offer product analytics, web analytics, session replay, error tracking, feature flags, experimentation, surveys, data warehouse, a CDP, and an AI product assistant to help debug your code, ship features faster, and keep all your usage and customer data in one stack.",
+      "stars": 35519,
+      "lang": "Python",
+      "updated": "2026-07-15",
+      "url": "https://github.com/PostHog/posthog",
+      "topics": [
+        "ab-testing",
+        "ai-analytics",
+        "analytics",
+        "cdp",
+        "data-warehouse"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "TabbyML/tabby",
+      "desc": "Self-hosted AI coding assistant",
+      "stars": 33698,
+      "lang": "Rust",
+      "updated": "2026-07-15",
+      "url": "https://github.com/TabbyML/tabby",
+      "topics": [
+        "ai",
+        "codegen",
+        "coding-assistant",
+        "coding-language",
+        "developer-experience"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "nightly",
+          "name": "nightly",
+          "date": "2023-09-08",
+          "summary": ""
+        },
+        {
+          "tag": "next-alpha",
+          "name": "next-alpha",
+          "date": "2026-02-09",
+          "summary": "This is an alpha version for Tabby dev,；This is only intended to be used internally."
+        },
+        {
+          "tag": "v0.32.0",
+          "name": "v0.32.0",
+          "date": "2026-01-25",
+          "summary": "Add support for mistral/embedding api kind. #4380；Add generic OAuth support. #4325；Add support for indexing multiple branches. #4419；Include email in invitation link and disable email editing when opening the link. #4417"
+        }
+      ]
+    },
+    {
+      "name": "zeroclaw-labs/zeroclaw",
+      "desc": "Fast, small, and fully autonomous AI personal assistant infrastructure, any OS, any platform — deploy anywhere, swap anything 🦀",
+      "stars": 32267,
+      "lang": "Rust",
+      "updated": "2026-07-14",
+      "url": "https://github.com/zeroclaw-labs/zeroclaw",
+      "topics": [
+        "agent",
+        "agentic",
+        "ai",
+        "infra",
+        "ml"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v0.8.2",
+          "name": "v0.8.2",
+          "date": "2026-06-26",
+          "summary": "A2A agent discovery；Richer skills story；Installation now adds zeroclaw to PATH automatically with a --no-modify-path opt-out .；Untrusted inbound content is now framed and sanitized before a model ever sees it, both through the "
+        },
+        {
+          "tag": "v0.8.1",
+          "name": "v0.8.1",
+          "date": "2026-06-19",
+          "summary": "Cascading config edits；Discord skill-driven slash commands；Operator Console redesign；Cached-input pricing for OpenAI-compatible providers: cost tracking now captures cached_input_tokens"
+        },
+        {
+          "tag": "v0.8.0",
+          "name": "v0.8.0",
+          "date": "2026-06-12",
+          "summary": "Multi-agent runtime；Schema V3 with automatic migration；a new terminal UI with dedicated Chat, Code, Dashboard, Config, Quickstart, and Logs panes. One daem；Security hardening"
+        }
+      ]
+    },
+    {
+      "name": "iOfficeAI/AionUi",
+      "desc": "Free, local, open-source 24/7 Cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI and 20+ more CLI | Customize your assistants | Star if you like it!",
+      "stars": 30060,
+      "lang": "TypeScript",
+      "updated": "2026-07-15",
+      "url": "https://github.com/iOfficeAI/AionUi",
+      "topics": [
+        "acp",
+        "agent-team",
+        "ai",
+        "ai-agent",
+        "chat"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v2.1.35",
+          "name": "v2.1.35",
+          "date": "2026-07-14",
+          "summary": "Sending to a busy conversation is handled gracefully across all runtimes: instead of surfacing a raw；If assistant data fails to load at startup, AionUi now treats it as a repairable local-data issue an；Bug reports filed from a team page now include t"
+        },
+        {
+          "tag": "v2.1.34",
+          "name": "v2.1.34",
+          "date": "2026-07-13",
+          "summary": "Fixed \"409 conflict\" errors when sending queued messages: the draft box could fire a message while t；fix(conversation)；fix(team)；bump version to 2.1.34 in https"
+        },
+        {
+          "tag": "v2.1.33",
+          "name": "v2.1.33",
+          "date": "2026-07-11",
+          "summary": "Fixed Windows builds shipping with an outdated Codex verification layout, which could cause Codex to；fix(build)；fix(build)；bump version to 2.1.33 in https"
+        }
+      ]
+    },
+    {
+      "name": "Zackriya-Solutions/meetily",
+      "desc": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS & Windows. Understand How to write meeting minutes",
+      "stars": 24681,
+      "lang": "Rust",
+      "updated": "2026-07-15",
+      "url": "https://github.com/Zackriya-Solutions/meetily",
+      "topics": [
+        "ai",
+        "ai-meeting-assistant",
+        "llm",
+        "local-ai",
+        "mac"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "MagicMirrorOrg/MagicMirror",
+      "desc": "MagicMirror² is an open source modular smart mirror platform. With a growing list of installable modules, the MagicMirror² allows you to convert your hallway or bathroom mirror into your personal assistant.",
+      "stars": 23663,
+      "lang": "JavaScript",
+      "updated": "2026-07-15",
+      "url": "https://github.com/MagicMirrorOrg/MagicMirror",
+      "topics": [
+        "domotics",
+        "javascript",
+        "magicmirror",
+        "mirror",
+        "raspberry-pi"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v2.37.0",
+          "name": "v2.37.0",
+          "date": "2026-07-01",
+          "summary": "newsfeed] add allowBasicHtmlTags option for basic emphasis "
+        },
+        {
+          "tag": "v2.36.0",
+          "name": "v2.36.0",
+          "date": "2026-04-30",
+          "summary": "fix(newsfeed)"
+        },
+        {
+          "tag": "v2.35.0",
+          "name": "v2.35.0",
+          "date": "2026-04-01",
+          "summary": "fix(newsfeed)；newsfeed] refactor"
+        }
+      ]
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "Shubhamsaboo/awesome-llm-apps",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "desc": "Star Shubhamsaboo / awesome-llm-apps 100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+      "lang": "Python",
+      "today": "1,106 stars today"
+    },
+    {
+      "name": "sponsors/mattpocock",
+      "url": "https://github.com/sponsors/mattpocock",
+      "desc": "Sponsor Star mattpocock / skills Skills for Real Engineers. Straight from my .claude directory.",
+      "lang": "Shell",
+      "today": "1,679 stars today"
+    },
+    {
+      "name": "sponsors/Dicklesworthstone",
+      "url": "https://github.com/sponsors/Dicklesworthstone",
+      "desc": "Sponsor Star Dicklesworthstone / destructive_command_guard The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.",
+      "lang": "Rust",
+      "today": "473 stars today"
+    },
+    {
+      "name": "sponsors/OpenCut-app",
+      "url": "https://github.com/sponsors/OpenCut-app",
+      "desc": "Sponsor Star OpenCut-app / OpenCut The open-source CapCut alternative",
+      "lang": "TypeScript",
+      "today": "4,276 stars today"
+    },
+    {
+      "name": "virattt/ai-hedge-fund",
+      "url": "https://github.com/virattt/ai-hedge-fund",
+      "desc": "Star virattt / ai-hedge-fund An AI Hedge Fund Team",
+      "lang": "Python",
+      "today": "109 stars today"
+    },
+    {
+      "name": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "desc": "Star Nutlope / hallmark Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "lang": "CSS",
+      "today": "1,015 stars today"
+    },
+    {
+      "name": "HKUDS/Vibe-Trading",
+      "url": "https://github.com/HKUDS/Vibe-Trading",
+      "desc": "Star HKUDS / Vibe-Trading \"Vibe-Trading: Your Personal Trading Agent\"",
+      "lang": "Python",
+      "today": "1,256 stars today"
+    },
+    {
+      "name": "sponsors/Raphire",
+      "url": "https://github.com/sponsors/Raphire",
+      "desc": "Sponsor Star Raphire / Win11Debloat A simple, lightweight PowerShell script that allows you to remove pre-installed apps, disable telemetry, as well as perform various other changes to declutter and customize your Windows experience. Win11Debloat works for both Windows 10 and Windows 11.",
+      "lang": "PowerShell",
+      "today": "783 stars today"
+    },
+    {
+      "name": "hasaneyldrm/exercises-dataset",
+      "url": "https://github.com/hasaneyldrm/exercises-dataset",
+      "desc": "Star hasaneyldrm / exercises-dataset 1,324-exercise fitness dataset — animation GIFs, 180×180 thumbnails, muscle-group & equipment data, and step-by-step instructions in 6 languages. The exercise data layer behind the LogPress app.",
+      "lang": "HTML",
+      "today": "851 stars today"
+    },
+    {
+      "name": "penpot/penpot",
+      "url": "https://github.com/penpot/penpot",
+      "desc": "Star penpot / penpot Penpot: The open-source design platform for Product teams that need scalable collaboration.",
+      "lang": "Clojure",
+      "today": "395 stars today"
+    },
+    {
+      "name": "AIEraDev/Clypra",
+      "url": "https://github.com/AIEraDev/Clypra",
+      "desc": "Star AIEraDev / Clypra A modern video editor built with Tauri, React, and TypeScript. Focus on building free capabilities of premium capcut functionalities",
+      "lang": "TypeScript",
+      "today": "85 stars today"
+    },
+    {
+      "name": "par274/sharpemu",
+      "url": "https://github.com/par274/sharpemu",
+      "desc": "Star par274 / sharpemu An experimental PlayStation 5 emulator project.",
+      "lang": "C#",
+      "today": "332 stars today"
+    },
+    {
+      "name": "chenyme/grok2api",
+      "url": "https://github.com/chenyme/grok2api",
+      "desc": "Star chenyme / grok2api 面向 Grok Build、Grok Web 与 Grok Console 的多账号 API 网关",
+      "lang": "Go",
+      "today": "186 stars today"
+    },
+    {
+      "name": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "desc": "Star Graphify-Labs / graphify AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
+      "lang": "Python",
+      "today": "1,851 stars today"
+    },
+    {
+      "name": "sponsors/HenryNdubuaku",
+      "url": "https://github.com/sponsors/HenryNdubuaku",
+      "desc": "Sponsor Star HenryNdubuaku / maths-cs-ai-compendium Become a cracked AI/ML Research Engineer",
+      "lang": "TypeScript",
+      "today": "112 stars today"
+    }
+  ],
+  "papers": [],
+  "hn": [
+    {
+      "title": "Financing the AI boom: from cash flows to debt [pdf]",
+      "url": "https://www.bis.org/publ/bisbull120.pdf",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-15",
+      "page_content": ""
+    },
+    {
+      "title": "How to stop Claude from saying load-bearing",
+      "url": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-14",
+      "page_content": "Absolutely ripping your hair out reading Claude referring to everything as “honest takes” and \"load-bearing seams\"? [You’re not the only one](https://github.com/anthropics/claude-code/issues/53454). But what if I tell you there’s a way to take this massive source of frustration and make it so _ridiculous_ you can't but laugh at it? Or just simply fix Claude's vocabulary. I present to you, the `MessageDisplay` hook.\n\nFirst you need a little script with some replacements set up:\n\n```\n#!/usr/bin/env python3\nimport json, re, sys\nreplacements = {\n\"seam\": \"whatchamacallit\",\n\"you're absolutely right\": \"I'm a complete clown\",\n\"honest take\": \"spicy doodad\",\n\"load-bearing\": \"cooked\"\n}\ndata = json.load(sys.stdin)\ntext = data.get(\"delta\") or \"\""
+    }
+  ],
+  "news": [
+    {
+      "title": "The Federal AI AGENT Act: Consumer Protection in AI Clothing? - Davis Wright Tremaine",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaG1LWndxY2tGMlU2bjhZTG9HNUlpS3pzakFTdk1YQnpaQWZYaGtTTVFuRXFKV2d6bjBwOEk1Wm9HRk9ScnRMM2J2UVRlckdTZEFOZ1ZSQlRMdWhXT0hHQUFLQXZjYl80dUJmMFVMSHRTdjlYbHk1ZXJtZkc0ZjV2NnVpQVh5SkJfV3I3bVdiQzk1d0ltVV95SXRzRlBDbG5aZlIwaTl5bkE?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Tue, 14 Jul 2026 19:30:06 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaG1LWndxY2tGMlU2bjhZTG9HNUlpS3pzakFTdk1YQnpaQWZYaGtTTVFuRXFKV2d6bjBwOEk1Wm9HRk9ScnRMM2J2",
+      "page_content": ""
+    },
+    {
+      "title": "Authenticate legitimate AI agent traffic with AWS WAF Bot Control - Amazon Web Services (AWS)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPVFVWNG50dEtGNHhHcDZadDR2c3UtZGw5STRHOTc4MW1LenNaOHhMdkFoWTlOaV90eHZCUlVFQzhPVmZsaDNoVU9yUF9DRUh6ZE5hdC1IUkpwOG13dFNOdUJ2RjEzUGdRQzBocExCN0dGMG9NbTQxNVJhcnBBdVd2VGg3M2w3a1ItLS1GbzJlQ19Pa2VJWERLUTVyVnlwb0FsNWZNdXhRQQ?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Tue, 14 Jul 2026 15:18:42 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPVFVWNG50dEtGNHhHcDZadDR2c3UtZGw5STRHOTc4MW1LenNaOHhMdkFoWTlOaV90eHZCUlVFQzhPVmZsaDNoVU9y",
+      "page_content": ""
+    },
+    {
+      "title": "Oracle Adds AI Agent Builder - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMUQ3NktFdGNiVVA2aTY5c0E1ZXF2LWtjQ3RqRDV5S2hjMDliSUZuSlh3MllJX25fckRpa0VUWllRdGx5OGM5VnNiNTJ6TUQ2RXZnU1hIV29FVkxxek5mMUtPbGxsU0c4el9nUEVNWkk5U1dWLTVIeTZOWm1zekoyVlZhRV9tOWNjT2JQWl9KWkgza3VDdDhN?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Tue, 14 Jul 2026 18:40:35 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNMUQ3NktFdGNiVVA2aTY5c0E1ZXF2LWtjQ3RqRDV5S2hjMDliSUZuSlh3MllJX25fckRpa0VUWllRdGx5OGM5VnNi",
+      "page_content": ""
+    },
+    {
+      "title": "This CEO Spent the Equivalent of $4 Million on an AI Agent to Run His Life - Vanity Fair",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBibTczUFVuMUlMcHNSZHVQOGhteTlmSDFtUHRLaGhrQ2FianF3X2xJZGJYUFBpR2YzZmNYaGxFbnlIZ3dYcnVBeGVjM2g1WUg3RktDRDFwTFRyZm8?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Tue, 14 Jul 2026 23:01:39 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTFBibTczUFVuMUlMcHNSZHVQOGhteTlmSDFtUHRLaGhrQ2FianF3X2xJZGJYUFBpR2YzZmNYaGxFbnlIZ3dYcnVBeGVj",
+      "page_content": ""
+    },
+    {
+      "title": "China Plans AI Agent Recalls. America Can’t Even Agree Who Regulates Them - Forbes",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQamZNNUpkcmIzamg1clFsbTlLcFJPNmFMWmp2ajlKVnVBeEhEeWJuV2diMEo0bDNuUHRJdDMzNlZDSVpqTlRySWFzbExNcFBpUkJDenY5Tk84anAxdWNjTlFQZ0w3WWJfVFF2SzNOZ2NPZHVWcmFYRE5Ia2tMV3JoTkJIZkFHRjl3MDZQdVNTdFY0UFoxVExJUmlKbFpWVFBhaU1jSnFlcW5oTWhEeUlGa211bmxkaEhxekJkWGZQdDNnYkxiZmc?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Wed, 15 Jul 2026 01:45:27 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxQamZNNUpkcmIzamg1clFsbTlLcFJPNmFMWmp2ajlKVnVBeEhEeWJuV2diMEo0bDNuUHRJdDMzNlZDSVpqTlRySWFz",
+      "page_content": ""
+    },
+    {
+      "title": "FEVO’s new AI agent also a tribute - Sports Business Journal",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOa29OaFoyb3l0dHgxVzVDY3BTbi04Q09Nc2tRZXRrczg2WkpMUlgwclF2ZmE3VzA5VnNXOEhSM1FtM3FWaDVQalEwWTY4LU01UG1MSDJLNUdmdk5ucy1RLVdkVnZBeG5UZzFlQ2xwVzkyYjllYU9PQUxGbmI5bDlXZ2FaQ2NSLTBONzdHMi10S0NkTlBEd3lN?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Tue, 14 Jul 2026 21:01:42 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOa29OaFoyb3l0dHgxVzVDY3BTbi04Q09Nc2tRZXRrczg2WkpMUlgwclF2ZmE3VzA5VnNXOEhSM1FtM3FWaDVQalEw",
+      "page_content": ""
+    },
+    {
+      "title": "How Much Does It Actually Cost to Run a Local LLM? (Euros per Million Tokens, Measured) - Towards Data Science",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWXZIeS1sWFNsTXpkTEVuNDl4enYwS0o3aGUxT1JJYkkyWGI3d2FSZ1NXZHo4MWlOX21YZTctZEZXTDdPYVJwVjBqR19XQmNudDY0TWRkNkxLNXdMOW5icWluMFVZX2s4dUlyaWRvU1RnZ0ZkV3dtRi1QQU1NSTAwdkZlb3BPWVNiYVI5OE43T1hYdVg3MC1XWllEaVE5Rno4QzJwSnJ3djNlaUJOemdXSA?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Tue, 14 Jul 2026 13:30:00 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQWXZIeS1sWFNsTXpkTEVuNDl4enYwS0o3aGUxT1JJYkkyWGI3d2FSZ1NXZHo4MWlOX21YZTctZEZXTDdPYVJwVjBq",
+      "page_content": ""
+    },
+    {
+      "title": "Your Law Firm’s Biggest Breach Risk Is an Unsupervised AI Agent - Bloomberg Law News",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQdnhJTDBWU0s1LW5IZEpQS3BDSVozREluV0lnelczMUpwUlBVZVBOaS00cmlPQWFBUFB2dEw2TDNoN05sS3BLT0dnc3hRZXlHYUxlQVRFZ01pMHE5UmpHbVI4Z0EybkNOVXRCWnpUclhPQzJPSEVkNjA5bnpsRlgzeTZVQmt1cGJXbndzYkthOHJ2c21ub2Uydk1EUzM5TWl3dmFvLXV3aU5vMnFoUjlCUDdNZ2R1TmhldzlQR3A1SzVJS2hXdmJhZldKaw?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Tue, 14 Jul 2026 08:30:00 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxQdnhJTDBWU0s1LW5IZEpQS3BDSVozREluV0lnelczMUpwUlBVZVBOaS00cmlPQWFBUFB2dEw2TDNoN05sS3BLT0dn",
+      "page_content": ""
+    }
+  ],
+  "blogs": [
+    {
+      "title": "How to manage AI investments in the agentic era",
+      "url": "https://openai.com/index/managing-ai-investments-in-agentic-era/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "OpenAI’s goal is to make AI more accessible, capable and affordable over time. From GPT‑4 to GPT‑5.4, the price per million tokens fell 97%. [GPT‑5.6⁠](https://openai.com/index/gpt-5-6/) continues that progress, delivering better performance in the Artificial Analysis Coding Agent Index with 54% fewer output tokens and 57% less time per task.\n\nBut token price alone does not show whether AI is creating value. Leaders should look at **useful work per dollar**: tasks completed, time saved, decisions improved, and workflows ready to scale.\n\nAs teams move from chat to longer-running workflows, admins need clearer visibility into demand, spend, and risk.\n\nHere are five ways to invest with confidence.\n\n## 1. Sharpen visibility into usage and spend\n\nEnterprise leaders need **a plain view of AI usage:** who is using it, which products or models they are using, how much capacity they are consuming, and what kind of work that usage supports. Without that visibility, a growing bill is hard to interpret. It could reflect waste, productive experimentation, or a workflow that is starting to become business-critical.\n\n[ChatGPT Work⁠](https://openai.com/chatgpt-work/) supports longer, multi-step tasks, so usage can vary widely by workflow. Admins need to see the work behind that usage, not just the credits consumed. This is possible thanks to a shared view of demand across ChatGPT. Updated [usage analytics and spend controls⁠](https://openai.com/index/chatgpt-enterprise-spend-controls/) in the [Admin Console⁠(opens in a new window)](https://chatgpt.com/admin) help admins see adoption, credit usage, and spend by user, product, and model; track trends over time; identify emerging patterns; and understand when usage reflects broad adoption, a power-user workflow, or a recurring business process that may deserve more investment.\n\n![Image 1: Analytics overview showing ChatGPT and Codex usage and credit consumption](https://images.ctfassets.net/kftzwdyauwt9/PUu1kZSiVcT1kkFdXOyNl/905ddac86e29c56509c35dc583288cc2/Analytics_overview_showing_ChatGPT_and_Codex_usage_and_credit_consumption.png?w=3840&q=90&fm=webp)"
+    },
+    {
+      "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "Today, OpenAI announced GPT‑5.6, which will become the new preferred model in Microsoft 365 Copilot—in Word, Excel, PowerPoint, Chat and Cowork. For Microsoft 365 customers, the update brings OpenAI's latest flagship model series into productivity tools people use every day, helping them create, analyze, and collaborate with more capable AI assistance across workstreams. GPT‑5.6 is OpenAI’s latest flagship model series, which delivers more useful work from every token, with stronger performance per dollar and on demand capability for the most complex tasks.\n\nWith GPT‑5.6, Microsoft 365 users will be able to create higher-quality work products with less effort across the apps they already rely on:\n\n*   In Word, GPT‑5.6 can help people draft, edit, and refine documents with fewer rounds of prompting.\n*   In Excel, it can support deeper analysis while using tokens more efficiently, helping users move faster from data to insights.\n*   In PowerPoint, it can help turn early ideas into more polished, visually compelling presentations with less manual guidance.\n*   In Cowork, it can help users complete complex, cross-functional work and produce higher-quality outputs with less manual coordination.\n\n“We can’t wait for customers to see what GPT‑5.6 in Microsoft 365 will do, enabling them to work even more effectively with AI in the tools they use every day,” said Nitin Agrawal, President, Copilot & Agents Core, Microsoft. “Using Copilot powered by OpenAI’s latest model, customers will be able to produce more polished outputs in Word, Excel, PowerPoint, Cowork, and Copilot Chat, whether they are drafting documents, analyzing data, creating presentations, or collaborating across teams. We’re excited to continue building with OpenAI to bring more powerful AI experiences to people and organizations around the world.”\n\n“Microsoft 365 is where millions of people write, analyze, create, and collaborate every day,” said Nikunj Handa, Head of API Product, OpenAI. “By bringing GPT‑5.6 to Microsoft 365 Copilot through the OpenAI API, we're helping organizations get more useful work from every token, and more value from AI in the tools they already use.”\n\nIn addition to serving the models natively, Microsoft will also access OpenAI models directly through the API to bring GPT‑5.6 to Microsoft 365 customers."
+    },
+    {
+      "title": "OpenAI Bio Bug Bounty",
+      "url": "https://openai.com/index/bio-bug-bounty/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "OpenAI Bio Bug Bounty | OpenAI\n\nTesting for universal jailbreaks for biorisks\n\n## Invitation\n\nAs part of our ongoing efforts to strengthen our safeguards for advanced AI capabilities in biology, we’re evolving our GPT‑5.5 Bio Bug Bounty to become an ongoing private program—the OpenAI Bio Bounty Program. The program will remain focused on universal jailbreaks that can defeat our predefined biosafety challenge against OpenAI’s frontier models, starting with GPT‑5.6 and going forward.\n\nWe’re also excited to announce that we’re increasing reward amounts. The reward for a universal jailbreak for the OpenAI Bio Bounty Program has been raised from $25,000 to $50,000 for both GPT‑5.6 and GPT‑5.5. Smaller awards may be granted for partial wins at our discretion.\n\nWe will continue to honor the scope for the GPT‑5.5 Bio Bounty Program as originally announced, with testing ending on July 27, 2026. After this date, only GPT‑5.6 will be in scope; we will continue to communicate any future changes in scope to our researchers.\n\nInterested applicants should apply through our rolling [application process⁠(opens in a new window)](https://docs.google.com/forms/d/e/1FAIpQLScIW9QJTq4J6zsl89Un-OmTCSDNWdWldcib8mYZEqoHzunukQ/viewform?usp=preview). Once selected, accepted applicants will be onboarded to the bio bug bounty platform. All past applicants to the GPT‑5.5 Bio Bounty Program will not need to reapply.\n\n## How to participate"
+    },
+    {
+      "title": "Download press kit",
+      "url": "https://anthropic.com/press-kit",
+      "source": "Anthropic",
+      "date": "",
+      "page_content": ""
+    },
+    {
+      "title": "Inviting hard questions",
+      "url": "https://www.anthropic.com/news/hard-questions",
+      "source": "Anthropic",
+      "date": "",
+      "page_content": ""
+    },
+    {
+      "title": "Giving AI Agents 3D Bodies, Real Jobs, and Wallets on three.ws three-ws • 2 days ago • 19",
+      "url": "https://huggingface.co/blog/three-ws/giving-ai-agents-bodies-and-wallets",
+      "source": "Hugging Face",
+      "date": "",
+      "page_content": ""
+    },
+    {
+      "title": "J-Space: Yet Another LLM Mind Reader? dlouapre • 1 day ago • 19",
+      "url": "https://huggingface.co/blog/dlouapre/j-space",
+      "source": "Hugging Face",
+      "date": "",
+      "page_content": ""
+    },
+    {
+      "title": "A New Look for OpenRouterJul 13, 2026",
+      "url": "https://openrouter.ai/blog/announcements/brand-refresh/",
+      "source": "OpenRouter",
+      "date": "",
+      "page_content": ""
+    },
+    {
+      "title": "The OpenRouter MCP ServerJun 25, 2026",
+      "url": "https://openrouter.ai/blog/announcements/openrouter-mcp-server/",
+      "source": "OpenRouter",
+      "date": "",
+      "page_content": ""
+    },
+    {
+      "title": "Introducing the Unified Image APIJun 23, 2026",
+      "url": "https://openrouter.ai/blog/announcements/image-api/",
+      "source": "OpenRouter",
+      "date": "",
+      "page_content": ""
+    }
+  ],
+  "github_strategy": {
+    "query": "agent OR \"AI tool\" OR coding assistant",
+    "filters": "stars:500..50000",
+    "sort": "stars",
+    "label": "中型潜力股（500-50K stars）"
+  }
+}
