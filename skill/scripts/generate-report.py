@@ -29,8 +29,8 @@ def enrich_trending(project):
     name = project['name'].replace(' / ', '/')
     desc_en = project.get('desc', '').strip()
     desc_zh = project.get('desc_zh', '')
-    # 优先使用翻译管道已生成的 desc_zh（足够长说明已翻译）
-    if desc_zh and len(desc_zh) > 80:
+    # 翻译管道已经提供中文时必须无条件保留；长度不是翻译是否有效的依据。
+    if desc_zh:
         project['desc_en'] = desc_en
         return
     if name in TRENDING_DESCS:
