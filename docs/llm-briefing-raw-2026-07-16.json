@@ -1,0 +1,733 @@
+{
+  "date": "2026-07-16",
+  "github": [
+    {
+      "name": "vinta/awesome-python",
+      "desc": "An opinionated list of Python frameworks, libraries, tools, and resources",
+      "stars": 308371,
+      "lang": "Python",
+      "updated": "2026-07-16",
+      "url": "https://github.com/vinta/awesome-python",
+      "topics": [
+        "awesome",
+        "collections",
+        "python",
+        "python-frameworks",
+        "python-libraries"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "obra/superpowers",
+      "desc": "An agentic skills framework & software development methodology that works.",
+      "stars": 255425,
+      "lang": "Shell",
+      "updated": "2026-07-16",
+      "url": "https://github.com/obra/superpowers",
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v6.1.1",
+          "name": "v6.1.1",
+          "date": "2026-07-02",
+          "summary": "- Codex no longer re-registers the Claude SessionStart hook. v6.1.0 removed the Codex hook config and its manifest hooks；- Removed orphaned Codex session-start dead code. hooks/session-start-codex had no caller once the Codex hook config was；- New pa"
+        },
+        {
+          "tag": "v6.1.0",
+          "name": "v6.1.0",
+          "date": "2026-06-30",
+          "summary": "The using-superpowers bootstrap is injected into every session, so its size is paid for constantly. This release trims i；- Compressed the using-superpowers bootstrap. Replaced the graphviz skill-flow diagram with the prose it encoded, folded；- Pruned"
+        },
+        {
+          "tag": "v6.0.3",
+          "name": "v6.0.3",
+          "date": "2026-06-18",
+          "summary": "- SDD scratch files moved out of .git/. Claude Code treats .git/ as a protected path and denies agent writes there, so a"
+        }
+      ]
+    },
+    {
+      "name": "tensorflow/tensorflow",
+      "desc": "An Open Source Machine Learning Framework for Everyone",
+      "stars": 196362,
+      "lang": "C++",
+      "updated": "2026-07-16",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "topics": [
+        "deep-learning",
+        "deep-neural-networks",
+        "distributed",
+        "machine-learning",
+        "ml"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v2.21.0",
+          "name": "TensorFlow 2.21.0",
+          "date": "2026-03-06",
+          "summary": "Support for Python 3.9 has been removed starting with TF 2.21.；The TensorBoard (TB) dependency has been removed starting with TF 2.21.；tf.lite；Adds int8 and int16x8 support for SQRT operator."
+        },
+        {
+          "tag": "v2.21.0-rc1",
+          "name": "TensorFlow 2.21.0-rc1",
+          "date": "2026-03-02",
+          "summary": "Support for Python 3.9 has been removed starting with TF 2.21.；tf.lite；Adds int8 and int16x8 support for SQRT operator.；Adds int16x8 support for EQUAL and NOT_EQUAL operators."
+        },
+        {
+          "tag": "v2.21.0-rc0",
+          "name": "TensorFlow 2.21.0-rc0",
+          "date": "2026-02-09",
+          "summary": "Support for Python 3.9 has been removed starting with TF 2.21.；tf.lite；Adds int8 and int16x8 support for SQRT operator.；Adds int16x8 support for EQUAL and NOT_EQUAL operators."
+        }
+      ]
+    },
+    {
+      "name": "ohmyzsh/ohmyzsh",
+      "desc": "🙃   A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community.",
+      "stars": 188744,
+      "lang": "Shell",
+      "updated": "2026-07-16",
+      "url": "https://github.com/ohmyzsh/ohmyzsh",
+      "topics": [
+        "cli",
+        "cli-app",
+        "oh-my-zsh",
+        "oh-my-zsh-plugin",
+        "oh-my-zsh-theme"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "avelino/awesome-go",
+      "desc": "A curated list of awesome Go frameworks, libraries and software",
+      "stars": 178276,
+      "lang": "Go",
+      "updated": "2026-07-16",
+      "url": "https://github.com/avelino/awesome-go",
+      "topics": [
+        "awesome",
+        "awesome-list",
+        "go",
+        "golang",
+        "golang-library"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "twbs/bootstrap",
+      "desc": "The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.",
+      "stars": 174481,
+      "lang": "MDX",
+      "updated": "2026-07-16",
+      "url": "https://github.com/twbs/bootstrap",
+      "topics": [
+        "bootstrap",
+        "css",
+        "css-framework",
+        "html",
+        "javascript"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v5.3.8",
+          "name": "v5.3.8",
+          "date": "2025-08-26",
+          "summary": "Streamline release prep script in https；restore local dev port to 9001 in https；use Example shortcode instead of divs with only .bd-example class in https://github.com/twbs/bootstr；fix scss autorecompile in dev mode in https://github.com/twbs/bootstr"
+        },
+        {
+          "tag": "v5.3.7",
+          "name": "v5.3.7",
+          "date": "2025-06-17",
+          "summary": "- Fixed broken \"View on GitHub\" URLs；- Corrected HTML <head> content generated by the \"Download examples\" button；- Refined sanitizer documentation for clarity and completeness"
+        },
+        {
+          "tag": "v5.3.6",
+          "name": "v5.3.6",
+          "date": "2025-05-05",
+          "summary": "Ported the docs from Hugo to Astro for our own sanity!；Added usage docs for Accordion JavaScript；Prevent .visually-hidden overflowing children to become focusable；Limit .card-group selectors to immediate children to fix some inheritance issues"
+        }
+      ]
+    },
+    {
+      "name": "huggingface/transformers",
+      "desc": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+      "stars": 162632,
+      "lang": "Python",
+      "updated": "2026-07-16",
+      "url": "https://github.com/huggingface/transformers",
+      "topics": [
+        "audio",
+        "deep-learning",
+        "deepseek",
+        "gemma",
+        "glm"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v5.14.0",
+          "name": "Release v5.14.0",
+          "date": "2026-07-15",
+          "summary": "cover xet as well (runtime error) in [#47338；docs] TokenizersBackend fallback in [#47302；Resolve continuous batching XPU availability checks at runtime in [#47185；Nit] Add kernels_fallback_ok kwarg to is_flash_attn_N_available in [#47318"
+        },
+        {
+          "tag": "v5.13.1",
+          "name": "Patch release v5.13.1",
+          "date": "2026-07-11",
+          "summary": "This patch is focused on enabling transformers for the latest release of vllm!；- Be more defensive with remap_legacy_layer_types for custom models (#47245) from @hmellor；- Fix custom code which doesn't know about the new linear layer type names (#471"
+        },
+        {
+          "tag": "v5.13.0",
+          "name": "Release v5.13.0",
+          "date": "2026-07-03",
+          "summary": "🚨 Modeling changes for export, compile, and hybrid-attention standardization；🚨 [gemma 3/4] Fix bidirectional attention masking crossing sliding window boundaries；🚨 EP；Update workflow callers to use transformers-ci in [#47040"
+        }
+      ]
+    },
+    {
+      "name": "langchain-ai/langchain",
+      "desc": "The agent engineering platform.",
+      "stars": 141865,
+      "lang": "Python",
+      "updated": "2026-07-16",
+      "url": "https://github.com/langchain-ai/langchain",
+      "topics": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "anthropic",
+        "chatgpt"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "langchain==1.3.13",
+          "name": "langchain==1.3.13",
+          "date": "2026-07-10",
+          "summary": "Changes since langchain==1.3.12；release(langchain): 1.3.13 (#38787)；feat(langchain): add meta extra and support langchain-meta in init_chat_model (#38786)"
+        },
+        {
+          "tag": "langchain-openai==1.3.5",
+          "name": "langchain-openai==1.3.5",
+          "date": "2026-07-10",
+          "summary": "Changes since langchain-openai==1.3.4；release(openai): 1.3.5 (#38785)；feat(openai): support explicit prompt caching (#38762)"
+        },
+        {
+          "tag": "langchain-fireworks==1.4.4",
+          "name": "langchain-fireworks==1.4.4",
+          "date": "2026-07-09",
+          "summary": "Changes since langchain-fireworks==1.4.3；release(fireworks): 1.4.4 (#38753)；fix(fireworks): report cached prompt token usage (#38751)"
+        }
+      ]
+    },
+    {
+      "name": "vercel/next.js",
+      "desc": "The React Framework",
+      "stars": 141104,
+      "lang": "JavaScript",
+      "updated": "2026-07-16",
+      "url": "https://github.com/vercel/next.js",
+      "topics": [
+        "blog",
+        "browser",
+        "compiler",
+        "components",
+        "hybrid"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "react/react-native",
+      "desc": "A framework for building native applications using React",
+      "stars": 126201,
+      "lang": "C++",
+      "updated": "2026-07-16",
+      "url": "https://github.com/react/react-native",
+      "topics": [
+        "android",
+        "app-framework",
+        "cross-platform",
+        "ios",
+        "mobile"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v0.87.0-rc.0",
+          "name": "0.87.0-rc.0",
+          "date": "2026-07-08",
+          "summary": "> [!WARNING]；> This is a release candidate. It is not intended for production use.；Full Changelog"
+        },
+        {
+          "tag": "v0.83.10",
+          "name": "0.83.10",
+          "date": "2026-06-26",
+          "summary": "Fixed Yoga node ownership when display；Fixed display；React Native DevTools"
+        },
+        {
+          "tag": "v0.86.0",
+          "name": "0.86.0",
+          "date": "2026-06-11",
+          "summary": "Fix AccessibilityInfo.isDarkerSystemColorsEnabled unresolved (never ending) promise (8fbf2fab47；Fix AccessibilityInfo.isHighTextContrastEnabled unresolved (never ending) promise (5c9a5717c1；Fix AccessibilityInfo.prefersCrossFadeTransitions unresolved"
+        }
+      ]
+    },
+    {
+      "name": "shadcn-ui/ui",
+      "desc": "A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.",
+      "stars": 119212,
+      "lang": "TypeScript",
+      "updated": "2026-07-16",
+      "url": "https://github.com/shadcn-ui/ui",
+      "topics": [
+        "base-ui",
+        "components",
+        "laravel",
+        "nextjs",
+        "radix-ui"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "@shadcn/react@0.2.1",
+          "name": "@shadcn/react@0.2.1",
+          "date": "2026-07-08",
+          "summary": "#11106 f6a26478547c7057aeda82516666dc3473dc39bd；#11100 dd6ce77cf1606eee2839368a97cc35417f763232；#11085 628e427231ca4bb7f586a69f99fe7809749a53e2"
+        },
+        {
+          "tag": "shadcn@4.13.0",
+          "name": "shadcn@4.13.0",
+          "date": "2026-07-03",
+          "summary": "#11082 f3e7de11752b087b1c4bf61f4035a866f3a4f9ed"
+        },
+        {
+          "tag": "@shadcn/react@0.2.0",
+          "name": "@shadcn/react@0.2.0",
+          "date": "2026-06-30",
+          "summary": "#11022 18fcf0f766857a7249cc0daac3c1609610edd158"
+        }
+      ]
+    },
+    {
+      "name": "fastapi/fastapi",
+      "desc": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+      "stars": 100555,
+      "lang": "Python",
+      "updated": "2026-07-16",
+      "url": "https://github.com/fastapi/fastapi",
+      "topics": [
+        "api",
+        "async",
+        "asyncio",
+        "fastapi",
+        "framework"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "0.139.0",
+          "name": "0.139.0",
+          "date": "2026-07-01",
+          "summary": "✨ Support dependencies in app.frontend(), e.g. for automatic cookie authentication for the frontend."
+        },
+        {
+          "tag": "0.138.1",
+          "name": "0.138.1",
+          "date": "2026-06-25",
+          "summary": "* ♻️ Refactor Library Skills, make info easier to find for agents. PR #15841 by @tiangolo.；* 👷 Simplify pull request workflow triggers. PR #15836 by @tiangolo.；* 👷 Update issue-manager to 0.7.1. PR #15833 by @tiangolo."
+        },
+        {
+          "tag": "0.138.0",
+          "name": "0.138.0",
+          "date": "2026-06-20",
+          "summary": "✨ Add support for app.frontend(\"/\", directory=\"dist\") and router.frontend(\"/\", directory=\"dist\"). PR；Read the docs"
+        }
+      ]
+    },
+    {
+      "name": "tailwindlabs/tailwindcss",
+      "desc": "A utility-first CSS framework for rapid UI development.",
+      "stars": 96004,
+      "lang": "TypeScript",
+      "updated": "2026-07-16",
+      "url": "https://github.com/tailwindlabs/tailwindcss",
+      "topics": [
+        "css",
+        "css-framework",
+        "functional-css",
+        "postcss",
+        "responsive"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v4.3.2",
+          "name": "v4.3.2",
+          "date": "2026-06-29",
+          "summary": "Support bare spacing values for auto-rows-* and auto-cols-* utilities (e.g. auto-rows-12 and auto-co；Prevent @tailwindcss/cli in --watch mode from crashing on Windows when @source points to a directory；Prevent @tailwindcss/vite from crashing in Deno "
+        },
+        {
+          "tag": "v4.3.1",
+          "name": "v4.3.1",
+          "date": "2026-06-12",
+          "summary": "Remove deprecation warnings by using Module#registerHooks instead of Module#register on Node 26+ ；don't crash when plugin utilities throw for unsupported values ；Allow @apply to be used with CSS mixins ；Ensure not-* correctly negates @container queri"
+        },
+        {
+          "tag": "v4.3.0",
+          "name": "v4.3.0",
+          "date": "2026-05-08",
+          "summary": "Ensure @plugin resolves package JavaScript entries instead of browser CSS entries when using @tailwi；Fix relative @import and @plugin paths resolving from the wrong directory when using @tailwindcss/vi；Ensure CSS files containing @variant are process"
+        }
+      ]
+    },
+    {
+      "name": "TauricResearch/TradingAgents",
+      "desc": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "stars": 93176,
+      "lang": "Python",
+      "updated": "2026-07-16",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "topics": [
+        "agent",
+        "finance",
+        "llm",
+        "multiagent",
+        "trading"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v0.3.1",
+          "name": "TradingAgents v0.3.1",
+          "date": "2026-07-05",
+          "summary": "Alpha Vantage look-ahead filter now runs. The fundamentals payload is a JSON string, so the dict-onl；News analyst prompt matches the tool. It advertised get_news(query, ...) while the tool takes a tick；Shared debate/risk routers can't crash mid-run. "
+        },
+        {
+          "tag": "v0.3.0",
+          "name": "TradingAgents v0.3.0",
+          "date": "2026-06-22",
+          "summary": "TradingAgents v0.3.0 is a stabilization and extensibility release: a verified data-access contract, an expanded provider；Symbol normalization now runs on every vendor path (identity, returns, CLI, news). The configured vendor list is the exa；OpenAI-c"
+        },
+        {
+          "tag": "v0.2.5",
+          "name": "TradingAgents v0.2.5",
+          "date": "2026-05-11",
+          "summary": "ticker path-traversal validation at every filesystem-path site.；\\pip install .\\ installations now pick up the project \\.env\\ when running the CLI as a console scrip；Reports save end-to-end；Ticker prompt preserves exchange suffixes (\\.SH\\, \\.SZ\\, \\.SS"
+        }
+      ]
+    },
+    {
+      "name": "microsoft/playwright",
+      "desc": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. ",
+      "stars": 92916,
+      "lang": "TypeScript",
+      "updated": "2026-07-16",
+      "url": "https://github.com/microsoft/playwright",
+      "topics": [
+        "automation",
+        "chrome",
+        "chromium",
+        "e2e-testing",
+        "electron"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.61.1",
+          "name": "v1.61.1",
+          "date": "2026-06-23",
+          "summary": "#41365 [Bug]；#41351 [Bug]；#41360 [Bug]；#41311 [Bug]"
+        },
+        {
+          "tag": "v1.61.0",
+          "name": "v1.61.0",
+          "date": "2026-06-15",
+          "summary": "Playwright now supports Ubuntu 26.04.；HAR and trace recordings now include WebSocket requests."
+        },
+        {
+          "tag": "v1.60.0",
+          "name": "v1.60.0",
+          "date": "2026-05-11",
+          "summary": "HTML reporter；npx playwright show-report accepts .zip files directly；Steps that contain attachments inside nested children show an indicator on the parent step.；The repeatEachIndex is shown in the test header when non-zero."
+        }
+      ]
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "sponsors/OpenCut-app",
+      "url": "https://github.com/sponsors/OpenCut-app",
+      "desc": "Sponsor Star OpenCut-app / OpenCut The open-source CapCut alternative",
+      "lang": "TypeScript",
+      "today": "1,664 stars today"
+    },
+    {
+      "name": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "desc": "Star Nutlope / hallmark Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "lang": "CSS",
+      "today": "1,277 stars today"
+    },
+    {
+      "name": "sponsors/mattpocock",
+      "url": "https://github.com/sponsors/mattpocock",
+      "desc": "Sponsor Star mattpocock / skills Skills for Real Engineers. Straight from my .claude directory.",
+      "lang": "Shell",
+      "today": "2,130 stars today"
+    },
+    {
+      "name": "moeru-ai/airi",
+      "url": "https://github.com/moeru-ai/airi",
+      "desc": "Star moeru-ai / airi 💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+      "lang": "TypeScript",
+      "today": "110 stars today"
+    },
+    {
+      "name": "sponsors/Dicklesworthstone",
+      "url": "https://github.com/sponsors/Dicklesworthstone",
+      "desc": "Sponsor Star Dicklesworthstone / destructive_command_guard The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.",
+      "lang": "Rust",
+      "today": "471 stars today"
+    },
+    {
+      "name": "HKUDS/Vibe-Trading",
+      "url": "https://github.com/HKUDS/Vibe-Trading",
+      "desc": "Star HKUDS / Vibe-Trading \"Vibe-Trading: Your Personal Trading Agent\"",
+      "lang": "Python",
+      "today": "915 stars today"
+    },
+    {
+      "name": "openinterpreter/openinterpreter",
+      "url": "https://github.com/openinterpreter/openinterpreter",
+      "desc": "Star openinterpreter / openinterpreter A coding agent for low-cost models",
+      "lang": "Rust",
+      "today": "299 stars today"
+    },
+    {
+      "name": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "desc": "Star HKUDS / DeepTutor DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
+      "lang": "Python",
+      "today": "172 stars today"
+    },
+    {
+      "name": "sponsors/HenryNdubuaku",
+      "url": "https://github.com/sponsors/HenryNdubuaku",
+      "desc": "Sponsor Star HenryNdubuaku / maths-cs-ai-compendium Become a cracked AI/ML Research Engineer",
+      "lang": "TypeScript",
+      "today": "725 stars today"
+    },
+    {
+      "name": "Shubhamsaboo/awesome-llm-apps",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "desc": "Star Shubhamsaboo / awesome-llm-apps 100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+      "lang": "Python",
+      "today": "1,236 stars today"
+    },
+    {
+      "name": "sponsors/coreyhaines31",
+      "url": "https://github.com/sponsors/coreyhaines31",
+      "desc": "Sponsor Star coreyhaines31 / marketingskills Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+      "lang": "JavaScript",
+      "today": "340 stars today"
+    },
+    {
+      "name": "YimMenu/YimMenuV2",
+      "url": "https://github.com/YimMenu/YimMenuV2",
+      "desc": "Star YimMenu / YimMenuV2 Experimental menu for GTA 5: Enhanced",
+      "lang": "C++",
+      "today": "38 stars today"
+    },
+    {
+      "name": "hasaneyldrm/exercises-dataset",
+      "url": "https://github.com/hasaneyldrm/exercises-dataset",
+      "desc": "Star hasaneyldrm / exercises-dataset 1,324-exercise fitness dataset — animation GIFs, 180×180 thumbnails, muscle-group & equipment data, and step-by-step instructions in 6 languages. The exercise data layer behind the LogPress app.",
+      "lang": "HTML",
+      "today": "949 stars today"
+    }
+  ],
+  "papers": [],
+  "hn": [
+    {
+      "title": "Governments, companies, nonprofits should invest in free, open source AI [pdf]",
+      "url": "https://www.siegelendowment.org/wp-content/uploads/2026/07/fortune-david-siegel-open-source-ai.pdf",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-16",
+      "page_content": "By David Siegel \n\nn the 1980s, I had the chance to spend sev -\n\neral years arguing about free and open soft -\n\nware, what we now call open source, with the \n\nfounder of the movement, Richard Stallman. \n\nMy office at the MIT AI Lab was next door to \n\nhis. Stallman’s position was that the source code to soft -\n\nware should be free for everyone to use, learn from,"
+    },
+    {
+      "title": "LLM Networking with MikroTik",
+      "url": "https://blog.greg.technology/2026/07/14/llm-networking-with-mikrotik.html",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-16",
+      "page_content": "I’ve been refraining from saying ‘vibe networking’ or ‘vibkrotik’ or some other abomination, but it is true - I have been using LLMs to setup a few networks these last few months, and things have generally gone over swimmingly.\n\nI’ve been a fan of [MikroTik](https://mikrotik.com/) equipment for a while - the short story is that the equipment is reliable, inexpensive, and they cover a ton of networking use cases - IoT cell phone routers, regular routers, switches, point to point systems, etc.\n\nOne of the usual complaints about MikroTik has been its complex ui/configuration. In a sense, I don’t know if that’s true inasmuch as networking is complicated in itself - as in, it goes deeper than one thinks? Maybe there should be a [iceberg-format meme](https://knowyourmeme.com/memes/iceberg-charts) about this. At the top you’d have “ip address”, and going deeper you’d see “[the dude](https://www.youtube.com/watch?v=wWt6eL6Hj7M)” and other you’ve-never-heard-of-them’s. mpls! igs! ospf!\n\nThe point I’m trying to make is yeah, networking can just be hard. I’ve been half-networking, amateur-ishly, for a while now - setting up networks for friends and friends’ offices, making cables, patching small panels etc. I almost certainly couldn’t pass an official “Certified Routing Engineer” cert - well, not without studying a lot (believe in yourself).\n\nBut you know, it hasn’t stopped me (and I suppose it shouldn’t?) from having fun and fixing people’s wifi (most people’s wifi problems can be categorized into… oh brother - I should make another post about this. Never use extenders.)\n\n* * *\n\nWhere do LLMs fit in? Well, as elsewhere (in coding, etc.) they are a chaotic force multiplier - they definitely know how to configure MikroTiks and networking in general, but they also still get things wrong, go off-path, etc. As with coding, you can/should keep a tight leash, [mis-trust and verify](https://en.wikipedia.org/wiki/Trust,_but_verify), but you can also make more progress faster ((remember the 2025 study that said that LLM speedups were not real - [well…](https://metr.org/blog/2026-02-24-uplift-update/#wider-adoption-of-ai-has-made-it-more-difficult-to-measure-task-level-productivity))).\n\nAnd so these last few months I’ve been able to setup networks - small, for sure - and had a lot of fun giving claude code access to my devices and letting it do its thing. ([As I discussed here](https://agentsandengineers.com/episodes/0001-vibe-coding-in-the-physical-world-robotics-circuits-and-dangerous-permissions/), yes, I do mean dangerously-skip’ing-permissions)."
+    }
+  ],
+  "news": [
+    {
+      "title": "Cadence rolls out AI agent to speed circuit board, chip packaging design - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQMmZaRXBtUG5RLWpZQjg4UjFZd012cTM1Uy0xZy13SkkxamJiSzVuZ0dIMGllZDZVZGJKMkItTlo4bzliUGdndlY2ZG1JYTlpY0Z0a3lEWERtZDE5ZGY0VlA5WEYxaXJvSkZUMDBaUkxkekF5b2NQamFhdHRUVEM3aVRwNkw4VFlPa2M3VWtOa1cyNGUtVGRzOHhGdVJYVUw2aHpVZV91TmpUWjFWQ25STmwtMA?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Wed, 15 Jul 2026 22:32:10 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxQMmZaRXBtUG5RLWpZQjg4UjFZd012cTM1Uy0xZy13SkkxamJiSzVuZ0dIMGllZDZVZGJKMkItTlo4bzliUGdndlY2",
+      "page_content": ""
+    },
+    {
+      "title": "An Hour With Our Top AI Agent Cost $13.42. You Can’t Hire Anyone For That. - saastr.com",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQd3JxQ0dRRlY0TEJMVU1uZ0FWMS1BMGtUOXlSMlVCRDZYRDhmNDhjVEJ2Qk9xaXFTbE9GQjcwc1R6T2kzXzZmM3IwcnFwdXp6aHJKd1JsOHF6N2l3U0pVOUV6OFFta2Nfd0xhSHhHamFLSEN0UUh0Z2lWUDltVW9MbHY5Z2hnQlYxajYyNGU5NEMxWGhzNDc5ZDRB?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Wed, 15 Jul 2026 15:37:25 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxQd3JxQ0dRRlY0TEJMVU1uZ0FWMS1BMGtUOXlSMlVCRDZYRDhmNDhjVEJ2Qk9xaXFTbE9GQjcwc1R6T2kzXzZmM3Iw",
+      "page_content": ""
+    },
+    {
+      "title": "TuxBot v3 Evolution Shows Signs of LLM-Assisted IoT Botnet Development - The Hacker News",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNY3VubmZ6Yi0wLWhNVTdGcmdyV3BNZThBal84YWMteFU5c2lQYnkxZFhuSW0xcDN0aEc0cHM1Ql82ampoRTNZSUJZNWNKeVBydVloR3djZjNJM1JpNGo0V25nSVVwUGw0aXpUUUhRcG1UUVdtTmRqUWhBWjZseGhYYkFKRQ?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Wed, 15 Jul 2026 18:43:00 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxNY3VubmZ6Yi0wLWhNVTdGcmdyV3BNZThBal84YWMteFU5c2lQYnkxZFhuSW0xcDN0aEc0cHM1Ql82ampoRTNZSUJZ",
+      "page_content": ""
+    },
+    {
+      "title": "Meet GPT-Red: an LLM super-hacker OpenAI built to make its models safer - MIT Technology Review",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOaEZNa3ZZZUpGMGRLajIyY2pLTjduZmhTVHp1Q0VkNEl0X0lGVUs3aXRfb1lrRjlWSS1IckF0MV80X0Rxb2o0MU1VbU8zVVlNMElnOWhjdGp4Zlp3ZkRuOGlodnpwZmhJOWpvYnB6WVd0OXhnR2J1MHlFWUZ0ZlJ1cUpWTjFkMU1qV0JzZFBDZUVMRTFoVzhSZWNRWXZVTFdxRk1HMFhUYlpRQkRNdnZGNWFiS0h5VVFCNlNzMlRrdV_SAcYBQVVfeXFMTWtlMlUwMFM4STZCMTRXVlg5VngxWU04cVRndWRmdlRhWTM3aV9ZUHB1TFNSa0hpTmpQUFltTTc4ZGhFMFhNNTVYdGRHLTRFbUo3Qm9JaE8xZGktVTh2LUhGMU55QWQ0WWRmY1NSdm45a0JWbXptZ0NBYWgzTV9UQ0N0ZzBveUVoQ2VRZnc4V3VCYTMyUlVhSk9sMG1xR1hYMnZLUmUzbmZZOFllQ1dET1FTTHRCMGpIQWhtQXRqSmtYZWdBS2R3?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Wed, 15 Jul 2026 17:09:37 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOaEZNa3ZZZUpGMGRLajIyY2pLTjduZmhTVHp1Q0VkNEl0X0lGVUs3aXRfb1lrRjlWSS1IckF0MV80X0Rxb2o0MU1V",
+      "page_content": ""
+    },
+    {
+      "title": "Legibility of effort in the LLM age. “What software (and wri... - Kottke.org",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1UNk9HZExoa01ONEdBTVduc2o3SkVsN19PdldJYkxHRmVjbzltMkhIOXhkdUx0c0xLQ05Fa0dQVF9zNjNkYXlOZmpkYnU1Q2RoR3V5MzNUa0sxeG1ENXZzTGptSEZmY083cGc?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Wed, 15 Jul 2026 18:50:00 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE1UNk9HZExoa01ONEdBTVduc2o3SkVsN19PdldJYkxHRmVjbzltMkhIOXhkdUx0c0xLQ05Fa0dQVF9zNjNkYXlOZmpk",
+      "page_content": ""
+    },
+    {
+      "title": "Here’s How To Calculate Your ROI For An AI Agent - Forbes",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTXBTWTNLUkxHWjhoalRORmZ4c0JYYmprU3NkR21xYjB5c0RmYTVJM0x3TDhvZmh4aHhmUzJSZDZ4UE9NT3F5Y3Q5dWlpcTVJb25GQ2FhQkZQQkJvMzdJdkJsQl9RSE10bXJBOE1yNTdfMDBUd3E4YjhtV2UyTU51QUxIbFp4S3ROMVBtQUxUUm1sVXJOM2ZhV0N6T192aFlp?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Wed, 15 Jul 2026 15:15:00 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxQTXBTWTNLUkxHWjhoalRORmZ4c0JYYmprU3NkR21xYjB5c0RmYTVJM0x3TDhvZmh4aHhmUzJSZDZ4UE9NT3F5Y3Q5",
+      "page_content": ""
+    },
+    {
+      "title": "TuxBot v3: Inside an IoT Botnet Framework With LLM-Assisted Development - Unit 42",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1sdFVscElTclFSQ2RUOWRFNHptLWx1N0xacTcwU1pFc0JDZE5yTVl5aW1hUmJWTDFtVzNZTGxaN3JzNlkyX0xLdUF2QUR3eGZWbjRGSkxXZHZNMTB6N3d4V2N5OXpMRmRkSl9OdnR5SkxYOHlEM0E?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Wed, 15 Jul 2026 10:06:37 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE1sdFVscElTclFSQ2RUOWRFNHptLWx1N0xacTcwU1pFc0JDZE5yTVl5aW1hUmJWTDFtVzNZTGxaN3JzNlkyX0xLdUF2",
+      "page_content": ""
+    },
+    {
+      "title": "AI Model Co-Design: Hardware-Friendly LLM Design | NVIDIA Technical Blog - NVIDIA Developer",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NHeEdVSXgzTTYteWEyNzdvX3FXd1ZOM2FWVjJzcXZvenppcVFIckx3azVJRmh0Rkw1NFV0UzVQR21Wb3RFWHhmd3c?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 10 Jul 2026 17:16:10 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPcVdNQmJrUVMzSDhYLTdWcUZCREJydnVuQzRGRUttVkduMzRJTWIzU3pYbWxRU2lMMHlHc1lMbU9EaUtWRzV3X3NH",
+      "page_content": ""
+    }
+  ],
+  "blogs": [
+    {
+      "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
+      "url": "https://openai.com/index/unlocking-self-improvement-gpt-red/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": ""
+    },
+    {
+      "title": "How to manage AI investments in the agentic era",
+      "url": "https://openai.com/index/managing-ai-investments-in-agentic-era/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "OpenAI’s goal is to make AI more accessible, capable and affordable over time. From GPT‑4 to GPT‑5.4, the price per million tokens fell 97%. [GPT‑5.6⁠](https://openai.com/index/gpt-5-6/) continues that progress, delivering better performance in the Artificial Analysis Coding Agent Index with 54% fewer output tokens and 57% less time per task.\n\nBut token price alone does not show whether AI is creating value. Leaders should look at **useful work per dollar**: tasks completed, time saved, decisions improved, and workflows ready to scale.\n\nAs teams move from chat to longer-running workflows, admins need clearer visibility into demand, spend, and risk.\n\nHere are five ways to invest with confidence.\n\n## 1. Sharpen visibility into usage and spend\n\nEnterprise leaders need **a plain view of AI usage:** who is using it, which products or models they are using, how much capacity they are consuming, and what kind of work that usage supports. Without that visibility, a growing bill is hard to interpret. It could reflect waste, productive experimentation, or a workflow that is starting to become business-critical.\n\n[ChatGPT Work⁠](https://openai.com/chatgpt-work/) supports longer, multi-step tasks, so usage can vary widely by workflow. Admins need to see the work behind that usage, not just the credits consumed. This is possible thanks to a shared view of demand across ChatGPT. Updated [usage analytics and spend controls⁠](https://openai.com/index/chatgpt-enterprise-spend-controls/) in the [Admin Console⁠(opens in a new window)](https://chatgpt.com/admin) help admins see adoption, credit usage, and spend by user, product, and model; track trends over time; identify emerging patterns; and understand when usage reflects broad adoption, a power-user workflow, or a recurring business process that may deserve more investment.\n\n![Image 1: Analytics overview showing ChatGPT and Codex usage and credit consumption](https://images.ctfassets.net/kftzwdyauwt9/PUu1kZSiVcT1kkFdXOyNl/905ddac86e29c56509c35dc583288cc2/Analytics_overview_showing_ChatGPT_and_Codex_usage_and_credit_consumption.png?w=3840&q=90&fm=webp)"
+    },
+    {
+      "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "Today, OpenAI announced GPT‑5.6, which will become the new preferred model in Microsoft 365 Copilot—in Word, Excel, PowerPoint, Chat and Cowork. For Microsoft 365 customers, the update brings OpenAI's latest flagship model series into productivity tools people use every day, helping them create, analyze, and collaborate with more capable AI assistance across workstreams. GPT‑5.6 is OpenAI’s latest flagship model series, which delivers more useful work from every token, with stronger performance per dollar and on demand capability for the most complex tasks.\n\nWith GPT‑5.6, Microsoft 365 users will be able to create higher-quality work products with less effort across the apps they already rely on:\n\n*   In Word, GPT‑5.6 can help people draft, edit, and refine documents with fewer rounds of prompting.\n*   In Excel, it can support deeper analysis while using tokens more efficiently, helping users move faster from data to insights.\n*   In PowerPoint, it can help turn early ideas into more polished, visually compelling presentations with less manual guidance.\n*   In Cowork, it can help users complete complex, cross-functional work and produce higher-quality outputs with less manual coordination.\n\n“We can’t wait for customers to see what GPT‑5.6 in Microsoft 365 will do, enabling them to work even more effectively with AI in the tools they use every day,” said Nitin Agrawal, President, Copilot & Agents Core, Microsoft. “Using Copilot powered by OpenAI’s latest model, customers will be able to produce more polished outputs in Word, Excel, PowerPoint, Cowork, and Copilot Chat, whether they are drafting documents, analyzing data, creating presentations, or collaborating across teams. We’re excited to continue building with OpenAI to bring more powerful AI experiences to people and organizations around the world.”\n\n“Microsoft 365 is where millions of people write, analyze, create, and collaborate every day,” said Nikunj Handa, Head of API Product, OpenAI. “By bringing GPT‑5.6 to Microsoft 365 Copilot through the OpenAI API, we're helping organizations get more useful work from every token, and more value from AI in the tools they already use.”\n\nIn addition to serving the models natively, Microsoft will also access OpenAI models directly through the API to bring GPT‑5.6 to Microsoft 365 customers."
+    },
+    {
+      "title": "Download press kit",
+      "url": "https://anthropic.com/press-kit",
+      "source": "Anthropic",
+      "date": "",
+      "page_content": ""
+    },
+    {
+      "title": "Inviting hard questions",
+      "url": "https://www.anthropic.com/news/hard-questions",
+      "source": "Anthropic",
+      "date": "",
+      "page_content": ""
+    },
+    {
+      "title": "J-Space: Yet Another LLM Mind Reader? dlouapre • 2 days ago • 23",
+      "url": "https://huggingface.co/blog/dlouapre/j-space",
+      "source": "Hugging Face",
+      "date": "",
+      "page_content": ""
+    },
+    {
+      "title": "Giving AI Agents 3D Bodies, Real Jobs, and Wallets on three.ws three-ws • 3 days ago • 19",
+      "url": "https://huggingface.co/blog/three-ws/giving-ai-agents-bodies-and-wallets",
+      "source": "Hugging Face",
+      "date": "",
+      "page_content": ""
+    },
+    {
+      "title": "A New Look for OpenRouterJul 13, 2026",
+      "url": "https://openrouter.ai/blog/announcements/brand-refresh/",
+      "source": "OpenRouter",
+      "date": "",
+      "page_content": ""
+    },
+    {
+      "title": "The OpenRouter MCP ServerJun 25, 2026",
+      "url": "https://openrouter.ai/blog/announcements/openrouter-mcp-server/",
+      "source": "OpenRouter",
+      "date": "",
+      "page_content": ""
+    },
+    {
+      "title": "Introducing the Unified Image APIJun 23, 2026",
+      "url": "https://openrouter.ai/blog/announcements/image-api/",
+      "source": "OpenRouter",
+      "date": "",
+      "page_content": ""
+    }
+  ],
+  "github_strategy": {
+    "query": "MCP OR embedding OR \"vector database\" OR \"AI framework\"",
+    "filters": "pushed:>2026-07-02",
+    "sort": "stars",
+    "label": "新兴话题（MCP/Vector/Embedding）"
+  }
+}
