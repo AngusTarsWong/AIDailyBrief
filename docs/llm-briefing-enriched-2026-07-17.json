@@ -1,0 +1,840 @@
+{
+  "date": "2026-07-17",
+  "github": [
+    {
+      "name": "kortix-ai/suna",
+      "desc": "The Company AI Command Center",
+      "stars": 19975,
+      "lang": "TypeScript",
+      "updated": "2026-07-17",
+      "url": "https://github.com/kortix-ai/suna",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "llm"
+      ],
+      "releases": [
+        {
+          "tag": "v0.10.7",
+          "name": "v0.10.7",
+          "date": "2026-07-17",
+          "summary": "Top-to-bottom overhaul of the LLM gateway; correct OpenAI responses routing and parameters; Anthropic extended-thinking requests no longer forward conflicting temperature/top_p; Bedrock provider and sandbox tooling hardening.",
+          "release_highlights_zh": [
+            "重构 LLM gateway，统一承载各模型请求并加强安全与沙箱工具链",
+            "修正 OpenAI reasoning 模型与工具调用的 Responses API 路由和参数转换",
+            "Anthropic extended thinking 场景不再转发冲突的 temperature/top_p 参数，并补强 Bedrock BYOK 支持"
+          ]
+        }
+      ],
+      "is_top": true,
+      "name_zh": "Suna",
+      "desc_zh": "Suna 是面向企业的 AI Command Center，用于集中管理长任务 Agent、模型网关、沙箱和业务工作流。它的重点不是单次聊天，而是让公司把多模型调用、工具执行、权限、审计和自动化流程整合到可运营的平台中。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "bojieli/ai-agent-book",
+      "desc": "《深入理解 AI Agent：设计原理与工程实践》开源主仓库，包含全书正文、编译版 PDF 与按章配套代码。",
+      "stars": 1202,
+      "lang": "Python",
+      "updated": "2026-07-17",
+      "url": "https://github.com/bojieli/ai-agent-book",
+      "topics": [
+        "agent",
+        "ai-agent",
+        "coding-agent",
+        "context-engineering",
+        "llm",
+        "mcp",
+        "multi-agent",
+        "rag"
+      ],
+      "releases": [],
+      "is_top": true,
+      "name_zh": "《深入理解 AI Agent》",
+      "desc_zh": "《深入理解 AI Agent》开源仓库把 Agent 设计原理、工程实践、正文 PDF 与分章代码集中维护，适合系统学习记忆、规划、工具调用、RAG、多 Agent 和上下文工程。它更像一本可运行的中文 Agent 工程教材。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "ollama/ollama",
+      "desc": "Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+      "stars": 176283,
+      "lang": "Go",
+      "updated": "2026-07-17",
+      "url": "https://github.com/ollama/ollama",
+      "topics": [
+        "deepseek",
+        "gemma",
+        "gpt-oss",
+        "llama",
+        "llm",
+        "mistral",
+        "ollama",
+        "qwen"
+      ],
+      "releases": [
+        {
+          "tag": "v0.32.1",
+          "name": "v0.32.1",
+          "date": "2026-07-16",
+          "summary": "Improved Gemma 4 tool calling and multi-turn reasoning; fixed recurrent MLX model cache leak; MLX loading now respects OLLAMA_LOAD_TIMEOUT; agent web search/fetch now prompts signin when required.",
+          "release_highlights_zh": [
+            "增强 Gemma 4 的工具调用和多轮推理稳定性",
+            "修复 MLX 模型缓存泄漏并改善缓存快照性能",
+            "Agent 的网页搜索和 fetch 在需要认证时会提示用户执行 ollama signin"
+          ]
+        },
+        {
+          "tag": "v0.32.0",
+          "name": "v0.32.0",
+          "date": "2026-07-11",
+          "summary": "New interactive agent experience: running ollama launches an agent to help users code and delegate work.",
+          "release_highlights_zh": [
+            "新增交互式 Agent 体验，运行 ollama 即可启动帮助编码和委派任务的代理"
+          ]
+        }
+      ],
+      "is_top": true,
+      "name_zh": "Ollama",
+      "desc_zh": "Ollama 是主流的本地 LLM 运行与分发工具，支持 Qwen、Gemma、DeepSeek、Mistral、gpt-oss 等模型，并通过 CLI/API 管理模型下载、推理和本地服务。它适合需要私有化、低延迟或离线部署大模型能力的开发者。",
+      "lang_zh": "Go"
+    },
+    {
+      "name": "ginlix-ai/LangAlpha",
+      "desc": "Claude Code for Investing",
+      "stars": 1556,
+      "lang": "Python",
+      "updated": "2026-07-17",
+      "url": "https://github.com/ginlix-ai/LangAlpha",
+      "topics": [
+        "agent",
+        "investment",
+        "langchain",
+        "langraph",
+        "llm",
+        "mcp",
+        "skills",
+        "trading"
+      ],
+      "releases": [
+        {
+          "tag": "v2026.06.27",
+          "name": "v2026.06.27",
+          "date": "2026-06-27",
+          "summary": "MarketView chart now supports bidirectional user-agent interaction; user selections become structured context; agent can draw trendlines, zones, Fibonacci retracements and event markers; LangGraph DeltaChannel reduces long-session latency.",
+          "release_highlights_zh": [
+            "MarketView 图表支持用户框选区域、价格线和注释并作为结构化上下文发送给 Agent",
+            "Agent 可反向在图表上绘制趋势线、区域、斐波那契回撤和事件标记",
+            "采用 LangGraph DeltaChannel 降低长研究线程的持久化成本和延迟"
+          ]
+        },
+        {
+          "tag": "v2026.06.19",
+          "name": "v2026.06.19",
+          "date": "2026-06-20",
+          "summary": "Every external source touched by the agent is captured and inspectable; sources panel tracks web pages, filings, market data, files, memory and MCP calls; Stop button is now immediate hard cancel.",
+          "release_highlights_zh": [
+            "自动捕获 Agent 使用的网页、SEC 文件、行情数据、用户文件、记忆和 MCP 调用",
+            "新增 Sources 面板和内容指纹，便于核对 Agent 是否真正读取来源",
+            "Stop 按钮改为硬取消，可停止主 Agent 与子 Agent 并保留检查点"
+          ]
+        }
+      ],
+      "is_top": true,
+      "name_zh": "LangAlpha",
+      "desc_zh": "LangAlpha 是面向投资研究的 Claude Code 式 Agent 平台，把行情图表、MCP、数据源、深度研究和对话式分析结合起来。它让投资者能围绕时间区间、价格区域和资料来源提问，并把 Agent 输出直接落到图表和研究线程中。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "Skyvern-AI/skyvern",
+      "desc": "Automate browser based workflows with AI",
+      "stars": 22444,
+      "lang": "Python",
+      "updated": "2026-07-17",
+      "url": "https://github.com/Skyvern-AI/skyvern",
+      "topics": [
+        "ai",
+        "automation",
+        "browser-automation",
+        "gpt",
+        "llm",
+        "playwright",
+        "rpa",
+        "vision",
+        "workflow"
+      ],
+      "releases": [
+        {
+          "tag": "v1.0.47",
+          "name": "Release v1.0.47",
+          "date": "2026-07-16",
+          "summary": "Gated artifact URL re-minting to signed Skyvern content URLs; refused Copilot drafts with null output contracts; bumped MCP dependency to fix high-severity Dependabot alerts.",
+          "release_highlights_zh": [
+            "Artifact URL 重新签发限制到 Skyvern 签名内容 URL，提高访问安全性",
+            "拒绝输出合同完全为空阻塞器的 Copilot 草稿，减少无效自动化结果",
+            "升级 MCP 依赖以修复高危 Dependabot 告警"
+          ]
+        }
+      ],
+      "is_top": true,
+      "name_zh": "Skyvern",
+      "desc_zh": "Skyvern 是用 AI 自动化浏览器工作流的平台，结合 LLM、视觉理解和浏览器执行能力，适合处理表单填写、后台操作和网页数据录入等传统 RPA 难以适配的任务。它强调用页面语义理解替代脆弱的坐标脚本。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "1jehuang/jcode",
+      "desc": "Coding Agent Harness",
+      "stars": 8367,
+      "lang": "Rust",
+      "updated": "2026-07-17",
+      "url": "https://github.com/1jehuang/jcode",
+      "topics": [
+        "ai-agent",
+        "coding-agent",
+        "claude",
+        "cli",
+        "llm",
+        "mcp",
+        "openai",
+        "rust",
+        "terminal",
+        "tui"
+      ],
+      "releases": [
+        {
+          "tag": "v0.47.0",
+          "name": "v0.47.0",
+          "date": "2026-07-14",
+          "summary": "Added live swarm page with ownership tree and detailed activity; first-run onboarding can launch read-only architecture review; external Claude, Codex, Pi, OpenCode and Cursor sessions resume faster.",
+          "release_highlights_zh": [
+            "新增实时 swarm 页面，展示 Agent 所有权树、动画状态和活动详情",
+            "首次运行可启动只读架构审查，帮助理解最近的代码项目",
+            "外部 Claude、Codex、Pi、OpenCode 和 Cursor 会话恢复更快"
+          ]
+        },
+        {
+          "tag": "v0.46.0",
+          "name": "v0.46.0",
+          "date": "2026-07-13",
+          "summary": "Spawn cards show nested agents in the transcript; swarm prompts open from inline controls; multiline LaTeX rendering is steadier during streaming.",
+          "release_highlights_zh": [
+            "Spawn 卡片可在聊天记录中显示嵌套 Agent 与当前工作",
+            "可从内联控件打开 swarm prompt",
+            "流式输出中的多行 LaTeX 渲染更稳定"
+          ]
+        }
+      ],
+      "is_top": true,
+      "name_zh": "jcode",
+      "desc_zh": "jcode 是 Rust 编写的编码 Agent Harness，面向终端/TUI 场景组织 Claude、Codex、OpenCode、Cursor 等外部 Agent 会话。它提供 MCP、任务编排、群体视图和代码上下文管理，适合把多种编码代理统一到一个本地工作台。",
+      "lang_zh": "Rust"
+    },
+    {
+      "name": "omnigent-ai/omnigent",
+      "desc": "Open-source AI agent framework and meta-harness for orchestrating Claude Code, Codex, Cursor, Pi and custom agents with policy, sandboxing and real-time collaboration.",
+      "stars": 7392,
+      "lang": "Python",
+      "updated": "2026-07-17",
+      "url": "https://github.com/omnigent-ai/omnigent",
+      "topics": [
+        "agent-framework",
+        "agent-orchestration",
+        "ai-agent",
+        "claude-code",
+        "codex",
+        "coding-agents",
+        "llm",
+        "multi-agent",
+        "sandbox"
+      ],
+      "releases": [
+        {
+          "tag": "v0.5.1",
+          "name": "v0.5.1",
+          "date": "2026-07-10",
+          "summary": "Older desktop builds without embedded browser now hide the Browser tab instead of showing a dead tab.",
+          "release_highlights_zh": [
+            "旧版桌面构建没有内嵌浏览器时会隐藏 Browser 标签，避免展示不可用入口"
+          ]
+        },
+        {
+          "tag": "v0.5.0",
+          "name": "v0.5.0",
+          "date": "2026-07-10",
+          "summary": "iOS app release; generic ACP harness connects compatible agents through MCP relay; command palette and richer session search; appearance and customization settings.",
+          "release_highlights_zh": [
+            "Omnigent iOS 版本上线 App Store",
+            "新增通用 ACP harness，可通过 MCP relay 连接兼容 Agent",
+            "加入全局命令面板、更丰富的会话搜索和外观自定义设置"
+          ]
+        }
+      ],
+      "is_top": true,
+      "name_zh": "Omnigent",
+      "desc_zh": "Omnigent 是开源 AI Agent 框架与元 harness，用来编排 Claude Code、Codex、Cursor、Pi 和自定义 Agent。它强调可替换 harness、策略约束、沙箱执行和实时协作，适合需要在多 Agent 工具之间统一治理和工作流的团队。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "AmberSahdev/Open-Interface",
+      "desc": "Control Any Computer Using LLMs.",
+      "stars": 2695,
+      "lang": "Python",
+      "updated": "2026-07-17",
+      "url": "https://github.com/AmberSahdev/Open-Interface",
+      "topics": [
+        "assistant-computer-control",
+        "automation",
+        "gpt",
+        "llm",
+        "machine-learning",
+        "openai",
+        "pyautogui"
+      ],
+      "releases": [
+        {
+          "tag": "0.9.0",
+          "name": "0.9.0",
+          "date": "2025-03-16",
+          "summary": "Added support for free Google Gemini models; improved reliability for keyboard hotkey shortcuts; documented Windows script-running fallback.",
+          "release_highlights_zh": [
+            "新增免费 Google Gemini 模型支持",
+            "提升键盘快捷键执行可靠性",
+            "补充 Windows 直接运行源码的安装替代说明"
+          ]
+        }
+      ],
+      "is_top": true,
+      "name_zh": "Open-Interface",
+      "desc_zh": "Open-Interface 是让 LLM 控制本地电脑的开源项目，通过屏幕理解、键盘鼠标操作和自动化脚本，把自然语言任务转化为跨 macOS、Windows、Linux 的电脑操作。它适合探索本地 GUI Agent、桌面自动化和人机协同助手。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "noonghunna/club-3090",
+      "desc": "Community recipes for serving LLMs on RTX 3090/4090/5090 CUDA GPUs across vLLM, llama.cpp and ik_llama, with configs for Qwen, Gemma and other models.",
+      "stars": 1718,
+      "lang": "Python",
+      "updated": "2026-07-17",
+      "url": "https://github.com/noonghunna/club-3090",
+      "topics": [
+        "llm",
+        "cuda",
+        "vllm",
+        "llama.cpp"
+      ],
+      "releases": [
+        {
+          "tag": "v0.10.2",
+          "name": "v0.10.2",
+          "date": "2026-07-13",
+          "summary": "Added Tess-4-27B model recipes; NVFP4 slugs validated across Ampere to Blackwell; single-card resolver now avoids DFlash path on non-sm_86 cards.",
+          "release_highlights_zh": [
+            "新增 Tess-4-27B 模型配方，覆盖 llama.cpp 与 vLLM 场景",
+            "NVFP4 配方扩展到 Ampere 到 Blackwell，并标注硬件 fallback",
+            "单卡解析器会在非 sm_86 显卡上避开 DFlash 路径以避免异常输出"
+          ]
+        },
+        {
+          "tag": "v0.10.1",
+          "name": "v0.10.1",
+          "date": "2026-07-02",
+          "summary": "vLLM stack pinned to v0.24.0 without overlay; Gemma-4-31B collapsed into one dual slug; served model names are now quantization-neutral.",
+          "release_highlights_zh": [
+            "vLLM 栈统一固定到 v0.24.0，移除 overlay 依赖",
+            "Gemma-4-31B 合并为一个 dual slug",
+            "served-model-names 改为量化无关命名，旧名称仍保持兼容"
+          ]
+        }
+      ],
+      "is_top": true,
+      "name_zh": "Club 3090",
+      "desc_zh": "club-3090 汇总在 RTX 3090/4090/5090 等消费级 GPU 上部署 LLM 的社区配方，覆盖 vLLM、llama.cpp、ik_llama 等引擎和 Qwen、Gemma 等模型。它适合本地推理玩家和小团队优化显存、量化和多卡配置。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "rivet-dev/agentos",
+      "desc": "A faster, lighter, cheaper alternative to sandboxes. Run any coding agent inside an isolated Linux VM, with agent orchestration built in.",
+      "stars": 3677,
+      "lang": "Rust",
+      "updated": "2026-07-17",
+      "url": "https://github.com/rivet-dev/agentos",
+      "topics": [
+        "agent",
+        "ai",
+        "llm",
+        "sandbox",
+        "wasm",
+        "webassembly"
+      ],
+      "releases": [
+        {
+          "tag": "v0.2.8-rc.2",
+          "name": "v0.2.8-rc.2",
+          "date": "2026-07-15",
+          "summary": "Updated Core Package docs and examples; sped up publish workflow; added opt-in persistent sessions via PI_SESSION_DIR; restored reliable interactive shell startup.",
+          "release_highlights_zh": [
+            "更新 Core Package 文档和示例",
+            "优化发布工作流速度",
+            "通过 PI_SESSION_DIR 支持可选持久会话",
+            "修复交互式 shell 启动可靠性"
+          ]
+        }
+      ],
+      "is_top": true,
+      "name_zh": "AgentOS",
+      "desc_zh": "AgentOS 是面向编码 Agent 的轻量隔离运行时，目标是以比传统沙箱更快、更便宜的方式在 Linux VM 中执行任意代理，并内置编排能力。它适合需要安全运行代码、管理会话和连接多 Agent 的开发平台。",
+      "lang_zh": "Rust"
+    },
+    {
+      "name": "screenpipe/screenpipe",
+      "desc": "Local-first AI memory and screen/audio recording platform that turns how you work into agents, with privacy-focused integrations for OpenClaw, Hermes Agent and MCP.",
+      "stars": 20189,
+      "lang": "Rust",
+      "updated": "2026-07-17",
+      "url": "https://github.com/screenpipe/screenpipe",
+      "topics": [
+        "agents",
+        "ai-memory",
+        "computer-vision",
+        "hermes-agent",
+        "llm",
+        "local-ai",
+        "mcp",
+        "multimodal",
+        "privacy"
+      ],
+      "releases": [
+        {
+          "tag": "app-v2.5.112",
+          "name": "Screenpipe App v2.5.112",
+          "date": "2026-07-15",
+          "summary": "Fixed Intel macOS launch crash; documented Windows Tauri installer build; improved onboarding accessibility; documented missing MCP tools.",
+          "release_highlights_zh": [
+            "修复 Intel macOS 启动崩溃并让视觉 smoke test 更稳定",
+            "补充 Windows Tauri 安装器构建文档",
+            "改进 onboarding 的无障碍标签",
+            "补齐 MCP 可用工具文档"
+          ]
+        }
+      ],
+      "is_top": true,
+      "name_zh": "screenpipe",
+      "desc_zh": "screenpipe 是本地优先的 AI 记忆与屏幕/音频记录平台，记录用户工作过程并转化为可查询、可自动化的 Agent 上下文。它强调隐私、本地数据、MCP 工具和多模态记忆，适合构建个人工作流 Agent 或企业知识回放系统。",
+      "lang_zh": "Rust"
+    },
+    {
+      "name": "onyx-dot-app/onyx",
+      "desc": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
+      "stars": 30930,
+      "lang": "Python",
+      "updated": "2026-07-17",
+      "url": "https://github.com/onyx-dot-app/onyx",
+      "topics": [
+        "ai-chat",
+        "enterprise-search",
+        "gen-ai",
+        "llm",
+        "rag",
+        "self-hosted",
+        "vector-search"
+      ],
+      "releases": [
+        {
+          "tag": "v4.3.7",
+          "name": "v4.3.7",
+          "date": "2026-07-16",
+          "summary": "Warned admins about document index migration before upgrade; enforced bot agent access before Slack answers; added Windows ARM64 desktop builds.",
+          "release_highlights_zh": [
+            "升级前提醒管理员先完成文档索引迁移以保护既有索引",
+            "Slack 回答前强制检查 bot agent 访问权限",
+            "新增 Windows ARM64 桌面构建"
+          ]
+        },
+        {
+          "tag": "v4.3.6",
+          "name": "v4.3.6",
+          "date": "2026-07-15",
+          "summary": "Added read-write lock when sending LLM calls; preserves upgrade warning around OpenSearch document index migration.",
+          "release_highlights_zh": [
+            "发送 LLM 调用时使用读写锁提升并发安全",
+            "保留 OpenSearch 文档索引迁移相关升级提醒"
+          ]
+        }
+      ],
+      "is_top": true,
+      "name_zh": "Onyx",
+      "desc_zh": "Onyx 是开源企业 AI 平台，提供面向所有 LLM 的聊天、企业搜索、RAG、连接器和自托管能力。它适合把公司文档、Slack、知识库和应用数据接入统一检索问答系统，并在权限控制下为团队提供 AI 助手。",
+      "lang_zh": "Python"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "apache/ossie",
+      "url": "https://github.com/apache/ossie",
+      "desc": "Apache Ossie, industry wide specification effort to standardize how we exchange semantic metadata across analytics, AI and BI platforms, providing a vendor neutral, single source of truth for semantic data",
+      "lang": "Python",
+      "stars": "916",
+      "today": "60 stars today",
+      "name_zh": "Apache Ossie",
+      "desc_zh": "Apache Ossie 是围绕开放语义互操作推进的规范项目，目标是在分析、AI 与 BI 平台之间统一交换语义元数据。它关注指标、维度、血缘和业务口径的可移植表达，适合需要把数据仓库、语义层、智能分析助手和企业知识系统打通的团队使用。",
+      "lang_zh": "Python",
+      "desc_en": "Apache Ossie, industry wide specification effort to standardize how we exchange semantic metadata across analytics, AI and BI platforms, providing a vendor neutral, single source of truth for semantic data"
+    },
+    {
+      "name": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "desc": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "lang": "CSS",
+      "stars": "10,961",
+      "today": "3,372 stars today",
+      "name_zh": "Hallmark",
+      "desc_zh": "Hallmark 是面向 Claude Code、Cursor、Codex 等 AI 编程工具的设计审美技能，目标是减少常见的机械化界面输出。它把排版、层级、留白、组件细节和交互质感整理成可复用规则，让编码 Agent 在生成前端页面时更接近成熟设计师的判断。",
+      "lang_zh": "CSS",
+      "desc_en": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex."
+    },
+    {
+      "name": "PostHog/posthog",
+      "url": "https://github.com/PostHog/posthog",
+      "desc": "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+      "lang": "Python",
+      "stars": "35,858",
+      "today": "77 stars today",
+      "name_zh": "PostHog",
+      "desc_zh": "PostHog 是面向产品团队的开源产品分析与实验平台，已加入 AI 可观测性、会话回放、Feature Flag 和自驱产品能力。它可以帮助团队追踪 AI 功能的真实使用、质量和转化路径，把模型交互、用户行为与产品迭代放在同一套观测体系中。",
+      "lang_zh": "Python",
+      "desc_en": "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP."
+    },
+    {
+      "name": "openinterpreter/openinterpreter",
+      "url": "https://github.com/openinterpreter/openinterpreter",
+      "desc": "A coding agent for open models like Kimi K3",
+      "lang": "Rust",
+      "stars": "65,997",
+      "today": "661 stars today",
+      "name_zh": "Open Interpreter",
+      "desc_zh": "Open Interpreter 是让开放模型操作本地计算机和代码环境的 Agent 项目，用户可用自然语言驱动终端、脚本、浏览器和文件任务。它适合希望用 Kimi、Qwen、Llama 等开放模型构建本地编码助手、数据处理助手或自动化工作流的开发者。",
+      "lang_zh": "Rust",
+      "desc_en": "A coding agent for open models like Kimi K3"
+    },
+    {
+      "name": "PrismML-Eng/Bonsai-demo",
+      "url": "https://github.com/PrismML-Eng/Bonsai-demo",
+      "desc": "Bonsai Demo\n[![Image 1: Bonsai](https://github.com/PrismML-Eng/Bonsai-demo/raw/main/assets/bonsai-logo.svg)](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/assets/bonsai-logo.svg)",
+      "lang": "Shell",
+      "stars": "1,526",
+      "today": "196 stars today",
+      "page_content": "[![Image 1: Bonsai](https://github.com/PrismML-Eng/Bonsai-demo/raw/main/assets/bonsai-logo.svg)](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/assets/bonsai-logo.svg)\n[**Website**](https://prismml.com/)|[**GitHub**](https://github.com/PrismML-Eng/Bonsai-demo)|[**Discord**](https://discord.gg/prismml)\n**HF Collections:**[Bonsai 27B](https://huggingface.co/collections/prism-ml/bonsai-27b) · [Bonsai (1-bit)](https://huggingface.co/collections/prism-ml/bonsai) · [Ternary-Bonsai](https://huggingface.co/collections/prism-ml/ternary-bonsai)\n**Whitepapers:**[Bonsai 27B](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/bonsai-27b-whitepaper.pdf) · [1-bit Bonsai 8B](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/1-bit-bonsai-8b-whitepaper.pdf) · [Ternary-Bonsai 8B](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/ternary-bonsai-8b-whitepaper.pdf)\n* * *\nUsing this demo repository you can run **Bonsai** (1-bit) and **Ternary-Bonsai** language models locally on Mac (Metal), Linux/Windows (CUDA, Vulkan, ROCm), or CPU.\n## 🌱 New: Bonsai 27B\n[](https://github.com/PrismML-Eng/Bonsai-demo#-new-bonsai-27b)\nThe family's newest and largest generation, and its first **vision-language** models ([Bonsai 27B collection](https://huggingface.co/collections/prism-ml/bonsai-27b)):\n*   **Vision:** send photos, screenshots, and PDFs; ask about them (see [VISION.md](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/VISION.md)).\n*   **Agentic tool calling:** native OpenAI-style `tool_calls` with full round-trips, plus MCP servers in both demo UIs (see [TOOLS.md](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/TOOLS.md)).\n*   **Thinking:** a reasoning model; pick the reasoning effort per chat in the UI or budget it per request.\n*   **Long context:** 256k+ token conversations.\n*   **Tiny footprint:** the 1-bit Bonsai-27B packs to ~1.125 bits per weight: it fits on a modern iPhone without memory offloading. Ternary-Bonsai-27B (~1.7 bits per weight, packed into 2-bit for fas",
+      "name_zh": "Bonsai Demo",
+      "desc_zh": "Bonsai Demo 是 PrismML 团队用于展示 Bonsai 模型体验的示例仓库，围绕机器学习应用的交互演示、部署素材和前端呈现组织。它提供 Bonsai 27B、1-bit 与三值模型相关入口，适合希望快速了解该模型系列、推理体验和 AI 应用展示方式的团队参考。",
+      "lang_zh": "Shell",
+      "desc_en": "Bonsai Demo\n[![Image 1: Bonsai](https://github.com/PrismML-Eng/Bonsai-demo/raw/main/assets/bonsai-logo.svg)](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/assets/bonsai-logo.svg)"
+    },
+    {
+      "name": "Shubhamsaboo/awesome-llm-apps",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "desc": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+      "lang": "Python",
+      "stars": "122,922",
+      "today": "923 stars today",
+      "name_zh": "Awesome LLM Apps",
+      "desc_zh": "awesome-llm-apps 收集了 100 多个可运行的 AI Agent、RAG、多 Agent 和工具调用应用示例，强调克隆后即可改造和上线。它适合开发者寻找 LLM 应用架构样板、学习检索增强生成、工作流自动化、语音与视觉 Agent 等常见模式。",
+      "lang_zh": "Python",
+      "desc_en": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship."
+    },
+    {
+      "name": "lobehub/lobehub",
+      "url": "https://github.com/lobehub/lobehub",
+      "desc": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "lang": "TypeScript",
+      "stars": "80,182",
+      "today": "71 stars today",
+      "name_zh": "LobeHub",
+      "desc_zh": "LobeHub 是面向 AI Agent 运营的应用平台，把代理的创建、排班、任务执行、报告和持续运行组织成统一体验。它适合需要管理多个智能体、监控持续工作流，并把 Agent 能力接入团队协作或个人生产力场景的用户。",
+      "lang_zh": "TypeScript",
+      "desc_en": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team."
+    },
+    {
+      "name": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "desc": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.\n> 🤝 **We welcome any kinds of contributing!** Vote on roadmap items or propose new ones at [`Roadmap`](https://github.com/HKUDS/DeepTutor/issues/498), and see our [Contributing Guide](https://github.c",
+      "lang": "Python",
+      "stars": "26,890",
+      "today": "656 stars today",
+      "page_content": "* * *\n> 🤝 **We welcome any kinds of contributing!** Vote on roadmap items or propose new ones at [`Roadmap`](https://github.com/HKUDS/DeepTutor/issues/498), and see our [Contributing Guide](https://github.com/HKUDS/DeepTutor/blob/main/CONTRIBUTING.md) for branching strategy, coding standards, and how to get started.\n### 📦 Releases\n[](https://github.com/HKUDS/DeepTutor#-releases)\n> **[2026.7.9]**[v1.5.1](https://github.com/HKUDS/DeepTutor/releases/tag/v1.5.1) — Remove a single failed document from a knowledge base — even one stuck in an **error** state — instead of deleting and rebuilding the whole base.\n> **[2026.7.4]**[v1.5.0](https://github.com/HKUDS/DeepTutor/releases/tag/v1.5.0) — LlamaIndex ingestion now honors your **Document Parsing** engine with multimodal image extraction, Partner & Soul ids stay URL-safe for non-Latin names, and optional RAG extras install cleanly on Python 3.14+.\n**Past releases (more than 1 week ago)**\n> **[2026.6.30]**[v1.4.15](https://github.com/HKUDS/DeepTutor/releases/tag/v1.4.15) — A native **Mattermost** channel for Partners, plus fixes so Guided Learning multiple-choice questions grade correctly and a configured zero chunk overlap is honored.\n> **[2026.6.29]**[v1.4.14](https://github.com/HKUDS/DeepTutor/releases/tag/v1.4.14) — Click an assigned partner to chat in one step, Deep Research flags partial reports, LightRAG indexes without MinerU, FAISS handles non-ASCII paths, and PocketBase sessions are isolated per user.\n> **[2026.6.27]**[v1.4.13](https://github.com/HKUDS/DeepTutor/releases/tag/v1.4.13) — Partners support non-Latin names and become assignable to users, logos render after login (#599), tiny knowledge bases retrieve reliably, and containers start cleanly under rootless Podman.\n> **[2026.6.24]**[v1.4.12](https://github.com/HKUDS/DeepTutor/releases/tag/v1.4.12) — A new **LightRAG Server** retrieval engine, a lightweight **PyMuPDF4LLM** parsing engine, and a FAISS vector backend that makes large knowledge-base retrieval d",
+      "name_zh": "DeepTutor",
+      "desc_zh": "DeepTutor 是香港大学数据智能团队推出的终身个性化辅导系统，面向教育场景中的 AI Tutor。项目关注学习者画像、长期记忆、个性化讲解和交互式答疑，适合研究 LLM 在教育陪伴、知识追踪和自适应教学中落地方式的开发者。",
+      "lang_zh": "Python",
+      "desc_en": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.\n> 🤝 **We welcome any kinds of contributing!** Vote on roadmap items or propose new ones at [`Roadmap`](https://github.com/HKUDS/DeepTutor/issues/498), and see our [Contributing Guide](https://github.c"
+    },
+    {
+      "name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "desc": "Skills for Real Engineers. Straight from my .claude directory.",
+      "lang": "Shell",
+      "stars": "174,330",
+      "today": "2,060 stars today",
+      "name_zh": "工程师技能库",
+      "desc_zh": "mattpocock/skills 汇集了作者在 Claude 工作流中沉淀的工程技能，强调把真实工程师的判断、检查清单和任务套路写成 Agent 可调用的规则。它适合用作 AI 编程助手的技能库参考，帮助模型在重构、排错、审查和文档任务中保持一致标准。",
+      "lang_zh": "Shell",
+      "desc_en": "Skills for Real Engineers. Straight from my .claude directory."
+    },
+    {
+      "name": "github/copilot-sdk",
+      "url": "https://github.com/github/copilot-sdk",
+      "desc": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+      "lang": "Java",
+      "stars": "9,649",
+      "today": "13 stars today",
+      "name_zh": "GitHub Copilot SDK",
+      "desc_zh": "GitHub Copilot SDK 用于把 Copilot Agent 能力集成到多平台应用和服务。它为第三方产品接入代码理解、任务执行、上下文传递和 Agent 交互提供基础能力，适合构建围绕 GitHub 生态的企业开发助手或 IDE 扩展。",
+      "lang_zh": "Java",
+      "desc_en": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services"
+    },
+    {
+      "name": "ibelick/ui-skills",
+      "url": "https://github.com/ibelick/ui-skills",
+      "desc": "Skills for Design Engineers",
+      "lang": "TypeScript",
+      "stars": "4,293",
+      "today": "178 stars today",
+      "name_zh": "UI Skills",
+      "desc_zh": "ui-skills 面向设计工程师整理了一组可复用的界面生成技能，可用于指导 Claude Code、Codex 等 Agent 输出更稳定的 UI 结构、视觉层级和组件细节。它把设计经验转化为机器可执行的约束，减少 AI 生成界面的粗糙感。",
+      "lang_zh": "TypeScript",
+      "desc_en": "Skills for Design Engineers"
+    },
+    {
+      "name": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "desc": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
+      "lang": "Python",
+      "stars": "89,122",
+      "today": "1,107 stars today",
+      "name_zh": "Graphify",
+      "desc_zh": "Graphify 是面向 Claude Code、Codex、OpenCode、Cursor、Gemini CLI 等工具的 AI 编码助手技能，能够把代码目录、SQL Schema、R 脚本和文档转化为结构化图谱。它适合在大型项目理解、依赖梳理、影响分析和知识检索中增强 Agent 的上下文能力。",
+      "lang_zh": "Python",
+      "desc_en": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph."
+    }
+  ],
+  "papers": [
+    {
+      "title": "Can We Trust LLM's Logic? A Comprehensive Evaluation on Logical Reasoning for Knowledge Graph Question Answering",
+      "date": "2026-07-17",
+      "summary": "This paper evaluates whether large language models can reliably perform logical reasoning for knowledge graph question answering, focusing on compositional reasoning, faithfulness and failure cases when models combine symbolic graph evidence with natural-language inference.",
+      "url": "https://arxiv.org/abs/2607.08017",
+      "cats": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "title_zh": "我们能信任 LLM 的逻辑吗？面向知识图谱问答的逻辑推理综合评估",
+      "summary_zh": "论文系统评估大语言模型在知识图谱问答中的逻辑推理可靠性，考察模型能否在组合查询、符号证据和自然语言推理间保持一致。它揭示了看似正确答案背后的推理跳步、证据错配和不可解释失败，对 RAG 与知识图谱结合的 Agent 很有参考价值。"
+    },
+    {
+      "title": "Doomed from the Start? How Early Performance Predicts AI Agent Outcomes",
+      "date": "2026-07-12",
+      "summary": "The study analyzes whether early interaction traces can forecast the eventual success or failure of AI agents, with implications for runtime monitoring, early stopping and safer deployment of long-horizon autonomous systems.",
+      "url": "https://arxiv.org/abs/2607.06503",
+      "cats": [
+        "cs.AI"
+      ],
+      "title_zh": "从一开始就注定失败？早期表现如何预测 AI Agent 结果",
+      "summary_zh": "研究分析 AI Agent 在长任务早期交互中的行为信号是否足以预测最终成败。它为运行时监控、提前终止、任务重试和安全部署提供依据：当早期轨迹显示规划不稳定、工具调用混乱或目标偏移，系统可以更早介入。"
+    },
+    {
+      "title": "ToolFailBench: A Benchmark for Stress-Testing Tool-Integrated Agents",
+      "date": "2026-07-09",
+      "summary": "ToolFailBench introduces adversarial and realistic failure modes for tool-using LLM agents, testing whether agents can detect bad tool outputs, recover from execution errors and avoid cascading mistakes in multi-step workflows.",
+      "url": "https://arxiv.org/abs/2607.04686",
+      "cats": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "title_zh": "ToolFailBench：用于压力测试工具集成 Agent 的基准",
+      "summary_zh": "ToolFailBench 面向工具调用型 LLM Agent 构造现实和对抗性的失败场景，测试 Agent 能否识别错误工具输出、处理执行异常、避免把单步错误扩大为多步灾难。它补足了传统只看最终答案的评测缺口，更贴近真实自动化流程风险。"
+    },
+    {
+      "title": "Beyond the Leaderboard: A Survey of Benchmark Saturation and Selection Bias in LLM Evaluation",
+      "date": "2026-07-10",
+      "summary": "This survey studies how leaderboard-driven evaluation can become saturated or biased, and argues for broader, task-grounded assessments that better reflect real deployment risks for LLM systems and agents.",
+      "url": "https://arxiv.org/abs/2607.05775",
+      "cats": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "title_zh": "超越排行榜：LLM 评测中的基准饱和与选择偏差综述",
+      "summary_zh": "这篇综述讨论 LLM 评测为何会出现排行榜饱和、数据选择偏差和过度优化，并主张采用更贴近任务、部署环境和风险场景的评估组合。它提醒 Agent 开发者不能只依赖单一 benchmark 分数，而要观察长任务、工具调用和失败恢复能力。"
+    },
+    {
+      "title": "Agentic Software Engineering: A Survey of LLM-Based Coding Agents",
+      "date": "2026-06-10",
+      "summary": "The survey organizes recent LLM coding-agent systems across planning, tool use, repository understanding, test feedback, sandbox execution and human-in-the-loop control, highlighting open challenges in reliability and evaluation.",
+      "url": "https://arxiv.org/abs/2606.05608",
+      "cats": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "title_zh": "Agentic 软件工程：基于 LLM 的编码 Agent 综述",
+      "summary_zh": "论文综述 LLM 编码 Agent 的主要技术路线，包括任务规划、仓库理解、工具调用、测试反馈、沙箱执行和人类协作控制。它指出可靠性、评测、权限边界和长上下文工程仍是编码 Agent 落地的关键瓶颈。"
+    }
+  ],
+  "hn": [
+    {
+      "title": "LM Studio Bionic: the AI agent for open models",
+      "url": "https://lmstudio.ai/blog/introducing-lm-studio-bionic",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-17",
+      "page_content": "![Image 1: LM Studio Bionic](https://lmstudio.ai/assets/marketing/blog/introducing-lm-studio-bionic/Bionic-Cover-blogimage.png)\n\n**Today, we're taking the biggest leap forward in LM Studio's evolution. Meet LM Studio Bionic, the AI agent made for open models.**\n\nBionic is the AI agent for getting real work done with open models, including coding, research, and complex work with documents and files. You can use local models or switch to open-source models in the cloud for heavier tasks, all while staying in control of your privacy and AI spend.\n\n**For all LM Studio Bionic users, we commit to Zero Data Retention and never training on your data.**\n\n**Bionic brings together:**\n\n*   A Bionic agent that excels at coding and document work\n*   Voice input with state-of-the-art local voice transcription\n*   Flexible model execution: run locally, connect through LM Link, or use the largest frontier open source models through LM Studio Secure Cloud\n*   Better cost control by letting users choose the right model and compute environment for each task",
+      "title_zh": "LM Studio Bionic：面向开放模型的 AI Agent",
+      "summary_zh": "HN 热议 LM Studio 的 Bionic Agent，它面向本地和开放模型提供代理式操作体验。讨论重点集中在开放模型能否承担真实任务、工具调用稳定性、本地推理成本以及与云端 Agent 产品的差异。"
+    },
+    {
+      "title": "$100 AI Music Video: Claude Fable 5 vs. GPT-5.6 Sol",
+      "url": "https://www.tryai.dev/blog/ai-music-video-arena-claude-vs-gpt-5.6",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-17",
+      "page_content": "We built a small agentic harness with one job: hand a model a song, a hard dollar budget, and a set of tools, then get out of the way and let it produce a full music video on its own. The model researches which video models exist, generates clips, watches its own footage, edits with ffmpeg, and assembles a final cut.\n\nA few readers of our [last build-off](https://www.tryai.dev/blog/gpt-5.6-build-off-12-models) said they wanted to see how tool use actually varies between models, so we gave frontier-level models an open-ended, long-horizon task where each model decides on its own what to research, what to generate, and how to edit. We log every tool call, so you can see exactly how each one worked (full transcripts below).\n\nWe ran two models, [Claude Fable 5](https://www.tryai.dev/models/claude-fable-5) and [GPT-5.6 Sol](https://www.tryai.dev/models/gpt-5.6-sol), each at two budgets ($25 and $100), for four runs total. Every run got the same song (Bruno Mars and Mark Ronson's \"Uptown Funk\"), a short text description, and a time-stamped lyric transcript.\n\n## The setup\n\nEach model ran an autonomous tool-calling loop with six tools:\n\n*   **plan**: a tool for thinking (no cost, no action).\n*   **web_search**: to research generation models and their APIs and fetch information about music videos (if needed).\n*   **get_budget**: to check the remaining budget.\n*   **generate_image** and **generate_video**: the only tools that spend budget. The model can pick any FAL or Replicate model and pass its own parameters.\n*   **run_command**: a local shell with ffmpeg/ffprobe available, used to analyze audio, cut and concatenate clips, and mux the final video.",
+      "title_zh": "100 美元 AI 音乐视频：Claude Fable 5 对比 GPT-5.6 Sol",
+      "summary_zh": "这条 HN 讨论围绕低成本 AI 视频和音乐内容生成实验展开，比较不同模型在创意工作流中的表现。它反映出多模态生成正在从演示走向可量化成本的生产流程，用户关注质量、可控性和版权边界。"
+    },
+    {
+      "title": "NotebookLM is now Gemini Notebook",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-17",
+      "page_content": "[Skip to main content](https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/#jump-content)\n\n[![Image 1: Google](https://blog.google/static/blogv2/images/super-g-aurora.svg?version=pr20260715-1455)](https://blog.google/ \"News from Google\")\nNotebookLM is now Gemini Notebook\n\n*    Innovation & AI \n*    Products & platforms \n*    Company news \n*   [Feed](https://blog.google/feed)\n\n[Subscribe](https://blog.google/newsletter-subscribe/)\n\n Back \n### Innovation & AI",
+      "title_zh": "NotebookLM 更名为 Gemini Notebook",
+      "summary_zh": "HN 关注 Google 将 NotebookLM 品牌并入 Gemini Notebook 的变化。这意味着笔记、资料问答和研究助手能力正进一步纳入 Gemini 生态，用户讨论产品连续性、数据来源可信度和与其他 RAG 笔记工具的差异。"
+    },
+    {
+      "title": "Detecting LLM-Generated Texts with “Classical” Machine Learning",
+      "url": "https://blog.lyc8503.net/en/post/llm-classifier/",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-17",
+      "page_content": "This article is currently an experimental machine translation and may contain errors. If anything is unclear, please refer to the original Chinese version. I am continuously working to improve the translation.\n\n## [](https://blog.lyc8503.net/en/post/llm-classifier/#TL-DR-Demo \"TL;DR & Demo\")TL;DR & Demo\n\nAs of early 2026, mainstream LLM-generated text exhibits strong statistical patterns that can be effectively distinguished from human-written content using traditional machine learning models. I suspect this is how many so-called “AI plagiarism checkers” actually work under the hood.\n\nOnline Demo: [https://lyc8503.github.io/AITextDetector/](https://lyc8503.github.io/AITextDetector/)\n\nThe model used in this demo is **not trained on general-purpose data**, nor has it undergone rigorous optimization or iteration. Its single-sentence detection accuracy is approximately 85% on the test set. Please read through this article before use to understand potential limitations.\n\nThe core code (drafts) and trained model files are available on GitHub: [lyc8503/AITextDetector](https://github.com/lyc8503/AITextDetector)\n\n## [](https://blog.lyc8503.net/en/post/llm-classifier/#Background-aka-Useless-Rambling \"Background (aka Useless Rambling)\")Background (aka Useless Rambling)\n\nBack when I was still writing my thesis at school half a year ago, rumors were already spreading about checking papers for AIGC (AI-generated content). I tested several platforms—CNKI, Wanfang, and some third-party AIGC detection services—and found they could indeed distinguish between my hand-written text and LLM-generated text with decent accuracy.",
+      "title_zh": "用经典机器学习检测 LLM 生成文本",
+      "summary_zh": "该 HN 条目讨论用传统机器学习方法检测 LLM 生成文本的研究与实践。相比只依赖大模型判别器，经典特征和轻量分类器可能在成本、可解释性和部署稳定性上有优势，但也面临生成模型快速变化带来的泛化挑战。"
+    }
+  ],
+  "news": [
+    {
+      "title": "Who will own the AI agent economy?",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxONjVwbDBYR0UxVmY5Rk9wU2FEU1Z2Yl9CcmcxalNubk1zRGdfTmpQcEkzSnB2Qk04UlN0U1BCMTU1NVNzMy1taE45M29kQzdaQzlsSEp3WHhBcjQ4cXRUWkl6Z192eEV0emNDV05KMXZJUzItc3pueEtrYWtCRzhFNA?oc=5",
+      "source": "MIT Sloan",
+      "cls": "google",
+      "date": "2026-07-13",
+      "desc": "MIT Sloan discusses how value, control and customer relationships may shift as AI agents mediate more commercial activity.",
+      "page_content": "",
+      "title_zh": "谁将拥有 AI Agent 经济？",
+      "summary_zh": "MIT Sloan 讨论 AI Agent 逐步代理搜索、购买和决策后，价值控制权可能从传统平台转向掌握用户关系、数据入口和交易基础设施的参与者。文章关注商业模式、分发权和信任机制在 Agent 经济中的重新分配。"
+    },
+    {
+      "title": "Is that AI agent worth it? Agentic economics and the modern operating model",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPVXZiMm01VVZwMEdSSXdrUGxsYjNHMlVFVjN5RllsMGR0bXB3V0RuTy1PbERlRWd1SVlfX2UzSFhHdmtmVTN0SF9ZVDB0X2twMHRxcEhiTExKRVFYWDlKXzgtcGRhMEZiZXVZX1FKN2VPRXVQREMwYWVZMzNRNW4xeUpCazhSTG5nUEFrcnBleVFnbDFKNENqRmtCaHRWZHZkODR2a20zTHltVE8wQWVhUDhRckFodlJXb3BfVFNSUXVjalRkaE80ZG5ZUGp1VDd2bHQ1Tg?oc=5",
+      "source": "McKinsey & Company",
+      "cls": "google",
+      "date": "2026-07-13",
+      "desc": "McKinsey frames agentic AI investment around operating-model change, cost-to-value measurement and workflow redesign.",
+      "page_content": "",
+      "title_zh": "这个 AI Agent 值不值？Agentic 经济学与现代运营模型",
+      "summary_zh": "McKinsey 将 Agentic AI 的价值评估放到运营模型中，而不是只比较模型成本。文章强调企业需要衡量任务完成质量、流程重构、治理和成本收益，判断 Agent 是否真正改善业务，而不是制造新的自动化复杂度。"
+    },
+    {
+      "title": "Cadence rolls out AI agent to speed circuit board, chip packaging design",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQMmZaRXBtUG5RLWpZQjg4UjFZd012cTM1Uy0xZy13SkkxamJiSzVuZ0dIMGllZDZVZGJKMkItTlo4bzliUGdndlY2ZG1JYTlpY0Z0a3lEWERtZDE5ZGY0VlA5WEYxaXJvSkZUMDBaUkxkekF5b2NQamFhdHRUVEM3aVRwNkw4VFlPa2M3VWtOa1cyNGUtVGRzOHhGdVJYVUw2aHpVZV91TmpUWjFWQ25STmwtMA?oc=5",
+      "source": "Reuters",
+      "cls": "google",
+      "date": "2026-07-15",
+      "desc": "Reuters reports Cadence is introducing an AI agent intended to accelerate circuit-board and chip-packaging design workflows.",
+      "page_content": "",
+      "title_zh": "Cadence 推出 AI Agent，加速电路板与芯片封装设计",
+      "summary_zh": "Reuters 报道 Cadence 推出面向电子设计自动化的 AI Agent，用于缩短电路板和芯片封装设计流程。这显示 Agent 正从通用办公和代码场景进入高专业度工业软件，重点在于把专家工具链中的步骤自动编排起来。"
+    },
+    {
+      "title": "New Agent Data Injection Attack Can Make AI Agents Misclick or Run Attacker Commands",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1vRm5uMi1lajhJWmhfN3NtaEM1M01mNG1BNjZYeERRQ1dwclZNUUk2RnlrY050QXpzOXhzUkYxdjZqenBOOG9naS1qSnJlbWpMbFVKWWZKSnZONFZlWERzUUg0S1NaNVJMS0prb1U1MnUxQVlGbDNWRlpFM1pta2M?oc=5",
+      "source": "The Hacker News",
+      "cls": "google",
+      "date": "2026-07-16",
+      "desc": "The Hacker News covers an agent data-injection technique that can steer UI agents toward attacker-selected clicks or commands.",
+      "page_content": "",
+      "title_zh": "新的 Agent 数据注入攻击可诱导 AI Agent 误点击或执行攻击命令",
+      "summary_zh": "The Hacker News 报道一种 Agent Data Injection 攻击，可通过页面或数据中的恶意指令影响 UI Agent 的点击和命令执行。该事件提醒开发者在浏览器 Agent、桌面 Agent 和工具调用系统中加强输入隔离、权限确认和行为审计。"
+    },
+    {
+      "title": "China Plans AI Agent Recalls. America Can’t Even Agree Who Regulates Them",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQamZNNUpkcmIzamg1clFsbTlLcFJPNmFMWmp2ajlKVnVBeEhEeWJuV2diMEo0bDNuUHRJdDMzNlZDSVpqTlRySWFzbExNcFBpUkJDenY5Tk84anAxdWNjTlFQZ0w3WWJfVFF2SzNOZ2NPZHVWcmFYRE5Ia2tMV3JoTkJIZkFHRjl3MDZQdVNTdFY0UFoxVExJUmlKbFpWVFBhaU1jSnFlcW5oTWhEeUlGa211bmxkaEhxekJkWGZQdDNnYkxiZmc?oc=5",
+      "source": "Forbes",
+      "cls": "google",
+      "date": "2026-07-15",
+      "desc": "Forbes contrasts China’s planned AI-agent recall regime with the unresolved regulatory split in the United States.",
+      "page_content": "",
+      "title_zh": "中国计划 AI Agent 召回机制，美国仍未确定监管归属",
+      "summary_zh": "Forbes 对比中美在 AI Agent 监管上的不同路径：一边讨论可召回机制，另一边仍在权责机构和监管边界上摇摆。文章反映出当 Agent 具备自主执行、交易和决策能力后，传统软件监管方式面临新的责任划分问题。"
+    },
+    {
+      "title": "Trust, transactions and tokenomics: AI agent infrastructure begins to standardize",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE00c09JWUJzX1I0SHM4NXRpR3RWRklPNzAtOGxZTzlYWXh6RmlOd1R6QWN2d29NV21xeS0wcTYxVVpYdnlLVElIYTJHWkNEUlEya2xUbFJxeHlCLTUyX1dhdDVXdWpDX0k2WmRF?oc=5",
+      "source": "The New Stack",
+      "cls": "google",
+      "date": "2026-07-15",
+      "desc": "The New Stack examines emerging standards for identity, payments and transaction trust in AI-agent infrastructure.",
+      "page_content": "",
+      "title_zh": "信任、交易与 Tokenomics：AI Agent 基础设施开始标准化",
+      "summary_zh": "The New Stack 关注 AI Agent 基础设施中的身份、交易、支付和信任标准化趋势。随着 Agent 代表用户或组织执行更多操作，行业正在探索可验证身份、审计轨迹、授权边界和机器间交易协议，以降低自动化经济中的信任成本。"
+    }
+  ],
+  "blogs": [
+    {
+      "title": "Why teens deserve access to safe AI",
+      "url": "https://openai.com/index/why-teens-deserve-access-safe-ai/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "Teens are the first generation growing up with AI, and this technology will heavily shape their future. Today, nearly 9 in 10 teens on ChatGPT use it for learning, information, skill-building, or productivity in a single week. This is why we believe it’s critical for teens to have access to AI. Keeping teens from using it until adulthood would be like asking a previous generation to avoid the internet or search engines until they turned 18, leaving them less prepared to use one of the defining technologies of their time. But access must be paired with protections designed specifically for teens.\n\nDuring a recent [OpenAI Academy⁠(opens in a new window)](https://www.linkedin.com/posts/openai-global-affairs_openaiacademy-activity-7430608494040354816-4GtV/) Oriana McKenzie shared how ChatGPT helped her become No.1 in her high school class by studying smarter and managing her workload—giving her the time needed for the sports and school programs she loves. Her story illustrates what’s possible when teens have access to AI that helps them learn and create.\n\nTo maximize those gains, teens need stronger protections designed for their stage of life, including automated guardrails that let them explore, learn, and build with confidence, while providing safeguards tailored to their age. As AI becomes more capable, our responsibility is to combine broad access with age-appropriate protections that allow teens to benefit from this technology as it evolves.\n\nOver the past year, that has meant strengthening default protections for teens, rolling out [age prediction⁠](https://openai.com/index/our-approach-to-age-prediction/), expanding [Parental Controls⁠](https://openai.com/index/introducing-parental-controls/), creating additional [family resources⁠(opens in a new window)](https://chatgpt.com/parent-resources/?openaicom-did=c82bc885-517b-4cca-b7f0-8409e020b35c&openaicom_referred=true) to help parents support healthy, responsible use, and introducing learning features to help support deeper understanding rather than just providing answers.\n\n*   We put teen safety first even when it may conflict with other goals.\n*   We encourage real-world support in times of need.\n*   We treat teens as teens.\n*   We are transparent by setting clear expectations.\n\n## Building for learning, not just answers",
+      "title_zh": "为什么青少年需要安全地使用 AI",
+      "summary_zh": "OpenAI 认为青少年已在学习、信息获取和生产力场景中大量使用 ChatGPT，简单禁止会削弱他们适应未来技术的能力。文章强调年龄适配保护、家长控制和面向学习而非直接给答案的产品设计应与访问并行。"
+    },
+    {
+      "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
+      "url": "https://openai.com/index/unlocking-self-improvement-gpt-red/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "#### Summary\n\n_Problem_\n\n*   Red-teaming is essential to discovering vulnerabilities and improving the robustness of our models. However, current approaches are not scalable, creating a bottleneck.\n\n*   Commonly used robustness evaluations have already been saturated by our latest models.\n\n*   We need to develop methods that allow safety and alignment to scale alongside model capabilities.\n\n_What we did_\n\n*   We trained GPT‑Red, an automated red-teaming model that scales our ability to find vulnerabilities so we can fix them before wider deployment.\n\n*   GPT‑Red is a strong red-teamer, and our previous models are highly vulnerable to its prompt injection attacks.",
+      "title_zh": "GPT-Red：用自我改进提升模型鲁棒性",
+      "summary_zh": "OpenAI 介绍自动化红队模型 GPT-Red，用于规模化发现模型漏洞和提示注入攻击。文章指出传统红队测试已成为安全评估瓶颈，更强模型也会使既有鲁棒性基准饱和，因此需要可随模型能力扩展的自动化攻防方法。"
+    },
+    {
+      "title": "How to manage AI investments in the agentic era",
+      "url": "https://openai.com/index/managing-ai-investments-in-agentic-era/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "OpenAI’s goal is to make AI more accessible, capable and affordable over time. From GPT‑4 to GPT‑5.4, the price per million tokens fell 97%. [GPT‑5.6⁠](https://openai.com/index/gpt-5-6/) continues that progress, delivering better performance in the Artificial Analysis Coding Agent Index with 54% fewer output tokens and 57% less time per task.\n\nBut token price alone does not show whether AI is creating value. Leaders should look at **useful work per dollar**: tasks completed, time saved, decisions improved, and workflows ready to scale.\n\nAs teams move from chat to longer-running workflows, admins need clearer visibility into demand, spend, and risk.\n\nHere are five ways to invest with confidence.\n\n## 1. Sharpen visibility into usage and spend\n\nEnterprise leaders need **a plain view of AI usage:** who is using it, which products or models they are using, how much capacity they are consuming, and what kind of work that usage supports. Without that visibility, a growing bill is hard to interpret. It could reflect waste, productive experimentation, or a workflow that is starting to become business-critical.\n\n[ChatGPT Work⁠](https://openai.com/chatgpt-work/) supports longer, multi-step tasks, so usage can vary widely by workflow. Admins need to see the work behind that usage, not just the credits consumed. This is possible thanks to a shared view of demand across ChatGPT. Updated [usage analytics and spend controls⁠](https://openai.com/index/chatgpt-enterprise-spend-controls/) in the [Admin Console⁠(opens in a new window)](https://chatgpt.com/admin) help admins see adoption, credit usage, and spend by user, product, and model; track trends over time; identify emerging patterns; and understand when usage reflects broad adoption, a power-user workflow, or a recurring business process that may deserve more investment.\n\n![Image 1: Analytics overview showing ChatGPT and Codex usage and credit consumption](https://images.ctfassets.net/kftzwdyauwt9/PUu1kZSiVcT1kkFdXOyNl/905ddac86e29c56509c35dc583288cc2/Analytics_overview_showing_ChatGPT_and_Codex_usage_and_credit_consumption.png?w=3840&q=90&fm=webp)",
+      "title_zh": "如何在 Agent 时代管理 AI 投资",
+      "summary_zh": "OpenAI 建议企业不只看 token 单价，而要衡量每美元带来的有效工作，包括完成任务、节省时间、改善决策和可扩展流程。管理员应通过用量分析、支出控制和工作流视角理解 AI 投资价值。"
+    },
+    {
+      "title": "Inviting hard questions",
+      "url": "https://www.anthropic.com/news/hard-questions",
+      "source": "Anthropic",
+      "date": "",
+      "page_content": "Who decides the rules for AI? Can AI give my children a better future? Does AI make the world more dangerous? Anthropic says it is collecting public hard questions about AI, expanding surveys and public records, and reporting how it addresses public-benefit goals around safety, science, jobs and social impact.",
+      "title_zh": "邀请公众提出关于 AI 的难题",
+      "summary_zh": "Anthropic 发起面向公众的 hard questions 沟通计划，收集有关 AI 规则制定、就业、家庭、科学潜力和安全风险的疑问。公司称会结合公众调查、Claude 用户访谈、焦点小组和研究，持续公开追踪公共利益使命的进展。"
+    },
+    {
+      "title": "A New Look for OpenRouter",
+      "url": "https://openrouter.ai/blog/announcements/brand-refresh/",
+      "source": "OpenRouter",
+      "date": "",
+      "page_content": "OpenRouter describes a new brand identity for its model-routing platform, including a redesigned logo, typeface, color palette and product expression intended to reflect a broader infrastructure role in the intelligence era.",
+      "title_zh": "OpenRouter 的新视觉形象",
+      "summary_zh": "OpenRouter 宣布品牌焕新，称平台已从模型路由服务扩展为连接多家 AI 模型与应用的基础设施。文章介绍新的标识、字体、色彩和产品视觉体系，强调以更清晰的品牌表达支撑模型互联与开发者生态定位。"
+    }
+  ],
+  "github_strategy": {
+    "query": "LLM stars:>1000 pushed:>2026-07-14",
+    "filters": "stars:>1000 pushed:>2026-07-14",
+    "sort": "updated",
+    "label": "最近活跃（人工质量修正）"
+  }
+}

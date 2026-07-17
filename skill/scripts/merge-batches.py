@@ -96,5 +96,11 @@ for section in SECTION_PREFIX:
 with open(ENRICHED_JSON, 'w') as f:
     json.dump(raw, f, ensure_ascii=False, indent=2)
 
+# docs 中的 enriched JSON 是日报正式交付物，供复查与重新渲染使用。
+import shutil
+docs_enriched = f"/Users/zz/code/AI_Daily_Brief/docs/llm-briefing-enriched-{DATE_STR}.json"
+shutil.copy2(ENRICHED_JSON, docs_enriched)
+
 print(f"\n✅ 合并完成: {translated_count} 个翻译，{missing_count} 个缺失")
 print(f"📦 Enriched JSON: {ENRICHED_JSON}")
+print(f"📦 已同步: {docs_enriched}")

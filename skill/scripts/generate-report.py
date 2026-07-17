@@ -10,6 +10,7 @@ RAW_JSON = f"/tmp/llm-briefing-raw-{DATE_STR}.json"
 ENRICHED_JSON = f"/tmp/llm-briefing-enriched-{DATE_STR}.json"
 OUTPUT_TMP = f"/tmp/llm-briefing-{DATE_STR}.html"
 OUTPUT = f"/Users/zz/code/AI_Daily_Brief/docs/llm-briefing-{DATE_STR}.html"
+ENRICHED_OUTPUT = f"/Users/zz/code/AI_Daily_Brief/docs/llm-briefing-enriched-{DATE_STR}.json"
 
 # ── LLM 知识库：Trending 项目描述补充 ─────────────────
 TRENDING_DESCS = {
@@ -788,7 +789,11 @@ with open(OUTPUT_TMP, 'w') as f:
 import shutil, os
 try:
     shutil.copy(OUTPUT_TMP, OUTPUT)
+    # 将实际参与渲染的 enriched 数据一并固化；否则 HTML 与 docs/raw 会脱节。
+    with open(ENRICHED_OUTPUT, 'w') as f:
+        json.dump(raw, f, ensure_ascii=False, indent=2)
     print(f"✅ 报告已生成: {OUTPUT}")
+    print(f"📦 翻译结果已保存: {ENRICHED_OUTPUT}")
 except Exception as e:
     print(f"⚠️ 复制到 docs 目录失败，文件仍在: {OUTPUT_TMP}")
 
