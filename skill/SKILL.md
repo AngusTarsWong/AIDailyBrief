@@ -79,7 +79,7 @@ category: automation
 2. 依次读取 `/tmp/llm-briefing-batch-{N}.json`（**注意：文件结构为 `{"batch_id": "...", "results": {task_id: translation}}`**，必须先取 `results` 字段再 `update` 到翻译字典）
 3. 将每个 task_id 的翻译结果合并到对应的 raw JSON 条目中
 4. **降级机制**：若某个 batch 文件缺失，该批次对应的条目保留英文原文
-5. 合并后输出 `/tmp/llm-briefing-enriched-{DATE}.json`
+5. 合并后输出 `/tmp/llm-briefing-enriched-{DATE}.json`，并**同步为正式交付物** `docs/llm-briefing-enriched-{DATE}.json`
 6. **验证**：合并后检查 enriched JSON 中随机条目的 `_zh` 字段（如 `desc_zh`、`name_zh`），若全为空说明合并失败（通常是 `results` 提取错误）
 
 ### Phase 3 — HTML 渲染（Python 脚本）
@@ -97,6 +97,7 @@ category: automation
 **输出**：
 - `/tmp/llm-briefing-YYYY-MM-DD.html`（临时文件）
 - 自动复制：`~/code/AI_Daily_Brief/docs/llm-briefing-YYYY-MM-DD.html`
+- 自动固化：`~/code/AI_Daily_Brief/docs/llm-briefing-enriched-YYYY-MM-DD.json`（必须与 HTML 使用同一份数据）
 
 ### Phase 4 — HTML 内容准确性终检（交付门禁）
 
@@ -106,6 +107,7 @@ Phase 3 仅生成候选 HTML；**Phase 4 通过前不得把它视为最终日报
 2. **事实与日期**：项目描述、新闻摘要和官方动态不含无依据的细节；历史日报中的文章日期不得晚于报告日期（允许前一自然日时区缓冲）。
 3. **文本质量**：项目介绍符合“定位 → 核心机制 → 解决问题/适用场景”；新闻为文章级摘要；禁止英文原文直嵌、来源级占位摘要和模板套话。
 4. **HTML 效果**：确认所有板块、卡片、统计数和链接正常渲染；检查空板块、重复卡片、导航/图片误抓、HTML 转义泄漏与占位文本。
+5. **交付物完整性**：`docs/llm-briefing-{DATE}.html`、`docs/llm-briefing-raw-{DATE}.json`、`docs/llm-briefing-enriched-{DATE}.json` 必须同时存在；HTML 卡片数必须与 docs/enriched 一致。缺少 enriched JSON 时不得发布。
 
 发现问题时，修复 raw/enriched 或翻译批次后重新运行 Phase 3，再从第 1 项复检。输出应记录为：板块数量、翻译覆盖率、发现/修复的问题和最终通过状态。
 

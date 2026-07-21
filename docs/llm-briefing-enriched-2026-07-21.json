@@ -1,0 +1,570 @@
+{
+  "date": "2026-07-21",
+  "github": [
+    {
+      "name": "xtekky/gpt4free",
+      "desc": "The official gpt4free repository | various collection of powerful language models | opus 4.6 gpt 5.3 kimi 2.5 deepseek v3.2 gemini 3",
+      "stars": 66474,
+      "lang": "Python",
+      "updated": "2026-07-18",
+      "url": "https://github.com/xtekky/gpt4free",
+      "topics": [
+        "chatbot",
+        "chatbots",
+        "chatgpt",
+        "chatgpt-4",
+        "chatgpt-api"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v7.9.0",
+          "name": "Release v7.9.0",
+          "date": "2026-07-18",
+          "summary": "Full Changelog: https://github.com/xtekky/gpt4free/compare/v7.8.12...v7.9.0；Python Package:；- PyPI: pip install g4f==v7.9.0",
+          "release_highlights_zh": [
+            "发布 v7.9.0，并提供与 v7.8.12 的完整变更对比链接",
+            "同步更新 PyPI 安装包，支持按版本安装"
+          ]
+        },
+        {
+          "tag": "v7.8.12",
+          "name": "Release v7.8.12",
+          "date": "2026-07-17",
+          "summary": "*Trigger generate docker images；Full Changelog: https://github.com/xtekky/gpt4free/compare/v7.8.11...v7.8.12；Python Package:",
+          "release_highlights_zh": [
+            "调整 CI 流程以触发 Docker 镜像构建",
+            "提供与上一版本的变更对比"
+          ]
+        },
+        {
+          "tag": "v7.8.11",
+          "name": "Release v7.8.11",
+          "date": "2026-07-17",
+          "summary": "fix(CI)",
+          "release_highlights_zh": [
+            "修复持续集成配置问题"
+          ]
+        }
+      ],
+      "name_zh": "gpt4free",
+      "desc_zh": "gpt4free 是一个聚合多种大语言模型服务的开源 Python 项目，为聊天、文本生成与图像等能力提供统一调用入口。它面向希望快速试验不同模型或搭建个人工具的开发者，同时也提醒使用者应核查各服务的授权、稳定性与数据处理规则。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "stanfordnlp/dspy",
+      "desc": "DSPy: The framework for programming—not prompting—language models",
+      "stars": 36208,
+      "lang": "Python",
+      "updated": "2026-07-19",
+      "url": "https://github.com/stanfordnlp/dspy",
+      "topics": [],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "3.3.0b1",
+          "name": "3.3.0b1",
+          "date": "2026-05-28",
+          "summary": "Added core typed LM objects for provider-neutral requests, responses, messages, parts, tool specs, r；Added OpenAI/LiteLLM compatibility conversion helpers so current provider-shaped calls can move thro；Routed adapter __call__ and acall through the no",
+          "release_highlights_zh": [
+            "新增提供商无关的类型化语言模型、消息与工具规范对象",
+            "加入 OpenAI 与 LiteLLM 的兼容转换辅助工具",
+            "统一适配器的同步与异步调用路径"
+          ]
+        },
+        {
+          "tag": "3.2.1",
+          "name": "3.2.1",
+          "date": "2026-05-05",
+          "summary": "Fixed async streaming LM calls so custom headers are forwarded to LiteLLM streaming completions. ；Fixed dspy.Embedder so per-call caching=False is honored for both sync and async embedding calls. ",
+          "release_highlights_zh": [
+            "修复异步流式调用未向 LiteLLM 传递自定义请求头的问题",
+            "修复 Embedder 在同步和异步场景下忽略 caching=False 的问题"
+          ]
+        },
+        {
+          "tag": "3.2.0",
+          "name": "3.2.0",
+          "date": "2026-04-21",
+          "summary": "Make BetterTogether compatible with all optimizers ；add verify parameter to Image for SSL bypass ；feat(signature)；add file output support to inspect_history and fix return type ",
+          "release_highlights_zh": [
+            "提升 BetterTogether 与各优化器的兼容性",
+            "增加签名能力并支持检查历史记录的文件输出"
+          ]
+        }
+      ],
+      "name_zh": "DSPy",
+      "desc_zh": "DSPy 是 Stanford NLP 推出的语言模型编程框架，主张用可组合的模块、签名和优化器来构建 LLM 程序，而非手工堆叠提示词。它能把示例、评估信号和模型调用编译成更稳定的工作流，适合需要可测试、可优化 RAG 或 Agent 管线的 Python 开发者。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "sgl-project/sglang",
+      "desc": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+      "stars": 30462,
+      "lang": "Python",
+      "updated": "2026-07-19",
+      "url": "https://github.com/sgl-project/sglang",
+      "topics": [
+        "attention",
+        "blackwell",
+        "cuda",
+        "deepseek",
+        "diffusion"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v0.5.15.post1",
+          "name": "v0.5.15.post1",
+          "date": "2026-07-14",
+          "summary": "v0.5.15.post1 includes a few patches, mostly for GLM 5.2；- #30454 #30627: Fix DSA model launching on non Cuda/HIP devices；- #30858: Fix flashinfer dependency on Cuda 12 images",
+          "release_highlights_zh": [
+            "为 GLM 5.2 补充补丁",
+            "修复非 CUDA/HIP 设备上的 DSA 模型启动问题",
+            "修复 CUDA 12 镜像中的 FlashInfer 依赖"
+          ]
+        },
+        {
+          "tag": "v0.5.15",
+          "name": "v0.5.15",
+          "date": "2026-07-10",
+          "summary": "Hunyuan 3 (Hy3)；Hierarchical Reasoning Model (HRM-Text)；NVIDIA LocateAnything-3B；Baidu Unlimited-OCR",
+          "release_highlights_zh": [
+            "加入 Hunyuan 3 与 HRM-Text 模型支持",
+            "加入 NVIDIA LocateAnything-3B 与 Baidu Unlimited-OCR"
+          ]
+        },
+        {
+          "tag": "v0.5.14",
+          "name": "v0.5.14",
+          "date": "2026-06-26",
+          "summary": "GLM-5.2；LiquidAI LFM2.5；Kimi-K2.7-Code；Poolside Laguna-M.1",
+          "release_highlights_zh": [
+            "扩展 GLM-5.2、LFM2.5 与 Kimi-K2.7-Code 支持",
+            "纳入 Poolside Laguna-M.1 模型"
+          ]
+        }
+      ],
+      "name_zh": "SGLang",
+      "desc_zh": "SGLang 是用于大语言模型和多模态模型的高性能推理与服务框架，聚焦调度、缓存、并行执行和硬件适配。它帮助团队更高效地部署模型服务，并持续接入新的开源模型与推理组件，适合对吞吐、延迟和 GPU 利用率有要求的推理基础设施团队。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "yamadashy/repomix",
+      "desc": "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
+      "stars": 27226,
+      "lang": "TypeScript",
+      "updated": "2026-07-19",
+      "url": "https://github.com/yamadashy/repomix",
+      "topics": [
+        "ai",
+        "anthropic",
+        "artificial-intelligence",
+        "chatbot",
+        "chatgpt"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.16.1",
+          "name": "v1.16.1",
+          "date": "2026-07-11",
+          "summary": "This release is a bug-fix patch: it plugs a WebAssembly memory leak, extends comment removal to more JavaScript/TypeScri；Parsed web-tree-sitter Tree objects were not released after use, leaking WebAssembly heap memory when parsing or compres；Special ",
+          "release_highlights_zh": [
+            "修复 WebAssembly 内存泄漏",
+            "扩展 JavaScript 与 TypeScript 注释移除处理",
+            "改善特殊文件的打包兼容性"
+          ]
+        },
+        {
+          "tag": "v1.16.0",
+          "name": "v1.16.0",
+          "date": "2026-06-29",
+          "summary": "--compress is now resilient: a single file that Tree-sitter cannot parse；File extensions are now matched case-insensitively when selecting the comment manipulator, so files ；Split-output files are now copied correctly after remote packing .",
+          "release_highlights_zh": [
+            "压缩模式可容忍单个 Tree-sitter 解析失败的文件",
+            "文件扩展名匹配改为大小写不敏感",
+            "修复远程打包后的分割输出复制问题"
+          ]
+        },
+        {
+          "tag": "v1.15.0",
+          "name": "v1.15.0",
+          "date": "2026-06-18",
+          "summary": "Fixed .gitignore handling edge cases；Fixed duplicate relative paths when packing multiple roots .；Updated root dependencies, including major bumps to v15 .",
+          "release_highlights_zh": [
+            "修复 .gitignore 边缘情况",
+            "修复多根目录打包时的重复相对路径",
+            "更新核心依赖版本"
+          ]
+        }
+      ],
+      "name_zh": "Repomix",
+      "desc_zh": "Repomix 是面向 LLM 工作流的代码仓库打包工具，可把整个仓库或指定范围整理为单个、结构化且更适合模型阅读的文件。它支持过滤、压缩与注释处理，帮助开发者在向 Claude、ChatGPT、Gemini 等模型提供上下文前控制体积和噪声，适合代码审查、迁移、问答和生成任务。",
+      "lang_zh": "TypeScript"
+    },
+    {
+      "name": "huggingface/trl",
+      "desc": "Train transformer language models with reinforcement learning.",
+      "stars": 18872,
+      "lang": "Python",
+      "updated": "2026-07-19",
+      "url": "https://github.com/huggingface/trl",
+      "topics": [],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.8.0",
+          "name": "v1.8.0",
+          "date": "2026-07-09",
+          "summary": "Fix GRPO + vLLM colocate + PEFT hang on non-NVLink hardware in https://github.com/huggingface/trl/pu；Align CPO / ORPO / BCO / Distillation / TPO with DPO: fix ZeRO-3 + PEFT mixed-dtype error in https:/；Fix chunked_nll patch hiding VLM kwargs from gen",
+          "release_highlights_zh": [
+            "修复非 NVLink 硬件上 GRPO、vLLM 与 PEFT 协同运行卡死",
+            "统一多种偏好优化器与 DPO 的处理方式",
+            "修复 FSDP2 与 PEFT 下的混合数据类型错误"
+          ]
+        },
+        {
+          "tag": "v1.7.1",
+          "name": "v1.7.1",
+          "date": "2026-07-04",
+          "summary": "Fix GRPO + vLLM colocate + PEFT hang on non-NVLink hardware in https://github.com/huggingface/trl/pu；Fix dataset fingerprinting in DPO/SFT tokenization in https://github.com/huggingface/trl/pull/6206；Pass GPU device_ids to barrier fix in GRPO + vLLM ",
+          "release_highlights_zh": [
+            "继续修复 GRPO、vLLM 与 PEFT 的硬件兼容问题",
+            "修复 DPO/SFT 分词数据集指纹问题",
+            "为 GRPO 的同步屏障传递 GPU device_ids"
+          ]
+        },
+        {
+          "tag": "v1.7.0",
+          "name": "v1.7.0",
+          "date": "2026-06-25",
+          "summary": "get_repetition_penalty_reward in https；get_cosine_scaled_reward in https；Share frozen layers with reference model instead of duplicating in memory；Fix chunked_nll mixed Tensor/DTensor error under FSDP2 + PEFT in https://github.com/huggingface/trl/",
+          "release_highlights_zh": [
+            "新增重复惩罚与余弦缩放奖励函数",
+            "通过共享冻结层降低参考模型显存占用",
+            "修复 FSDP2 与 PEFT 下的训练兼容性"
+          ]
+        }
+      ],
+      "name_zh": "TRL",
+      "desc_zh": "TRL 是 Hugging Face 维护的 Transformer 强化学习训练库，提供 SFT、DPO、GRPO、奖励建模等对齐与偏好优化流程。它把常见训练范式封装为可组合的 Python 接口，并与 vLLM、PEFT 和分布式训练生态衔接，适合训练或微调语言模型、视觉语言模型的研究和工程团队。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "microsoft/mcp-for-beginners",
+      "desc": "This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.",
+      "stars": 16781,
+      "lang": "Jupyter Notebook",
+      "updated": "2026-07-18",
+      "url": "https://github.com/microsoft/mcp-for-beginners",
+      "topics": [
+        "csharp",
+        "java",
+        "javascript",
+        "javascript-applications",
+        "mcp"
+      ],
+      "is_top": true,
+      "releases": [],
+      "name_zh": "MCP 入门教程",
+      "desc_zh": "mcp-for-beginners 是微软开源的 Model Context Protocol（MCP）教学课程，覆盖 .NET、Java、TypeScript、JavaScript、Rust 与 Python 的跨语言示例。内容从会话建立、工具与资源接入延伸到模块化、安全的 AI 工作流编排，适合希望为模型或 Agent 接入外部上下文与服务的开发者系统学习 MCP。",
+      "lang_zh": "Jupyter Notebook"
+    },
+    {
+      "name": "GreyDGL/PentestGPT",
+      "desc": "Automated Penetration Testing Agentic Framework Powered by Large Language Models",
+      "stars": 14323,
+      "lang": "Python",
+      "updated": "2026-07-19",
+      "url": "https://github.com/GreyDGL/PentestGPT",
+      "topics": [
+        "large-language-models",
+        "llm",
+        "penetration-testing",
+        "python"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.0.0",
+          "name": "v1.0.0",
+          "date": "2025-12-24",
+          "summary": "Agentic penetration testing pipeline；Terminal UI with real-time activity feed；86.5% success rate on XBOW benchmark (90/104)；Docker-based deployment",
+          "release_highlights_zh": [
+            "发布 Agent 化渗透测试流水线",
+            "新增实时活动流终端界面",
+            "提供 Docker 部署方式并披露 XBOW 基准结果"
+          ]
+        },
+        {
+          "tag": "v0.14.0",
+          "name": "v0.14.0",
+          "date": "2024-05-15",
+          "summary": "Openai compatability in https；Support gpt4o in https",
+          "release_highlights_zh": [
+            "改进 OpenAI API 兼容性",
+            "加入对 GPT-4o 的支持"
+          ]
+        },
+        {
+          "tag": "v0.13.0",
+          "name": "v0.13.0 Official Support For GPT4o",
+          "date": "2024-05-14",
+          "summary": "format code with black in https；Fix typo in argument name in https；Fast bugfix in https；README Fix in https",
+          "release_highlights_zh": [
+            "统一使用 Black 格式化代码",
+            "修正参数名称拼写错误",
+            "包含快速缺陷修复"
+          ]
+        }
+      ],
+      "name_zh": "PentestGPT",
+      "desc_zh": "PentestGPT 是由大语言模型驱动的自动化渗透测试 Agent 框架，旨在把信息收集、分析、命令执行和结果跟踪组织为可交互的安全测试流程。项目提供终端界面与容器化部署思路，适合在明确授权范围内研究 Agent 安全评估与自动化测试；生产使用应坚持人工复核、最小权限和合规边界。",
+      "lang_zh": "Python"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "Robbyant/lingbot-map",
+      "url": "https://github.com/Robbyant/lingbot-map",
+      "desc": "A feed-forward 3D foundation model for reconstructing scenes from streaming data",
+      "lang": "Python",
+      "stars": "12,981",
+      "today": "831 stars today",
+      "page_content": "[![Image 1](https://github.com/Robbyant/lingbot-map/raw/main/assets/teaser.webp)](https://github.com/Robbyant/lingbot-map/blob/main/assets/teaser.webp)\n## LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction\n[](https://github.com/Robbyant/lingbot-map#lingbot-map-geometric-context-transformer-for-streaming-3d-reconstruction)\nRobbyant Team\nteaser.mp4[Video 13](https://private-user-images.githubusercontent.com/29980330/578978595-fe39e095-af2c-4ec9-b68d-a8ba97e505ab.mp4?jwt=eyJ",
+      "name_zh": "LingBot-Map",
+      "desc_zh": "LingBot-Map 是面向流式传感器数据的三维场景重建基础模型。它以几何上下文 Transformer 把连续观测逐步写入可查询的空间表示，在相机移动、视角变化或局部遮挡时尽量维持地图的一致性。项目关注机器人导航、AR/VR、具身智能等需要在线理解环境的场景，为开发者提供从原始数据到可用三维语义地图的模型实现与实验入口。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "apache/ossie",
+      "url": "https://github.com/apache/ossie",
+      "desc": "Apache Ossie, industry wide specification effort to standardize how we exchange semantic metadata across analytics, AI and BI platforms, providing a vendor neutral, single source of truth for semantic data",
+      "lang": "Python",
+      "stars": "1,281",
+      "today": "47 stars today",
+      "page_content": "[Skip to content](https://github.com/apache/ossie#start-of-content)\n## Navigation Menu\nToggle navigation\n[](https://github.com/)\n[Sign in](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fapache%2Fossie)\nAppearance settings\n*\nPlatform\n*\nAI CODE CREATION\n*   [GitHub Copilot Write better code with AI](https://github.com/features/copilot)\n*   [GitHub Copilot app Direct agents from issue to merge](https://github.com/features/ai/github-app)\n*   [MCP Registry New Integrate external tools]",
+      "name_zh": "Apache Ossie",
+      "desc_zh": "Apache Ossie 是一项面向分析、AI 与 BI 平台的开放语义元数据规范与实现项目。它试图以供应商中立的方式统一指标、业务实体和数据含义，使模型、报表和分析工具能引用同一份可信定义，而不是各自维护口径。对建设数据平台、检索增强生成和企业智能体的团队而言，它可减少语义漂移，并让跨工具的数据上下文更容易复用。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "PostHog/posthog",
+      "url": "https://github.com/PostHog/posthog",
+      "desc": "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+      "lang": "Python",
+      "stars": "36,608",
+      "today": "338 stars today",
+      "page_content": "[Skip to content](https://github.com/PostHog/posthog#start-of-content)\n## Navigation Menu\nToggle navigation\n[](https://github.com/)\n[Sign in](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2FPostHog%2Fposthog)\nAppearance settings\n*\nPlatform\n*\nAI CODE CREATION\n*   [GitHub Copilot Write better code with AI](https://github.com/features/copilot)\n*   [GitHub Copilot app Direct agents from issue to merge](https://github.com/features/ai/github-app)\n*   [MCP Registry New Integrate external ",
+      "name_zh": "PostHog",
+      "desc_zh": "PostHog 是一体化产品工程平台，集合产品分析、会话回放、特性开关、实验、错误追踪与日志等能力，并强调为 AI 驱动的产品和智能体提供可观测性。团队可从真实用户行为与运行信号中定位问题、验证假设，再将修复动作接入 Slack、桌面端或 MCP 工作流。它适合希望把数据分析、工程反馈和 Agent 自动化放在同一套开发闭环中的产品团队。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "rohitg00/ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "desc": "Learn it. Build it. Ship it for others.",
+      "lang": "Python",
+      "stars": "39,120",
+      "today": "191 stars today",
+      "page_content": "[![Image 1: AI Engineering from Scratch — reference manual banner](https://github.com/rohitg00/ai-engineering-from-scratch/raw/main/assets/banner.svg)](https://github.com/rohitg00/ai-engineering-from-scratch/blob/main/assets/banner.svg)\n```\n░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒\n```\n> **84% of students already use AI tools. Only 18% feel prepared to use them professionally.** This curriculum closes that gap.\n>\n>\n> 503 lessons. 20 phases. ~320 h",
+      "name_zh": "从零构建 AI 工程",
+      "desc_zh": "AI Engineering from Scratch 是一套从学习到交付的 AI 工程课程与实践资料库。项目将基础概念、模型调用、评估、检索、Agent 和产品化拆成大量循序渐进的课程与练习，重点不只是会用模型，而是建立可维护的工程能力。它适合希望系统进入 AI 开发的初学者，以及需要为团队设计内部培训路径的技术负责人。",
+      "lang_zh": "Python"
+    },
+    {
+      "name": "tirth8205/code-review-graph",
+      "url": "https://github.com/tirth8205/code-review-graph",
+      "desc": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+      "lang": "Python",
+      "stars": "20,191",
+      "today": "355 stars today",
+      "page_content": "**Stop burning tokens. Start reviewing smarter.**\n[English](https://github.com/tirth8205/code-review-graph/blob/main/README.md) | [简体中文](https://github.com/tirth8205/code-review-graph/blob/main/README.zh-CN.md) | [日本語](https://github.com/tirth8205/code-review-graph/blob/main/README.ja-JP.md) | [한국어](https://github.com/tirth8205/code-review-graph/blob/main/README.ko-KR.md) | [हिन्दी](https://github.com/tirth8205/code-review-graph/blob/main/README.hi-IN.md)\n[Usage](https://github.com/tirth8205/cod",
+      "name_zh": "代码审查图谱",
+      "desc_zh": "code-review-graph 是本地优先的代码智能图谱工具，可通过 MCP 和 CLI 为 AI 编程助手提供持久的仓库结构与关联信息。它把文件、符号和依赖关系组织为可查询地图，让模型在代码审查或处理大型仓库时只读取与任务相关的上下文，从而控制 Token 消耗并减少遗漏。项目适合使用 Claude Code、Codex 等工具、且需要提高大仓库检索和审查质量的开发团队。",
+      "lang_zh": "Python"
+    }
+  ],
+  "papers": [
+    {
+      "title": "Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models",
+      "date": "2026-07-16",
+      "summary": "In-context learning is commonly interpreted as a form of conditional inference, in which the prompt specifies a context and the model's output is treated as an estimate of the corresponding conditional distribution. If this interpretation holds, then LLM estimates should satisfy basic probabilistic ",
+      "url": "https://arxiv.org/abs/2607.15277v1",
+      "cats": [
+        "cs.CL"
+      ],
+      "title_zh": "划分、提示、聚合：语言模型的统计自一致性",
+      "summary_zh": "论文将上下文学习视为条件推断，并据此检验 LLM 输出是否满足基本概率一致性。作者提出将样本或提示划分为多个部分、分别推断再聚合的统计自一致性方法，用以识别模型估计在不同上下文切分下的偏差。该视角为评估提示稳健性与模型校准提供了可操作的统计工具。"
+    },
+    {
+      "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
+      "date": "2026-07-16",
+      "summary": "Recent advances in Tool-Integrated Large Language Models have made web search a core capability of information-seeking agents. However, as interaction histories grow, agents increasingly struggle to track task progress. When search attempts fail to yield useful evidence, current single- and multi-ag",
+      "url": "https://arxiv.org/abs/2607.15257v1",
+      "cats": [
+        "cs.AI",
+        "cs.IR"
+      ],
+      "title_zh": "SearchOS-V1：迈向稳健的开放域信息检索 Agent 协作",
+      "summary_zh": "SearchOS-V1 研究带工具大模型在开放网络检索任务中的协作问题。论文指出，随着交互历史增长，单 Agent 与多 Agent 都容易丢失任务进度，并在无效搜索后反复消耗预算。作者提出面向检索过程状态管理、证据积累和协作分工的系统设计，目标是让信息寻求 Agent 更稳定地完成复杂研究任务。"
+    },
+    {
+      "title": "teLLMe Why (Ain't Nothing but a Jam): Exploratory Causal Analysis of Urban Driving Data",
+      "date": "2026-07-16",
+      "summary": "Traffic agencies now have access to large volumes of video-derived data for studying safety and congestion. Most of these data are observational and collected without interventions, which makes causal questions such as \"How would rain change traffic density?\" difficult to answer. We present teLLMe, ",
+      "url": "https://arxiv.org/abs/2607.15254v1",
+      "cats": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "title_zh": "teLLMe Why：城市驾驶数据的探索性因果分析",
+      "summary_zh": "论文面向交通视频衍生数据中的因果问题，例如降雨会如何影响车流密度。由于此类数据主要是非干预式观察数据，直接从相关性推断因果关系十分困难。作者提出 teLLMe 框架，把大语言模型辅助的探索与因果分析结合，用于梳理变量、假设和可验证证据，为城市交通安全与拥堵研究提供支持。"
+    },
+    {
+      "title": "AutoSynthesis: An agentic system for automated meta-analysis",
+      "date": "2026-07-16",
+      "summary": "Evidence synthesis is crucial for turning primary research into reliable knowledge for science, medicine, education, and policy. Yet, quantitative evidence synthesis remains largely manual and difficult to scale. Here, we introduce AutoSynthesis, an end-to-end multi-agent system for automated meta-a",
+      "url": "https://arxiv.org/abs/2607.15247v1",
+      "cats": [
+        "cs.AI"
+      ],
+      "title_zh": "AutoSynthesis：用于自动化 Meta 分析的 Agent 系统",
+      "summary_zh": "AutoSynthesis 提出端到端多 Agent 系统，以自动化证据综合和定量 Meta 分析。该方向试图把文献检索、筛选、数据提取、质量核验和统计汇总从高度依赖人工的流程中拆解出来，同时保留可追溯的中间产物。它面向科学、医学、教育和政策等需要规模化整合研究证据的场景。"
+    },
+    {
+      "title": "ARMOR++: Agentic Orchestration of a Multi-Domain Primitive Set for Transferable Attacks on Deepfake Detectors",
+      "date": "2026-07-16",
+      "summary": "The reliability of deepfake detectors frequently degrades under black-box adversarial transfer, as these models often rely on fragile, architecture-dependent forensic cues. Existing transfer attacks often lack semantic awareness and struggle to maintain effectiveness under strict no-query constraint",
+      "url": "https://arxiv.org/abs/2607.15246v1",
+      "cats": [
+        "cs.CV"
+      ],
+      "title_zh": "ARMOR++：面向深度伪造检测器可迁移攻击的多领域原语 Agent 编排",
+      "summary_zh": "ARMOR++ 探讨深度伪造检测器在黑盒迁移攻击下的可靠性。论文认为，现有攻击往往依赖脆弱且与特定架构绑定的取证线索，且在无查询约束下难以保持有效性。作者以 Agent 编排多领域操作原语，研究更具语义感知的攻击组合；该工作可用于压力测试和改进检测系统的防御能力。"
+    }
+  ],
+  "hn": [
+    {
+      "title": "Fable 5 vs. GPT-5.6 Sol on an NP-Hard Problem: Does /goal help?",
+      "url": "https://charlesazam.com/blog/fable-5-gpt-5-6-sol-goal/",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-18",
+      "page_content": "**TL;DR:** I gave Claude Fable 5 and GPT-5.6 Sol the same unpublished NP-hard optimization problem, with and without their native `/goal` mode. Fable 5 is an absolute beast; `/goal` is not a game changer.\n\n![Image 1: Clean score distributions](https://charlesazam.com/_astro/fig3_clean_distributions.Ct-GZQ3W_2lndA9.webp)\n\n**Context:** This is an operations research problem originally submitted to students at a hackathon. I spent a week years ago writing C++ to solve it, so I have a useful human baseline.\n\nFable 5 was an absolute beast on this benchmark. It produced the best solution overall, and its consistency is unlike anything I have seen from a model on this problem. This is pure raw intelligence. Incredible.\n\nThe other result is that `/goal` is not a generic “try harder” switch. It changes the control loop and the search path. Sometimes that finds a better basin. Sometimes it gives a bad idea more time to mature.\n\nAll code, prompts, result tables, exclusions, and trajectory notes are in [CLIArena](https://github.com/charles-azam/CLIArena). This is a follow-up to my [first article about this benchmark](https://charlesazam.com/blog/kiro-benchmark/).\n\n* * *\n\n## The problem",
+      "title_zh": "Fable 5 与 GPT-5.6 Sol 求解 NP 难问题：/goal 有帮助吗？",
+      "summary_zh": "一项 Hacker News 讨论链接到对两款模型求解未公开 NP 难优化问题的实验。作者在启用和不启用原生 /goal 模式的条件下比较结果，认为该模式会改变搜索和控制路径，而非普遍意义上的“更努力”；它有时找到更优解，也可能让错误方向持续更久。文中附有提示、结果和轨迹记录。"
+    }
+  ],
+  "news": [
+    {
+      "title": "Meet GPT-Red: an LLM super-hacker OpenAI built to make its models safer - MIT Technology Review",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOaEZNa3ZZZUpGMGRLajIyY2pLTjduZmhTVHp1Q0VkNEl0X0lGVUs3aXRfb1lrRjlWSS1IckF0MV80X0Rxb2o0MU1VbU8zVVlNMElnOWhjdGp4Zlp3ZkRuOGlodnpwZmhJOWpvYnB6WVd0OXhnR2J1MHlFWUZ0ZlJ1cUpWTjFkMU1qV0JzZFBDZUVMRTFoVzhSZWNRWXZVTFdxRk1HMFhUYlpRQkRNdnZGNWFiS0h5VVFCNlNzMlRrdV_SAcYBQVVfeXFMTWtlMlUwMFM4STZCMTRXVlg5VngxWU04cVRndWRmdlRhWTM3aV9ZUHB1TFNSa0hpTmpQUFltTTc4ZGhFMFhNNTVYdGRHLTRFbUo3Qm9JaE8xZGktVTh2LUhGMU55QWQ0WWRmY1NSdm45a0JWbXptZ0NBYWgzTV9UQ0N0ZzBveUVoQ2VRZnc4V3VCYTMyUlVhSk9sMG1xR1hYMnZLUmUzbmZZOFllQ1dET1FTTHRCMGpIQWhtQXRqSmtYZWdBS2R3?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Wed, 15 Jul 2026 17:09:37 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOaEZNa3ZZZUpGMGRLajIyY2pLTjduZmhTVHp1Q0VkNEl0X0lGVUs3aXRfb1lrRjlWSS1IckF0MV80X0Rxb2o0MU1V",
+      "page_content": "OpenAI has built an [LLM super-hacker called GPT-Red](https://openai.com/index/unlocking-self-improvement-gpt-red/) that it uses as a sparring partner to help its other models boost their defenses against cyberattacks. Last week the company released the latest version of its flagship LLM, GPT-5.6. OpenAI says that training it against GPT-Red made the model its most robust release yet.\n\nGPT-Red automates a type of safety evaluation for software systems known as red-teaming, which is typically done by a team of human testers. The aim is to find as many different ways to break or hijack a system as possible. The weak spots can then be patched before the final version of the software is released.\n\nAs LLMs become more complex and get used in a wider variety of tasks—especially in the form of agents, which can interact with computer files, websites, and third-party code as well as other agents—it’s hard for teams of people by themselves to keep up with all the types of attacks that might take place. “The risk surface grows and the blast radius also grows,” says Nikhil Kandpal, a research scientist at OpenAI who co-created GPT-Red.\n\nOpenAI built GPT-Red to future-proof its safety testing process. “As more capable models become available, we will have already designed the system that can discover new modes of attack,” says Dylan Hunn, a research scientist at the company and fellow co-creator of GPT-Red. The researchers say it has already come up with new types of attack that had not been seen before.\n\nOpenAI focused most of its efforts on a type of attack known as a prompt injection, where a hacker slips an LLM instructions to make it do things its developers or users do not want it to, such as copy confidential information, sabotage a company’s code base, or generate embarrassing or harmful output. In theory, such instructions can be hidden in any text that the LLM might encounter—in code or on a website, for example.\n\n### **Training dojo**\n\nTo build GPT-Red, OpenAI’s researchers took an LLM that had not been trained as a hacker and set it up in what’s known as a self-play loop with several other models. Its goal was to try to attack the other models; their goal was to try to defend themselves. Over many rounds of play, GPT-Red became better and better at attacking other LLMs, and those LLMs became better and better at fending off the attacks.\n\nThe training took place in a kind of dojo that OpenAI had designed to mimic a range of scenarios in which LLMs might be deployed in the real world, including browsing the web, reading emails or calendar apps, and editing code.",
+      "title_zh": "OpenAI 的 GPT-Red：用于提升模型安全性的 LLM 红队",
+      "summary_zh": "MIT Technology Review 报道 OpenAI 使用 GPT-Red 作为自动化攻击者，与其他模型进行对抗训练以发现安全漏洞。其重点包括提示注入：恶意指令可能藏在网页、代码或文档中，诱导 Agent 泄露数据或执行偏离目标的操作。该方法意在扩大红队覆盖面，并让防御能力随模型增强而迭代。"
+    },
+    {
+      "title": "TuxBot v3: Inside an IoT Botnet Framework With LLM-Assisted Development - Unit 42",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1sdFVscElTclFSQ2RUOWRFNHptLWx1N0xacTcwU1pFc0JDZE5yTVl5aW1hUmJWTDFtVzNZTGxaN3JzNlkyX0xLdUF2QUR3eGZWbjRGSkxXZHZNMTB6N3d4V2N5OXpMRmRkSl9OdnR5SkxYOHlEM0E?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Wed, 15 Jul 2026 10:06:37 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE1sdFVscElTclFSQ2RUOWRFNHptLWx1N0xacTcwU1pFc0JDZE5yTVl5aW1hUmJWTDFtVzNZTGxaN3JzNlkyX0xLdUF2",
+      "page_content": "[Malware](https://unit42.paloaltonetworks.com/category/malware/)\n\n![Image 1: Clock Icon](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/icon-clock.svg) 23 min read\n\nRelated Products\n\n## [](https://news.google.com/rss/articles/CBMidkFVX3lxTE1sdFVscElTclFSQ2RUOWRFNHptLWx1N0xacTcwU1pFc0JDZE5yTVl5aW1hUmJWTDFtVzNZTGxaN3JzNlkyX0xLdUF2QUR3eGZWbjRGSkxXZHZNMTB6N3d4V2N5OXpMRmRkSl9OdnR5SkxYOHlEM0E?oc=5)Executive Summary\n\nWe identified a previously undocumented modular internet-of-things (IoT) botnet framework named TuxBot v3 Evolution.\n\nThe malware authors leveraged an LLM to assist in their code development, yielding mixed results. While the AI complied with their request to generate botnet code, it included a safety disclaimer that the developer failed to remove before shipping.\n\nAlthough the LLM clearly aided in constructing the botnet, several functions in the analyzed samples failed to work correctly. While a manual code review could have easily resolved these errors, the authors neglected this step. However, it is highly likely that corrected, more polished iterations exist, which significantly elevates the potential threat posed by this malware.\n\nWe [initially reported this information](https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2026-05-28-TuxBot-v3-Evolution-Framework-Analysis.txt) through our Timely Threat Intelligence program, and this article provides further in-depth analysis of the TuxBot v3 Evolution botnet.",
+      "title_zh": "TuxBot v3：LLM 辅助开发的 IoT 僵尸网络框架",
+      "summary_zh": "Unit 42 分析一款名为 TuxBot v3 Evolution 的模块化物联网僵尸网络。研究人员发现，作者疑似借助 LLM 编写部分代码，样本甚至保留了安全免责声明；但多个功能存在明显缺陷。报告提醒，生成式工具可能降低恶意开发门槛，安全团队应加强对自动化攻击链和 IoT 设备的监测。"
+    },
+    {
+      "title": "Opinion | My AI agent would like to speak to your manager - The Boston Globe",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPdllVeWE1am9KTmd6eDlmSm14UEpIc2pGb2hMYUZ1VS05eVBkRHZEbFZ0WlZYQmhfeUg4SzRTa1hPRWl6MTI3ZGJTQXRCSzJRN0lOcE43ZEJheVZiU0Y4S3dDLWQteHRmNVRuMXFCeEUyUDlmY2hVNGY1OHhRSGpHcA?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Sat, 18 Jul 2026 08:07:44 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxPdllVeWE1am9KTmd6eDlmSm14UEpIc2pGb2hMYUZ1VS05eVBkRHZEbFZ0WlZYQmhfeUg4SzRTa1hPRWl6MTI3ZGJT",
+      "page_content": "[Skip to main content](https://news.google.com/rss/articles/CBMigAFBVV95cUxPdllVeWE1am9KTmd6eDlmSm14UEpIc2pGb2hMYUZ1VS05eVBkRHZEbFZ0WlZYQmhfeUg4SzRTa1hPRWl6MTI3ZGJTQXRCSzJRN0lOcE43ZEJheVZiU0Y4S3dDLWQteHRmNVRuMXFCeEUyUDlmY2hVNGY1OHhRSGpHcA?oc=5#main)\n\n*    Sections\n    *           *   ### [Epaper](https://epaper.bostonglobe.com/?p1=BGMenu_Sections)\n\n    *           *   ### [Sports](https://news.google.com/sports/?p1=BGMenu_Sections)\n\n            *   [Red Sox](https://news.google.com/sports/baseball/redsox/?p1=BGMenu_Sections)\n            *   [Patriots](https://news.google.com/sports/football/patriots/?p1=BGMenu_Sections)\n            *   [Celtics](https://news.google.com/sports/basketball/celtics/?p1=BGMenu_Sections)\n            *   [Bruins](https://news.google.com/sports/hockey/bruins/?p1=BGMenu_Sections)\n            *   [High Schools](https://news.google.com/sports/high-schools/?p1=BGMenu_Sections)\n            *   [Colleges](https://news.google.com/sports/colleges/?p1=BGMenu_Sections)\n            *   [Women's Sports](https://news.google.com/sports/women/?p1=BGMenu_Sections)\n            *   [TV & Radio](https://news.google.com/sports/tv-radio/?p1=BGMenu_Sections)",
+      "title_zh": "当我的 AI Agent 想找你的经理谈谈",
+      "summary_zh": "《波士顿环球报》评论文章讨论 AI Agent 代表用户与企业沟通时可能带来的服务与治理变化。随着 Agent 能够跨网站、账户和客服系统执行任务，机构需要重新设计身份验证、授权范围、责任归属与人工升级机制，避免自动化交涉放大误解或损害消费者权益。"
+    },
+    {
+      "title": "Authenticate legitimate AI agent traffic with AWS WAF Bot Control - Amazon Web Services (AWS)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPVFVWNG50dEtGNHhHcDZadDR2c3UtZGw5STRHOTc4MW1LenNaOHhMdkFoWTlOaV90eHZCUlVFQzhPVmZsaDNoVU9yUF9DRUh6ZE5hdC1IUkpwOG13dFNOdUJ2RjEzUGdRQzBocExCN0dGMG9NbTQxNVJhcnBBdVd2VGg3M2w3a1ItLS1GbzJlQ19Pa2VJWERLUTVyVnlwb0FsNWZNdXhRQQ?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Tue, 14 Jul 2026 15:18:42 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPVFVWNG50dEtGNHhHcDZadDR2c3UtZGw5STRHOTc4MW1LenNaOHhMdkFoWTlOaV90eHZCUlVFQzhPVmZsaDNoVU9y",
+      "page_content": "",
+      "title_zh": "使用 AWS WAF Bot Control 认证合法 AI Agent 流量",
+      "summary_zh": "AWS 分享如何在 Web 应用防火墙中区分合法 AI Agent 与自动化滥用流量。方案围绕 Bot Control、请求特征和身份信号配置策略，使已获授权的 Agent 能访问必要服务，同时对未知或异常爬虫施加限制。该实践适合正在开放 Agent 接入 API 或网页服务的团队参考。"
+    },
+    {
+      "title": "Vertu wants executives to pay $6,880 for an AI agent — here’s how it actually performs - TechCrunch",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTnUtSFFraUNONDhSemRxQzJpTXhkMlVleHpEN0N0Mll5TmZqUVJZVGNraWFVUTZzWVZ5NDhOZjJILV9yLUg1cEM4UFN3Z1pRcmVxNVZXakI1Tk0teDhDT3FnWTdpaktPR05SNlUzSEstVGdPeWFmdVE3VE9ybFlmQ3lScC1sbS1VR2x4UnRtbnpVd3hCbWg3a2ZHcTVweTdwdlhNeDNuTGRNdkx1bm5QYllNVGRNRzQ?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 17 Jul 2026 22:55:09 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQTnUtSFFraUNONDhSemRxQzJpTXhkMlVleHpEN0N0Mll5TmZqUVJZVGNraWFVUTZzWVZ5NDhOZjJILV9yLUg1cEM4",
+      "page_content": "",
+      "title_zh": "Vertu 向高管销售高价 AI Agent，实际表现如何？",
+      "summary_zh": "TechCrunch 评测 Vertu 面向高管的高价 AI Agent 产品，关注其承诺的代办、信息处理和主动服务能力是否与实际体验相符。报道反映出消费级与商务级 Agent 产品普遍面临的落差：价格和人设并不能替代可靠执行、透明权限、稳定集成与清晰的人工接管机制。"
+    }
+  ],
+  "blogs": [
+    {
+      "title": "A scorecard for the AI age",
+      "url": "https://openai.com/index/a-scorecard-for-the-ai-age/",
+      "source": "OpenAI",
+      "date": "2026-07-17",
+      "page_content": "The question I hear from CFOs everywhere is simple: how do we get more value from our AI spend?\n\nFor years, the market measured the success of software through adoption: seats purchased, users active, licenses renewed. Understanding the value of AI demands a more powerful measure: work accomplished.\n\nThe basic economic question facing CFOs and other business leaders is whether the value of the work AI completes grows faster than the cost of producing it.\n\nAnswering that question requires looking more deeply than a metric such as cost per token. A lower-cost model may have cheaper tokens, but getting great results may require more attempts, more time, or more human review. A more capable model may have more expensive tokens, but complete the same task in one pass. What matters is the full cost of producing a successful outcome, measured against the value that outcome creates.\n\nThe ultimate scorecard for the age of AI could be looked at as “Useful Intelligence per Dollar.” This metric answers four key questions:\n\n1.   Is AI completing work that matters?\n2.   What does each successful task cost?\n3.   Can people depend on the result?\n4.   Does each AI dollar produce more value as usage grows?",
+      "title_zh": "AI 时代的价值记分卡",
+      "summary_zh": "OpenAI 讨论企业应如何衡量 AI 投入回报。文章认为，不能只看 Token 单价或购买席位数，而要比较完成一项有价值工作所需的总成本、成功率、人工复核时间与可依赖性，并将产出价值置于模型价格之上。"
+    },
+    {
+      "title": "Why teens deserve access to safe AI",
+      "url": "https://openai.com/index/why-teens-deserve-access-safe-ai/",
+      "source": "OpenAI",
+      "date": "2026-07-16",
+      "page_content": "Teens are the first generation growing up with AI, and this technology will heavily shape their future. Today, nearly 9 in 10 teens on ChatGPT use it for learning, information, skill-building, or productivity in a single week. This is why we believe it’s critical for teens to have access to AI. Keeping teens from using it until adulthood would be like asking a previous generation to avoid the internet or search engines until they turned 18, leaving them less prepared to use one of the defining technologies of their time. But access must be paired with protections designed specifically for teens.\n\nDuring a recent [OpenAI Academy⁠(opens in a new window)](https://www.linkedin.com/posts/openai-global-affairs_openaiacademy-activity-7430608494040354816-4GtV/) Oriana McKenzie shared how ChatGPT helped her become No.1 in her high school class by studying smarter and managing her workload—giving her the time needed for the sports and school programs she loves. Her story illustrates what’s possible when teens have access to AI that helps them learn and create.\n\nTo maximize those gains, teens need stronger protections designed for their stage of life, including automated guardrails that let them explore, learn, and build with confidence, while providing safeguards tailored to their age. As AI becomes more capable, our responsibility is to combine broad access with age-appropriate protections that allow teens to benefit from this technology as it evolves.\n\nOver the past year, that has meant strengthening default protections for teens, rolling out [age prediction⁠](https://openai.com/index/our-approach-to-age-prediction/), expanding [Parental Controls⁠](https://openai.com/index/introducing-parental-controls/), creating additional [family resources⁠(opens in a new window)](https://chatgpt.com/parent-resources/?openaicom-did=6d0b75a6-2968-4cc9-ad9c-907cc491182f&openaicom_referred=true) to help parents support healthy, responsible use, and introducing learning features to help support deeper understanding rather than just providing answers.\n\n*   We put teen safety first even when it may conflict with other goals.\n*   We encourage real-world support in times of need.\n*   We treat teens as teens.\n*   We are transparent by setting clear expectations.\n\n## Building for learning, not just answers",
+      "title_zh": "为什么青少年应当获得安全的 AI 使用权",
+      "summary_zh": "OpenAI 主张青少年需要在适龄保护下接触 AI，用于学习、获取信息、培养技能和提高效率。文章强调，广泛可用必须与年龄识别、家长控制、学习导向功能和危机保护配套，目标是在促进探索的同时降低未成年人风险。"
+    },
+    {
+      "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
+      "url": "https://openai.com/index/unlocking-self-improvement-gpt-red/",
+      "source": "OpenAI",
+      "date": "2026-07-15",
+      "page_content": "#### Summary\n\n_Problem_\n\n*   Red-teaming is essential to discovering vulnerabilities and improving the robustness of our models. However, current approaches are not scalable, creating a bottleneck.\n\n*   Commonly used robustness evaluations have already been saturated by our latest models.\n\n*   We need to develop methods that allow safety and alignment to scale alongside model capabilities.\n\n_What we did_\n\n*   We trained GPT‑Red, an automated red-teaming model that scales our ability to find vulnerabilities so we can fix them before wider deployment.\n\n*   GPT‑Red is a strong red-teamer, and our previous models are highly vulnerable to its prompt injection attacks.",
+      "title_zh": "GPT-Red：以自我改进提升模型鲁棒性",
+      "summary_zh": "OpenAI 介绍 GPT-Red 自动化红队模型。该系统通过与其他模型的对抗式自博弈持续发现弱点，尤其关注提示注入等 Agent 场景中的攻击路径；研究目标是把安全评估从依赖人工专家的瓶颈，扩展为能随模型能力提升而扩展的流程。"
+    },
+    {
+      "title": "Inviting hard questions",
+      "url": "https://www.anthropic.com/news/hard-questions",
+      "source": "Anthropic",
+      "date": "2026-07-09",
+      "page_content": "",
+      "title_zh": "欢迎提出尖锐问题",
+      "summary_zh": "Anthropic 以公开讨论的形式回应外界对前沿 AI 公司决策、能力边界与社会影响的质疑。文章强调将难题摆到台面上讨论的重要性，并鼓励围绕模型部署、风险管理和责任机制提出可检验的问题，而非只接受营销式叙述。"
+    },
+    {
+      "title": "A New Look for OpenRouter Jul 13, 2026",
+      "url": "https://openrouter.ai/blog/announcements/brand-refresh/",
+      "source": "OpenRouter",
+      "date": "2026-07-13",
+      "page_content": "",
+      "title_zh": "OpenRouter 品牌视觉焕新",
+      "summary_zh": "OpenRouter 公布品牌视觉更新，为其多模型路由与统一 API 产品调整界面和识别体系。此次变更聚焦更清晰地呈现模型选择、开发者入口和产品信息，不改变用户通过统一接口比较和调用不同模型供应商服务的核心定位。"
+    }
+  ],
+  "github_strategy": {
+    "query": "LLM OR AI agent OR \"large language model\"",
+    "filters": "pushed:>2026-06-19",
+    "sort": "stars",
+    "label": "经典热门（近 30 天活跃）"
+  }
+}

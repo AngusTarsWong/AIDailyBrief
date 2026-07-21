@@ -1,0 +1,674 @@
+{
+  "date": "2026-07-17",
+  "github": [
+    {
+      "name": "kortix-ai/suna",
+      "desc": "The Company AI Command Center",
+      "stars": 19975,
+      "lang": "TypeScript",
+      "updated": "2026-07-17",
+      "url": "https://github.com/kortix-ai/suna",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "llm"
+      ],
+      "releases": [
+        {
+          "tag": "v0.10.7",
+          "name": "v0.10.7",
+          "date": "2026-07-17",
+          "summary": "Top-to-bottom overhaul of the LLM gateway; correct OpenAI responses routing and parameters; Anthropic extended-thinking requests no longer forward conflicting temperature/top_p; Bedrock provider and sandbox tooling hardening."
+        }
+      ],
+      "is_top": true
+    },
+    {
+      "name": "bojieli/ai-agent-book",
+      "desc": "《深入理解 AI Agent：设计原理与工程实践》开源主仓库，包含全书正文、编译版 PDF 与按章配套代码。",
+      "stars": 1202,
+      "lang": "Python",
+      "updated": "2026-07-17",
+      "url": "https://github.com/bojieli/ai-agent-book",
+      "topics": [
+        "agent",
+        "ai-agent",
+        "coding-agent",
+        "context-engineering",
+        "llm",
+        "mcp",
+        "multi-agent",
+        "rag"
+      ],
+      "releases": [],
+      "is_top": true
+    },
+    {
+      "name": "ollama/ollama",
+      "desc": "Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+      "stars": 176283,
+      "lang": "Go",
+      "updated": "2026-07-17",
+      "url": "https://github.com/ollama/ollama",
+      "topics": [
+        "deepseek",
+        "gemma",
+        "gpt-oss",
+        "llama",
+        "llm",
+        "mistral",
+        "ollama",
+        "qwen"
+      ],
+      "releases": [
+        {
+          "tag": "v0.32.1",
+          "name": "v0.32.1",
+          "date": "2026-07-16",
+          "summary": "Improved Gemma 4 tool calling and multi-turn reasoning; fixed recurrent MLX model cache leak; MLX loading now respects OLLAMA_LOAD_TIMEOUT; agent web search/fetch now prompts signin when required."
+        },
+        {
+          "tag": "v0.32.0",
+          "name": "v0.32.0",
+          "date": "2026-07-11",
+          "summary": "New interactive agent experience: running ollama launches an agent to help users code and delegate work."
+        }
+      ],
+      "is_top": true
+    },
+    {
+      "name": "ginlix-ai/LangAlpha",
+      "desc": "Claude Code for Investing",
+      "stars": 1556,
+      "lang": "Python",
+      "updated": "2026-07-17",
+      "url": "https://github.com/ginlix-ai/LangAlpha",
+      "topics": [
+        "agent",
+        "investment",
+        "langchain",
+        "langraph",
+        "llm",
+        "mcp",
+        "skills",
+        "trading"
+      ],
+      "releases": [
+        {
+          "tag": "v2026.06.27",
+          "name": "v2026.06.27",
+          "date": "2026-06-27",
+          "summary": "MarketView chart now supports bidirectional user-agent interaction; user selections become structured context; agent can draw trendlines, zones, Fibonacci retracements and event markers; LangGraph DeltaChannel reduces long-session latency."
+        },
+        {
+          "tag": "v2026.06.19",
+          "name": "v2026.06.19",
+          "date": "2026-06-20",
+          "summary": "Every external source touched by the agent is captured and inspectable; sources panel tracks web pages, filings, market data, files, memory and MCP calls; Stop button is now immediate hard cancel."
+        }
+      ],
+      "is_top": true
+    },
+    {
+      "name": "Skyvern-AI/skyvern",
+      "desc": "Automate browser based workflows with AI",
+      "stars": 22444,
+      "lang": "Python",
+      "updated": "2026-07-17",
+      "url": "https://github.com/Skyvern-AI/skyvern",
+      "topics": [
+        "ai",
+        "automation",
+        "browser-automation",
+        "gpt",
+        "llm",
+        "playwright",
+        "rpa",
+        "vision",
+        "workflow"
+      ],
+      "releases": [
+        {
+          "tag": "v1.0.47",
+          "name": "Release v1.0.47",
+          "date": "2026-07-16",
+          "summary": "Gated artifact URL re-minting to signed Skyvern content URLs; refused Copilot drafts with null output contracts; bumped MCP dependency to fix high-severity Dependabot alerts."
+        }
+      ],
+      "is_top": true
+    },
+    {
+      "name": "1jehuang/jcode",
+      "desc": "Coding Agent Harness",
+      "stars": 8367,
+      "lang": "Rust",
+      "updated": "2026-07-17",
+      "url": "https://github.com/1jehuang/jcode",
+      "topics": [
+        "ai-agent",
+        "coding-agent",
+        "claude",
+        "cli",
+        "llm",
+        "mcp",
+        "openai",
+        "rust",
+        "terminal",
+        "tui"
+      ],
+      "releases": [
+        {
+          "tag": "v0.47.0",
+          "name": "v0.47.0",
+          "date": "2026-07-14",
+          "summary": "Added live swarm page with ownership tree and detailed activity; first-run onboarding can launch read-only architecture review; external Claude, Codex, Pi, OpenCode and Cursor sessions resume faster."
+        },
+        {
+          "tag": "v0.46.0",
+          "name": "v0.46.0",
+          "date": "2026-07-13",
+          "summary": "Spawn cards show nested agents in the transcript; swarm prompts open from inline controls; multiline LaTeX rendering is steadier during streaming."
+        }
+      ],
+      "is_top": true
+    },
+    {
+      "name": "omnigent-ai/omnigent",
+      "desc": "Open-source AI agent framework and meta-harness for orchestrating Claude Code, Codex, Cursor, Pi and custom agents with policy, sandboxing and real-time collaboration.",
+      "stars": 7392,
+      "lang": "Python",
+      "updated": "2026-07-17",
+      "url": "https://github.com/omnigent-ai/omnigent",
+      "topics": [
+        "agent-framework",
+        "agent-orchestration",
+        "ai-agent",
+        "claude-code",
+        "codex",
+        "coding-agents",
+        "llm",
+        "multi-agent",
+        "sandbox"
+      ],
+      "releases": [
+        {
+          "tag": "v0.5.1",
+          "name": "v0.5.1",
+          "date": "2026-07-10",
+          "summary": "Older desktop builds without embedded browser now hide the Browser tab instead of showing a dead tab."
+        },
+        {
+          "tag": "v0.5.0",
+          "name": "v0.5.0",
+          "date": "2026-07-10",
+          "summary": "iOS app release; generic ACP harness connects compatible agents through MCP relay; command palette and richer session search; appearance and customization settings."
+        }
+      ],
+      "is_top": true
+    },
+    {
+      "name": "AmberSahdev/Open-Interface",
+      "desc": "Control Any Computer Using LLMs.",
+      "stars": 2695,
+      "lang": "Python",
+      "updated": "2026-07-17",
+      "url": "https://github.com/AmberSahdev/Open-Interface",
+      "topics": [
+        "assistant-computer-control",
+        "automation",
+        "gpt",
+        "llm",
+        "machine-learning",
+        "openai",
+        "pyautogui"
+      ],
+      "releases": [
+        {
+          "tag": "0.9.0",
+          "name": "0.9.0",
+          "date": "2025-03-16",
+          "summary": "Added support for free Google Gemini models; improved reliability for keyboard hotkey shortcuts; documented Windows script-running fallback."
+        }
+      ],
+      "is_top": true
+    },
+    {
+      "name": "noonghunna/club-3090",
+      "desc": "Community recipes for serving LLMs on RTX 3090/4090/5090 CUDA GPUs across vLLM, llama.cpp and ik_llama, with configs for Qwen, Gemma and other models.",
+      "stars": 1718,
+      "lang": "Python",
+      "updated": "2026-07-17",
+      "url": "https://github.com/noonghunna/club-3090",
+      "topics": [
+        "llm",
+        "cuda",
+        "vllm",
+        "llama.cpp"
+      ],
+      "releases": [
+        {
+          "tag": "v0.10.2",
+          "name": "v0.10.2",
+          "date": "2026-07-13",
+          "summary": "Added Tess-4-27B model recipes; NVFP4 slugs validated across Ampere to Blackwell; single-card resolver now avoids DFlash path on non-sm_86 cards."
+        },
+        {
+          "tag": "v0.10.1",
+          "name": "v0.10.1",
+          "date": "2026-07-02",
+          "summary": "vLLM stack pinned to v0.24.0 without overlay; Gemma-4-31B collapsed into one dual slug; served model names are now quantization-neutral."
+        }
+      ],
+      "is_top": true
+    },
+    {
+      "name": "rivet-dev/agentos",
+      "desc": "A faster, lighter, cheaper alternative to sandboxes. Run any coding agent inside an isolated Linux VM, with agent orchestration built in.",
+      "stars": 3677,
+      "lang": "Rust",
+      "updated": "2026-07-17",
+      "url": "https://github.com/rivet-dev/agentos",
+      "topics": [
+        "agent",
+        "ai",
+        "llm",
+        "sandbox",
+        "wasm",
+        "webassembly"
+      ],
+      "releases": [
+        {
+          "tag": "v0.2.8-rc.2",
+          "name": "v0.2.8-rc.2",
+          "date": "2026-07-15",
+          "summary": "Updated Core Package docs and examples; sped up publish workflow; added opt-in persistent sessions via PI_SESSION_DIR; restored reliable interactive shell startup."
+        }
+      ],
+      "is_top": true
+    },
+    {
+      "name": "screenpipe/screenpipe",
+      "desc": "Local-first AI memory and screen/audio recording platform that turns how you work into agents, with privacy-focused integrations for OpenClaw, Hermes Agent and MCP.",
+      "stars": 20189,
+      "lang": "Rust",
+      "updated": "2026-07-17",
+      "url": "https://github.com/screenpipe/screenpipe",
+      "topics": [
+        "agents",
+        "ai-memory",
+        "computer-vision",
+        "hermes-agent",
+        "llm",
+        "local-ai",
+        "mcp",
+        "multimodal",
+        "privacy"
+      ],
+      "releases": [
+        {
+          "tag": "app-v2.5.112",
+          "name": "Screenpipe App v2.5.112",
+          "date": "2026-07-15",
+          "summary": "Fixed Intel macOS launch crash; documented Windows Tauri installer build; improved onboarding accessibility; documented missing MCP tools."
+        }
+      ],
+      "is_top": true
+    },
+    {
+      "name": "onyx-dot-app/onyx",
+      "desc": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
+      "stars": 30930,
+      "lang": "Python",
+      "updated": "2026-07-17",
+      "url": "https://github.com/onyx-dot-app/onyx",
+      "topics": [
+        "ai-chat",
+        "enterprise-search",
+        "gen-ai",
+        "llm",
+        "rag",
+        "self-hosted",
+        "vector-search"
+      ],
+      "releases": [
+        {
+          "tag": "v4.3.7",
+          "name": "v4.3.7",
+          "date": "2026-07-16",
+          "summary": "Warned admins about document index migration before upgrade; enforced bot agent access before Slack answers; added Windows ARM64 desktop builds."
+        },
+        {
+          "tag": "v4.3.6",
+          "name": "v4.3.6",
+          "date": "2026-07-15",
+          "summary": "Added read-write lock when sending LLM calls; preserves upgrade warning around OpenSearch document index migration."
+        }
+      ],
+      "is_top": true
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "apache/ossie",
+      "url": "https://github.com/apache/ossie",
+      "desc": "Apache Ossie, industry wide specification effort to standardize how we exchange semantic metadata across analytics, AI and BI platforms, providing a vendor neutral, single source of truth for semantic data",
+      "lang": "Python",
+      "stars": "916",
+      "today": "60 stars today"
+    },
+    {
+      "name": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "desc": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "lang": "CSS",
+      "stars": "10,961",
+      "today": "3,372 stars today"
+    },
+    {
+      "name": "OpenCut-app/OpenCut",
+      "url": "https://github.com/OpenCut-app/OpenCut",
+      "desc": "The open-source CapCut alternative",
+      "lang": "TypeScript",
+      "stars": "74,052",
+      "today": "3,537 stars today"
+    },
+    {
+      "name": "PostHog/posthog",
+      "url": "https://github.com/PostHog/posthog",
+      "desc": "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+      "lang": "Python",
+      "stars": "35,858",
+      "today": "77 stars today"
+    },
+    {
+      "name": "openinterpreter/openinterpreter",
+      "url": "https://github.com/openinterpreter/openinterpreter",
+      "desc": "A coding agent for open models like Kimi K3",
+      "lang": "Rust",
+      "stars": "65,997",
+      "today": "661 stars today"
+    },
+    {
+      "name": "PrismML-Eng/Bonsai-demo",
+      "url": "https://github.com/PrismML-Eng/Bonsai-demo",
+      "desc": "Bonsai Demo\n[![Image 1: Bonsai](https://github.com/PrismML-Eng/Bonsai-demo/raw/main/assets/bonsai-logo.svg)](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/assets/bonsai-logo.svg)",
+      "lang": "Shell",
+      "stars": "1,526",
+      "today": "196 stars today",
+      "page_content": "[![Image 1: Bonsai](https://github.com/PrismML-Eng/Bonsai-demo/raw/main/assets/bonsai-logo.svg)](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/assets/bonsai-logo.svg)\n[**Website**](https://prismml.com/)|[**GitHub**](https://github.com/PrismML-Eng/Bonsai-demo)|[**Discord**](https://discord.gg/prismml)\n**HF Collections:**[Bonsai 27B](https://huggingface.co/collections/prism-ml/bonsai-27b) · [Bonsai (1-bit)](https://huggingface.co/collections/prism-ml/bonsai) · [Ternary-Bonsai](https://huggingface.co/collections/prism-ml/ternary-bonsai)\n**Whitepapers:**[Bonsai 27B](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/bonsai-27b-whitepaper.pdf) · [1-bit Bonsai 8B](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/1-bit-bonsai-8b-whitepaper.pdf) · [Ternary-Bonsai 8B](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/ternary-bonsai-8b-whitepaper.pdf)\n* * *\nUsing this demo repository you can run **Bonsai** (1-bit) and **Ternary-Bonsai** language models locally on Mac (Metal), Linux/Windows (CUDA, Vulkan, ROCm), or CPU.\n## 🌱 New: Bonsai 27B\n[](https://github.com/PrismML-Eng/Bonsai-demo#-new-bonsai-27b)\nThe family's newest and largest generation, and its first **vision-language** models ([Bonsai 27B collection](https://huggingface.co/collections/prism-ml/bonsai-27b)):\n*   **Vision:** send photos, screenshots, and PDFs; ask about them (see [VISION.md](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/VISION.md)).\n*   **Agentic tool calling:** native OpenAI-style `tool_calls` with full round-trips, plus MCP servers in both demo UIs (see [TOOLS.md](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/TOOLS.md)).\n*   **Thinking:** a reasoning model; pick the reasoning effort per chat in the UI or budget it per request.\n*   **Long context:** 256k+ token conversations.\n*   **Tiny footprint:** the 1-bit Bonsai-27B packs to ~1.125 bits per weight: it fits on a modern iPhone without memory offloading. Ternary-Bonsai-27B (~1.7 bits per weight, packed into 2-bit for fas"
+    },
+    {
+      "name": "hasaneyldrm/exercises-dataset",
+      "url": "https://github.com/hasaneyldrm/exercises-dataset",
+      "desc": "1,324-exercise fitness dataset — animation GIFs, 180×180 thumbnails, muscle-group & equipment data, and step-by-step instructions in 6 languages. The exercise data layer behind the LogPress app.",
+      "lang": "HTML",
+      "stars": "15,057",
+      "today": "710 stars today"
+    },
+    {
+      "name": "Shubhamsaboo/awesome-llm-apps",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "desc": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+      "lang": "Python",
+      "stars": "122,922",
+      "today": "923 stars today"
+    },
+    {
+      "name": "lobehub/lobehub",
+      "url": "https://github.com/lobehub/lobehub",
+      "desc": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "lang": "TypeScript",
+      "stars": "80,182",
+      "today": "71 stars today"
+    },
+    {
+      "name": "YimMenu/YimMenuV2",
+      "url": "https://github.com/YimMenu/YimMenuV2",
+      "desc": "Experimental menu for GTA 5: Enhanced",
+      "lang": "C++",
+      "stars": "1,507",
+      "today": "128 stars today"
+    },
+    {
+      "name": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "desc": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.\n> 🤝 **We welcome any kinds of contributing!** Vote on roadmap items or propose new ones at [`Roadmap`](https://github.com/HKUDS/DeepTutor/issues/498), and see our [Contributing Guide](https://github.c",
+      "lang": "Python",
+      "stars": "26,890",
+      "today": "656 stars today",
+      "page_content": "* * *\n> 🤝 **We welcome any kinds of contributing!** Vote on roadmap items or propose new ones at [`Roadmap`](https://github.com/HKUDS/DeepTutor/issues/498), and see our [Contributing Guide](https://github.com/HKUDS/DeepTutor/blob/main/CONTRIBUTING.md) for branching strategy, coding standards, and how to get started.\n### 📦 Releases\n[](https://github.com/HKUDS/DeepTutor#-releases)\n> **[2026.7.9]**[v1.5.1](https://github.com/HKUDS/DeepTutor/releases/tag/v1.5.1) — Remove a single failed document from a knowledge base — even one stuck in an **error** state — instead of deleting and rebuilding the whole base.\n> **[2026.7.4]**[v1.5.0](https://github.com/HKUDS/DeepTutor/releases/tag/v1.5.0) — LlamaIndex ingestion now honors your **Document Parsing** engine with multimodal image extraction, Partner & Soul ids stay URL-safe for non-Latin names, and optional RAG extras install cleanly on Python 3.14+.\n**Past releases (more than 1 week ago)**\n> **[2026.6.30]**[v1.4.15](https://github.com/HKUDS/DeepTutor/releases/tag/v1.4.15) — A native **Mattermost** channel for Partners, plus fixes so Guided Learning multiple-choice questions grade correctly and a configured zero chunk overlap is honored.\n> **[2026.6.29]**[v1.4.14](https://github.com/HKUDS/DeepTutor/releases/tag/v1.4.14) — Click an assigned partner to chat in one step, Deep Research flags partial reports, LightRAG indexes without MinerU, FAISS handles non-ASCII paths, and PocketBase sessions are isolated per user.\n> **[2026.6.27]**[v1.4.13](https://github.com/HKUDS/DeepTutor/releases/tag/v1.4.13) — Partners support non-Latin names and become assignable to users, logos render after login (#599), tiny knowledge bases retrieve reliably, and containers start cleanly under rootless Podman.\n> **[2026.6.24]**[v1.4.12](https://github.com/HKUDS/DeepTutor/releases/tag/v1.4.12) — A new **LightRAG Server** retrieval engine, a lightweight **PyMuPDF4LLM** parsing engine, and a FAISS vector backend that makes large knowledge-base retrieval d"
+    },
+    {
+      "name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "desc": "Skills for Real Engineers. Straight from my .claude directory.",
+      "lang": "Shell",
+      "stars": "174,330",
+      "today": "2,060 stars today"
+    },
+    {
+      "name": "github/copilot-sdk",
+      "url": "https://github.com/github/copilot-sdk",
+      "desc": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+      "lang": "Java",
+      "stars": "9,649",
+      "today": "13 stars today"
+    },
+    {
+      "name": "ibelick/ui-skills",
+      "url": "https://github.com/ibelick/ui-skills",
+      "desc": "Skills for Design Engineers",
+      "lang": "TypeScript",
+      "stars": "4,293",
+      "today": "178 stars today"
+    },
+    {
+      "name": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "desc": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
+      "lang": "Python",
+      "stars": "89,122",
+      "today": "1,107 stars today"
+    },
+    {
+      "name": "codecrafters-io/build-your-own-x",
+      "url": "https://github.com/codecrafters-io/build-your-own-x",
+      "desc": "Master programming by recreating your favorite technologies from scratch.",
+      "lang": "Markdown",
+      "stars": "526,348",
+      "today": "435 stars today"
+    },
+    {
+      "name": "ossu/computer-science",
+      "url": "https://github.com/ossu/computer-science",
+      "desc": "🎓 Path to a free self-taught education in Computer Science!",
+      "lang": "HTML",
+      "stars": "206,543",
+      "today": "107 stars today"
+    }
+  ],
+  "papers": [
+    {
+      "title": "Can We Trust LLM's Logic? A Comprehensive Evaluation on Logical Reasoning for Knowledge Graph Question Answering",
+      "date": "2026-07-17",
+      "summary": "This paper evaluates whether large language models can reliably perform logical reasoning for knowledge graph question answering, focusing on compositional reasoning, faithfulness and failure cases when models combine symbolic graph evidence with natural-language inference.",
+      "url": "https://arxiv.org/abs/2607.08017",
+      "cats": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Doomed from the Start? How Early Performance Predicts AI Agent Outcomes",
+      "date": "2026-07-12",
+      "summary": "The study analyzes whether early interaction traces can forecast the eventual success or failure of AI agents, with implications for runtime monitoring, early stopping and safer deployment of long-horizon autonomous systems.",
+      "url": "https://arxiv.org/abs/2607.06503",
+      "cats": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "ToolFailBench: A Benchmark for Stress-Testing Tool-Integrated Agents",
+      "date": "2026-07-09",
+      "summary": "ToolFailBench introduces adversarial and realistic failure modes for tool-using LLM agents, testing whether agents can detect bad tool outputs, recover from execution errors and avoid cascading mistakes in multi-step workflows.",
+      "url": "https://arxiv.org/abs/2607.04686",
+      "cats": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Beyond the Leaderboard: A Survey of Benchmark Saturation and Selection Bias in LLM Evaluation",
+      "date": "2026-07-10",
+      "summary": "This survey studies how leaderboard-driven evaluation can become saturated or biased, and argues for broader, task-grounded assessments that better reflect real deployment risks for LLM systems and agents.",
+      "url": "https://arxiv.org/abs/2607.05775",
+      "cats": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Agentic Software Engineering: A Survey of LLM-Based Coding Agents",
+      "date": "2026-06-10",
+      "summary": "The survey organizes recent LLM coding-agent systems across planning, tool use, repository understanding, test feedback, sandbox execution and human-in-the-loop control, highlighting open challenges in reliability and evaluation.",
+      "url": "https://arxiv.org/abs/2606.05608",
+      "cats": [
+        "cs.SE",
+        "cs.AI"
+      ]
+    }
+  ],
+  "hn": [
+    {
+      "title": "LM Studio Bionic: the AI agent for open models",
+      "url": "https://lmstudio.ai/blog/introducing-lm-studio-bionic",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-17",
+      "page_content": "![Image 1: LM Studio Bionic](https://lmstudio.ai/assets/marketing/blog/introducing-lm-studio-bionic/Bionic-Cover-blogimage.png)\n\n**Today, we're taking the biggest leap forward in LM Studio's evolution. Meet LM Studio Bionic, the AI agent made for open models.**\n\nBionic is the AI agent for getting real work done with open models, including coding, research, and complex work with documents and files. You can use local models or switch to open-source models in the cloud for heavier tasks, all while staying in control of your privacy and AI spend.\n\n**For all LM Studio Bionic users, we commit to Zero Data Retention and never training on your data.**\n\n**Bionic brings together:**\n\n*   A Bionic agent that excels at coding and document work\n*   Voice input with state-of-the-art local voice transcription\n*   Flexible model execution: run locally, connect through LM Link, or use the largest frontier open source models through LM Studio Secure Cloud\n*   Better cost control by letting users choose the right model and compute environment for each task"
+    },
+    {
+      "title": "$100 AI Music Video: Claude Fable 5 vs. GPT-5.6 Sol",
+      "url": "https://www.tryai.dev/blog/ai-music-video-arena-claude-vs-gpt-5.6",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-17",
+      "page_content": "We built a small agentic harness with one job: hand a model a song, a hard dollar budget, and a set of tools, then get out of the way and let it produce a full music video on its own. The model researches which video models exist, generates clips, watches its own footage, edits with ffmpeg, and assembles a final cut.\n\nA few readers of our [last build-off](https://www.tryai.dev/blog/gpt-5.6-build-off-12-models) said they wanted to see how tool use actually varies between models, so we gave frontier-level models an open-ended, long-horizon task where each model decides on its own what to research, what to generate, and how to edit. We log every tool call, so you can see exactly how each one worked (full transcripts below).\n\nWe ran two models, [Claude Fable 5](https://www.tryai.dev/models/claude-fable-5) and [GPT-5.6 Sol](https://www.tryai.dev/models/gpt-5.6-sol), each at two budgets ($25 and $100), for four runs total. Every run got the same song (Bruno Mars and Mark Ronson's \"Uptown Funk\"), a short text description, and a time-stamped lyric transcript.\n\n## The setup\n\nEach model ran an autonomous tool-calling loop with six tools:\n\n*   **plan**: a tool for thinking (no cost, no action).\n*   **web_search**: to research generation models and their APIs and fetch information about music videos (if needed).\n*   **get_budget**: to check the remaining budget.\n*   **generate_image** and **generate_video**: the only tools that spend budget. The model can pick any FAL or Replicate model and pass its own parameters.\n*   **run_command**: a local shell with ffmpeg/ffprobe available, used to analyze audio, cut and concatenate clips, and mux the final video."
+    },
+    {
+      "title": "NotebookLM is now Gemini Notebook",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-17",
+      "page_content": "[Skip to main content](https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/#jump-content)\n\n[![Image 1: Google](https://blog.google/static/blogv2/images/super-g-aurora.svg?version=pr20260715-1455)](https://blog.google/ \"News from Google\")\nNotebookLM is now Gemini Notebook\n\n*    Innovation & AI \n*    Products & platforms \n*    Company news \n*   [Feed](https://blog.google/feed)\n\n[Subscribe](https://blog.google/newsletter-subscribe/)\n\n Back \n### Innovation & AI"
+    },
+    {
+      "title": "Detecting LLM-Generated Texts with “Classical” Machine Learning",
+      "url": "https://blog.lyc8503.net/en/post/llm-classifier/",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-17",
+      "page_content": "This article is currently an experimental machine translation and may contain errors. If anything is unclear, please refer to the original Chinese version. I am continuously working to improve the translation.\n\n## [](https://blog.lyc8503.net/en/post/llm-classifier/#TL-DR-Demo \"TL;DR & Demo\")TL;DR & Demo\n\nAs of early 2026, mainstream LLM-generated text exhibits strong statistical patterns that can be effectively distinguished from human-written content using traditional machine learning models. I suspect this is how many so-called “AI plagiarism checkers” actually work under the hood.\n\nOnline Demo: [https://lyc8503.github.io/AITextDetector/](https://lyc8503.github.io/AITextDetector/)\n\nThe model used in this demo is **not trained on general-purpose data**, nor has it undergone rigorous optimization or iteration. Its single-sentence detection accuracy is approximately 85% on the test set. Please read through this article before use to understand potential limitations.\n\nThe core code (drafts) and trained model files are available on GitHub: [lyc8503/AITextDetector](https://github.com/lyc8503/AITextDetector)\n\n## [](https://blog.lyc8503.net/en/post/llm-classifier/#Background-aka-Useless-Rambling \"Background (aka Useless Rambling)\")Background (aka Useless Rambling)\n\nBack when I was still writing my thesis at school half a year ago, rumors were already spreading about checking papers for AIGC (AI-generated content). I tested several platforms—CNKI, Wanfang, and some third-party AIGC detection services—and found they could indeed distinguish between my hand-written text and LLM-generated text with decent accuracy."
+    }
+  ],
+  "news": [
+    {
+      "title": "Who will own the AI agent economy?",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxONjVwbDBYR0UxVmY5Rk9wU2FEU1Z2Yl9CcmcxalNubk1zRGdfTmpQcEkzSnB2Qk04UlN0U1BCMTU1NVNzMy1taE45M29kQzdaQzlsSEp3WHhBcjQ4cXRUWkl6Z192eEV0emNDV05KMXZJUzItc3pueEtrYWtCRzhFNA?oc=5",
+      "source": "MIT Sloan",
+      "cls": "google",
+      "date": "2026-07-13",
+      "desc": "MIT Sloan discusses how value, control and customer relationships may shift as AI agents mediate more commercial activity.",
+      "page_content": ""
+    },
+    {
+      "title": "Is that AI agent worth it? Agentic economics and the modern operating model",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPVXZiMm01VVZwMEdSSXdrUGxsYjNHMlVFVjN5RllsMGR0bXB3V0RuTy1PbERlRWd1SVlfX2UzSFhHdmtmVTN0SF9ZVDB0X2twMHRxcEhiTExKRVFYWDlKXzgtcGRhMEZiZXVZX1FKN2VPRXVQREMwYWVZMzNRNW4xeUpCazhSTG5nUEFrcnBleVFnbDFKNENqRmtCaHRWZHZkODR2a20zTHltVE8wQWVhUDhRckFodlJXb3BfVFNSUXVjalRkaE80ZG5ZUGp1VDd2bHQ1Tg?oc=5",
+      "source": "McKinsey & Company",
+      "cls": "google",
+      "date": "2026-07-13",
+      "desc": "McKinsey frames agentic AI investment around operating-model change, cost-to-value measurement and workflow redesign.",
+      "page_content": ""
+    },
+    {
+      "title": "Cadence rolls out AI agent to speed circuit board, chip packaging design",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQMmZaRXBtUG5RLWpZQjg4UjFZd012cTM1Uy0xZy13SkkxamJiSzVuZ0dIMGllZDZVZGJKMkItTlo4bzliUGdndlY2ZG1JYTlpY0Z0a3lEWERtZDE5ZGY0VlA5WEYxaXJvSkZUMDBaUkxkekF5b2NQamFhdHRUVEM3aVRwNkw4VFlPa2M3VWtOa1cyNGUtVGRzOHhGdVJYVUw2aHpVZV91TmpUWjFWQ25STmwtMA?oc=5",
+      "source": "Reuters",
+      "cls": "google",
+      "date": "2026-07-15",
+      "desc": "Reuters reports Cadence is introducing an AI agent intended to accelerate circuit-board and chip-packaging design workflows.",
+      "page_content": ""
+    },
+    {
+      "title": "New Agent Data Injection Attack Can Make AI Agents Misclick or Run Attacker Commands",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1vRm5uMi1lajhJWmhfN3NtaEM1M01mNG1BNjZYeERRQ1dwclZNUUk2RnlrY050QXpzOXhzUkYxdjZqenBOOG9naS1qSnJlbWpMbFVKWWZKSnZONFZlWERzUUg0S1NaNVJMS0prb1U1MnUxQVlGbDNWRlpFM1pta2M?oc=5",
+      "source": "The Hacker News",
+      "cls": "google",
+      "date": "2026-07-16",
+      "desc": "The Hacker News covers an agent data-injection technique that can steer UI agents toward attacker-selected clicks or commands.",
+      "page_content": ""
+    },
+    {
+      "title": "China Plans AI Agent Recalls. America Can’t Even Agree Who Regulates Them",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQamZNNUpkcmIzamg1clFsbTlLcFJPNmFMWmp2ajlKVnVBeEhEeWJuV2diMEo0bDNuUHRJdDMzNlZDSVpqTlRySWFzbExNcFBpUkJDenY5Tk84anAxdWNjTlFQZ0w3WWJfVFF2SzNOZ2NPZHVWcmFYRE5Ia2tMV3JoTkJIZkFHRjl3MDZQdVNTdFY0UFoxVExJUmlKbFpWVFBhaU1jSnFlcW5oTWhEeUlGa211bmxkaEhxekJkWGZQdDNnYkxiZmc?oc=5",
+      "source": "Forbes",
+      "cls": "google",
+      "date": "2026-07-15",
+      "desc": "Forbes contrasts China’s planned AI-agent recall regime with the unresolved regulatory split in the United States.",
+      "page_content": ""
+    },
+    {
+      "title": "Trust, transactions and tokenomics: AI agent infrastructure begins to standardize",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE00c09JWUJzX1I0SHM4NXRpR3RWRklPNzAtOGxZTzlYWXh6RmlOd1R6QWN2d29NV21xeS0wcTYxVVpYdnlLVElIYTJHWkNEUlEya2xUbFJxeHlCLTUyX1dhdDVXdWpDX0k2WmRF?oc=5",
+      "source": "The New Stack",
+      "cls": "google",
+      "date": "2026-07-15",
+      "desc": "The New Stack examines emerging standards for identity, payments and transaction trust in AI-agent infrastructure.",
+      "page_content": ""
+    }
+  ],
+  "blogs": [
+    {
+      "title": "Why teens deserve access to safe AI",
+      "url": "https://openai.com/index/why-teens-deserve-access-safe-ai/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "Teens are the first generation growing up with AI, and this technology will heavily shape their future. Today, nearly 9 in 10 teens on ChatGPT use it for learning, information, skill-building, or productivity in a single week. This is why we believe it’s critical for teens to have access to AI. Keeping teens from using it until adulthood would be like asking a previous generation to avoid the internet or search engines until they turned 18, leaving them less prepared to use one of the defining technologies of their time. But access must be paired with protections designed specifically for teens.\n\nDuring a recent [OpenAI Academy⁠(opens in a new window)](https://www.linkedin.com/posts/openai-global-affairs_openaiacademy-activity-7430608494040354816-4GtV/) Oriana McKenzie shared how ChatGPT helped her become No.1 in her high school class by studying smarter and managing her workload—giving her the time needed for the sports and school programs she loves. Her story illustrates what’s possible when teens have access to AI that helps them learn and create.\n\nTo maximize those gains, teens need stronger protections designed for their stage of life, including automated guardrails that let them explore, learn, and build with confidence, while providing safeguards tailored to their age. As AI becomes more capable, our responsibility is to combine broad access with age-appropriate protections that allow teens to benefit from this technology as it evolves.\n\nOver the past year, that has meant strengthening default protections for teens, rolling out [age prediction⁠](https://openai.com/index/our-approach-to-age-prediction/), expanding [Parental Controls⁠](https://openai.com/index/introducing-parental-controls/), creating additional [family resources⁠(opens in a new window)](https://chatgpt.com/parent-resources/?openaicom-did=c82bc885-517b-4cca-b7f0-8409e020b35c&openaicom_referred=true) to help parents support healthy, responsible use, and introducing learning features to help support deeper understanding rather than just providing answers.\n\n*   We put teen safety first even when it may conflict with other goals.\n*   We encourage real-world support in times of need.\n*   We treat teens as teens.\n*   We are transparent by setting clear expectations.\n\n## Building for learning, not just answers"
+    },
+    {
+      "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
+      "url": "https://openai.com/index/unlocking-self-improvement-gpt-red/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "#### Summary\n\n_Problem_\n\n*   Red-teaming is essential to discovering vulnerabilities and improving the robustness of our models. However, current approaches are not scalable, creating a bottleneck.\n\n*   Commonly used robustness evaluations have already been saturated by our latest models.\n\n*   We need to develop methods that allow safety and alignment to scale alongside model capabilities.\n\n_What we did_\n\n*   We trained GPT‑Red, an automated red-teaming model that scales our ability to find vulnerabilities so we can fix them before wider deployment.\n\n*   GPT‑Red is a strong red-teamer, and our previous models are highly vulnerable to its prompt injection attacks."
+    },
+    {
+      "title": "How to manage AI investments in the agentic era",
+      "url": "https://openai.com/index/managing-ai-investments-in-agentic-era/",
+      "source": "OpenAI",
+      "date": "",
+      "page_content": "OpenAI’s goal is to make AI more accessible, capable and affordable over time. From GPT‑4 to GPT‑5.4, the price per million tokens fell 97%. [GPT‑5.6⁠](https://openai.com/index/gpt-5-6/) continues that progress, delivering better performance in the Artificial Analysis Coding Agent Index with 54% fewer output tokens and 57% less time per task.\n\nBut token price alone does not show whether AI is creating value. Leaders should look at **useful work per dollar**: tasks completed, time saved, decisions improved, and workflows ready to scale.\n\nAs teams move from chat to longer-running workflows, admins need clearer visibility into demand, spend, and risk.\n\nHere are five ways to invest with confidence.\n\n## 1. Sharpen visibility into usage and spend\n\nEnterprise leaders need **a plain view of AI usage:** who is using it, which products or models they are using, how much capacity they are consuming, and what kind of work that usage supports. Without that visibility, a growing bill is hard to interpret. It could reflect waste, productive experimentation, or a workflow that is starting to become business-critical.\n\n[ChatGPT Work⁠](https://openai.com/chatgpt-work/) supports longer, multi-step tasks, so usage can vary widely by workflow. Admins need to see the work behind that usage, not just the credits consumed. This is possible thanks to a shared view of demand across ChatGPT. Updated [usage analytics and spend controls⁠](https://openai.com/index/chatgpt-enterprise-spend-controls/) in the [Admin Console⁠(opens in a new window)](https://chatgpt.com/admin) help admins see adoption, credit usage, and spend by user, product, and model; track trends over time; identify emerging patterns; and understand when usage reflects broad adoption, a power-user workflow, or a recurring business process that may deserve more investment.\n\n![Image 1: Analytics overview showing ChatGPT and Codex usage and credit consumption](https://images.ctfassets.net/kftzwdyauwt9/PUu1kZSiVcT1kkFdXOyNl/905ddac86e29c56509c35dc583288cc2/Analytics_overview_showing_ChatGPT_and_Codex_usage_and_credit_consumption.png?w=3840&q=90&fm=webp)"
+    },
+    {
+      "title": "Inviting hard questions",
+      "url": "https://www.anthropic.com/news/hard-questions",
+      "source": "Anthropic",
+      "date": "",
+      "page_content": "Who decides the rules for AI? Can AI give my children a better future? Does AI make the world more dangerous? Anthropic says it is collecting public hard questions about AI, expanding surveys and public records, and reporting how it addresses public-benefit goals around safety, science, jobs and social impact."
+    },
+    {
+      "title": "A New Look for OpenRouter",
+      "url": "https://openrouter.ai/blog/announcements/brand-refresh/",
+      "source": "OpenRouter",
+      "date": "",
+      "page_content": "OpenRouter describes a new brand identity for its model-routing platform, including a redesigned logo, typeface, color palette and product expression intended to reflect a broader infrastructure role in the intelligence era."
+    }
+  ],
+  "github_strategy": {
+    "query": "LLM stars:>1000 pushed:>2026-07-14",
+    "filters": "stars:>1000 pushed:>2026-07-14",
+    "sort": "updated",
+    "label": "最近活跃（人工质量修正）"
+  }
+}

@@ -10,6 +10,7 @@ RAW_JSON = f"/tmp/llm-briefing-raw-{DATE_STR}.json"
 ENRICHED_JSON = f"/tmp/llm-briefing-enriched-{DATE_STR}.json"
 OUTPUT_TMP = f"/tmp/llm-briefing-{DATE_STR}.html"
 OUTPUT = f"/Users/zz/code/AI_Daily_Brief/docs/llm-briefing-{DATE_STR}.html"
+ENRICHED_OUTPUT = f"/Users/zz/code/AI_Daily_Brief/docs/llm-briefing-enriched-{DATE_STR}.json"
 
 # ── LLM 知识库：Trending 项目描述补充 ─────────────────
 TRENDING_DESCS = {
@@ -619,9 +620,12 @@ for p in trending:
     t = p.get('today','')
     l = f'<span class="lang">{p["lang"]}</span>' if p.get('lang') else ''
     d = p.get('desc_zh', '') or p.get('desc', '') or ''
+    display_name = p.get('name_zh') or p.get('name', '')
+    original_name = p.get('name', '')
+    original_html = f'<span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">{original_name}</span>' if original_name and original_name != display_name else ''
     body += f"""
 <div class="card">
-  <div class="ct"><a href="{p.get('url','')}" target="_blank">{p['name']}</a></div>
+  <div class="ct"><a href="{p.get('url','')}" target="_blank">{display_name}</a>{original_html}</div>
   <div class="cm"><span class="stars">⭐ {s}</span>{l}{t}</div>
   <div class="cd">{d}</div>
 </div>"""
@@ -650,6 +654,9 @@ for p in gh:
     l = f'<span class="lang">{p["lang"]}</span>' if p.get('lang') else ''
     topics = ''.join(f'<span class="topic">{t}</span>' for t in p.get('topics', [])[:3])
     d = p.get('desc_zh', '') or p.get('desc', '') or ''
+    display_name = p.get('name_zh') or p.get('name', '')
+    original_name = p.get('name', '')
+    original_html = f'<span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">{original_name}</span>' if original_name and original_name != display_name else ''
     # Releases 展示 — 支持 release_highlights_zh（子 Agent 生成的中文改动说明）
     releases_html = ''
     releases = p.get('releases', [])
@@ -681,7 +688,7 @@ for p in gh:
         releases_html = '<div class="releases-section">' + ''.join(rel_items) + '</div>'
     body += f"""
 <div class="card">
-  <div class="ct"><a href="{p['url']}" target="_blank">{p['name']}</a></div>
+  <div class="ct"><a href="{p['url']}" target="_blank">{display_name}</a>{original_html}</div>
   <div class="cm"><span class="stars">⭐ {s}</span>{l}{topics}<span>更新于 {p['updated']}</span></div>
   <div class="cd">{d}</div>
   {releases_html}
@@ -788,7 +795,11 @@ with open(OUTPUT_TMP, 'w') as f:
 import shutil, os
 try:
     shutil.copy(OUTPUT_TMP, OUTPUT)
+    # 将实际参与渲染的 enriched 数据一并固化；否则 HTML 与 docs/raw 会脱节。
+    with open(ENRICHED_OUTPUT, 'w') as f:
+        json.dump(raw, f, ensure_ascii=False, indent=2)
     print(f"✅ 报告已生成: {OUTPUT}")
+    print(f"📦 翻译结果已保存: {ENRICHED_OUTPUT}")
 except Exception as e:
     print(f"⚠️ 复制到 docs 目录失败，文件仍在: {OUTPUT_TMP}")
 
