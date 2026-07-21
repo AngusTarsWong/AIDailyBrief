@@ -1,0 +1,582 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LLM & Agent Daily Briefing | 2026-07-20</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+  background: #1B2838;
+  color: #e2e8f0;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(56, 189, 248, 0.2), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 40%, rgba(139, 92, 246, 0.15), transparent),
+    radial-gradient(ellipse 50% 60% at 5% 85%, rgba(52, 211, 153, 0.1), transparent),
+    repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(148, 163, 184, 0.08) 49px, rgba(148, 163, 184, 0.08) 50px),
+    repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(148, 163, 184, 0.08) 49px, rgba(148, 163, 184, 0.08) 50px);
+  pointer-events: none;
+  z-index: 0;
+}
+.container { max-width:1080px; margin:0 auto; padding:2rem; position: relative; z-index: 1; }
+.header { text-align:center; margin-bottom:2.5rem; position: relative; padding-bottom:1.5rem; }
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.6), rgba(139, 92, 246, 0.6), transparent);
+}
+.header h1 {
+  font-size:2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom:0.4rem;
+  letter-spacing: -0.02em;
+}
+.sub { color:#64748b; font-size:0.9rem; font-weight: 500; letter-spacing: 0.05em; }
+.progress-rail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(148, 163, 184, 0.08);
+  z-index: 20;
+}
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #34d399, #38bdf8, #a78bfa);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+  transition: width 0.12s ease-out;
+}
+.quick-nav {
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 1.2rem;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+.quick-nav-links {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+.quick-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(30, 41, 59, 0.65);
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+.quick-link:hover {
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.48);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(30, 41, 59, 0.88));
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22), 0 0 0 1px rgba(96, 165, 250, 0.12);
+}
+.quick-link.active {
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.35);
+  background: rgba(37, 99, 235, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.12);
+}
+.quick-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.quick-status strong {
+  color: #f8fafc;
+  font-weight: 700;
+}
+.section {
+  margin-bottom:2rem;
+  padding: 1.2rem;
+  border-radius: 20px;
+  position: relative;
+  background: rgba(27, 40, 56, 0.5);
+  scroll-margin-top: 88px;
+}
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(148, 163, 184, 0.1), transparent, rgba(148, 163, 184, 0.05));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.sh {
+  display:flex;
+  align-items:center;
+  gap:0.8rem;
+  margin-bottom:1rem;
+  padding-bottom:0.5rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+.sh .icon { font-size:1.3rem; }
+.sh .title { font-size:1.2rem; font-weight:700; color:#f1f5f9; letter-spacing: -0.01em; }
+.sh.trending .title { color:#34d399; }
+.sh.github .title { color:#60a5fa; }
+.sh.paper .title { color:#a78bfa; }
+.sh.blog .title { color:#38bdf8; }
+.sh.news .title { color:#fb923c; }
+.cnt {
+  font-size:0.7rem;
+  color:#94a3b8;
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  padding:0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-left:auto;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.card {
+  background: linear-gradient(135deg, rgba(22, 35, 50, 0.9), rgba(22, 35, 50, 0.75));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  border-left: 3px solid rgba(96, 165, 250, 0.4);
+  border-radius: 14px;
+  padding:1.1rem 1.3rem;
+  margin-bottom:0.7rem;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+.card::after {
+  content: '';
+  position: absolute;
+  inset: -20% auto auto -10%;
+  width: 42%;
+  height: 140%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.0), rgba(255,255,255,0.06), rgba(255,255,255,0.0));
+  transform: translateX(-140%) skewX(-18deg);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+.card:hover {
+  border-color: rgba(96, 165, 250, 0.42);
+  border-left-color: #60a5fa;
+  background: linear-gradient(135deg, rgba(36, 50, 72, 0.96), rgba(28, 39, 58, 0.84));
+  transform: translateY(-4px) translateX(6px) scale(1.008);
+  box-shadow: 0 14px 34px rgba(96, 165, 250, 0.18), 0 0 0 1px rgba(96, 165, 250, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+.card:hover::after {
+  transform: translateX(280%) skewX(-18deg);
+}
+/* Section-specific card accent colors */
+.section:has(.sh.trending) .card { border-left-color: rgba(52, 211, 153, 0.5); }
+.section:has(.sh.trending) .card:hover { border-left-color: #34d399; box-shadow: 0 14px 34px rgba(52, 211, 153, 0.16), 0 0 0 1px rgba(52, 211, 153, 0.08), inset 0 1px 0 rgba(255,255,255,0.06); }
+.section:has(.sh.paper) .card { border-left-color: rgba(167, 139, 250, 0.5); }
+.section:has(.sh.paper) .card:hover { border-left-color: #a78bfa; box-shadow: 0 14px 34px rgba(167, 139, 250, 0.16), 0 0 0 1px rgba(167, 139, 250, 0.08), inset 0 1px 0 rgba(255,255,255,0.06); }
+
+.ct { font-size:1rem; font-weight:600; margin-bottom:0.35rem; letter-spacing: -0.01em; }
+.ct a { color:#60a5fa; text-decoration:none; transition: color 0.2s; }
+.ct a:hover { color:#93c5fd; text-decoration:underline; }
+.cm { display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.78rem; color:#64748b; margin-bottom:0.4rem; }
+.stars { color:#fbbf24; font-weight:600; }
+.lang {
+  background: rgba(56, 189, 248, 0.1);
+  color:#38bdf8;
+  padding:0.12rem 0.5rem;
+  border-radius: 10px;
+  font-size:0.72rem;
+  font-weight: 500;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+}
+.topic {
+  background: rgba(167, 139, 250, 0.1);
+  color:#a78bfa;
+  padding:0.12rem 0.45rem;
+  border-radius: 10px;
+  font-size:0.68rem;
+  font-weight: 500;
+  border: 1px solid rgba(167, 139, 250, 0.15);
+}
+.cd { color:#cbd5e1; font-size:0.88rem; margin-top:0.4rem; line-height: 1.65; }
+.releases-section { margin-top:0.8rem; display:flex; flex-direction:column; gap:0.5rem; }
+.release-item {
+  background: rgba(34, 197, 94, 0.04);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  border-radius: 10px;
+  padding:0.6rem 0.8rem;
+  transition: all 0.2s ease;
+}
+.release-item:hover {
+  background: rgba(34, 197, 94, 0.08);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+.release-tag { color:#22c55e; font-weight:600; font-size:0.82rem; margin-right:0.5rem; }
+.release-date { color:#475569; font-size:0.72rem; }
+.release-summary { color:#94a3b8; font-size:0.78rem; margin-top:0.25rem; line-height:1.5; }
+.blog-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  border-left: 3px solid rgba(56, 189, 248, 0.4);
+  border-radius: 12px;
+  padding:0.8rem 1.2rem;
+  margin-bottom:0.6rem;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.blog-card::after {
+  content: '';
+  position: absolute;
+  inset: -15% auto auto -10%;
+  width: 36%;
+  height: 130%;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.06), rgba(255,255,255,0));
+  transform: translateX(-150%) skewX(-18deg);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+.blog-card:hover {
+  border-color: rgba(56, 189, 248, 0.42);
+  border-left-color: #38bdf8;
+  background: linear-gradient(135deg, rgba(36, 53, 76, 0.94), rgba(28, 41, 61, 0.82));
+  transform: translateY(-4px) translateX(6px) scale(1.008);
+  box-shadow: 0 14px 32px rgba(56, 189, 248, 0.16), 0 0 0 1px rgba(56, 189, 248, 0.08);
+}
+.blog-card:hover::after {
+  transform: translateX(285%) skewX(-18deg);
+}
+.blog-src {
+  display:inline-block;
+  font-size:0.68rem;
+  color:#38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  padding:0.12rem 0.45rem;
+  border-radius: 8px;
+  margin-right:0.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.blog-title { color:#60a5fa; font-size:0.92rem; font-weight:500; text-decoration:none; }
+.blog-title:hover { color:#93c5fd; text-decoration:underline; }
+.blog-date { color:#475569; font-size:0.72rem; margin-left:0.4rem; }
+.blog-summary { color:#94a3b8; font-size:0.83rem; margin-top:0.35rem; line-height: 1.5; }
+.news-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(251, 146, 60, 0.12);
+  border-left: 3px solid rgba(251, 146, 60, 0.4);
+  border-radius: 12px;
+  padding:0.8rem 1.2rem;
+  margin-bottom:0.6rem;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.news-card::after {
+  content: '';
+  position: absolute;
+  inset: -15% auto auto -10%;
+  width: 36%;
+  height: 130%;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.06), rgba(255,255,255,0));
+  transform: translateX(-150%) skewX(-18deg);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+.news-card:hover {
+  border-color: rgba(251, 146, 60, 0.46);
+  border-left-color: #fb923c;
+  background: linear-gradient(135deg, rgba(56, 44, 33, 0.94), rgba(40, 34, 30, 0.84));
+  transform: translateY(-4px) translateX(6px) scale(1.008);
+  box-shadow: 0 14px 32px rgba(251, 146, 60, 0.18), 0 0 0 1px rgba(251, 146, 60, 0.08);
+}
+.news-card:hover::after {
+  transform: translateX(285%) skewX(-18deg);
+}
+.news-src {
+  display:inline-block;
+  font-size:0.68rem;
+  color:#fb923c;
+  background: rgba(251, 146, 60, 0.08);
+  border: 1px solid rgba(251, 146, 60, 0.15);
+  padding:0.12rem 0.45rem;
+  border-radius: 8px;
+  margin-right:0.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.news-title { color:#fbbf24; font-size:0.92rem; font-weight:500; text-decoration:none; }
+.news-title:hover { color:#fcd34d; text-decoration:underline; }
+.news-date { color:#475569; font-size:0.72rem; margin-left:0.4rem; }
+.news-summary { color:#94a3b8; font-size:0.83rem; margin-top:0.35rem; line-height: 1.5; }
+.stats {
+  display:flex;
+  justify-content:center;
+  gap:2.5rem;
+  margin-top:2rem;
+  padding-top:1.2rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+.sv { font-size:1.3rem; font-weight:700; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.sl { font-size:0.72rem; color:#64748b; margin-top:0.15rem; letter-spacing: 0.02em; }
+.ft { color:#475569; font-size:0.78rem; text-align:center; margin-top:1.2rem; letter-spacing: 0.02em; }
+@media(max-width:640px) {
+  .container { padding:1rem; }
+  .header h1 { font-size:1.5rem; }
+  .card { padding:1rem 1.1rem; }
+  .section { padding: 1rem 0.8rem; }
+  .quick-nav {
+    top: 8px;
+    padding: 0.75rem 0.8rem;
+  }
+  .quick-status {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+</style></head><body><div class="progress-rail"><div id="progress-bar" class="progress-bar"></div></div><div class="container">
+<div class="header"><h1>📡 LLM & Agent Daily Briefing</h1><p class="sub">2026-07-20</p></div>
+<div class="quick-nav">
+  <div class="quick-nav-links">
+    <a class="quick-link" data-target="section-trending" href="#section-trending">🔥 Trending</a>
+    <a class="quick-link" data-target="section-github" href="#section-github">🚀 GitHub</a>
+    <a class="quick-link" data-target="section-paper" href="#section-paper">📄 论文</a>
+    <a class="quick-link" data-target="section-blog" href="#section-blog">📢 官方动态</a>
+    <a class="quick-link" data-target="section-news" href="#section-news">🏭 行业动态</a>
+  </div>
+  <div class="quick-status">当前阅读：<strong id="current-section-label">Trending</strong><span id="reading-percent">0%</span></div>
+</div><div id="section-trending" class="section"><div class="sh trending"><span class="icon">🔥</span><span class="title">GitHub Trending 今日热门</span><span class="cnt">5 条</span></div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Robbyant/lingbot-map" target="_blank">LingBot-Map</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">Robbyant/lingbot-map</span></div>
+  <div class="cm"><span class="stars">⭐ 12,981</span><span class="lang">Python</span>831 stars today</div>
+  <div class="cd">LingBot-Map 是面向持续输入数据流的三维场景重建基础模型。它以单次前馈推理把相机、传感器等连续观测转换为可更新的几何表示，减少传统 SLAM 或逐帧优化在实时场景中的计算与累积误差。项目适合机器人、AR/VR、自动驾驶仿真与空间计算团队，用于在有限延迟下获得可供下游感知、导航或交互使用的稳定 3D 世界模型。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/apache/ossie" target="_blank">Apache Ossie</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">apache/ossie</span></div>
+  <div class="cm"><span class="stars">⭐ 1,281</span><span class="lang">Python</span>47 stars today</div>
+  <div class="cd">Apache Ossie 是一项跨厂商的开放规范，目标是统一分析、AI 与 BI 平台之间交换语义元数据的方式。它把指标口径、实体关系和业务定义作为独立且可复用的语义层，避免同一数据在不同工具里被重复解释或产生冲突。对建设数据治理、指标体系或需要让 AI Agent 理解企业业务语境的团队，Ossie 可作为连接数据仓库、分析产品与智能应用的中立基础。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/PostHog/posthog" target="_blank">PostHog</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">PostHog/posthog</span></div>
+  <div class="cm"><span class="stars">⭐ 36,608</span><span class="lang">Python</span>338 stars today</div>
+  <div class="cd">PostHog 是面向“自驱动产品”的开发者平台，将产品分析、会话回放、实验、特性开关、错误与日志等上下文汇集起来，并提供 AI 可观测性能力。其重点不是只展示仪表盘，而是让 Agent 能依据用户行为和运行信号定位问题、发现机会并协助交付修复。团队可通过 Web、桌面、Slack 或 MCP 接入，适合希望把产品数据直接接入智能研发与运营闭环的工程组织。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank">从零构建 AI 工程</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">rohitg00/ai-engineering-from-scratch</span></div>
+  <div class="cm"><span class="stars">⭐ 39,120</span><span class="lang">Python</span>191 stars today</div>
+  <div class="cd">AI Engineering from Scratch 是一套以实践为中心的 AI 工程学习资源，围绕“理解、构建、交付”组织课程与项目。它不把模型调用孤立成提示词技巧，而是覆盖数据、评估、部署、Agent 工作流和产品化所需的工程环节，帮助学习者把概念落到可运行的系统。适合希望系统转向 AI 开发的程序员、技术团队新人，以及需要为内部培训挑选项目式教材的负责人。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/tirth8205/code-review-graph" target="_blank">代码审查图谱</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">tirth8205/code-review-graph</span></div>
+  <div class="cm"><span class="stars">⭐ 20,191</span><span class="lang">Python</span>355 stars today</div>
+  <div class="cd">Code Review Graph 是本地优先的代码智能图谱工具，可通过 MCP 和 CLI 为仓库建立持久化的结构、依赖与变更关系地图。AI 编程助手不必每次把整库塞进上下文，而是按任务检索真正相关的文件和调用链，从而降低 token 消耗并减少大仓库审查中的遗漏。它适合使用 Claude Code、Codex 等工具的团队，尤其适用于多模块项目的代码评审、故障定位与重构规划。</div>
+</div></div><div id="section-github" class="section"><div class="sh github"><span class="icon">🚀</span><span class="title">GitHub 热门项目</span><span class="cnt">7 项</span></div>
+<p style="color:#64748b;font-size:0.85rem;margin-bottom:0.8rem;line-height:1.5">📅 经典热门（近 30 天活跃） | 🔍 pushed:>2026-06-19 | 🔑 LLM OR AI agent OR "large language model"</p>
+<div class="card">
+  <div class="ct"><a href="https://github.com/xtekky/gpt4free" target="_blank">gpt4free</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">xtekky/gpt4free</span></div>
+  <div class="cm"><span class="stars">⭐ 66,474</span><span class="lang">Python</span><span class="topic">chatbot</span><span class="topic">chatbots</span><span class="topic">chatgpt</span><span>更新于 2026-07-18</span></div>
+  <div class="cd">gpt4free 汇集多种语言模型服务接入方式，为开发者提供统一的 Python 工具链与命令行入口。它关注模型选择、对话调用和兼容层，便于在原型或个人工具中快速试验不同模型能力。项目适合需要比较多个模型服务、搭建轻量聊天应用或研究兼容 API 的开发者；生产使用仍应审查各服务的授权、稳定性与数据处理边界。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ Release v7.9.0</span><span class="release-date">2026-07-18</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 发布 v7.9.0，并同步 PyPI 安装包</div></div><div class="release-item"><div><span class="release-tag">🏷️ Release v7.8.12</span><span class="release-date">2026-07-17</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 调整 Docker 镜像构建触发流程</div></div><div class="release-item"><div><span class="release-tag">🏷️ Release v7.8.11</span><span class="release-date">2026-07-17</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复持续集成流程问题</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/stanfordnlp/dspy" target="_blank">DSPy</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">stanfordnlp/dspy</span></div>
+  <div class="cm"><span class="stars">⭐ 36,208</span><span class="lang">Python</span><span>更新于 2026-07-19</span></div>
+  <div class="cd">DSPy 是斯坦福 NLP 团队维护的语言模型编程框架，主张用模块、签名、优化器和评估来声明任务，而不是手工堆叠提示词。它可在不同模型提供商间保持较稳定的程序结构，并用数据与指标优化提示和示例。适合构建可测试的 RAG、分类、问答或 Agent 子模块的开发者，尤其适用于需要复现、迭代和评估 LLM 行为的工程场景。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ 3.3.0b1</span><span class="release-date">2026-05-28</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 加入提供商无关的强类型语言模型请求、响应与工具规格对象</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 补充 OpenAI 与 LiteLLM 兼容转换辅助</div></div><div class="release-item"><div><span class="release-tag">🏷️ 3.2.1</span><span class="release-date">2026-05-05</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复异步流式调用未转发自定义请求头的问题</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复 Embedder 单次调用禁用缓存的行为</div></div><div class="release-item"><div><span class="release-tag">🏷️ 3.2.0</span><span class="release-date">2026-04-21</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 扩展优化器兼容性并增加图像 SSL 跳过参数</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 改进调用历史检查与文件输出</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/sgl-project/sglang" target="_blank">SGLang</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">sgl-project/sglang</span></div>
+  <div class="cm"><span class="stars">⭐ 30,462</span><span class="lang">Python</span><span class="topic">attention</span><span class="topic">blackwell</span><span class="topic">cuda</span><span>更新于 2026-07-19</span></div>
+  <div class="cd">SGLang 是服务大语言模型与多模态模型的高性能推理框架，围绕批处理、缓存、调度和硬件优化降低在线生成的延迟与成本。它为模型部署提供 Python 接口与运行时能力，适合将开源模型接入高并发 API、Agent 后端或多模态应用。对需要在 NVIDIA GPU 等环境中持续优化吞吐、显存和模型兼容性的推理平台团队尤其有价值。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ v0.5.15.post1</span><span class="release-date">2026-07-14</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 为 GLM 5.2 提供补丁更新</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复非 CUDA/HIP 设备上的 DSA 模型启动与 CUDA 12 镜像依赖问题</div></div><div class="release-item"><div><span class="release-tag">🏷️ v0.5.15</span><span class="release-date">2026-07-10</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 加入 Hunyuan 3、HRM-Text、LocateAnything-3B 与 Unlimited-OCR 支持</div></div><div class="release-item"><div><span class="release-tag">🏷️ v0.5.14</span><span class="release-date">2026-06-26</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 加入 GLM-5.2、LFM2.5、Kimi-K2.7-Code 等模型适配</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/yamadashy/repomix" target="_blank">Repomix</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">yamadashy/repomix</span></div>
+  <div class="cm"><span class="stars">⭐ 27,226</span><span class="lang">TypeScript</span><span class="topic">ai</span><span class="topic">anthropic</span><span class="topic">artificial-intelligence</span><span>更新于 2026-07-19</span></div>
+  <div class="cd">Repomix 用于把整个代码仓库整理为单个、适合交给 LLM 阅读的上下文文件。它会按配置处理目录、忽略规则、压缩与注释，让 Claude、ChatGPT、DeepSeek 等模型在不直接访问仓库的情况下仍能获得可审阅的代码快照。适合代码咨询、迁移评估、离线审查和向外部模型提交最小必要上下文；对敏感仓库应先核查过滤规则并避免打包密钥。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ v1.16.1</span><span class="release-date">2026-07-11</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复 WebAssembly 内存泄漏</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 扩展 JavaScript/TypeScript 注释移除能力</div></div><div class="release-item"><div><span class="release-tag">🏷️ v1.16.0</span><span class="release-date">2026-06-29</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 提高压缩模式对无法解析文件的容错性</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复远程打包后的分片输出复制问题</div></div><div class="release-item"><div><span class="release-tag">🏷️ v1.15.0</span><span class="release-date">2026-06-18</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复 .gitignore 边界情况与多根目录相对路径重复</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 更新核心依赖</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/huggingface/trl" target="_blank">TRL</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">huggingface/trl</span></div>
+  <div class="cm"><span class="stars">⭐ 18,872</span><span class="lang">Python</span><span>更新于 2026-07-19</span></div>
+  <div class="cd">TRL 是 Hugging Face 的 Transformer 强化学习训练库，提供 SFT、DPO、GRPO、奖励建模等后训练算法及与常用推理栈的集成。它帮助研究和工程团队以较少样板代码训练偏好对齐、推理优化或多模态语言模型，并保留可配置的分布式训练路径。适合开展开源模型对齐实验、构建奖励驱动训练流水线，以及需要复用成熟算法实现的开发者。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ v1.8.0</span><span class="release-date">2026-07-09</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复非 NVLink 环境下 GRPO、vLLM 与 PEFT 组合可能挂起的问题</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修正多种偏好优化器的 ZeRO-3 与混合精度兼容性</div></div><div class="release-item"><div><span class="release-tag">🏷️ v1.7.1</span><span class="release-date">2026-07-04</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复 DPO/SFT 分词数据集指纹与 GRPO 同步问题</div></div><div class="release-item"><div><span class="release-tag">🏷️ v1.7.0</span><span class="release-date">2026-06-25</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 新增重复惩罚与余弦缩放奖励</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 降低参考模型冻结层的内存占用</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/microsoft/mcp-for-beginners" target="_blank">MCP 入门教程</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">microsoft/mcp-for-beginners</span></div>
+  <div class="cm"><span class="stars">⭐ 16,781</span><span class="lang">Jupyter Notebook</span><span class="topic">csharp</span><span class="topic">java</span><span class="topic">javascript</span><span>更新于 2026-07-18</span></div>
+  <div class="cd">mcp-for-beginners 是微软维护的开源课程，通过 .NET、Java、TypeScript、JavaScript、Rust 与 Python 示例讲解 Model Context Protocol（MCP）。内容从会话建立、工具暴露到服务编排，强调模块化、可扩展和安全的 AI 工作流。它适合想把本地工具、企业服务或数据接入 LLM/Agent 的开发者，也可作为团队统一 MCP 概念与跨语言实现方式的教学起点。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/GreyDGL/PentestGPT" target="_blank">PentestGPT</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">GreyDGL/PentestGPT</span></div>
+  <div class="cm"><span class="stars">⭐ 14,323</span><span class="lang">Python</span><span class="topic">large-language-models</span><span class="topic">llm</span><span class="topic">penetration-testing</span><span>更新于 2026-07-19</span></div>
+  <div class="cd">PentestGPT 是由大语言模型驱动的自动化渗透测试 Agent 框架，尝试把信息收集、漏洞分析、工具调用与结果记录串成可监督的安全测试流程。其终端界面可展示实时活动，并支持容器化部署，目标是辅助授权场景下的安全研究与演练。它适合红队、应用安全人员和教学实验室；所有扫描与利用必须取得明确授权并遵守目标环境的规则。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ v1.0.0</span><span class="release-date">2025-12-24</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 发布 Agent 化渗透测试流水线与实时终端界面</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 提供 Docker 部署，并公布 XBOW 基准结果</div></div><div class="release-item"><div><span class="release-tag">🏷️ v0.14.0</span><span class="release-date">2024-05-15</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 改进 OpenAI 兼容性并支持 GPT-4o</div></div><div class="release-item"><div><span class="release-tag">🏷️ v0.13.0 Official Support For GPT4o</span><span class="release-date">2024-05-14</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 完成代码格式化与小型缺陷修复</div></div></div>
+</div></div><div id="section-paper" class="section"><div class="sh paper"><span class="icon">📄</span><span class="title">论文速读</span><span class="cnt">5 篇</span></div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.15277v1" target="_blank">划分、提示、聚合：语言模型的统计自一致性</a></div>
+  <div class="cm">2026-07-16 · cs.CL</div>
+  <div class="cd"><b>摘要：</b>论文从条件推断视角审视 in-context learning：若提示下的模型输出可视为条件分布估计，它应满足基本的概率自一致性。作者提出以划分样本、构造提示并聚合结果的统计检验思路，用于观察 LLM 估计是否稳定一致。该工作为理解提示驱动推断的可信度提供了可量化的理论与实验入口。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.15257v1" target="_blank">SearchOS-V1：迈向稳健的开放域信息检索 Agent 协作</a></div>
+  <div class="cm">2026-07-16 · cs.AI, cs.IR</div>
+  <div class="cd"><b>摘要：</b>SearchOS-V1 关注集成工具的语言模型在开放域检索任务中的协作问题。随着交互历史变长，Agent 容易丢失任务进度；当检索未得到有效证据时，单 Agent 与多 Agent 方法也难以恢复。论文提出面向搜索过程的系统设计，旨在让协作体保存状态、处理失败并更可靠地汇集证据。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.15254v1" target="_blank">teLLMe Why：城市驾驶数据的探索性因果分析</a></div>
+  <div class="cm">2026-07-16 · cs.AI, cs.HC</div>
+  <div class="cd"><b>摘要：</b>论文针对交通管理机构积累的大规模视频衍生数据，研究如何回答“降雨会怎样改变车流密度”等反事实问题。由于观测数据缺乏干预，传统相关分析无法直接给出因果结论。teLLMe 将语言模型能力用于探索性因果分析，帮助从城市驾驶数据中组织假设、解释变量关系并支持安全与拥堵研究。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.15247v1" target="_blank">AutoSynthesis：用于自动化元分析的 Agent 系统</a></div>
+  <div class="cm">2026-07-16 · cs.AI</div>
+  <div class="cd"><b>摘要：</b>AutoSynthesis 提出端到端多 Agent 系统，将证据综合这一高度人工、难以扩展的研究环节自动化。系统面向科学、医学、教育和政策中的定量元分析，协调检索、筛选、数据提取和综合步骤。其价值在于把分散的一手研究转成可复核的证据结论，同时也要求研究者审查检索范围、偏差控制与最终统计判断。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.15246v1" target="_blank">ARMOR++：面向深伪检测器可迁移攻击的多领域原语 Agent 编排</a></div>
+  <div class="cm">2026-07-16 · cs.CV</div>
+  <div class="cd"><b>摘要：</b>ARMOR++ 研究深伪检测器在黑盒对抗迁移条件下的脆弱性。现有迁移攻击常依赖与架构绑定的取证线索，且在无查询限制下难保持效果；论文使用 Agent 编排多领域攻击原语以增强语义感知与可迁移性。该工作可用于评估检测系统鲁棒性和改进防御，不应被用于规避真实平台的安全检测。</div>
+</div></div><div id="section-blog" class="section"><div class="sh blog"><span class="icon">📢</span><span class="title">官方动态</span><span class="cnt">5 条</span></div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenAI</span><a class="blog-title" href="https://openai.com/index/a-scorecard-for-the-ai-age/" target="_blank">AI 时代的价值记分卡</a><span class="blog-date">2026-07-17</span></div>
+  <div class='blog-summary'>摘要：OpenAI 讨论企业评估 AI 投入的方式：不能只看 token 单价、购买席位或活跃用户，而要衡量 AI 是否完成有价值的工作、每项成功任务的总成本、结果可靠性，以及规模化后每一美元带来的产出。文章将这一框架概括为“每美元有效智能”，强调把模型成本与人工复核、重试和业务结果一并考量。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenAI</span><a class="blog-title" href="https://openai.com/index/why-teens-deserve-access-safe-ai/" target="_blank">为什么青少年应获得安全的 AI 使用权</a><span class="blog-date">2026-07-16</span></div>
+  <div class='blog-summary'>摘要：OpenAI 认为青少年已广泛将 ChatGPT 用于学习、信息获取和效率提升，因此关键不在于简单禁止，而在于提供适龄保护。文章列出年龄预测、家长控制、家庭资源与学习功能等措施，并强调在模型能力提升时，应将未成年人安全、现实世界支持和透明预期作为产品设计的优先条件。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenAI</span><a class="blog-title" href="https://openai.com/index/unlocking-self-improvement-gpt-red/" target="_blank">GPT-Red：以自我改进提升模型鲁棒性</a><span class="blog-date">2026-07-15</span></div>
+  <div class='blog-summary'>摘要：OpenAI 发布 GPT-Red 的研究介绍。这一自动化红队模型通过与其他模型的自博弈寻找提示注入等漏洞，使攻击与防御能力共同迭代。文章称传统人工红队难以随模型和 Agent 的攻击面扩展，GPT-Red 用模拟浏览、邮件、日历和代码编辑等场景扩大评估覆盖，以便在更广泛部署前修补问题。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">Anthropic</span><a class="blog-title" href="https://www.anthropic.com/news/hard-questions" target="_blank">欢迎尖锐的问题</a><span class="blog-date">2026-07-09</span></div>
+  <div class='blog-summary'>摘要：Anthropic 的文章讨论如何面对外部对 AI 系统、安全实践和公司决策的严格质询。其核心是将批评视为改进模型治理与社会影响评估的输入，而非仅作公关回应。对于使用 Claude 或部署 Agent 的团队，这类公开讨论提醒了透明沟通、风险披露和接受独立审视在建立长期信任中的作用。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenRouter</span><a class="blog-title" href="https://openrouter.ai/blog/announcements/brand-refresh/" target="_blank">OpenRouter 的全新界面</a><span class="blog-date">2026-07-13</span></div>
+  <div class='blog-summary'>摘要：OpenRouter 更新了产品界面与视觉呈现，旨在让用户更清晰地浏览模型、价格、使用状态与路由能力。作为聚合多家模型提供商的 API 平台，界面改版虽不直接改变模型能力，却会影响开发者选择模型、比较成本和调试调用的效率。对多模型应用团队而言，统一且可见的运行信息有助于降低切换与运维摩擦。</div>
+</div></div><div id="section-news" class="section"><div class="sh news"><span class="icon">🏭</span><span class="title">行业动态</span><span class="cnt">6 条</span></div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOaEZNa3ZZZUpGMGRLajIyY2pLTjduZmhTVHp1Q0VkNEl0X0lGVUs3aXRfb1lrRjlWSS1IckF0MV80X0Rxb2o0MU1VbU8zVVlNMElnOWhjdGp4Zlp3ZkRuOGlodnpwZmhJOWpvYnB6WVd0OXhnR2J1MHlFWUZ0ZlJ1cUpWTjFkMU1qV0JzZFBDZUVMRTFoVzhSZWNRWXZVTFdxRk1HMFhUYlpRQkRNdnZGNWFiS0h5VVFCNlNzMlRrdV_SAcYBQVVfeXFMTWtlMlUwMFM4STZCMTRXVlg5VngxWU04cVRndWRmdlRhWTM3aV9ZUHB1TFNSa0hpTmpQUFltTTc4ZGhFMFhNNTVYdGRHLTRFbUo3Qm9JaE8xZGktVTh2LUhGMU55QWQ0WWRmY1NSdm45a0JWbXptZ0NBYWgzTV9UQ0N0ZzBveUVoQ2VRZnc4V3VCYTMyUlVhSk9sMG1xR1hYMnZLUmUzbmZZOFllQ1dET1FTTHRCMGpIQWhtQXRqSmtYZWdBS2R3?oc=5" target="_blank">认识 GPT-Red：OpenAI 用于提升模型安全性的 LLM“超级黑客”</a><span class="news-date">Wed, 15 Jul 2026 17:09:37 GMT</span></div>
+  <div class='news-summary'>摘要：MIT Technology Review 报道，OpenAI 用 GPT-Red 作为自动化红队伙伴，寻找提示注入等攻击路径，再以结果训练其他模型增强防御。文章指出，Agent 可访问文件、网站和第三方代码后攻击面会扩大，单靠人工测试难以覆盖。自博弈式评估的重点是尽早发现新型失效模式，而非将安全测试留到发布之后。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1sdFVscElTclFSQ2RUOWRFNHptLWx1N0xacTcwU1pFc0JDZE5yTVl5aW1hUmJWTDFtVzNZTGxaN3JzNlkyX0xLdUF2QUR3eGZWbjRGSkxXZHZNMTB6N3d4V2N5OXpMRmRkSl9OdnR5SkxYOHlEM0E?oc=5" target="_blank">TuxBot v3：LLM 辅助开发的 IoT 僵尸网络框架</a><span class="news-date">Wed, 15 Jul 2026 10:06:37 GMT</span></div>
+  <div class='news-summary'>摘要：Unit 42 披露名为 TuxBot v3 Evolution 的模块化 IoT 僵尸网络框架，分析发现作者曾借助 LLM 编写代码，但样本中还遗留安全免责声明且部分功能失效。报告说明生成式工具可降低恶意代码制作门槛，却不能替代人工审查；研究者担心后续修订版本可能更完善，建议防守方持续追踪相关 IoT 威胁。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMigAFBVV95cUxPdllVeWE1am9KTmd6eDlmSm14UEpIc2pGb2hMYUZ1VS05eVBkRHZEbFZ0WlZYQmhfeUg4SzRTa1hPRWl6MTI3ZGJTQXRCSzJRN0lOcE43ZEJheVZiU0Y4S3dDLWQteHRmNVRuMXFCeEUyUDlmY2hVNGY1OHhRSGpHcA?oc=5" target="_blank">当我的 AI Agent 要找你的经理：代理式服务的边界</a><span class="news-date">Sat, 18 Jul 2026 08:07:44 GMT</span></div>
+  <div class='news-summary'>摘要：《波士顿环球报》评论以“让 AI Agent 替用户交涉”为切入点，讨论自动化代理进入客服、消费决策和日常沟通后可能改变的互动方式。此类服务承诺节省时间，却也带来授权范围、责任归属、身份透明和对方是否愿意与机器协商的问题。文章提示产品设计应保留人类升级通道与可控的代表权限。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPVFVWNG50dEtGNHhHcDZadDR2c3UtZGw5STRHOTc4MW1LenNaOHhMdkFoWTlOaV90eHZCUlVFQzhPVmZsaDNoVU9yUF9DRUh6ZE5hdC1IUkpwOG13dFNOdUJ2RjEzUGdRQzBocExCN0dGMG9NbTQxNVJhcnBBdVd2VGg3M2w3a1ItLS1GbzJlQ19Pa2VJWERLUTVyVnlwb0FsNWZNdXhRQQ?oc=5" target="_blank">使用 AWS WAF Bot Control 验证合法 AI Agent 流量</a><span class="news-date">Tue, 14 Jul 2026 15:18:42 GMT</span></div>
+  <div class='news-summary'>摘要：AWS 介绍如何借助 WAF Bot Control 区分合法 AI Agent 与自动化滥用流量。随着搜索、采购和运维 Agent 更频繁访问网站，简单按 User-Agent 封禁会误伤正常业务；验证、分类和可审计策略成为更细粒度的替代方案。该实践对需要开放机器访问、同时防范抓取、欺诈和资源滥用的站点运营者具有参考意义。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMitwFBVV95cUxQTnUtSFFraUNONDhSemRxQzJpTXhkMlVleHpEN0N0Mll5TmZqUVJZVGNraWFVUTZzWVZ5NDhOZjJILV9yLUg1cEM4UFN3Z1pRcmVxNVZXakI1Tk0teDhDT3FnWTdpaktPR05SNlUzSEstVGdPeWFmdVE3VE9ybFlmQ3lScC1sbS1VR2x4UnRtbnpVd3hCbWg3a2ZHcTVweTdwdlhNeDNuTGRNdkx1bm5QYllNVGRNRzQ?oc=5" target="_blank">Vertu 向高管推销 6,880 美元 AI Agent，实际表现如何？</a><span class="news-date">Fri, 17 Jul 2026 22:55:09 GMT</span></div>
+  <div class='news-summary'>摘要：TechCrunch 评测 Vertu 面向高管的高价 AI Agent 产品，关注其以奢侈硬件和代理服务包装后的实际能力。报道的价值不在于单一产品定价，而在于提醒企业采购者区分演示体验、模型能力、可靠的任务执行与人工支持：昂贵设备或订阅并不天然等于可托付的自动化，仍需以真实工作流和失败处理来验证。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Hacker News</span><a class="news-title" href="https://charlesazam.com/blog/fable-5-gpt-5-6-sol-goal/" target="_blank">Fable 5 与 GPT-5.6 Sol 在 NP 困难问题上的比较：/goal 有帮助吗？</a><span class="news-date">2026-07-18</span></div>
+  <div class='news-summary'>摘要：一篇 Hacker News 讨论贴比较 Fable 5 与 GPT-5.6 Sol 解决同一未公开 NP 困难优化问题的表现，并测试各自的 /goal 模式。作者报告 Fable 5 的解质量与稳定性更突出，但认为 /goal 并非通用的“更努力”开关，而是会改变控制循环与搜索路径。结果附有代码、提示与轨迹，仍应视为单任务实验而非普适排行榜。</div>
+</div></div>
+<div class="stats">
+  <div><div class="sv">28</div><div class="sl">信息条数</div></div>
+  <div><div class="sv">7</div><div class="sl">GitHub 项目</div></div>
+  <div><div class="sv">5</div><div class="sl">Trending</div></div>
+  <div><div class="sv">5</div><div class="sl">官方动态</div></div>
+</div>
+<div class="ft">由 Hermes Agent 自动生成 | 2026-07-20 10:13</div>
+</div>
+<script>
+(() => {
+  const progressBar = document.getElementById('progress-bar');
+  const percentLabel = document.getElementById('reading-percent');
+  const currentLabel = document.getElementById('current-section-label');
+  const links = Array.from(document.querySelectorAll('.quick-link'));
+  const sections = links
+    .map(link => {
+      const id = link.getAttribute('data-target');
+      const section = document.getElementById(id);
+      return section ? { id, link, section, label: link.textContent.trim() } : null;
+    })
+    .filter(Boolean);
+
+  function updateProgress() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = maxScroll > 0 ? Math.min(100, Math.max(0, (scrollTop / maxScroll) * 100)) : 0;
+    progressBar.style.width = percent + '%';
+    percentLabel.textContent = Math.round(percent) + '%';
+  }
+
+  function updateActiveSection() {
+    const trigger = window.innerHeight * 0.22;
+    let current = sections[0];
+    for (const item of sections) {
+      const rect = item.section.getBoundingClientRect();
+      if (rect.top <= trigger) {
+        current = item;
+      }
+    }
+    if (!current) return;
+    links.forEach(link => link.classList.remove('active'));
+    current.link.classList.add('active');
+    currentLabel.textContent = current.label.replace(/^[^\s]+\s/, '');
+  }
+
+  function onScroll() {
+    updateProgress();
+    updateActiveSection();
+  }
+
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script></body></html>

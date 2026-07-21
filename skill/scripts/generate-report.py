@@ -620,9 +620,12 @@ for p in trending:
     t = p.get('today','')
     l = f'<span class="lang">{p["lang"]}</span>' if p.get('lang') else ''
     d = p.get('desc_zh', '') or p.get('desc', '') or ''
+    display_name = p.get('name_zh') or p.get('name', '')
+    original_name = p.get('name', '')
+    original_html = f'<span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">{original_name}</span>' if original_name and original_name != display_name else ''
     body += f"""
 <div class="card">
-  <div class="ct"><a href="{p.get('url','')}" target="_blank">{p['name']}</a></div>
+  <div class="ct"><a href="{p.get('url','')}" target="_blank">{display_name}</a>{original_html}</div>
   <div class="cm"><span class="stars">⭐ {s}</span>{l}{t}</div>
   <div class="cd">{d}</div>
 </div>"""
@@ -651,6 +654,9 @@ for p in gh:
     l = f'<span class="lang">{p["lang"]}</span>' if p.get('lang') else ''
     topics = ''.join(f'<span class="topic">{t}</span>' for t in p.get('topics', [])[:3])
     d = p.get('desc_zh', '') or p.get('desc', '') or ''
+    display_name = p.get('name_zh') or p.get('name', '')
+    original_name = p.get('name', '')
+    original_html = f'<span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">{original_name}</span>' if original_name and original_name != display_name else ''
     # Releases 展示 — 支持 release_highlights_zh（子 Agent 生成的中文改动说明）
     releases_html = ''
     releases = p.get('releases', [])
@@ -682,7 +688,7 @@ for p in gh:
         releases_html = '<div class="releases-section">' + ''.join(rel_items) + '</div>'
     body += f"""
 <div class="card">
-  <div class="ct"><a href="{p['url']}" target="_blank">{p['name']}</a></div>
+  <div class="ct"><a href="{p['url']}" target="_blank">{display_name}</a>{original_html}</div>
   <div class="cm"><span class="stars">⭐ {s}</span>{l}{topics}<span>更新于 {p['updated']}</span></div>
   <div class="cd">{d}</div>
   {releases_html}

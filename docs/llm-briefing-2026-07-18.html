@@ -1,0 +1,672 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LLM & Agent Daily Briefing | 2026-07-18</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+  background: #1B2838;
+  color: #e2e8f0;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(56, 189, 248, 0.2), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 40%, rgba(139, 92, 246, 0.15), transparent),
+    radial-gradient(ellipse 50% 60% at 5% 85%, rgba(52, 211, 153, 0.1), transparent),
+    repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(148, 163, 184, 0.08) 49px, rgba(148, 163, 184, 0.08) 50px),
+    repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(148, 163, 184, 0.08) 49px, rgba(148, 163, 184, 0.08) 50px);
+  pointer-events: none;
+  z-index: 0;
+}
+.container { max-width:1080px; margin:0 auto; padding:2rem; position: relative; z-index: 1; }
+.header { text-align:center; margin-bottom:2.5rem; position: relative; padding-bottom:1.5rem; }
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.6), rgba(139, 92, 246, 0.6), transparent);
+}
+.header h1 {
+  font-size:2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom:0.4rem;
+  letter-spacing: -0.02em;
+}
+.sub { color:#64748b; font-size:0.9rem; font-weight: 500; letter-spacing: 0.05em; }
+.progress-rail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(148, 163, 184, 0.08);
+  z-index: 20;
+}
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #34d399, #38bdf8, #a78bfa);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+  transition: width 0.12s ease-out;
+}
+.quick-nav {
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 1.2rem;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+.quick-nav-links {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+.quick-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(30, 41, 59, 0.65);
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+.quick-link:hover {
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.48);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(30, 41, 59, 0.88));
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22), 0 0 0 1px rgba(96, 165, 250, 0.12);
+}
+.quick-link.active {
+  color: #f8fafc;
+  border-color: rgba(96, 165, 250, 0.35);
+  background: rgba(37, 99, 235, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.12);
+}
+.quick-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.quick-status strong {
+  color: #f8fafc;
+  font-weight: 700;
+}
+.section {
+  margin-bottom:2rem;
+  padding: 1.2rem;
+  border-radius: 20px;
+  position: relative;
+  background: rgba(27, 40, 56, 0.5);
+  scroll-margin-top: 88px;
+}
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(148, 163, 184, 0.1), transparent, rgba(148, 163, 184, 0.05));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.sh {
+  display:flex;
+  align-items:center;
+  gap:0.8rem;
+  margin-bottom:1rem;
+  padding-bottom:0.5rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+.sh .icon { font-size:1.3rem; }
+.sh .title { font-size:1.2rem; font-weight:700; color:#f1f5f9; letter-spacing: -0.01em; }
+.sh.trending .title { color:#34d399; }
+.sh.github .title { color:#60a5fa; }
+.sh.paper .title { color:#a78bfa; }
+.sh.blog .title { color:#38bdf8; }
+.sh.news .title { color:#fb923c; }
+.cnt {
+  font-size:0.7rem;
+  color:#94a3b8;
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  padding:0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-left:auto;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.card {
+  background: linear-gradient(135deg, rgba(22, 35, 50, 0.9), rgba(22, 35, 50, 0.75));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  border-left: 3px solid rgba(96, 165, 250, 0.4);
+  border-radius: 14px;
+  padding:1.1rem 1.3rem;
+  margin-bottom:0.7rem;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+.card::after {
+  content: '';
+  position: absolute;
+  inset: -20% auto auto -10%;
+  width: 42%;
+  height: 140%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.0), rgba(255,255,255,0.06), rgba(255,255,255,0.0));
+  transform: translateX(-140%) skewX(-18deg);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+.card:hover {
+  border-color: rgba(96, 165, 250, 0.42);
+  border-left-color: #60a5fa;
+  background: linear-gradient(135deg, rgba(36, 50, 72, 0.96), rgba(28, 39, 58, 0.84));
+  transform: translateY(-4px) translateX(6px) scale(1.008);
+  box-shadow: 0 14px 34px rgba(96, 165, 250, 0.18), 0 0 0 1px rgba(96, 165, 250, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+.card:hover::after {
+  transform: translateX(280%) skewX(-18deg);
+}
+/* Section-specific card accent colors */
+.section:has(.sh.trending) .card { border-left-color: rgba(52, 211, 153, 0.5); }
+.section:has(.sh.trending) .card:hover { border-left-color: #34d399; box-shadow: 0 14px 34px rgba(52, 211, 153, 0.16), 0 0 0 1px rgba(52, 211, 153, 0.08), inset 0 1px 0 rgba(255,255,255,0.06); }
+.section:has(.sh.paper) .card { border-left-color: rgba(167, 139, 250, 0.5); }
+.section:has(.sh.paper) .card:hover { border-left-color: #a78bfa; box-shadow: 0 14px 34px rgba(167, 139, 250, 0.16), 0 0 0 1px rgba(167, 139, 250, 0.08), inset 0 1px 0 rgba(255,255,255,0.06); }
+
+.ct { font-size:1rem; font-weight:600; margin-bottom:0.35rem; letter-spacing: -0.01em; }
+.ct a { color:#60a5fa; text-decoration:none; transition: color 0.2s; }
+.ct a:hover { color:#93c5fd; text-decoration:underline; }
+.cm { display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.78rem; color:#64748b; margin-bottom:0.4rem; }
+.stars { color:#fbbf24; font-weight:600; }
+.lang {
+  background: rgba(56, 189, 248, 0.1);
+  color:#38bdf8;
+  padding:0.12rem 0.5rem;
+  border-radius: 10px;
+  font-size:0.72rem;
+  font-weight: 500;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+}
+.topic {
+  background: rgba(167, 139, 250, 0.1);
+  color:#a78bfa;
+  padding:0.12rem 0.45rem;
+  border-radius: 10px;
+  font-size:0.68rem;
+  font-weight: 500;
+  border: 1px solid rgba(167, 139, 250, 0.15);
+}
+.cd { color:#cbd5e1; font-size:0.88rem; margin-top:0.4rem; line-height: 1.65; }
+.releases-section { margin-top:0.8rem; display:flex; flex-direction:column; gap:0.5rem; }
+.release-item {
+  background: rgba(34, 197, 94, 0.04);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  border-radius: 10px;
+  padding:0.6rem 0.8rem;
+  transition: all 0.2s ease;
+}
+.release-item:hover {
+  background: rgba(34, 197, 94, 0.08);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+.release-tag { color:#22c55e; font-weight:600; font-size:0.82rem; margin-right:0.5rem; }
+.release-date { color:#475569; font-size:0.72rem; }
+.release-summary { color:#94a3b8; font-size:0.78rem; margin-top:0.25rem; line-height:1.5; }
+.blog-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  border-left: 3px solid rgba(56, 189, 248, 0.4);
+  border-radius: 12px;
+  padding:0.8rem 1.2rem;
+  margin-bottom:0.6rem;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.blog-card::after {
+  content: '';
+  position: absolute;
+  inset: -15% auto auto -10%;
+  width: 36%;
+  height: 130%;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.06), rgba(255,255,255,0));
+  transform: translateX(-150%) skewX(-18deg);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+.blog-card:hover {
+  border-color: rgba(56, 189, 248, 0.42);
+  border-left-color: #38bdf8;
+  background: linear-gradient(135deg, rgba(36, 53, 76, 0.94), rgba(28, 41, 61, 0.82));
+  transform: translateY(-4px) translateX(6px) scale(1.008);
+  box-shadow: 0 14px 32px rgba(56, 189, 248, 0.16), 0 0 0 1px rgba(56, 189, 248, 0.08);
+}
+.blog-card:hover::after {
+  transform: translateX(285%) skewX(-18deg);
+}
+.blog-src {
+  display:inline-block;
+  font-size:0.68rem;
+  color:#38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  padding:0.12rem 0.45rem;
+  border-radius: 8px;
+  margin-right:0.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.blog-title { color:#60a5fa; font-size:0.92rem; font-weight:500; text-decoration:none; }
+.blog-title:hover { color:#93c5fd; text-decoration:underline; }
+.blog-date { color:#475569; font-size:0.72rem; margin-left:0.4rem; }
+.blog-summary { color:#94a3b8; font-size:0.83rem; margin-top:0.35rem; line-height: 1.5; }
+.news-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(251, 146, 60, 0.12);
+  border-left: 3px solid rgba(251, 146, 60, 0.4);
+  border-radius: 12px;
+  padding:0.8rem 1.2rem;
+  margin-bottom:0.6rem;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.news-card::after {
+  content: '';
+  position: absolute;
+  inset: -15% auto auto -10%;
+  width: 36%;
+  height: 130%;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.06), rgba(255,255,255,0));
+  transform: translateX(-150%) skewX(-18deg);
+  transition: transform 0.45s ease;
+  pointer-events: none;
+}
+.news-card:hover {
+  border-color: rgba(251, 146, 60, 0.46);
+  border-left-color: #fb923c;
+  background: linear-gradient(135deg, rgba(56, 44, 33, 0.94), rgba(40, 34, 30, 0.84));
+  transform: translateY(-4px) translateX(6px) scale(1.008);
+  box-shadow: 0 14px 32px rgba(251, 146, 60, 0.18), 0 0 0 1px rgba(251, 146, 60, 0.08);
+}
+.news-card:hover::after {
+  transform: translateX(285%) skewX(-18deg);
+}
+.news-src {
+  display:inline-block;
+  font-size:0.68rem;
+  color:#fb923c;
+  background: rgba(251, 146, 60, 0.08);
+  border: 1px solid rgba(251, 146, 60, 0.15);
+  padding:0.12rem 0.45rem;
+  border-radius: 8px;
+  margin-right:0.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.news-title { color:#fbbf24; font-size:0.92rem; font-weight:500; text-decoration:none; }
+.news-title:hover { color:#fcd34d; text-decoration:underline; }
+.news-date { color:#475569; font-size:0.72rem; margin-left:0.4rem; }
+.news-summary { color:#94a3b8; font-size:0.83rem; margin-top:0.35rem; line-height: 1.5; }
+.stats {
+  display:flex;
+  justify-content:center;
+  gap:2.5rem;
+  margin-top:2rem;
+  padding-top:1.2rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+.sv { font-size:1.3rem; font-weight:700; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.sl { font-size:0.72rem; color:#64748b; margin-top:0.15rem; letter-spacing: 0.02em; }
+.ft { color:#475569; font-size:0.78rem; text-align:center; margin-top:1.2rem; letter-spacing: 0.02em; }
+@media(max-width:640px) {
+  .container { padding:1rem; }
+  .header h1 { font-size:1.5rem; }
+  .card { padding:1rem 1.1rem; }
+  .section { padding: 1rem 0.8rem; }
+  .quick-nav {
+    top: 8px;
+    padding: 0.75rem 0.8rem;
+  }
+  .quick-status {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+</style></head><body><div class="progress-rail"><div id="progress-bar" class="progress-bar"></div></div><div class="container">
+<div class="header"><h1>📡 LLM & Agent Daily Briefing</h1><p class="sub">2026-07-18</p></div>
+<div class="quick-nav">
+  <div class="quick-nav-links">
+    <a class="quick-link" data-target="section-trending" href="#section-trending">🔥 Trending</a>
+    <a class="quick-link" data-target="section-github" href="#section-github">🚀 GitHub</a>
+    <a class="quick-link" data-target="section-paper" href="#section-paper">📄 论文</a>
+    <a class="quick-link" data-target="section-blog" href="#section-blog">📢 官方动态</a>
+    <a class="quick-link" data-target="section-news" href="#section-news">🏭 行业动态</a>
+  </div>
+  <div class="quick-status">当前阅读：<strong id="current-section-label">Trending</strong><span id="reading-percent">0%</span></div>
+</div><div id="section-trending" class="section"><div class="sh trending"><span class="icon">🔥</span><span class="title">GitHub Trending 今日热门</span><span class="cnt">11 条</span></div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/codecrafters-io/build-your-own-x" target="_blank">Build Your Own X</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">codecrafters-io/build-your-own-x</span></div>
+  <div class="cm"><span class="stars">⭐ 527,558</span><span class="lang">Markdown</span>1,068 stars today</div>
+  <div class="cd">Build Your Own X 是一个面向工程师的从零复现技术项目教程合集，覆盖 3D 渲染器、数据库、操作系统、AI Model 等主题。它不是单一 LLM 框架，但对希望理解模型、推理系统和底层工程机制的 AI/ML 学习者很有价值：通过手写核心组件，把抽象概念变成可运行代码，适合用作 AI 工程基础训练和面试准备材料。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/PostHog/posthog" target="_blank">PostHog</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">PostHog/posthog</span></div>
+  <div class="cm"><span class="stars">⭐ 36,257</span><span class="lang">Python</span>438 stars today</div>
+  <div class="cd">PostHog 是面向产品团队和 AI Agent 工作流的开源产品分析与可观测平台。它把事件分析、会话回放、功能开关、实验、日志、错误追踪和 AI observability 放在同一套上下文里，让 Agent 能诊断产品问题、发现增长机会并辅助修复。项目支持通过 Slack、Web、桌面端和 MCP 接入，适合构建自驱动产品和评估 AI 功能效果的团队。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/HenryNdubuaku/maths-cs-ai-compendium" target="_blank">数学、计算机与 AI 速成手册</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">HenryNdubuaku/maths-cs-ai-compendium</span></div>
+  <div class="cm"><span class="stars">⭐ 6,700</span><span class="lang">TypeScript</span>200 stars today</div>
+  <div class="cd">maths-cs-ai-compendium 是面向 AI/ML Research Engineer 的学习资料库，试图用更直观的方式组织数学、计算机科学和机器学习基础。它把教材中分散的概念整理为可在线阅读的结构化内容，强调直觉、例子和工程理解。对准备进入大模型、深度学习或研究工程岗位的人来说，它适合作为补齐线性代数、概率、优化与系统基础的路线图。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Nutlope/hallmark" target="_blank">Hallmark</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">Nutlope/hallmark</span></div>
+  <div class="cm"><span class="stars">⭐ 12,184</span><span class="lang">CSS</span>1,485 stars today</div>
+  <div class="cd">Hallmark 是为 Claude Code、Cursor 和 Codex 等 AI 编程助手设计的反“AI 味”设计技能。它把页面宏观结构、主题、视觉动词和校验步骤封装成可被 Agent 调用的设计流程，帮助生成更有审美一致性、更少模板感的前端界面。适合需要让代码 Agent 直接产出高质量 UI 原型、落地页或产品界面的开发者。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/github/copilot-sdk" target="_blank">GitHub Copilot SDK</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">github/copilot-sdk</span></div>
+  <div class="cm"><span class="stars">⭐ 9,822</span><span class="lang">Java</span>233 stars today</div>
+  <div class="cd">GitHub Copilot SDK 是用于把 Copilot Agent 能力嵌入应用和服务的多平台 SDK，覆盖 Python、TypeScript、Go、.NET、Java 和 Rust 等生态。它暴露与 Copilot CLI 背后相同的 agentic workflow 引擎，让第三方产品可以接入代码理解、任务执行和开发协作能力。适合希望在自有 IDE、内部工具或平台中集成 Copilot Agent 的工程团队。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/anthropics/cwc-workshops" target="_blank">Anthropic Code with Claude 工作坊</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">anthropics/cwc-workshops</span></div>
+  <div class="cm"><span class="stars">⭐ 1,619</span><span class="lang">TypeScript</span>45 stars today</div>
+  <div class="cd">cwc-workshops 汇集了 Anthropic Code with Claude 系列工作坊材料，虽然仓库标注不再维护，但内容直接面向 Agent 工程实践。材料覆盖模型选择评估、多 Agent 系统拆分、Claude Code 产品工作流、Managed Agent 接入和基于 MCP 的 Agent Battle。它适合想学习 Claude Code、Skills、MCP、evals 与生产化 Agent 编排方式的开发者参考。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/PrismML-Eng/Bonsai-demo" target="_blank">Bonsai Demo</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">PrismML-Eng/Bonsai-demo</span></div>
+  <div class="cm"><span class="stars">⭐ 1,737</span><span class="lang">Shell</span>278 stars today</div>
+  <div class="cd">Bonsai-demo 是 PrismML 团队围绕 Bonsai 系列模型发布的演示仓库，关联 Hugging Face 上的 Bonsai 27B、1-bit Bonsai 和 Ternary-Bonsai 模型集合。它更像是模型与工具链展示入口，帮助用户快速了解低比特或紧凑大模型的部署、试用和社区资源。适合关注高效 LLM、模型压缩和开源推理实验的研究者与工程师。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/tirth8205/code-review-graph" target="_blank">Code Review Graph</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">tirth8205/code-review-graph</span></div>
+  <div class="cm"><span class="stars">⭐ 19,830</span><span class="lang">Python</span>74 stars today</div>
+  <div class="cd">code-review-graph 是一个本地优先的代码智能图谱工具，面向 MCP、CLI 和 AI 编码助手。它会为代码库构建持久化结构图，让 Agent 在代码审查和大型仓库任务中只读取相关上下文，从而减少 token 消耗并提高定位效率。适合经常让 Claude Code、Codex 或其他 coding agent 处理大仓库评审、重构和缺陷排查的团队。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/openinterpreter/openinterpreter" target="_blank">Open Interpreter</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">openinterpreter/openinterpreter</span></div>
+  <div class="cm"><span class="stars">⭐ 66,445</span><span class="lang">Rust</span>431 stars today</div>
+  <div class="cd">Open Interpreter 是面向开放模型的本地编码 Agent，让 Kimi K3 等模型能够在用户环境中解释需求、运行代码并完成开发任务。它强调把模型推理与本地执行能力结合，使 AI 不只回答问题，还能操作文件、调用命令和迭代修复。适合希望用开源或可替换模型构建桌面级 coding agent、自动化脚本助手和实验性开发工作流的用户。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/RyanCodrai/turbovec" target="_blank">TurboVec</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">RyanCodrai/turbovec</span></div>
+  <div class="cm"><span class="stars">⭐ 13,379</span><span class="lang">Python</span>280 stars today</div>
+  <div class="cd">TurboVec 是基于 TurboQuant 的向量索引项目，用 Rust 编写并提供 Python 绑定。它面向向量检索、RAG 和嵌入式语义搜索场景，目标是在性能、内存占用和 Python 易用性之间取得平衡。对构建 LLM 检索增强系统、Agent 记忆库或大规模 embedding 搜索服务的工程师来说，它可作为轻量高性能向量索引组件评估。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/HKUDS/DeepTutor" target="_blank">DeepTutor</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">HKUDS/DeepTutor</span></div>
+  <div class="cm"><span class="stars">⭐ 27,435</span><span class="lang">Python</span>531 stars today</div>
+  <div class="cd">DeepTutor 是 HKUDS 推出的终身个性化辅导项目，聚焦用 AI 为学习者提供长期、连续的个性化教学支持。项目强调根据用户学习轨迹调整辅导内容，而不是一次性问答，适合探索教育 Agent、学习画像、知识追踪和个性化课程生成。它对关注 AI 教育产品和长期记忆型 Tutor Agent 的开发者具有参考价值。</div>
+</div></div><div id="section-github" class="section"><div class="sh github"><span class="icon">🚀</span><span class="title">GitHub 热门项目</span><span class="cnt">15 项</span></div>
+<p style="color:#64748b;font-size:0.85rem;margin-bottom:0.8rem;line-height:1.5">📅 AI 工具生态（插件/技能） | 🔍 stars:100..20000 | 🔑 AI plugin OR agent skill OR prompt engineering</p>
+<div class="card">
+  <div class="ct"><a href="https://github.com/stas00/ml-engineering" target="_blank">机器学习工程开放书</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">stas00/ml-engineering</span></div>
+  <div class="cm"><span class="stars">⭐ 18,416</span><span class="lang">Python</span><span class="topic">ai</span><span class="topic">debugging</span><span class="topic">gpus</span><span>更新于 2026-07-17</span></div>
+  <div class="cd">ml-engineering 是一本开源机器学习工程手册，聚焦训练、推理、GPU、调试、存储、网络和 MLOps 等生产化主题。它适合需要把 LLM 或深度学习模型稳定落地的工程师，用系统工程视角补齐从研究代码到可运维服务之间的关键能力。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/liyupi/ai-guide" target="_blank">鱼皮 AI 导航与教程</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">liyupi/ai-guide</span></div>
+  <div class="cm"><span class="stars">⭐ 17,376</span><span class="lang">JavaScript</span><span class="topic">ai</span><span class="topic">artificial-intelligence</span><span class="topic">chatgpt</span><span>更新于 2026-07-18</span></div>
+  <div class="cd">ai-guide 是面向中文开发者的 AI 资源与 Vibe Coding 入门教程集合，覆盖 DeepSeek、GPT、Gemini、Claude、Agent Skills、RAG、MCP、A2A、Cursor、Claude Code、Codex 和 Copilot 等主题。它更像一站式学习导航，适合快速了解 AI 工具生态与产品化路径。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/danielmiessler/LifeOS" target="_blank">LifeOS</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">danielmiessler/LifeOS</span></div>
+  <div class="cm"><span class="stars">⭐ 16,776</span><span class="lang">TypeScript</span><span class="topic">ai</span><span class="topic">ai-harness</span><span class="topic">augmentation</span><span>更新于 2026-07-18</span></div>
+  <div class="cd">LifeOS 是 Daniel Miessler 构建的 AI harness 与意图工程平台，用来把用户的长期目标、偏好和当前状态持续传递给 AI。它把 coding、business、life 和 work 等场景组织成可复用的上下文系统，适合探索个人 AI 操作系统、任务编排和高质量提示上下文管理。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ LifeOS 7.1.1 — Install Awareness</span><span class="release-date">2026-07-13</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 加入安装感知与路由修正</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 补充 EIA 油价序列和美元尺度格式化</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 改进观察模式，避免重复输出</div></div><div class="release-item"><div><span class="release-tag">🏷️ LifeOS 7.0.0 — The Bitter Pill Release</span><span class="release-date">2026-07-12</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 发布 Bitter Pill Engineering 架构调整</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 大幅减少常驻上下文</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 移除模式和层级概念，更新核心算法</div></div><div class="release-item"><div><span class="release-tag">🏷️ LifeOS 6.0.5 — Rename in the Code, New Harvest Skill</span><span class="release-date">2026-07-05</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 完成代码层面的 LifeOS 重命名</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 新增 Harvest 技能</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 补充项目标识与说明</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/chiphuyen/aie-book" target="_blank">AI Engineering 配套资源</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">chiphuyen/aie-book</span></div>
+  <div class="cm"><span class="stars">⭐ 16,544</span><span class="lang">Jupyter Notebook</span><span>更新于 2026-07-18</span></div>
+  <div class="cd">aie-book 是 Chip Huyen《AI Engineering》一书的配套材料和 AI 工程资源库，包含用于理解模型应用、评估、数据、检索和生产实践的补充内容。它适合从传统 ML 过渡到 LLM 应用工程的开发者，用作系统化学习和案例查阅。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/visenger/awesome-mlops" target="_blank">Awesome MLOps</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">visenger/awesome-mlops</span></div>
+  <div class="cm"><span class="stars">⭐ 13,956</span><span class="topic">ai</span><span class="topic">data-science</span><span class="topic">devops</span><span>更新于 2026-07-17</span></div>
+  <div class="cd">awesome-mlops 汇集 MLOps、机器学习平台、数据科学工程和模型运维相关资料。它不是框架本身，而是参考清单，适合需要建设 LLMOps、模型部署、监控、实验管理和生产化流程的团队快速发现工具、论文和实践案例。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/coleam00/context-engineering-intro" target="_blank">Context Engineering 入门</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">coleam00/context-engineering-intro</span></div>
+  <div class="cm"><span class="stars">⭐ 13,713</span><span class="lang">Python</span><span>更新于 2026-07-18</span></div>
+  <div class="cd">context-engineering-intro 把 context engineering 定义为让 AI 编码助手真正可靠工作的核心方法，围绕 Claude Code 展示如何组织上下文、规则、示例和工作流。项目适合正在从 vibe coding 转向可复现 Agent 工程的开发者，也可迁移到 Codex、Cursor 等工具。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/Orchestra-Research/AI-Research-SKILLs" target="_blank">AI Research Skills</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">Orchestra-Research/AI-Research-SKILLs</span></div>
+  <div class="cm"><span class="stars">⭐ 10,814</span><span class="lang">TeX</span><span class="topic">ai</span><span class="topic">ai-research</span><span class="topic">claude</span><span>更新于 2026-07-18</span></div>
+  <div class="cd">AI-Research-SKILLs 是 Orchestra Research 维护的开源 AI 研究与工程技能库，可打包给 Claude Code、Codex、Gemini 等 Agent 使用。它把文献调研、实验设计、论文写作、模型合并等研究流程拆成可调用技能，适合把通用模型扩展成研究助理的团队。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ v1.7.2 — Qoder Agent Support</span><span class="release-date">2026-06-16</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 新增 Qoder Agent 一等支持</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 安装器可自动检测 Qoder 并写入原生技能目录</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 模型合并技能加入无标签系数选择能力</div></div><div class="release-item"><div><span class="release-tag">🏷️ v1.7.1 — Inventory Consistency, Drift Guard & Security Hardening</span><span class="release-date">2026-06-15</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修正库存计数漂移</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 加入 drift guard 与安全加固</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 新增清单一致性检查脚本</div></div><div class="release-item"><div><span class="release-tag">🏷️ v1.4.0 - Autoresearch: Autonomous AI Research from Idea to Paper</span><span class="release-date">2026-03-16</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 加入自主 AI 研究到论文工作流</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 补充冷启动引导文件</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 改进 Agent 友好的安装路径和 Windows 支持</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/walkinglabs/learn-harness-engineering" target="_blank">Harness Engineering 入门教程</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">walkinglabs/learn-harness-engineering</span></div>
+  <div class="cm"><span class="stars">⭐ 10,476</span><span class="lang">TypeScript</span><span class="topic">agent</span><span class="topic">agentic</span><span class="topic">agentic-ai</span><span>更新于 2026-07-18</span></div>
+  <div class="cd">learn-harness-engineering 是从 0 到 1 的 harness engineering 初学教程，围绕 Agentic AI、AI Agent 和编码助手组织实践内容。它关注如何为模型搭建外部工具、上下文、评估和执行环，让 Agent 不只是聊天，而能在可控流程中完成任务。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/mrexodia/ida-pro-mcp" target="_blank">IDA Pro MCP 逆向助手</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">mrexodia/ida-pro-mcp</span></div>
+  <div class="cm"><span class="stars">⭐ 10,375</span><span class="lang">Python</span><span class="topic">ai</span><span class="topic">aiagent</span><span class="topic">binary-analysis</span><span>更新于 2026-07-18</span></div>
+  <div class="cd">ida-pro-mcp 是把 IDA Pro 与语言模型通过 MCP 连接的逆向工程助手。它让 AI 能查询函数、字符串、交叉引用和调试信息，并辅助重命名、理解反编译代码与安全分析。适合授权逆向、漏洞研究和二进制分析场景中的 AI 辅助工作流。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ 1.4.0</span><span class="release-date">2025-10-06</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 新增基于 idalib 的 MCP server</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 加入调试器相关 MCP 函数</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 支持列出全局对象和查询结构字段引用</div></div><div class="release-item"><div><span class="release-tag">🏷️ 1.3.0</span><span class="release-date">2025-04-09</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 支持全局变量重命名和类型调整</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 实现字符串列表与搜索能力</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复部分 IDA 类型信息兼容问题</div></div><div class="release-item"><div><span class="release-tag">🏷️ 1.2.0</span><span class="release-date">2025-03-29</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 补充使用提示</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 修复函数解析兼容性</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 支持解析 Hex-Rays 输出中的 demangled 名称</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/ZeroLu/awesome-nanobanana-pro" target="_blank">Nano Banana Pro Prompt 合集</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">ZeroLu/awesome-nanobanana-pro</span></div>
+  <div class="cm"><span class="stars">⭐ 10,180</span><span class="topic">gemini</span><span class="topic">nanobanana</span><span class="topic">nanobanana-pro</span><span>更新于 2026-07-17</span></div>
+  <div class="cd">awesome-nanobanana-pro 汇集 Nano Banana Pro/Nano Banana 2 图像模型的提示词与案例，面向创意生成和 prompt engineering 学习。它适合需要探索图像模型风格控制、复杂场景描述和高质量提示模板的设计师、创作者与 AI 应用开发者。</div>
+  
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/VoltAgent/voltagent" target="_blank">VoltAgent</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">VoltAgent/voltagent</span></div>
+  <div class="cm"><span class="stars">⭐ 10,081</span><span class="lang">TypeScript</span><span class="topic">agents</span><span class="topic">ai</span><span class="topic">ai-agents</span><span>更新于 2026-07-18</span></div>
+  <div class="cd">VoltAgent 是基于开源 TypeScript AI Agent 框架构建的 Agent 工程平台，面向多 Agent 应用、工具调用、状态管理和服务端运行。它适合希望用 JavaScript/TypeScript 快速构建生产级 AI Agent、工作流自动化和可观测 Agent 服务的团队。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ @voltagent/core@2.9.0</span><span class="release-date">2026-07-08</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 发布 core 2.9.0</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 包含核心框架修复与能力更新</div></div><div class="release-item"><div><span class="release-tag">🏷️ @voltagent/server-core@2.1.19</span><span class="release-date">2026-07-01</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 更新 server-core 依赖</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 同步 core 2.8.1 相关改动</div></div><div class="release-item"><div><span class="release-tag">🏷️ @voltagent/sandbox-e2b@2.0.3</span><span class="release-date">2026-07-01</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 发布 E2B sandbox 适配包维护版本</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 改进沙箱集成稳定性</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/spring-projects/spring-ai" target="_blank">Spring AI</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">spring-projects/spring-ai</span></div>
+  <div class="cm"><span class="stars">⭐ 9,152</span><span class="lang">Java</span><span class="topic">artificial-intelligence</span><span class="topic">java</span><span class="topic">spring-ai</span><span>更新于 2026-07-18</span></div>
+  <div class="cd">Spring AI 是 Spring 生态中的 AI 应用框架，帮助 Java 开发者用熟悉的配置、依赖注入和抽象层接入聊天模型、图像模型、向量存储和工具调用。它适合企业 Java 团队构建 RAG、Agent、模型服务封装和可观测 AI 应用。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ Spring AI 2.0.0</span><span class="release-date">2026-06-12</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 更新 Google GenAI 模型支持</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• OpenAI ChatModel 统一使用 Jackson 2</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 完善图像观测和 Prompt 相关 API</div></div><div class="release-item"><div><span class="release-tag">🏷️ Spring AI 1.1.8</span><span class="release-date">2026-06-12</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 为智谱 AI ChatCompletionFinishReason 补齐缺失枚举值</div></div><div class="release-item"><div><span class="release-tag">🏷️ Spring AI 1.0.9</span><span class="release-date">2026-06-12</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 弃用 Pixtral 相关模型配置</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/zhaoxuya520/reverse-skill" target="_blank">Reverse Skill 安全路由包</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">zhaoxuya520/reverse-skill</span></div>
+  <div class="cm"><span class="stars">⭐ 8,377</span><span class="lang">PowerShell</span><span>更新于 2026-07-18</span></div>
+  <div class="cd">reverse-skill 是面向逆向工程、授权渗透和安全研究的 AI 技能路由包，支持 Claude Code、Kiro、Cursor、Cline 等编码客户端。它通过 AI 自动路由、按需工具链自举和自进化经验库，把复杂安全任务拆成可执行的技能路径。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ v1.0.0 — First formal release</span><span class="release-date">2026-07-17</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 发布首个正式版本</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 明确项目定位为技能路由、工具自举和日志系统</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 本地工具路径仅写入生成的 tool-index，不随标签内容发布</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/cobusgreyling/loop-engineering" target="_blank">Loop Engineering</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">cobusgreyling/loop-engineering</span></div>
+  <div class="cm"><span class="stars">⭐ 8,325</span><span class="lang">JavaScript</span><span class="topic">agentic-ai</span><span class="topic">ai-agents</span><span class="topic">ai-coding</span><span>更新于 2026-07-18</span></div>
+  <div class="cd">loop-engineering 汇集面向 AI 编码 Agent 的循环工程模式、starter 和 CLI 工具，强调通过提示、编排、审计和成本估算构建可重复运行的 Agent 系统。项目包含 loop-audit、loop-init、loop-cost 等工具，适合设计日常自动化和开发协作循环。</div>
+  <div class="releases-section"><div class="release-item"><div><span class="release-tag">🏷️ v1.5.0 — Community Tools Drop</span><span class="release-date">2026-06-30</span></div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 合并七个社区 PR</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 新增三个 CLI 工具</div><div style="color:rgba(255,255,255,0.75);font-size:0.78rem;margin-top:0.2rem;padding-left:0.5rem;border-left:2px solid rgba(34,197,94,0.3)">• 提供一条命令试用 daily-triage 等循环模式</div></div></div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://github.com/NirDiamant/Prompt_Engineering" target="_blank">Prompt Engineering 技术教程</a><span style="color:#64748b;font-size:0.75rem;margin-left:0.45rem">NirDiamant/Prompt_Engineering</span></div>
+  <div class="cm"><span class="stars">⭐ 7,686</span><span class="lang">Jupyter Notebook</span><span class="topic">ai</span><span class="topic">chain-of-thought</span><span class="topic">chatgpt</span><span>更新于 2026-07-18</span></div>
+  <div class="cd">Prompt_Engineering 提供 22 种提示工程技术的 Jupyter Notebook 实战教程，从基础概念到 chain-of-thought、few-shot、Claude/ChatGPT 等高级策略。它适合希望系统学习如何设计、评估和迭代 LLM 提示的开发者、研究者和产品原型团队。</div>
+  
+</div></div><div id="section-paper" class="section"><div class="sh paper"><span class="icon">📄</span><span class="title">论文速读</span><span class="cnt">5 篇</span></div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.15277v1" target="_blank">划分、提示、聚合：语言模型中的统计自一致性</a></div>
+  <div class="cm">2026-07-16 · cs.CL</div>
+  <div class="cd"><b>摘要：</b>本文把 in-context learning 视为一种条件推断形式：prompt 指定上下文，模型输出则估计对应的条件分布。作者检验 LLM 的估计是否满足基本概率一致性，提出通过划分样本、构造提示并聚合结果来度量统计自一致性。这类方法有助于发现模型在概率推理、校准和上下文泛化上的系统偏差。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.15257v1" target="_blank">SearchOS-V1：迈向稳健开放域信息搜索 Agent 协作</a></div>
+  <div class="cm">2026-07-16 · cs.AI, cs.IR</div>
+  <div class="cd"><b>摘要：</b>论文关注工具集成型 LLM 在 Web search 场景中的协作问题。随着交互历史增长，信息搜索 Agent 容易失去任务进度、重复无效搜索或无法整合证据。SearchOS-V1 试图为开放域信息检索提供更稳健的 Agent 协作机制，使单 Agent 与多 Agent 系统在失败检索后仍能追踪目标、调整策略并产出可靠答案。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.15254v1" target="_blank">teLLMe Why：城市驾驶数据的探索性因果分析</a></div>
+  <div class="cm">2026-07-16 · cs.AI, cs.HC</div>
+  <div class="cd"><b>摘要：</b>本文面向交通视频数据中的因果问题，例如雨天如何影响交通密度。由于城市驾驶数据多为观测式采集，缺少干预实验，传统分析难以回答反事实问题。作者提出 teLLMe，用 LLM 辅助探索因果结构和变量关系，帮助交通机构从大规模视频衍生数据中获得更可解释的安全与拥堵分析。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.15247v1" target="_blank">AutoSynthesis：用于自动化元分析的 Agentic 系统</a></div>
+  <div class="cm">2026-07-16 · cs.AI</div>
+  <div class="cd"><b>摘要：</b>AutoSynthesis 是一个端到端多 Agent 系统，目标是把传统上高度人工化的定量证据综合和元分析流程自动化。它面向科学、医学、教育和政策等领域，将研究检索、筛选、数据抽取、统计汇总和报告生成拆解给多个 Agent 协作完成，有望提升系统综述和证据合成的规模化能力。</div>
+</div>
+<div class="card">
+  <div class="ct"><a href="https://arxiv.org/abs/2607.15246v1" target="_blank">ARMOR++：用于深伪检测器可迁移攻击的多域原语 Agentic 编排</a></div>
+  <div class="cm">2026-07-16 · cs.CV</div>
+  <div class="cd"><b>摘要：</b>论文研究深伪检测器在黑盒对抗迁移下的脆弱性。现有攻击常依赖脆弱的取证线索，且难以在无查询约束下保持语义一致与攻击效果。ARMOR++ 通过 Agentic orchestration 组织多域攻击原语，自动选择和组合变换策略，以生成更具可迁移性的深伪检测规避样本。</div>
+</div></div><div id="section-blog" class="section"><div class="sh blog"><span class="icon">📢</span><span class="title">官方动态</span><span class="cnt">5 条</span></div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenAI</span><a class="blog-title" href="https://openai.com/index/a-scorecard-for-the-ai-age/" target="_blank">AI 时代的价值记分卡</a><span class="blog-date">2026-07-17</span></div>
+  <div class='blog-summary'>摘要：OpenAI 讨论企业应如何衡量 AI 投入产出，认为仅看 token 成本或使用席位不足以判断价值。文章提出“每美元有用智能”作为更贴近业务结果的指标，关注 AI 是否完成重要工作、成功任务成本、结果可靠性以及规模化后每美元能否创造更多价值。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenAI</span><a class="blog-title" href="https://openai.com/index/why-teens-deserve-access-safe-ai/" target="_blank">为什么青少年应获得安全的 AI 访问</a><span class="blog-date">2026-07-16</span></div>
+  <div class='blog-summary'>摘要：OpenAI 主张青少年需要在适龄保护下使用 AI，因为他们正成长于 AI 将深刻影响学习和工作的时代。文章强调访问权与安全机制应并重，包括默认保护、年龄预测、家长控制、家庭资源和更重视理解而非直接给答案的学习功能。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenAI</span><a class="blog-title" href="https://openai.com/index/unlocking-self-improvement-gpt-red/" target="_blank">GPT-Red：释放模型自我改进以提升鲁棒性</a><span class="blog-date">2026-07-15</span></div>
+  <div class='blog-summary'>摘要：OpenAI 介绍 GPT-Red，一个用于自动化 red-teaming 的模型。文章指出传统红队测试难以随模型能力扩展，且常用鲁棒性评测已被新模型饱和。GPT-Red 用更强的自动攻击能力发现漏洞，帮助团队在更大范围部署前修复提示注入等安全问题。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">Anthropic</span><a class="blog-title" href="https://www.anthropic.com/news/hard-questions" target="_blank">邀请更尖锐的问题</a><span class="blog-date">2026-07-09</span></div>
+  <div class='blog-summary'>摘要：Anthropic 发起“hard questions”倡议，邀请公众围绕 AI 规则制定、儿童未来、就业影响、社会风险和科学进步提出更尖锐的问题。文章强调公司作为 Public Benefit Corporation，需要公开回应外界关切，并追踪其在 AI 安全、公共利益和社会影响方面的行动。</div>
+</div>
+<div class="blog-card">
+  <div><span class="blog-src">OpenRouter</span><a class="blog-title" href="https://openrouter.ai/blog/announcements/brand-refresh/" target="_blank">OpenRouter 全新视觉与产品形象</a><span class="blog-date">2026-07-13</span></div>
+  <div class='blog-summary'>摘要：OpenRouter 于 2026 年 7 月 13 日发布品牌与界面更新，围绕模型路由平台的视觉识别、产品呈现和开发者体验做调整。该动态反映 OpenRouter 正在强化多模型 API、模型发现和控制台使用体验，让开发者更清晰地接入与比较不同模型。</div>
+</div></div><div id="section-news" class="section"><div class="sh news"><span class="icon">🏭</span><span class="title">行业动态</span><span class="cnt">9 条</span></div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMizAFBVV95cUxNWlZod3Zoam9mWGM3SHRmeENQNUJiOG5ObVhfal8tYVRLTEhoN0lFLXVXdDVRS0haS042RkR4YWotSUxXOXkteVBJTWYzQWgwV1JfS1Z2LU91c28zTmRmTGtNUWlQSlJuY2JwcGNOX1M4a1RSa21HQVlmYjJ5aW42VW5fRzJ6NXRCNnRGUEZ5OUtnMTIwQjE2dzFyLUNaRkluLVlod241Y3pYRHJkR0JQNk1VUExBcHpqQkRLMFQ4N1lfQzZEcGhWR25VOVg?oc=5" target="_blank">Agentic ID：Vint Cerf 加入为每个 AI Agent 提供持久标识符的项目</a><span class="news-date">Fri, 17 Jul 2026 22:19:54 GMT</span></div>
+  <div class='news-summary'>摘要：Forbes 报道，一个名为 Agentic ID 的项目希望为 AI Agent 建立 durable identifier，使代理在不同平台、服务和交互中具备可验证身份。Vint Cerf 的参与凸显了 Agent 身份、信任、追踪和责任归属正在成为 AI 基础设施议题。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMitwFBVV95cUxQTnUtSFFraUNONDhSemRxQzJpTXhkMlVleHpEN0N0Mll5TmZqUVJZVGNraWFVUTZzWVZ5NDhOZjJILV9yLUg1cEM4UFN3Z1pRcmVxNVZXakI1Tk0teDhDT3FnWTdpaktPR05SNlUzSEstVGdPeWFmdVE3VE9ybFlmQ3lScC1sbS1VR2x4UnRtbnpVd3hCbWg3a2ZHcTVweTdwdlhNeDNuTGRNdkx1bm5QYllNVGRNRzQ?oc=5" target="_blank">Vertu 希望高管为 AI Agent 支付 6,880 美元，实际表现如何</a><span class="news-date">Fri, 17 Jul 2026 22:55:09 GMT</span></div>
+  <div class='news-summary'>摘要：TechCrunch 评测 Vertu 面向高管推出的高价 AI Agent 产品，关注其在日程、沟通、信息整理和执行任务中的真实表现。报道反映出消费级和商务级 AI Agent 正从概念走向高端硬件或服务捆绑，但价值仍需通过实际效率验证。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMi8wFBVV95cUxOR0RoV3psOU96WXlFcWFCbGp2TnhKWGVaOENUYlp6ZkZFTlVKVC1aWVh5azROLWxUZ01xVHduZjJpSGVqSS1iMkViRy1UX1JtM0pody1yZE5YLTB5dnk2anpIVjVKQkdDdlMtOHhkdFZ4djhNenBJNEdJWE82bmlfbldfVktzOUNtRDZ1SzVSbzhKZTUyengzX25VREt6Q1BYOEVzeUJ3aGVfbjRQUW0zUFl4eDFnNHA2N0Z1bUxnZ01OR09pNEs1SU51QmxOVDFxdzhYZ0tzejFRVllfQzVWYmJiMHZoX2J0SDRVMlY1SWhzYms?oc=5" target="_blank">Intuit AI Agent 编排系统重构内幕</a><span class="news-date">Fri, 17 Jul 2026 20:46:55 GMT</span></div>
+  <div class='news-summary'>摘要：VentureBeat 报道 Intuit 正在重构 AI Agent orchestration，用于在财税、会计和中小企业服务中协调多个专用 Agent。核心看点是企业如何把分散模型能力组织成可靠流程，包括任务路由、上下文共享、工具调用和结果校验。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMie0FVX3lxTE1lSV85X2s1QXRVUHRVWmRnSjhTR0U3LTJaT1RubmdvaDBQQVdBcHB6dlQ4V2lUcHl1YlRKT3NBbk9EX0xmcmRaMWhkanA5VnVmLUNwaURjQlhFVmlxY0haVXhGUDdtejNVTFRramtjSk5odnNrV1phQmJUVQ?oc=5" target="_blank">用经典机器学习增强 AI Agent</a><span class="news-date">Fri, 17 Jul 2026 15:00:00 GMT</span></div>
+  <div class='news-summary'>摘要：Towards Data Science 讨论如何把传统机器学习方法用于 AI Agent 系统，而不是完全依赖 LLM。经典 ML 可在排序、分类、预测、异常检测和策略选择中提供稳定信号，与 LLM 的语言推理和工具调用互补，提升 Agent 的成本效率和可靠性。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOaEZNa3ZZZUpGMGRLajIyY2pLTjduZmhTVHp1Q0VkNEl0X0lGVUs3aXRfb1lrRjlWSS1IckF0MV80X0Rxb2o0MU1VbU8zVVlNMElnOWhjdGp4Zlp3ZkRuOGlodnpwZmhJOWpvYnB6WVd0OXhnR2J1MHlFWUZ0ZlJ1cUpWTjFkMU1qV0JzZFBDZUVMRTFoVzhSZWNRWXZVTFdxRk1HMFhUYlpRQkRNdnZGNWFiS0h5VVFCNlNzMlRrdV_SAcYBQVVfeXFMTWtlMlUwMFM4STZCMTRXVlg5VngxWU04cVRndWRmdlRhWTM3aV9ZUHB1TFNSa0hpTmpQUFltTTc4ZGhFMFhNNTVYdGRHLTRFbUo3Qm9JaE8xZGktVTh2LUhGMU55QWQ0WWRmY1NSdm45a0JWbXptZ0NBYWgzTV9UQ0N0ZzBveUVoQ2VRZnc4V3VCYTMyUlVhSk9sMG1xR1hYMnZLUmUzbmZZOFllQ1dET1FTTHRCMGpIQWhtQXRqSmtYZWdBS2R3?oc=5" target="_blank">GPT-Red：OpenAI 为提升模型安全打造的 LLM 超级黑客</a><span class="news-date">Wed, 15 Jul 2026 17:09:37 GMT</span></div>
+  <div class='news-summary'>摘要：MIT Technology Review 报道 OpenAI 的 GPT-Red 自动红队模型。该系统用于生成更强攻击和提示注入测试，帮助发现模型脆弱点并推动安全修复。文章把它称作面向模型鲁棒性的“超级黑客”，体现安全评测正被自动化模型本身加速。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1sdFVscElTclFSQ2RUOWRFNHptLWx1N0xacTcwU1pFc0JDZE5yTVl5aW1hUmJWTDFtVzNZTGxaN3JzNlkyX0xLdUF2QUR3eGZWbjRGSkxXZHZNMTB6N3d4V2N5OXpMRmRkSl9OdnR5SkxYOHlEM0E?oc=5" target="_blank">TuxBot v3：LLM 辅助开发的 IoT Botnet 框架内幕</a><span class="news-date">Wed, 15 Jul 2026 10:06:37 GMT</span></div>
+  <div class='news-summary'>摘要：Unit 42 分析 TuxBot v3 IoT Botnet 框架，并指出其开发过程存在 LLM 辅助迹象。报道提醒安全团队关注攻击者如何借助大模型加速恶意代码开发、重构和文档化，也说明 AI 能力正在改变攻防双方的工具生产速度。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMihwFBVV95cUxOY0V2UkhOeE80WWFkMWJvWGxSV3Q4X0N0NW5sZ2ExSzVYb3Z1OWE4N3RlNnN5YkZ1Wmo2aUlzRFlOUlF1OTlfMnByT3lkWXU2WlRjYWpydXpHbTFfcU1uVEpKRU95NzYwMFp5X1JMYmt0eEh2STNFdG4zYU9rejQ3RHQtcGpvVnM?oc=5" target="_blank">如果每家公司都使用同一个 LLM，你的竞争优势在哪里</a><span class="news-date">Fri, 17 Jul 2026 15:45:32 GMT</span></div>
+  <div class='news-summary'>摘要：JD Supra 讨论企业普遍采用相同基础模型后，差异化优势可能来自专有数据、业务流程、合规经验、上下文工程和系统集成，而不是模型名称本身。文章对法律和专业服务机构尤其相关：LLM 需要嵌入独特工作流才能形成壁垒。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Google News</span><a class="news-title" href="https://news.google.com/rss/articles/CBMilgFBVV95cUxQa05PUEFfbXBXeTNHYlRjbU5FRER2ZE42dUdGa21lU25jTjhmVlp6Z2hTclZWMmJwVUViN2VmQ18zZmtEd2JJVng0anBESzVNSjQ0N1k2bEtBbjJpZHZYc3JtLURQc01FNWxTd3d3OWZvLVhPSjVqeUtMWEw0SVMybl9wa2ZNZHdxdTFCNU93MnNHLWdTd0E?oc=5" target="_blank">Trend Micro 在 PwC 支持的 AI Agent 风险研究中测试 13 个模型</a><span class="news-date">Fri, 17 Jul 2026 22:51:06 GMT</span></div>
+  <div class='news-summary'>摘要：International Business Times 报道 Trend Micro 对 13 个 AI 模型进行 Agent 风险测试，并由 PwC 支持研究。焦点包括模型在自主执行、工具调用、越权行为和安全边界上的表现，显示企业正在把 Agent 风险评估纳入治理和采购流程。</div>
+</div>
+<div class="news-card">
+  <div><span class="news-src">Hacker News</span><a class="news-title" href="https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/" target="_blank">Kaiser 护士称 AI 与职场监控正在恶化工作和护理质量</a><span class="news-date">2026-07-18</span></div>
+  <div class='news-summary'>摘要：CalMatters 报道 Kaiser Permanente 呼叫中心护士认为 AI 和职场监控正在影响护理质量。护士称通话时长、生产率预测、语气与同理心评分等系统会影响绩效压力。事件反映医疗行业采用 AI 管理工具时，效率目标、劳动权益和患者照护之间的冲突正在升温。</div>
+</div></div>
+<div class="stats">
+  <div><div class="sv">45</div><div class="sl">信息条数</div></div>
+  <div><div class="sv">15</div><div class="sl">GitHub 项目</div></div>
+  <div><div class="sv">11</div><div class="sl">Trending</div></div>
+  <div><div class="sv">5</div><div class="sl">官方动态</div></div>
+</div>
+<div class="ft">由 Hermes Agent 自动生成 | 2026-07-18 13:23</div>
+</div>
+<script>
+(() => {
+  const progressBar = document.getElementById('progress-bar');
+  const percentLabel = document.getElementById('reading-percent');
+  const currentLabel = document.getElementById('current-section-label');
+  const links = Array.from(document.querySelectorAll('.quick-link'));
+  const sections = links
+    .map(link => {
+      const id = link.getAttribute('data-target');
+      const section = document.getElementById(id);
+      return section ? { id, link, section, label: link.textContent.trim() } : null;
+    })
+    .filter(Boolean);
+
+  function updateProgress() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = maxScroll > 0 ? Math.min(100, Math.max(0, (scrollTop / maxScroll) * 100)) : 0;
+    progressBar.style.width = percent + '%';
+    percentLabel.textContent = Math.round(percent) + '%';
+  }
+
+  function updateActiveSection() {
+    const trigger = window.innerHeight * 0.22;
+    let current = sections[0];
+    for (const item of sections) {
+      const rect = item.section.getBoundingClientRect();
+      if (rect.top <= trigger) {
+        current = item;
+      }
+    }
+    if (!current) return;
+    links.forEach(link => link.classList.remove('active'));
+    current.link.classList.add('active');
+    currentLabel.textContent = current.label.replace(/^[^\s]+\s/, '');
+  }
+
+  function onScroll() {
+    updateProgress();
+    updateActiveSection();
+  }
+
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script></body></html>

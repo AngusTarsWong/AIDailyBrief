@@ -1,0 +1,649 @@
+{
+  "date": "2026-07-18",
+  "github": [
+    {
+      "name": "stas00/ml-engineering",
+      "desc": "Machine Learning Engineering Open Book",
+      "stars": 18416,
+      "lang": "Python",
+      "updated": "2026-07-17",
+      "url": "https://github.com/stas00/ml-engineering",
+      "topics": [
+        "ai",
+        "debugging",
+        "gpus",
+        "inference",
+        "large-language-models"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "liyupi/ai-guide",
+      "desc": "程序员鱼皮的 AI 资源大全 + Vibe Coding 零基础教程，分享 OpenClaw 保姆级教程、大模型玩法（DeepSeek / GPT / Gemini / Claude / GLM）、最新 AI 资讯、Prompt 提示词大全、AI 知识百科（Agent Skills / RAG / MCP / A2A）、AI 编程教程（Harness Engineering）、AI 工具用法（Cursor / Claude Code / TRAE / Codex / Copilot）、AI 开发框架教程（Spring AI / LangChain）、AI 产品变现指南，帮你快速掌握 AI 技术，走在时代前沿。本项目为开源文档 aiguide，已升级为鱼皮 AI 导航网站",
+      "stars": 17376,
+      "lang": "JavaScript",
+      "updated": "2026-07-18",
+      "url": "https://github.com/liyupi/ai-guide",
+      "topics": [
+        "ai",
+        "artificial-intelligence",
+        "chatgpt",
+        "claude",
+        "codex"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "danielmiessler/LifeOS",
+      "desc": "The AI harness that moves you from current state to ideal state. An intent engineering platform: it conveys what you ultimately want to your AI on every task. [CODING, BUILDING, CREATING, BUSINESS, LIFE, WORK, ...]",
+      "stars": 16776,
+      "lang": "TypeScript",
+      "updated": "2026-07-18",
+      "url": "https://github.com/danielmiessler/LifeOS",
+      "topics": [
+        "ai",
+        "ai-harness",
+        "augmentation",
+        "humans",
+        "intent-engineering"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v7.1.1",
+          "name": "LifeOS 7.1.1 — Install Awareness",
+          "date": "2026-07-13",
+          "summary": "EIA gas-price series and dollar-scale formatting (#1470；dead routing references repointed to the current routing table (#1471；observation-only, no more duplicated output on re-emit；Fork-patch note in MemoryTypes "
+        },
+        {
+          "tag": "v7.0.0",
+          "name": "LifeOS 7.0.0 — The Bitter Pill Release",
+          "date": "2026-07-12",
+          "summary": "Bitter Pill Engineering；~⅔ less always-on context；Modes and tiers are gone；The Algorithm (v8.3.0)"
+        },
+        {
+          "tag": "v6.0.5",
+          "name": "LifeOS 6.0.5 — Rename in the Code, New Harvest Skill",
+          "date": "2026-07-05",
+          "summary": "<div align=\"center\">；<img src=\"https://raw.githubusercontent.com/danielmiessler/LifeOS/main/images/lifeos-logo.png\" alt=\"LifeOS\" width=\"200\">；The LifeOS rename lands in the code — plus a new Harvest skill."
+        }
+      ]
+    },
+    {
+      "name": "chiphuyen/aie-book",
+      "desc": "[WIP] Resources for AI engineers. Also contains supporting materials for the book AI Engineering (Chip Huyen, 2025)",
+      "stars": 16544,
+      "lang": "Jupyter Notebook",
+      "updated": "2026-07-18",
+      "url": "https://github.com/chiphuyen/aie-book",
+      "topics": [],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "visenger/awesome-mlops",
+      "desc": "A curated list of references for MLOps ",
+      "stars": 13956,
+      "lang": "",
+      "updated": "2026-07-17",
+      "url": "https://github.com/visenger/awesome-mlops",
+      "topics": [
+        "ai",
+        "data-science",
+        "devops",
+        "engineering",
+        "federated-learning"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "coleam00/context-engineering-intro",
+      "desc": "Context engineering is the new vibe coding - it's the way to actually make AI coding assistants work. Claude Code is the best for this so that's what this repo is centered around, but you can apply this strategy with any AI coding assistant!",
+      "stars": 13713,
+      "lang": "Python",
+      "updated": "2026-07-18",
+      "url": "https://github.com/coleam00/context-engineering-intro",
+      "topics": [],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "Orchestra-Research/AI-Research-SKILLs",
+      "desc": "Comprehensive open-source library of AI research and engineering skills for any AI model. Package the skills and your claude code/codex/gemini agent will be an AI research agent with full horsepower. Maintained by Orchestra Research.",
+      "stars": 10814,
+      "lang": "TeX",
+      "updated": "2026-07-18",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+      "topics": [
+        "ai",
+        "ai-research",
+        "claude",
+        "claude-code",
+        "claude-skills"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.7.2",
+          "name": "v1.7.2 — Qoder Agent Support",
+          "date": "2026-06-16",
+          "summary": "Qoder is now a first-class supported agent. The installer auto-detects Qoder and installs skills natively to ~/.qoder/sk；npx @orchestra-research/ai-research-skills；The model-merging skill (19-emerging-techniques) gains a label-free coefficient-select"
+        },
+        {
+          "tag": "v1.7.1",
+          "name": "v1.7.1 — Inventory Consistency, Drift Guard & Security Hardening",
+          "date": "2026-06-15",
+          "summary": "Maintenance & hardening release. (The 98-skill content milestone shipped in v1.6.0 with the ARA category.)；Corrected stale counts that had drifted apart across CLAUDE.md (said 90), CONTRIBUTING.md (86/22), the README sync line ；New scripts/check-inve"
+        },
+        {
+          "tag": "v1.4.0",
+          "name": "v1.4.0 - Autoresearch: Autonomous AI Research from Idea to Paper",
+          "date": "2026-03-16",
+          "summary": "WELCOME.md: cold-start bootstrap；Agent-friendly install path；Windows support；Research Ideation (21-research-ideation) added to npm installer categories"
+        }
+      ]
+    },
+    {
+      "name": "walkinglabs/learn-harness-engineering",
+      "desc": "Harness engineering beginner tutorial, from 0 to 1",
+      "stars": 10476,
+      "lang": "TypeScript",
+      "updated": "2026-07-18",
+      "url": "https://github.com/walkinglabs/learn-harness-engineering",
+      "topics": [
+        "agent",
+        "agentic",
+        "agentic-ai",
+        "ai",
+        "ai-agent"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "mrexodia/ida-pro-mcp",
+      "desc": "AI-powered reverse engineering assistant that bridges IDA Pro with language models through MCP.",
+      "stars": 10375,
+      "lang": "Python",
+      "updated": "2026-07-18",
+      "url": "https://github.com/mrexodia/ida-pro-mcp",
+      "topics": [
+        "ai",
+        "aiagent",
+        "binary-analysis",
+        "ida-plugin",
+        "ida-pro"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "1.4.0",
+          "name": "1.4.0",
+          "date": "2025-10-06",
+          "summary": "add idalib-based MCP server in https；Add debugger mpc function in https；Add functionality to list globals in https://github.com/mrexodia/ida-pro-mcp/pull/47；Added command to find xrefs to struct fields in https://github.com/mrexodia/ida-pro-mcp/pull/"
+        },
+        {
+          "tag": "1.3.0",
+          "name": "1.3.0",
+          "date": "2025-04-09",
+          "summary": "add rename & retype for gloabl variable in https://github.com/mrexodia/ida-pro-mcp/pull/14；Implement list_strings and search_strings in https://github.com/mrexodia/ida-pro-mcp/pull/12；handle tinfo_t() exception when ctor not supported in https://gith"
+        },
+        {
+          "tag": "1.2.0",
+          "name": "1.2.0",
+          "date": "2025-03-29",
+          "summary": "add some tips in https；Fix resolve get_function compatibility in https://github.com/mrexodia/ida-pro-mcp/pull/5；Added support to resolve demangled names found in HexRays output in https://github.com/mrexodia/ida-；@gmh5225 made their first contributio"
+        }
+      ]
+    },
+    {
+      "name": "ZeroLu/awesome-nanobanana-pro",
+      "desc": "🚀 An awesome list of curated Nano Banana pro prompts and examples. Your go-to resource for mastering prompt engineering and exploring the creative potential of the Nano banana pro(Nano banana 2) AI image model.",
+      "stars": 10180,
+      "lang": "",
+      "updated": "2026-07-17",
+      "url": "https://github.com/ZeroLu/awesome-nanobanana-pro",
+      "topics": [
+        "gemini",
+        "nanobanana",
+        "nanobanana-pro",
+        "nanobanana2",
+        "nanobananapro"
+      ],
+      "is_top": true,
+      "releases": []
+    },
+    {
+      "name": "VoltAgent/voltagent",
+      "desc": "AI Agent Engineering Platform built on an Open Source TypeScript AI Agent Framework",
+      "stars": 10081,
+      "lang": "TypeScript",
+      "updated": "2026-07-18",
+      "url": "https://github.com/VoltAgent/voltagent",
+      "topics": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "ai-agents-framework",
+        "aiagentframework"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "@voltagent/core@2.9.0",
+          "name": "@voltagent/core@2.9.0",
+          "date": "2026-07-08",
+          "summary": "#1372 4a3100b"
+        },
+        {
+          "tag": "@voltagent/server-core@2.1.19",
+          "name": "@voltagent/server-core@2.1.19",
+          "date": "2026-07-01",
+          "summary": "#1331 887213b；Updated dependencies [6b26a8f, 9dc0314]；@voltagent/core@2.8.1"
+        },
+        {
+          "tag": "@voltagent/sandbox-e2b@2.0.3",
+          "name": "@voltagent/sandbox-e2b@2.0.3",
+          "date": "2026-07-01",
+          "summary": "#1356 2b66ae3"
+        }
+      ]
+    },
+    {
+      "name": "spring-projects/spring-ai",
+      "desc": "An Application Framework for AI Engineering",
+      "stars": 9152,
+      "lang": "Java",
+      "updated": "2026-07-18",
+      "url": "https://github.com/spring-projects/spring-ai",
+      "topics": [
+        "artificial-intelligence",
+        "java",
+        "spring-ai"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v2.0.0",
+          "name": "Spring AI 2.0.0",
+          "date": "2026-06-12",
+          "summary": "Update Google GenAI models #6406；Use only Jackson 2 in OpenAiChatModel #6392；Make org.springframework.ai.image.observation null-marked #6388；Polish Prompt #6387"
+        },
+        {
+          "tag": "v1.1.8",
+          "name": "Spring AI 1.1.8",
+          "date": "2026-06-12",
+          "summary": "Add missing values to ZhiPuAiApi.ChatCompletionFinishReason #5532"
+        },
+        {
+          "tag": "v1.0.9",
+          "name": "Spring AI 1.0.9",
+          "date": "2026-06-12",
+          "summary": "Deprecate Pixtral models #6148"
+        }
+      ]
+    },
+    {
+      "name": "zhaoxuya520/reverse-skill",
+      "desc": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+      "stars": 8377,
+      "lang": "PowerShell",
+      "updated": "2026-07-18",
+      "url": "https://github.com/zhaoxuya520/reverse-skill",
+      "topics": [],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.0.0",
+          "name": "v1.0.0 — First formal release",
+          "date": "2026-07-17",
+          "summary": "This pack is a skill router + bootstrap + journal, not a full host security platform.；Local tool paths live only in generated tool-index (not shipped in the tag content as absolute machi"
+        }
+      ]
+    },
+    {
+      "name": "cobusgreyling/loop-engineering",
+      "desc": "Practical patterns, starters & CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). Includes loop-audit, loop-init, loop-cost.",
+      "stars": 8325,
+      "lang": "JavaScript",
+      "updated": "2026-07-18",
+      "url": "https://github.com/cobusgreyling/loop-engineering",
+      "topics": [
+        "agentic-ai",
+        "ai-agents",
+        "ai-coding",
+        "anthropic",
+        "automation"
+      ],
+      "is_top": true,
+      "releases": [
+        {
+          "tag": "v1.5.0",
+          "name": "v1.5.0 — Community Tools Drop",
+          "date": "2026-06-30",
+          "summary": "Seven community PRs merged. Three new tools ship. One command to try everything.；npx @cobusgreyling/loop-init . --pattern daily-triage --tool grok；npx @cobusgreyling/loop-cost --pattern daily-triage --level L1 --cadence 1d"
+        }
+      ]
+    },
+    {
+      "name": "NirDiamant/Prompt_Engineering",
+      "desc": "22 prompt engineering techniques with hands-on Jupyter Notebook tutorials, from fundamental concepts to advanced strategies for leveraging LLMs.",
+      "stars": 7686,
+      "lang": "Jupyter Notebook",
+      "updated": "2026-07-18",
+      "url": "https://github.com/NirDiamant/Prompt_Engineering",
+      "topics": [
+        "ai",
+        "chain-of-thought",
+        "chatgpt",
+        "claude",
+        "few-shot-learning"
+      ],
+      "is_top": true,
+      "releases": []
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "codecrafters-io/build-your-own-x",
+      "url": "https://github.com/codecrafters-io/build-your-own-x",
+      "desc": "Master programming by recreating your favorite technologies from scratch.",
+      "lang": "Markdown",
+      "stars": "527,558",
+      "today": "1,068 stars today",
+      "page_content": "## Build your own <insert-technology-here>\n[](https://github.com/codecrafters-io/build-your-own-x#build-your-own-insert-technology-here)\nThis repository is a compilation of well-written, step-by-step guides for re-creating our favorite technologies from scratch.\n> _What I cannot create, I do not understand — Richard Feynman._\nIt's a great way to learn.\n*   [3D Renderer](https://github.com/codecrafters-io/build-your-own-x#build-your-own-3d-renderer)\n*   [AI Model](https://github.com/codecrafters-"
+    },
+    {
+      "name": "PostHog/posthog",
+      "url": "https://github.com/PostHog/posthog",
+      "desc": "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+      "lang": "Python",
+      "stars": "36,257",
+      "today": "438 stars today",
+      "page_content": "[Skip to content](https://github.com/PostHog/posthog#start-of-content)\n## Navigation Menu\nToggle navigation\n[](https://github.com/)\n[Sign in](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2FPostHog%2Fposthog)\nAppearance settings\n*\nPlatform\n*\nAI CODE CREATION\n*   [GitHub Copilot Write better code with AI](https://github.com/features/copilot)\n*   [GitHub Copilot app Direct agents from issue to merge](https://github.com/features/ai/github-app)\n*   [MCP Registry New Integrate external "
+    },
+    {
+      "name": "HenryNdubuaku/maths-cs-ai-compendium",
+      "url": "https://github.com/HenryNdubuaku/maths-cs-ai-compendium",
+      "desc": "Become a cracked AI/ML Research Engineer",
+      "lang": "TypeScript",
+      "stars": "6,700",
+      "today": "200 stars today",
+      "page_content": "[![Image 1: Logo](https://github.com/HenryNdubuaku/maths-cs-ai-compendium/raw/main/images/logo.png)](https://github.com/HenryNdubuaku/maths-cs-ai-compendium/blob/main/images/logo.png)\n**Read online**: [henryndubuaku.github.io/maths-cs-ai-compendium](https://henryndubuaku.github.io/maths-cs-ai-compendium/)\n## Overview\n[](https://github.com/HenryNdubuaku/maths-cs-ai-compendium#overview)\nMost textbooks bury good ideas under dense notation, skip the intuition, assume you already know half the materi"
+    },
+    {
+      "name": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "desc": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "lang": "CSS",
+      "stars": "12,184",
+      "today": "1,485 stars today",
+      "page_content": "**A design skill for Claude Code, Cursor, and Codex that refuses to look AI-generated.**\n[Live demo →](https://www.usehallmark.com/)· twenty themes · four verbs · press `T` to cycle.\nMade by Together AI.\n[![Image 1: Hallmark, a design skill that refuses to look AI-generated](https://github.com/Nutlope/hallmark/raw/main/site/OG-hallmark.png)](https://github.com/Nutlope/hallmark/blob/main/site/OG-hallmark.png)\nHallmark picks a macrostructure for the brief, dresses it in one of twenty themes, runs "
+    },
+    {
+      "name": "github/copilot-sdk",
+      "url": "https://github.com/github/copilot-sdk",
+      "desc": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+      "lang": "Java",
+      "stars": "9,822",
+      "today": "233 stars today",
+      "page_content": "## GitHub Copilot CLI SDKs\n[](https://github.com/github/copilot-sdk#github-copilot-cli-sdks)\n[![Image 1: GitHub Copilot SDK](https://github.com/github/copilot-sdk/raw/main/assets/RepoHeader_01.png)](https://github.com/github/copilot-sdk/blob/main/assets/RepoHeader_01.png)\nAgents for every app.\nEmbed Copilot's agentic workflows in your application with the GitHub Copilot SDK for Python, TypeScript, Go, .NET, Java, and Rust.\nThe GitHub Copilot SDK exposes the same engine behind Copilot CLI: a prod"
+    },
+    {
+      "name": "anthropics/cwc-workshops",
+      "url": "https://github.com/anthropics/cwc-workshops",
+      "desc": "Workshop materials. Not maintained and not accepting contributions.",
+      "lang": "TypeScript",
+      "stars": "1,619",
+      "today": "45 stars today",
+      "page_content": "Workshop materials. Not maintained and not accepting contributions.\nMaterials from Anthropic-run **Code with Claude** workshops.\n## Workshops\n[](https://github.com/anthropics/cwc-workshops#workshops)\n*   [`rightmodel/`](https://github.com/anthropics/cwc-workshops/blob/main/rightmodel) — _Picking the Right Model_: use a Claude Code SKILL to audit an LLM eval suite and sweep it across models and inference parameters (extended thinking, effort) to find the best quality-per-dollar and quality-per-second configuration.\n*   [`agent-decomposition/`](https://github.com/anthropics/cwc-workshops/blob/main/agent-decomposition) — _Compose Multi-Agent Systems with Skills and MCP_: decompose a 400-line-prompt inventory agent into skills + code execution + callable_agents on Claude Managed Agents, with evals to verify each step.\n*   [`how-we-claude-code/`](https://github.com/anthropics/cwc-workshops/blob/main/how-we-claude-code) — _How We Claude Code_: a three-phase walkthrough of an AI-assisted product workflow — interview to spec, four divergent design explorations as static HTML, and a Vite + React app whose components emit a machine-readable DOM contract so an agent (or CI) can verify them at runtime.\n*   [`ship-your-first-managed-agent/`](https://github.com/anthropics/cwc-workshops/blob/main/ship-your-first-managed-agent) — _Ship Your First Managed Agent_: a Streamlit incident dashboard with an offline SRE Agent chat panel. You bring it online by implementing seven small functions in `agent.py`, each a single Claude Managed Agents API call — until it can grep a 70k-line log in its sandbox, call your local tools, and name the bad commit.\n*   [`agent-battle/`](https://github.com/anthropics/cwc-workshops/blob/main/agent-battle) — _Agent Battle_: a 45-minute competition to configure a Claude Managed Agent — system prompt, skills, MCP servers, model — that drives a local game bot over MCP. Most diamonds wins, fewest tokens breaks ties; a fast `--eval` decision-probe loop lets you "
+    },
+    {
+      "name": "PrismML-Eng/Bonsai-demo",
+      "url": "https://github.com/PrismML-Eng/Bonsai-demo",
+      "desc": "Bonsai Demo",
+      "lang": "Shell",
+      "stars": "1,737",
+      "today": "278 stars today",
+      "page_content": "[![Image 1: Bonsai](https://github.com/PrismML-Eng/Bonsai-demo/raw/main/assets/bonsai-logo.svg)](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/assets/bonsai-logo.svg)\n[**Website**](https://prismml.com/)|[**GitHub**](https://github.com/PrismML-Eng/Bonsai-demo)|[**Discord**](https://discord.gg/prismml)\n**HF Collections:**[Bonsai 27B](https://huggingface.co/collections/prism-ml/bonsai-27b) · [Bonsai (1-bit)](https://huggingface.co/collections/prism-ml/bonsai) · [Ternary-Bonsai](https://huggi"
+    },
+    {
+      "name": "protocolbuffers/protobuf",
+      "url": "https://github.com/protocolbuffers/protobuf",
+      "desc": "Protocol Buffers - Google's data interchange format",
+      "lang": "C++",
+      "stars": "71,551",
+      "today": "11 stars today",
+      "page_content": "[Skip to content](https://github.com/protocolbuffers/protobuf#start-of-content)\n## Navigation Menu\nToggle navigation\n[](https://github.com/)\n[Sign in](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fprotocolbuffers%2Fprotobuf)\nAppearance settings\n*\nPlatform\n*\nAI CODE CREATION\n*   [GitHub Copilot Write better code with AI](https://github.com/features/copilot)\n*   [GitHub Copilot app Direct agents from issue to merge](https://github.com/features/ai/github-app)\n*   [MCP Registry New I"
+    },
+    {
+      "name": "tirth8205/code-review-graph",
+      "url": "https://github.com/tirth8205/code-review-graph",
+      "desc": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+      "lang": "Python",
+      "stars": "19,830",
+      "today": "74 stars today",
+      "page_content": "**Stop burning tokens. Start reviewing smarter.**\n[English](https://github.com/tirth8205/code-review-graph/blob/main/README.md) | [简体中文](https://github.com/tirth8205/code-review-graph/blob/main/README.zh-CN.md) | [日本語](https://github.com/tirth8205/code-review-graph/blob/main/README.ja-JP.md) | [한국어](https://github.com/tirth8205/code-review-graph/blob/main/README.ko-KR.md) | [हिन्दी](https://github.com/tirth8205/code-review-graph/blob/main/README.hi-IN.md)\n[Usage](https://github.com/tirth8205/cod"
+    },
+    {
+      "name": "docusealco/docuseal",
+      "url": "https://github.com/docusealco/docuseal",
+      "desc": "Open source DocuSign alternative. Create, fill, and sign digital documents ✍️",
+      "lang": "Ruby",
+      "stars": "17,900",
+      "today": "91 stars today",
+      "page_content": "### Open source document filling and signing\n[](https://github.com/docusealco/docuseal#--open-source-document-filling-and-signing)\nDocuSeal is an open source platform that provides secure and efficient digital document signing and processing. Create PDF forms to have them filled and signed online on any device with an easy-to-use, mobile-optimized web tool.\n## [✨ Live Demo](https://demo.docuseal.tech/)|[☁️ Try in Cloud](https://docuseal.com/sign_up)\n[](https://github.com/docusealco/docuseal#---l"
+    },
+    {
+      "name": "openinterpreter/openinterpreter",
+      "url": "https://github.com/openinterpreter/openinterpreter",
+      "desc": "A coding agent for open models like Kimi K3",
+      "lang": "Rust",
+      "stars": "66,445",
+      "today": "431 stars today"
+    },
+    {
+      "name": "RyanCodrai/turbovec",
+      "url": "https://github.com/RyanCodrai/turbovec",
+      "desc": "A vector index built on TurboQuant, written in Rust with Python bindings",
+      "lang": "Python",
+      "stars": "13,379",
+      "today": "280 stars today"
+    },
+    {
+      "name": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "desc": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "lang": "Python",
+      "stars": "27,435",
+      "today": "531 stars today"
+    },
+    {
+      "name": "OpenCut-app/OpenCut",
+      "url": "https://github.com/OpenCut-app/OpenCut",
+      "desc": "The open-source CapCut alternative",
+      "lang": "TypeScript",
+      "stars": "74,996",
+      "today": "1,074 stars today"
+    }
+  ],
+  "papers": [
+    {
+      "title": "Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models",
+      "date": "2026-07-16",
+      "summary": "In-context learning is commonly interpreted as a form of conditional inference, in which the prompt specifies a context and the model's output is treated as an estimate of the corresponding conditional distribution. If this interpretation holds, then LLM estimates should satisfy basic probabilistic ",
+      "url": "https://arxiv.org/abs/2607.15277v1",
+      "cats": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
+      "date": "2026-07-16",
+      "summary": "Recent advances in Tool-Integrated Large Language Models have made web search a core capability of information-seeking agents. However, as interaction histories grow, agents increasingly struggle to track task progress. When search attempts fail to yield useful evidence, current single- and multi-ag",
+      "url": "https://arxiv.org/abs/2607.15257v1",
+      "cats": [
+        "cs.AI",
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "teLLMe Why (Ain't Nothing but a Jam): Exploratory Causal Analysis of Urban Driving Data",
+      "date": "2026-07-16",
+      "summary": "Traffic agencies now have access to large volumes of video-derived data for studying safety and congestion. Most of these data are observational and collected without interventions, which makes causal questions such as \"How would rain change traffic density?\" difficult to answer. We present teLLMe, ",
+      "url": "https://arxiv.org/abs/2607.15254v1",
+      "cats": [
+        "cs.AI",
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "AutoSynthesis: An agentic system for automated meta-analysis",
+      "date": "2026-07-16",
+      "summary": "Evidence synthesis is crucial for turning primary research into reliable knowledge for science, medicine, education, and policy. Yet, quantitative evidence synthesis remains largely manual and difficult to scale. Here, we introduce AutoSynthesis, an end-to-end multi-agent system for automated meta-a",
+      "url": "https://arxiv.org/abs/2607.15247v1",
+      "cats": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "ARMOR++: Agentic Orchestration of a Multi-Domain Primitive Set for Transferable Attacks on Deepfake Detectors",
+      "date": "2026-07-16",
+      "summary": "The reliability of deepfake detectors frequently degrades under black-box adversarial transfer, as these models often rely on fragile, architecture-dependent forensic cues. Existing transfer attacks often lack semantic awareness and struggle to maintain effectiveness under strict no-query constraint",
+      "url": "https://arxiv.org/abs/2607.15246v1",
+      "cats": [
+        "cs.CV"
+      ]
+    }
+  ],
+  "hn": [
+    {
+      "title": "Kaiser nurses say AI, workplace surveillance are making their jobs, care worse",
+      "url": "https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/",
+      "source": "Hacker News",
+      "cls": "hn",
+      "date": "2026-07-18",
+      "page_content": "**KAISER PERMANENTE NURSES** who answer advice and triage calls say their duty of care for patients is being increasingly threatened by workplace surveillance.\n\nSeven current and former nurses told CalMatters that those who spend more than 15 minutes on a call with a patient routinely face criticism from Kaiser management or get called into performance evaluation meetings. Call time, they said, factors into monthly performance scores they receive.\n\nIn addition to tracking call length, they said Kaiser uses software that tries to predict on a daily basis whether they’re being unproductive or failing to answer calls quickly. Artificial intelligence systems have also been used to rate their empathy and tone of voice.\n\n[![Image 1](https://i0.wp.com/localnewsmatters.org/wp-content/uploads/2021/11/211130_CalmattersLogo.jpg?resize=600%2C101&ssl=1)](https://calmatters.org/)\n\nTheir comments come as the California Nurses Association begins negotiating a new contract with Kaiser this month with AI a likely issue. Kaiser nurses[went on strike against AI](https://apnews.com/article/kaiser-mental-health-therapists-ai-2d05d37fd8be8f05491f0f15d97a78af)for one day in March and[picketed against AI last fall](https://www.sfexaminer.com/news/public-health/california-kaiser-permanente-nurses-picket-layoffs-ai-use/article_b28ddf99-8665-4d8d-b890-dc5e94ba45b2.html). The CNA is bargaining for 25,000 nurses, including 1,000 in call centers.\n\nAt the same time, California lawmakers are considering several bills regulating AI in the workplace, including one that would protect from retaliation doctors and nurses who override automated care recommendations.\n\nKaiser defended its use of AI, saying it deploys the technology with patient safety in mind and does not use “average handle time” to assess performance.\n\nKaiser Permanente is the largest private employer in California, providing healthcare services to more than 9 million people in the state and to 3 million other Americans. That means the company’s use of artificial intelligence could set important precedents for managing workers with AI. It could also have a big impact on patient care, providing an early example of how the healthcare sector balances cost-cutting automation with human presence or touch."
+    }
+  ],
+  "news": [
+    {
+      "title": "Agentic ID? Vint Cerf Joins Project To Give Every AI Agent A Durable Identifier - Forbes",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNWlZod3Zoam9mWGM3SHRmeENQNUJiOG5ObVhfal8tYVRLTEhoN0lFLXVXdDVRS0haS042RkR4YWotSUxXOXkteVBJTWYzQWgwV1JfS1Z2LU91c28zTmRmTGtNUWlQSlJuY2JwcGNOX1M4a1RSa21HQVlmYjJ5aW42VW5fRzJ6NXRCNnRGUEZ5OUtnMTIwQjE2dzFyLUNaRkluLVlod241Y3pYRHJkR0JQNk1VUExBcHpqQkRLMFQ4N1lfQzZEcGhWR25VOVg?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 17 Jul 2026 22:19:54 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxNWlZod3Zoam9mWGM3SHRmeENQNUJiOG5ObVhfal8tYVRLTEhoN0lFLXVXdDVRS0haS042RkR4YWotSUxXOXkteVBJ",
+      "page_content": ""
+    },
+    {
+      "title": "Vertu wants executives to pay $6,880 for an AI agent — here’s how it actually performs - TechCrunch",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTnUtSFFraUNONDhSemRxQzJpTXhkMlVleHpEN0N0Mll5TmZqUVJZVGNraWFVUTZzWVZ5NDhOZjJILV9yLUg1cEM4UFN3Z1pRcmVxNVZXakI1Tk0teDhDT3FnWTdpaktPR05SNlUzSEstVGdPeWFmdVE3VE9ybFlmQ3lScC1sbS1VR2x4UnRtbnpVd3hCbWg3a2ZHcTVweTdwdlhNeDNuTGRNdkx1bm5QYllNVGRNRzQ?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 17 Jul 2026 22:55:09 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQTnUtSFFraUNONDhSemRxQzJpTXhkMlVleHpEN0N0Mll5TmZqUVJZVGNraWFVUTZzWVZ5NDhOZjJILV9yLUg1cEM4",
+      "page_content": ""
+    },
+    {
+      "title": "Inside Intuit's AI agent orchestration rebuild - VentureBeat",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOR0RoV3psOU96WXlFcWFCbGp2TnhKWGVaOENUYlp6ZkZFTlVKVC1aWVh5azROLWxUZ01xVHduZjJpSGVqSS1iMkViRy1UX1JtM0pody1yZE5YLTB5dnk2anpIVjVKQkdDdlMtOHhkdFZ4djhNenBJNEdJWE82bmlfbldfVktzOUNtRDZ1SzVSbzhKZTUyengzX25VREt6Q1BYOEVzeUJ3aGVfbjRQUW0zUFl4eDFnNHA2N0Z1bUxnZ01OR09pNEs1SU51QmxOVDFxdzhYZ0tzejFRVllfQzVWYmJiMHZoX2J0SDRVMlY1SWhzYms?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 17 Jul 2026 20:46:55 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMi8wFBVV95cUxOR0RoV3psOU96WXlFcWFCbGp2TnhKWGVaOENUYlp6ZkZFTlVKVC1aWVh5azROLWxUZ01xVHduZjJpSGVqSS1iMkVi",
+      "page_content": ""
+    },
+    {
+      "title": "Using Classical ML to Empower AI Agents - towardsdatascience.com",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1lSV85X2s1QXRVUHRVWmRnSjhTR0U3LTJaT1RubmdvaDBQQVdBcHB6dlQ4V2lUcHl1YlRKT3NBbk9EX0xmcmRaMWhkanA5VnVmLUNwaURjQlhFVmlxY0haVXhGUDdtejNVTFRramtjSk5odnNrV1phQmJUVQ?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 17 Jul 2026 15:00:00 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE1lSV85X2s1QXRVUHRVWmRnSjhTR0U3LTJaT1RubmdvaDBQQVdBcHB6dlQ4V2lUcHl1YlRKT3NBbk9EX0xmcmRaMWhk",
+      "page_content": ""
+    },
+    {
+      "title": "Meet GPT-Red: an LLM super-hacker OpenAI built to make its models safer - MIT Technology Review",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOaEZNa3ZZZUpGMGRLajIyY2pLTjduZmhTVHp1Q0VkNEl0X0lGVUs3aXRfb1lrRjlWSS1IckF0MV80X0Rxb2o0MU1VbU8zVVlNMElnOWhjdGp4Zlp3ZkRuOGlodnpwZmhJOWpvYnB6WVd0OXhnR2J1MHlFWUZ0ZlJ1cUpWTjFkMU1qV0JzZFBDZUVMRTFoVzhSZWNRWXZVTFdxRk1HMFhUYlpRQkRNdnZGNWFiS0h5VVFCNlNzMlRrdV_SAcYBQVVfeXFMTWtlMlUwMFM4STZCMTRXVlg5VngxWU04cVRndWRmdlRhWTM3aV9ZUHB1TFNSa0hpTmpQUFltTTc4ZGhFMFhNNTVYdGRHLTRFbUo3Qm9JaE8xZGktVTh2LUhGMU55QWQ0WWRmY1NSdm45a0JWbXptZ0NBYWgzTV9UQ0N0ZzBveUVoQ2VRZnc4V3VCYTMyUlVhSk9sMG1xR1hYMnZLUmUzbmZZOFllQ1dET1FTTHRCMGpIQWhtQXRqSmtYZWdBS2R3?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Wed, 15 Jul 2026 17:09:37 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOaEZNa3ZZZUpGMGRLajIyY2pLTjduZmhTVHp1Q0VkNEl0X0lGVUs3aXRfb1lrRjlWSS1IckF0MV80X0Rxb2o0MU1V",
+      "page_content": ""
+    },
+    {
+      "title": "TuxBot v3: Inside an IoT Botnet Framework With LLM-Assisted Development - Unit 42",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1sdFVscElTclFSQ2RUOWRFNHptLWx1N0xacTcwU1pFc0JDZE5yTVl5aW1hUmJWTDFtVzNZTGxaN3JzNlkyX0xLdUF2QUR3eGZWbjRGSkxXZHZNMTB6N3d4V2N5OXpMRmRkSl9OdnR5SkxYOHlEM0E?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Wed, 15 Jul 2026 10:06:37 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE1sdFVscElTclFSQ2RUOWRFNHptLWx1N0xacTcwU1pFc0JDZE5yTVl5aW1hUmJWTDFtVzNZTGxaN3JzNlkyX0xLdUF2",
+      "page_content": ""
+    },
+    {
+      "title": "If Every Firm Uses the Same LLM, Where Is Your Edge? - JD Supra",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOY0V2UkhOeE80WWFkMWJvWGxSV3Q4X0N0NW5sZ2ExSzVYb3Z1OWE4N3RlNnN5YkZ1Wmo2aUlzRFlOUlF1OTlfMnByT3lkWXU2WlRjYWpydXpHbTFfcU1uVEpKRU95NzYwMFp5X1JMYmt0eEh2STNFdG4zYU9rejQ3RHQtcGpvVnM?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 17 Jul 2026 15:45:32 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxOY0V2UkhOeE80WWFkMWJvWGxSV3Q4X0N0NW5sZ2ExSzVYb3Z1OWE4N3RlNnN5YkZ1Wmo2aUlzRFlOUlF1OTlfMnBy",
+      "page_content": ""
+    },
+    {
+      "title": "Trend Micro tests 13 AI models in PwC-backed AI agent risk study - International Business Times",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQa05PUEFfbXBXeTNHYlRjbU5FRER2ZE42dUdGa21lU25jTjhmVlp6Z2hTclZWMmJwVUViN2VmQ18zZmtEd2JJVng0anBESzVNSjQ0N1k2bEtBbjJpZHZYc3JtLURQc01FNWxTd3d3OWZvLVhPSjVqeUtMWEw0SVMybl9wa2ZNZHdxdTFCNU93MnNHLWdTd0E?oc=5",
+      "source": "Google News",
+      "cls": "google",
+      "date": "Fri, 17 Jul 2026 22:51:06 GMT",
+      "desc": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQa05PUEFfbXBXeTNHYlRjbU5FRER2ZE42dUdGa21lU25jTjhmVlp6Z2hTclZWMmJwVUViN2VmQ18zZmtEd2JJVng0",
+      "page_content": ""
+    }
+  ],
+  "blogs": [
+    {
+      "title": "A scorecard for the AI age",
+      "url": "https://openai.com/index/a-scorecard-for-the-ai-age/",
+      "source": "OpenAI",
+      "date": "2026-07-17",
+      "page_content": "The question I hear from CFOs everywhere is simple: how do we get more value from our AI spend?\n\nFor years, the market measured the success of software through adoption: seats purchased, users active, licenses renewed. Understanding the value of AI demands a more powerful measure: work accomplished.\n\nThe basic economic question facing CFOs and other business leaders is whether the value of the work AI completes grows faster than the cost of producing it.\n\nAnswering that question requires looking more deeply than a metric such as cost per token. A lower-cost model may have cheaper tokens, but getting great results may require more attempts, more time, or more human review. A more capable model may have more expensive tokens, but complete the same task in one pass. What matters is the full cost of producing a successful outcome, measured against the value that outcome creates.\n\nThe ultimate scorecard for the age of AI could be looked at as “Useful Intelligence per Dollar.” This metric answers four key questions:\n\n1.   Is AI completing work that matters?\n2.   What does each successful task cost?\n3.   Can people depend on the result?\n4.   Does each AI dollar produce more value as usage grows?"
+    },
+    {
+      "title": "Why teens deserve access to safe AI",
+      "url": "https://openai.com/index/why-teens-deserve-access-safe-ai/",
+      "source": "OpenAI",
+      "date": "2026-07-16",
+      "page_content": "Teens are the first generation growing up with AI, and this technology will heavily shape their future. Today, nearly 9 in 10 teens on ChatGPT use it for learning, information, skill-building, or productivity in a single week. This is why we believe it’s critical for teens to have access to AI. Keeping teens from using it until adulthood would be like asking a previous generation to avoid the internet or search engines until they turned 18, leaving them less prepared to use one of the defining technologies of their time. But access must be paired with protections designed specifically for teens.\n\nDuring a recent [OpenAI Academy⁠(opens in a new window)](https://www.linkedin.com/posts/openai-global-affairs_openaiacademy-activity-7430608494040354816-4GtV/) Oriana McKenzie shared how ChatGPT helped her become No.1 in her high school class by studying smarter and managing her workload—giving her the time needed for the sports and school programs she loves. Her story illustrates what’s possible when teens have access to AI that helps them learn and create.\n\nTo maximize those gains, teens need stronger protections designed for their stage of life, including automated guardrails that let them explore, learn, and build with confidence, while providing safeguards tailored to their age. As AI becomes more capable, our responsibility is to combine broad access with age-appropriate protections that allow teens to benefit from this technology as it evolves.\n\nOver the past year, that has meant strengthening default protections for teens, rolling out [age prediction⁠](https://openai.com/index/our-approach-to-age-prediction/), expanding [Parental Controls⁠](https://openai.com/index/introducing-parental-controls/), creating additional [family resources⁠(opens in a new window)](https://chatgpt.com/parent-resources/) to help parents support healthy, responsible use, and introducing learning features to help support deeper understanding rather than just providing answers.\n\n*   We put teen safety first even when it may conflict with other goals.\n*   We encourage real-world support in times of need.\n*   We treat teens as teens.\n*   We are transparent by setting clear expectations.\n\n## Building for learning, not just answers"
+    },
+    {
+      "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
+      "url": "https://openai.com/index/unlocking-self-improvement-gpt-red/",
+      "source": "OpenAI",
+      "date": "2026-07-15",
+      "page_content": "#### Summary\n\n_Problem_\n\n*   Red-teaming is essential to discovering vulnerabilities and improving the robustness of our models. However, current approaches are not scalable, creating a bottleneck.\n\n*   Commonly used robustness evaluations have already been saturated by our latest models.\n\n*   We need to develop methods that allow safety and alignment to scale alongside model capabilities.\n\n_What we did_\n\n*   We trained GPT‑Red, an automated red-teaming model that scales our ability to find vulnerabilities so we can fix them before wider deployment.\n\n*   GPT‑Red is a strong red-teamer, and our previous models are highly vulnerable to its prompt injection attacks."
+    },
+    {
+      "title": "Inviting hard questions",
+      "url": "https://www.anthropic.com/news/hard-questions",
+      "source": "Anthropic",
+      "date": "2026-07-09",
+      "page_content": ""
+    },
+    {
+      "title": "A New Look for OpenRouter Jul 13, 2026",
+      "url": "https://openrouter.ai/blog/announcements/brand-refresh/",
+      "source": "OpenRouter",
+      "date": "2026-07-13",
+      "page_content": ""
+    }
+  ],
+  "github_strategy": {
+    "query": "AI plugin OR agent skill OR prompt engineering",
+    "filters": "stars:100..20000",
+    "sort": "stars",
+    "label": "AI 工具生态（插件/技能）"
+  }
+}

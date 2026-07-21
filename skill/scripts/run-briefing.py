@@ -51,9 +51,23 @@ def gh_run(cmd, timeout=15):
     r = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=timeout, env=env)
     return r.stdout
 
+def curl_api_get(url, timeout=15):
+    """GitHub CLI 认证可能失效；失败时回退到未认证 REST API。"""
+    try:
+        out = run(f'curl -s --connect-timeout 10 -m {timeout} -x {PROXY} "{url}"', timeout=timeout + 5)
+        if not out or len(out) < 10:
+            return {}
+        data = json.loads(out)
+        if isinstance(data, dict) and data.get('message') and 'rate limit' in data['message'].lower():
+            return {}
+        return data
+    except Exception:
+        return {}
+
 def gh_api_search_repos(query, filters, sort, per_page=15):
     """使用 gh CLI 调用 GitHub Search API（已认证，5000 req/h）"""
     import time as _time
+    from urllib.parse import quote
     
     # 构建查询字符串
     if filters:
@@ -73,23 +87,30 @@ def gh_api_search_repos(query, filters, sort, per_page=15):
                     continue
                 return {}
             data = json.loads(out)
-            return data
+            if isinstance(data, dict) and data.get('items') is not None:
+                return data
         except Exception as e:
             if attempt < 2:
                 _time.sleep(2)
                 continue
-            return {}
-    return {}
+            break
+
+    # gh token 失效时使用未认证 REST API 回退；每日采集请求量低于 60/h 限额。
+    q_encoded = quote(raw_q)
+    url = f'https://api.github.com/search/repositories?q={q_encoded}&sort={sort}&order=desc&per_page={per_page}'
+    data = curl_api_get(url, timeout=15)
+    return data if isinstance(data, dict) else {}
 
 def gh_api_get(endpoint, timeout=10):
     """使用 gh CLI 调用 GitHub API 任意端点"""
     try:
         out = gh_run(f'gh api "{endpoint}"', timeout=timeout)
         if not out or len(out) < 10:
-            return {}
+            raise ValueError("empty gh output")
         return json.loads(out)
     except:
-        return {}
+        data = curl_api_get(f'https://api.github.com/{endpoint}', timeout=timeout)
+        return data
 
 def clean_release_body(body):
     """清理 release body，返回可用于提取的纯文本"""
@@ -479,7 +500,8 @@ try:
             if m:
                 if current.get('name'):
                     projects.append(current)
-                current = {'name': m.group(1), 'url': m.group(2), 'desc': ''}
+                repo_name = re.sub(r'\s*/\s*', '/', m.group(1)).strip()
+                current = {'name': repo_name, 'url': m.group(2), 'desc': ''}
                 continue
             # 匹配描述行（标题下一行，通常是纯文本描述）
             if current.get('name') and not current.get('desc') and line and not line.startswith('##') and not line.startswith('['):
@@ -518,7 +540,13 @@ if not results['github_trending']:
             f'curl -sL --connect-timeout 10 -m 30 -x {PROXY} "https://github.com/trending"',
             timeout=35,
         )
-        articles = re.findall(r'<article[^>]*Box-row[^>]*>(.*?)</article>', trending_html, re.DOTALL)
+        articles = re.findall(
+            r'<article\b(?=[^>]*class="[^"]*Box-row)[^>]*>(.*?)</article>',
+            trending_html,
+            re.DOTALL,
+        )
+        if not articles:
+            articles = re.split(r'<h2 class="h3 lh-condensed">', trending_html)[1:]
         projects = []
         for article in articles:
             repo = re.search(r'href="/([^"?#]+/[^"?#]+)"', article)
